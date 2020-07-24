@@ -42,6 +42,23 @@
 
                 <div class="form-row">
                     <div class="col-md-12 mb-3">
+                        <div class="font-weight-bold pb-1">Account type</div>
+
+                        <div>
+                            <label for="organizer">
+                                <!-- to be more understanding -->
+                                @if($user->organizer == false) 
+                                Client
+                                @else
+                                Organizer
+                                @endif
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
                         <div class="font-weight-bold pb-1">Email address</div>
 
                         <div>
@@ -119,11 +136,11 @@
 
                         @if ($user->address->line_2 == null)
                         <div>
-                            <label for="line_2">'No address added</label>
+                            <label for="line_2">No address added</label>
                         </div>
                         @else
                         <div>
-                            <label for="line_2">$user->address->line_2</label>
+                            <label for="line_2">{{ $user->address->line_2 }}</label>
                         </div>
                         @endif
                     </div>

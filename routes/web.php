@@ -31,14 +31,9 @@ Route::delete('/events/show/{event}', 'EventController@destroy')->name('event_vi
 
 Route::get('/event/create', 'EventController@create')->name('event.create');
 Route::post('/event/create', 'EventController@store')->name('event.create');
-Route::get('/event/{event}', 'EventController@show')->name('event.show');
 Route::get('/events/approved', 'EventController@approved')->name('profile.approved');
 Route::get('/events/waiting', 'EventController@waiting')->name('profile.waiting');
 Route::get('/events/approve/{id}', 'EventController@approve')->name('event.approve');
-
-//Comments
-Route::post('/event/{event}', 'CommentController@store')->name('comment.store');
-Route::delete('/event/{comment}','CommentController@destroy')->name('comment.delete');
 
 //For contact
 Route::get('/contact', 'ContactController@create')->name('contact.create');

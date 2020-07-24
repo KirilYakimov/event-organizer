@@ -7,7 +7,12 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+// Jquery-ui
+@import '~jquery-ui/themes/base/all.css';
+
 // Fullcalendar
 @import "~@fullcalendar/core/main.min";
 @import "~@fullcalendar/daygrid/main.min";
 
+//Navbar
+@import "navbar";

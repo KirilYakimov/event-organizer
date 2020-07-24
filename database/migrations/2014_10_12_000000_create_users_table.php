@@ -15,7 +15,6 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('address_id');
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->boolean('organizer');
@@ -26,10 +25,10 @@ class CreateUsersTable extends Migration
             $table->string('lastname');
             $table->string('event_organizer')->nullable();
             $table->string('event_client')->nullable();
+            $table->unsignedBigInteger('address_id');
+            $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
-
-            $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade');
         });
     }
 

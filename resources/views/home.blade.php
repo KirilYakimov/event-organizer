@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'EventO')
+@section('title', 'events')
 
 @section('content')
 <div class="container">
@@ -10,32 +10,26 @@
                 <h1>{{ __('EventO') }}</h1>
             </div>
 
-            <div class="text-center mb-3">
-                <h4>Check our public events</h4>
+            <div class="row justify-content-center mb-3">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <h4>Check our public events</h4>
+                    </div>
+                    @if (auth()->user() && auth()->user()->organizer == false)
+                    <div class="float-md-right">
+                        <a href="{{ route('event.create') }}" class="btn btn-lg btn-primary">Create event</a>
+                    </div>
+                    @endif
+                </div>
             </div>
 
-            <div class="row">
-                @if (auth()->user())
-                    <div class="col-md-8">
-                        <div id="calendar"></div>
-                    </div>
-                    <div class="col-md-4 align-self-center">
-                        <!-- Tuk shte slojim denq ot kalendara -->
-                        <div class="text-center">
-                            <h4>Date of calendar</h4>
-                        </div>
-                        <div class="form-group row mb-3">
-                            <div class="col-md-12 text-center">
-                                <a href="{{ route('event.create') }}" class="btn btn-lg btn-primary">Create event</a>
-                            </div>
-                        </div>
-                    </div>
-                @else
-                    <div class="col-md-12">
-                        <div id="calendar"></div>
-                    </div>
-                @endif
+            <div class="col-md-12">
+                <div id="calendar"></div>
             </div>
+
         </div>
     </div>
+    <script>
+        var eventArray = @json($eventArray, JSON_PRETTY_PRINT);
+    </script>
     @endsection

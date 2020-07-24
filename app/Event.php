@@ -11,7 +11,7 @@ class Event extends Model
     protected $table = 'events';
 
     protected $fillable = [
-        'address', 'client' , 'name', 'start_date', 'end_date' , 'description', 'organizer', 'approved', 'public' ,
+        'address', 'client' , 'name', 'start_date', 'end_date' , 'description', 'organizer', 'approved', 'public' , 'show_images',
     ];
     
     public function comments()
@@ -26,7 +26,7 @@ class Event extends Model
 
     //public function address()
     //{ 
-    //    return $this->hasOnew(Address::class, 'address_id');
+    //    return $this->has(Address::class, 'address_id');
     //}
 
     //public function eventType()

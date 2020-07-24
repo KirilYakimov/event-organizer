@@ -113,7 +113,19 @@ class EventController extends Controller
 
     public function storeShow(Request $request, Event $event)
     {
-
+        //Show images public
+        if ($request->has('show_images')) {
+            $event = Event::all()->where('id', $event->id)->first();
+            if($event->show_images){
+                $event->show_images = false;
+                $event->save();
+                return back()->with('success', 'You are approved the event gallery to be private!');
+            }
+            $event->show_images = true;
+            $event->save();
+            return back()->with('success', 'You are approved the event gallery to be public!');
+        }
+        
         //Post comment
         if ($request->has('add_comment')) {
             $validateData = $request->validate([
@@ -129,7 +141,7 @@ class EventController extends Controller
         //Post event picture
         if ($request->has('add_image')) {
             $image_path = $request->file('event_image');
-            if($image_path == null){
+            if ($image_path == null) {
                 return back()->with('error', "You haven't specified an Image!");
             }
             $filename = time() . "." . $image_path->getClientOriginalExtension();
@@ -170,12 +182,13 @@ class EventController extends Controller
         $event = Event::create([
             'address' =>  $request['event_address'],
             'organizer' => $request['organizer'],
-            'start_date' => $request['start_date'],
-            'end_date' => $request['end_date'],
+            'start_date' => date_format(date_create($request['start_date']), 'Y-m-d'),
+            'end_date' => date_format(date_create($request['end_date']), 'Y-m-d'),
             'client' => Auth::user()->username,
             'name' => $request['event_name'],
             'public' => ($request['public'] == 'true' ? true : false),
             'description' => $request['event_description'],
+            'show_images' => false,
             'approved' => false,
         ]);
 
@@ -196,9 +209,10 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
+        $user = Auth::user();
         $eventImages = EventImage::where('event_id', $event->id);
         $comments = Comment::where('event_id', $event->id)->latest()->paginate(5);
-        return view('events.show', compact('event', 'comments','eventImages'));
+        return view('events.show', compact('event', 'comments', 'eventImages', 'user'));
     }
 
     /**

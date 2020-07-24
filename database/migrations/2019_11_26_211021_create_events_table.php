@@ -22,6 +22,7 @@ class CreateEventsTable extends Migration
             $table->datetime('end_date');
             $table->string('description');
             $table->string('organizer');
+            $table->boolean('show_images');
             $table->boolean('approved');
             $table->boolean('public');
             $table->timestamps();

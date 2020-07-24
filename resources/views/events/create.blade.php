@@ -10,6 +10,8 @@
             <div class="text-center pt-3 pb-2 mb-3">
                 <h1>{{ __('EventO') }}</h1>
             </div>
+
+            @if (auth()->user() && auth()->user()->organizer == false)
             <form method="POST" action="{{ route('event.create') }}" id='theform'>
                 @csrf
                 <div class="form-row">
@@ -24,22 +26,17 @@
                     <div class="col-md-6 mb-3">
                         <label for="start_date">{{ __('Start date') }}</label>
                         <div>
-                            <input id="datepicker" type="text" class="form-control @error('start_date') is-invalid @enderror" placeholder="Start date" name="start_date" required autocomplete="start_date" autofocus>
-                            <span class="glyphicon glyphicon-calendar"></span>
+                            <input id="start_date" type="text" class="cusDate form-control @error('start_date') is-invalid @enderror" placeholder="Start date" name="start_date" required autofocus>
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="end_date">{{ __('End date') }}</label>
-
-                        <div class='input-group date' id='datepicker'>
-                            <input id="datepicker" type="text" class="form-control @error('end_date') is-invalid @enderror" placeholder="End date" name="end_date" required autocomplete="end_date" autofocus>
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
+                        <div>
+                            <input id="end_date" type="text" class="cusDate form-control @error('end_date') is-invalid @enderror" placeholder="End date" name="end_date" required autofocus>
                         </div>
-
                     </div>
                 </div>
+
                 <div class="form-row">
                     <div class="col-md-12 mb-3">
                         <label for="event_address">{{ __('Event Address') }}</label>
@@ -85,6 +82,14 @@
                     </div>
                 </div>
             </form>
+            @else
+            <div class="text-center pt-3 pb-2 mb-3">
+                <h1>Sorry only clients can create events</h1>
+            </div>
+            <div class="col-md-12 text-center">
+                <a class="btn btn-lg btn-primary" href="{{ url('home') }}">Back to callendar</a>
+            </div>
+            @endif
         </div>
     </div>
 </div>

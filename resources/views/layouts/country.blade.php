@@ -1,6 +1,6 @@
 <select name="country" class="custom-select" id="country" required>
     @if (Auth::check())
-    <option value="$user->address->country" disabled selected hidden>{{ $user->address->country }}</option>
+    <option value="{{ $user->address->country }}" selected hidden>{{ $user->address->country }}</option>
     @else
     <option value="" disabled selected hidden>Select country</option>
     @endif

@@ -54,14 +54,4 @@ class User extends Authenticatable # implements MustVerifyEmail, CanResetPasswor
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function address()
-    {
-        return $this->belongsTo(Address::class, 'address_id');
-    }
-
-    public function comments()
-    {
-        return $this->hasMany(Comment::class);
-    }
 }

@@ -90,13 +90,14 @@
 /*!*****************************************************!*\
   !*** ./node_modules/@fullcalendar/core/main.esm.js ***!
   \*****************************************************/
-/*! exports provided: Calendar, Component, DateComponent, DateEnv, DateProfileGenerator, DayHeader, DaySeries, DayTable, ElementDragging, ElementScrollController, EmitterMixin, EventApi, FgEventRenderer, FillRenderer, Interaction, Mixin, NamedTimeZoneImpl, PositionCache, ScrollComponent, ScrollController, Slicer, Splitter, Theme, View, WindowScrollController, addDays, addDurations, addMs, addWeeks, allowContextMenu, allowSelection, appendToElement, applyAll, applyMutationToEventStore, applyStyle, applyStyleProp, asRoughMinutes, asRoughMs, asRoughSeconds, buildGotoAnchorHtml, buildSegCompareObj, capitaliseFirstLetter, combineEventUis, compareByFieldSpec, compareByFieldSpecs, compareNumbers, compensateScroll, computeClippingRect, computeEdges, computeFallbackHeaderFormat, computeHeightAndMargins, computeInnerRect, computeRect, computeVisibleDayRange, config, constrainPoint, createDuration, createElement, createEmptyEventStore, createEventInstance, createFormatter, createPlugin, cssToStr, debounce, diffDates, diffDayAndTime, diffDays, diffPoints, diffWeeks, diffWholeDays, diffWholeWeeks, disableCursor, distributeHeight, elementClosest, elementMatches, enableCursor, eventTupleToStore, filterEventStoreDefs, filterHash, findChildren, findElements, flexibleCompare, forceClassName, formatDate, formatIsoTimeString, formatRange, getAllDayHtml, getClippingParents, getDayClasses, getElSeg, getRectCenter, getRelevantEvents, globalDefaults, greatestDurationDenominator, hasBgRendering, htmlEscape, htmlToElement, insertAfterElement, interactionSettingsStore, interactionSettingsToStore, intersectRanges, intersectRects, isArraysEqual, isDateSpansEqual, isInt, isInteractionValid, isMultiDayRange, isPropsEqual, isPropsValid, isSingleDay, isValidDate, listenBySelector, mapHash, matchCellWidths, memoize, memoizeOutput, memoizeRendering, mergeEventStores, multiplyDuration, padStart, parseBusinessHours, parseDragMeta, parseEventDef, parseFieldSpecs, parseMarker, pointInsideRect, prependToElement, preventContextMenu, preventDefault, preventSelection, processScopedUiProps, rangeContainsMarker, rangeContainsRange, rangesEqual, rangesIntersect, refineProps, removeElement, removeExact, renderDateCell, requestJson, sliceEventStore, startOfDay, subtractInnerElHeight, translateRect, uncompensateScroll, undistributeHeight, unpromisify, version, whenTransitionDone, wholeDivideDurations */
+/*! exports provided: Calendar, Component, ComponentContext, DateComponent, DateEnv, DateProfileGenerator, DayHeader, DaySeries, DayTable, ElementDragging, ElementScrollController, EmitterMixin, EventApi, FgEventRenderer, FillRenderer, Interaction, Mixin, NamedTimeZoneImpl, PositionCache, ScrollComponent, ScrollController, Slicer, Splitter, Theme, View, WindowScrollController, addDays, addDurations, addMs, addWeeks, allowContextMenu, allowSelection, appendToElement, applyAll, applyMutationToEventStore, applyStyle, applyStyleProp, asRoughMinutes, asRoughMs, asRoughSeconds, buildGotoAnchorHtml, buildSegCompareObj, capitaliseFirstLetter, combineEventUis, compareByFieldSpec, compareByFieldSpecs, compareNumbers, compensateScroll, computeClippingRect, computeEdges, computeEventDraggable, computeEventEndResizable, computeEventStartResizable, computeFallbackHeaderFormat, computeHeightAndMargins, computeInnerRect, computeRect, computeVisibleDayRange, config, constrainPoint, createDuration, createElement, createEmptyEventStore, createEventInstance, createFormatter, createPlugin, cssToStr, debounce, diffDates, diffDayAndTime, diffDays, diffPoints, diffWeeks, diffWholeDays, diffWholeWeeks, disableCursor, distributeHeight, elementClosest, elementMatches, enableCursor, eventTupleToStore, filterEventStoreDefs, filterHash, findChildren, findElements, flexibleCompare, forceClassName, formatDate, formatIsoTimeString, formatRange, getAllDayHtml, getClippingParents, getDayClasses, getElSeg, getRectCenter, getRelevantEvents, globalDefaults, greatestDurationDenominator, hasBgRendering, htmlEscape, htmlToElement, insertAfterElement, interactionSettingsStore, interactionSettingsToStore, intersectRanges, intersectRects, isArraysEqual, isDateSpansEqual, isInt, isInteractionValid, isMultiDayRange, isPropsEqual, isPropsValid, isSingleDay, isValidDate, listenBySelector, mapHash, matchCellWidths, memoize, memoizeOutput, memoizeRendering, mergeEventStores, multiplyDuration, padStart, parseBusinessHours, parseDragMeta, parseEventDef, parseFieldSpecs, parseMarker, pointInsideRect, prependToElement, preventContextMenu, preventDefault, preventSelection, processScopedUiProps, rangeContainsMarker, rangeContainsRange, rangesEqual, rangesIntersect, refineProps, removeElement, removeExact, renderDateCell, requestJson, sliceEventStore, startOfDay, subtractInnerElHeight, translateRect, uncompensateScroll, undistributeHeight, unpromisify, version, whenTransitionDone, wholeDivideDurations */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Calendar", function() { return Calendar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return Component; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentContext", function() { return ComponentContext; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DateComponent", function() { return DateComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DateEnv", function() { return DateEnv; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DateProfileGenerator", function() { return DateProfileGenerator; });
@@ -144,6 +145,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compensateScroll", function() { return compensateScroll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeClippingRect", function() { return computeClippingRect; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeEdges", function() { return computeEdges; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeEventDraggable", function() { return computeEventDraggable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeEventEndResizable", function() { return computeEventEndResizable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeEventStartResizable", function() { return computeEventStartResizable; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeFallbackHeaderFormat", function() { return computeFallbackHeaderFormat; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeHeightAndMargins", function() { return computeHeightAndMargins; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeInnerRect", function() { return computeInnerRect; });
@@ -246,7 +250,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "whenTransitionDone", function() { return whenTransitionDone; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wholeDivideDurations", function() { return wholeDivideDurations; });
 /*!
-FullCalendar Core Package v4.3.1
+FullCalendar Core Package v4.4.2
 Docs & License: https://fullcalendar.io/
 (c) 2019 Adam Shaw
 */
@@ -1372,18 +1376,18 @@ function diffDates(date0, date1, dateEnv, largeUnit) {
 }
 
 /*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
+Copyright (c) Microsoft Corporation.
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
 
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 /* global Reflect, Promise */
 
@@ -2633,12 +2637,13 @@ function sliceEventStore(eventStore, eventUiBases, framingRange, nextDayThreshol
 function hasBgRendering(def) {
     return def.rendering === 'background' || def.rendering === 'inverse-background';
 }
-function filterSegsViaEls(view, segs, isMirror) {
-    if (view.hasPublicHandlers('eventRender')) {
+function filterSegsViaEls(context, segs, isMirror) {
+    var calendar = context.calendar, view = context.view;
+    if (calendar.hasPublicHandlers('eventRender')) {
         segs = segs.filter(function (seg) {
-            var custom = view.publiclyTrigger('eventRender', [
+            var custom = calendar.publiclyTrigger('eventRender', [
                 {
-                    event: new EventApi(view.calendar, seg.eventRange.def, seg.eventRange.instance),
+                    event: new EventApi(calendar, seg.eventRange.def, seg.eventRange.instance),
                     isMirror: isMirror,
                     isStart: seg.isStart,
                     isEnd: seg.isEnd,
@@ -2684,6 +2689,65 @@ function compileEventUi(eventDef, eventUiBases) {
     }
     uis.push(eventDef.ui);
     return combineEventUis(uis);
+}
+// triggers
+function triggerRenderedSegs(context, segs, isMirrors) {
+    var calendar = context.calendar, view = context.view;
+    if (calendar.hasPublicHandlers('eventPositioned')) {
+        for (var _i = 0, segs_2 = segs; _i < segs_2.length; _i++) {
+            var seg = segs_2[_i];
+            calendar.publiclyTriggerAfterSizing('eventPositioned', [
+                {
+                    event: new EventApi(calendar, seg.eventRange.def, seg.eventRange.instance),
+                    isMirror: isMirrors,
+                    isStart: seg.isStart,
+                    isEnd: seg.isEnd,
+                    el: seg.el,
+                    view: view
+                }
+            ]);
+        }
+    }
+    if (!calendar.state.eventSourceLoadingLevel) { // avoid initial empty state while pending
+        calendar.afterSizingTriggers._eventsPositioned = [null]; // fire once
+    }
+}
+function triggerWillRemoveSegs(context, segs, isMirrors) {
+    var calendar = context.calendar, view = context.view;
+    for (var _i = 0, segs_3 = segs; _i < segs_3.length; _i++) {
+        var seg = segs_3[_i];
+        calendar.trigger('eventElRemove', seg.el);
+    }
+    if (calendar.hasPublicHandlers('eventDestroy')) {
+        for (var _a = 0, segs_4 = segs; _a < segs_4.length; _a++) {
+            var seg = segs_4[_a];
+            calendar.publiclyTrigger('eventDestroy', [
+                {
+                    event: new EventApi(calendar, seg.eventRange.def, seg.eventRange.instance),
+                    isMirror: isMirrors,
+                    el: seg.el,
+                    view: view
+                }
+            ]);
+        }
+    }
+}
+// is-interactable
+function computeEventDraggable(context, eventDef, eventUi) {
+    var calendar = context.calendar, view = context.view;
+    var transformers = calendar.pluginSystem.hooks.isDraggableTransformers;
+    var val = eventUi.startEditable;
+    for (var _i = 0, transformers_1 = transformers; _i < transformers_1.length; _i++) {
+        var transformer = transformers_1[_i];
+        val = transformer(val, eventDef, eventUi, view);
+    }
+    return val;
+}
+function computeEventStartResizable(context, eventDef, eventUi) {
+    return eventUi.durationEditable && context.options.eventResizableFromStart;
+}
+function computeEventEndResizable(context, eventDef, eventUi) {
+    return eventUi.durationEditable;
 }
 
 // applies the mutation to ALL defs/instances within the event store
@@ -3586,8 +3650,7 @@ function buildEventUiForKey(allUi, eventUiForKey, individualUi) {
 // { date, type, forceOff }
 // `type` is a view-type like "day" or "week". default value is "day".
 // `attrs` and `innerHtml` are use to generate the rest of the HTML tag.
-function buildGotoAnchorHtml(component, gotoOptions, attrs, innerHtml) {
-    var dateEnv = component.dateEnv;
+function buildGotoAnchorHtml(allOptions, dateEnv, gotoOptions, attrs, innerHtml) {
     var date;
     var type;
     var forceOff;
@@ -3610,7 +3673,7 @@ function buildGotoAnchorHtml(component, gotoOptions, attrs, innerHtml) {
     }
     attrs = attrs ? ' ' + attrsToStr(attrs) : ''; // will have a leading space
     innerHtml = innerHtml || '';
-    if (!forceOff && component.opt('navLinks')) {
+    if (!forceOff && allOptions.navLinks) {
         return '<a' + attrs +
             ' data-goto="' + htmlEscape(JSON.stringify(finalOptions)) + '">' +
             innerHtml +
@@ -3622,12 +3685,12 @@ function buildGotoAnchorHtml(component, gotoOptions, attrs, innerHtml) {
             '</span>';
     }
 }
-function getAllDayHtml(component) {
-    return component.opt('allDayHtml') || htmlEscape(component.opt('allDayText'));
+function getAllDayHtml(allOptions) {
+    return allOptions.allDayHtml || htmlEscape(allOptions.allDayText);
 }
 // Computes HTML classNames for a single-day element
 function getDayClasses(date, dateProfile, context, noThemeHighlight) {
-    var calendar = context.calendar, view = context.view, theme = context.theme, dateEnv = context.dateEnv;
+    var calendar = context.calendar, options = context.options, theme = context.theme, dateEnv = context.dateEnv;
     var classes = [];
     var todayStart;
     var todayEnd;
@@ -3636,7 +3699,7 @@ function getDayClasses(date, dateProfile, context, noThemeHighlight) {
     }
     else {
         classes.push('fc-' + DAY_IDS[date.getUTCDay()]);
-        if (view.opt('monthMode') &&
+        if (options.monthMode &&
             dateEnv.getMonth(date) !== dateEnv.getMonth(dateProfile.currentRange.start)) {
             classes.push('fc-other-month');
         }
@@ -4101,34 +4164,59 @@ Theme.prototype.baseIconClass = '';
 Theme.prototype.iconOverridePrefix = '';
 
 var guid = 0;
+var ComponentContext = /** @class */ (function () {
+    function ComponentContext(calendar, theme, dateEnv, options, view) {
+        this.calendar = calendar;
+        this.theme = theme;
+        this.dateEnv = dateEnv;
+        this.options = options;
+        this.view = view;
+        this.isRtl = options.dir === 'rtl';
+        this.eventOrderSpecs = parseFieldSpecs(options.eventOrder);
+        this.nextDayThreshold = createDuration(options.nextDayThreshold);
+    }
+    ComponentContext.prototype.extend = function (options, view) {
+        return new ComponentContext(this.calendar, this.theme, this.dateEnv, options || this.options, view || this.view);
+    };
+    return ComponentContext;
+}());
 var Component = /** @class */ (function () {
-    function Component(context, isView) {
-        // HACK to populate view at top of component instantiation call chain
-        if (isView) {
-            context.view = this;
-        }
+    function Component() {
+        this.everRendered = false;
         this.uid = String(guid++);
-        this.context = context;
-        this.dateEnv = context.dateEnv;
-        this.theme = context.theme;
-        this.view = context.view;
-        this.calendar = context.calendar;
-        this.isRtl = this.opt('dir') === 'rtl';
     }
     Component.addEqualityFuncs = function (newFuncs) {
         this.prototype.equalityFuncs = __assign({}, this.prototype.equalityFuncs, newFuncs);
     };
-    Component.prototype.opt = function (name) {
-        return this.context.options[name];
-    };
-    Component.prototype.receiveProps = function (props) {
+    Component.prototype.receiveProps = function (props, context) {
+        this.receiveContext(context);
         var _a = recycleProps(this.props || {}, props, this.equalityFuncs), anyChanges = _a.anyChanges, comboProps = _a.comboProps;
         this.props = comboProps;
         if (anyChanges) {
-            this.render(comboProps);
+            if (this.everRendered) {
+                this.beforeUpdate();
+            }
+            this.render(comboProps, context);
+            if (this.everRendered) {
+                this.afterUpdate();
+            }
+        }
+        this.everRendered = true;
+    };
+    Component.prototype.receiveContext = function (context) {
+        var oldContext = this.context;
+        this.context = context;
+        if (!oldContext) {
+            this.firstContext(context);
         }
     };
-    Component.prototype.render = function (props) {
+    Component.prototype.render = function (props, context) {
+    };
+    Component.prototype.firstContext = function (context) {
+    };
+    Component.prototype.beforeUpdate = function () {
+    };
+    Component.prototype.afterUpdate = function () {
     };
     // after destroy is called, this component won't ever be used again
     Component.prototype.destroy = function () {
@@ -4170,8 +4258,8 @@ PURPOSES:
 */
 var DateComponent = /** @class */ (function (_super) {
     __extends(DateComponent, _super);
-    function DateComponent(context, el, isView) {
-        var _this = _super.call(this, context, isView) || this;
+    function DateComponent(el) {
+        var _this = _super.call(this) || this;
         _this.el = el;
         return _this;
     }
@@ -4179,38 +4267,6 @@ var DateComponent = /** @class */ (function (_super) {
         _super.prototype.destroy.call(this);
         removeElement(this.el);
     };
-    // TODO: WHAT ABOUT (sourceSeg && sourceSeg.component.doesDragMirror)
-    //
-    // Event Drag-n-Drop Rendering (for both events and external elements)
-    // ---------------------------------------------------------------------------------------------------------------
-    /*
-    renderEventDragSegs(state: EventSegUiInteractionState) {
-      if (state) {
-        let { isEvent, segs, sourceSeg } = state
-  
-        if (this.eventRenderer) {
-          this.eventRenderer.hideByHash(state.affectedInstances)
-        }
-  
-        // if the user is dragging something that is considered an event with real event data,
-        // and this component likes to do drag mirrors OR the component where the seg came from
-        // likes to do drag mirrors, then render a drag mirror.
-        if (isEvent && (this.doesDragMirror || sourceSeg && sourceSeg.component.doesDragMirror)) {
-          if (this.mirrorRenderer) {
-            this.mirrorRenderer.renderSegs(segs, { isDragging: true, sourceSeg })
-          }
-        }
-  
-        // if it would be impossible to render a drag mirror OR this component likes to render
-        // highlights, then render a highlight.
-        if (!isEvent || this.doesDragHighlight) {
-          if (this.fillRenderer) {
-            this.fillRenderer.renderSegs('highlight', segs)
-          }
-        }
-      }
-    }
-    */
     // Hit System
     // -----------------------------------------------------------------------------------------------------------------
     DateComponent.prototype.buildPositionCaches = function () {
@@ -4221,7 +4277,7 @@ var DateComponent = /** @class */ (function (_super) {
     // Validation
     // -----------------------------------------------------------------------------------------------------------------
     DateComponent.prototype.isInteractionValid = function (interaction) {
-        var calendar = this.calendar;
+        var calendar = this.context.calendar;
         var dateProfile = this.props.dateProfile; // HACK
         var instances = interaction.mutatedEvents.instances;
         if (dateProfile) { // HACK for DayTile
@@ -4234,68 +4290,13 @@ var DateComponent = /** @class */ (function (_super) {
         return isInteractionValid(interaction, calendar);
     };
     DateComponent.prototype.isDateSelectionValid = function (selection) {
+        var calendar = this.context.calendar;
         var dateProfile = this.props.dateProfile; // HACK
         if (dateProfile && // HACK for DayTile
             !rangeContainsRange(dateProfile.validRange, selection.range)) {
             return false;
         }
-        return isDateSelectionValid(selection, this.calendar);
-    };
-    // Triggering
-    // -----------------------------------------------------------------------------------------------------------------
-    // TODO: move to Calendar
-    DateComponent.prototype.publiclyTrigger = function (name, args) {
-        var calendar = this.calendar;
-        return calendar.publiclyTrigger(name, args);
-    };
-    DateComponent.prototype.publiclyTriggerAfterSizing = function (name, args) {
-        var calendar = this.calendar;
-        return calendar.publiclyTriggerAfterSizing(name, args);
-    };
-    DateComponent.prototype.hasPublicHandlers = function (name) {
-        var calendar = this.calendar;
-        return calendar.hasPublicHandlers(name);
-    };
-    DateComponent.prototype.triggerRenderedSegs = function (segs, isMirrors) {
-        var calendar = this.calendar;
-        if (this.hasPublicHandlers('eventPositioned')) {
-            for (var _i = 0, segs_1 = segs; _i < segs_1.length; _i++) {
-                var seg = segs_1[_i];
-                this.publiclyTriggerAfterSizing('eventPositioned', [
-                    {
-                        event: new EventApi(calendar, seg.eventRange.def, seg.eventRange.instance),
-                        isMirror: isMirrors,
-                        isStart: seg.isStart,
-                        isEnd: seg.isEnd,
-                        el: seg.el,
-                        view: this // safe to cast because this method is only called on context.view
-                    }
-                ]);
-            }
-        }
-        if (!calendar.state.loadingLevel) { // avoid initial empty state while pending
-            calendar.afterSizingTriggers._eventsPositioned = [null]; // fire once
-        }
-    };
-    DateComponent.prototype.triggerWillRemoveSegs = function (segs, isMirrors) {
-        var calendar = this.calendar;
-        for (var _i = 0, segs_2 = segs; _i < segs_2.length; _i++) {
-            var seg = segs_2[_i];
-            calendar.trigger('eventElRemove', seg.el);
-        }
-        if (this.hasPublicHandlers('eventDestroy')) {
-            for (var _a = 0, segs_3 = segs; _a < segs_3.length; _a++) {
-                var seg = segs_3[_a];
-                this.publiclyTrigger('eventDestroy', [
-                    {
-                        event: new EventApi(calendar, seg.eventRange.def, seg.eventRange.instance),
-                        isMirror: isMirrors,
-                        el: seg.el,
-                        view: this // safe to cast because this method is only called on context.view
-                    }
-                ]);
-            }
-        }
+        return isDateSelectionValid(selection, calendar);
     };
     // Pointer Interaction Utils
     // -----------------------------------------------------------------------------------------------------------------
@@ -4910,6 +4911,9 @@ var OptionsManager = /** @class */ (function () {
         this.compute();
     }
     OptionsManager.prototype.mutate = function (updates, removals, isDynamic) {
+        if (!Object.keys(updates).length && !removals.length) {
+            return;
+        }
         var overrideHash = isDynamic ? this.dynamicOverrides : this.overrides;
         __assign(overrideHash, updates);
         for (var _i = 0, removals_1 = removals; _i < removals_1.length; _i++) {
@@ -5420,6 +5424,7 @@ function isSourceDirty(eventSource, fetchRange, calendar) {
     else {
         return !calendar.opt('lazyFetching') ||
             !eventSource.fetchRange ||
+            eventSource.isFetching || // always cancel outdated in-progress fetches
             fetchRange.start < eventSource.fetchRange.start ||
             fetchRange.end > eventSource.fetchRange.end;
     }
@@ -5487,7 +5492,8 @@ function receiveResponse(sourceHash, sourceId, fetchId, fetchRange) {
     var eventSource = sourceHash[sourceId];
     if (eventSource && // not already removed
         fetchId === eventSource.latestFetchId) {
-        return __assign({}, sourceHash, (_a = {}, _a[sourceId] = __assign({}, eventSource, { isFetching: false, fetchRange: fetchRange }), _a));
+        return __assign({}, sourceHash, (_a = {}, _a[sourceId] = __assign({}, eventSource, { isFetching: false, fetchRange: fetchRange // also serves as a marker that at least one fetch has completed
+         }), _a));
     }
     return sourceHash;
 }
@@ -6225,8 +6231,8 @@ function buildViewSpec(viewDef, overrideConfigs, optionsManager) {
 
 var Toolbar = /** @class */ (function (_super) {
     __extends(Toolbar, _super);
-    function Toolbar(context, extraClassName) {
-        var _this = _super.call(this, context) || this;
+    function Toolbar(extraClassName) {
+        var _this = _super.call(this) || this;
         _this._renderLayout = memoizeRendering(_this.renderLayout, _this.unrenderLayout);
         _this._updateTitle = memoizeRendering(_this.updateTitle, null, [_this._renderLayout]);
         _this._updateActiveButton = memoizeRendering(_this.updateActiveButton, null, [_this._renderLayout]);
@@ -6261,7 +6267,7 @@ var Toolbar = /** @class */ (function (_super) {
     };
     Toolbar.prototype.renderSection = function (position, buttonStr) {
         var _this = this;
-        var _a = this, theme = _a.theme, calendar = _a.calendar;
+        var _a = this.context, theme = _a.theme, calendar = _a.calendar;
         var optionsManager = calendar.optionsManager;
         var viewSpecs = calendar.viewSpecs;
         var sectionEl = createElement('div', { className: 'fc-' + position });
@@ -6369,7 +6375,8 @@ var Toolbar = /** @class */ (function (_super) {
         });
     };
     Toolbar.prototype.updateActiveButton = function (buttonName) {
-        var className = this.theme.getClass('buttonActive');
+        var theme = this.context.theme;
+        var className = theme.getClass('buttonActive');
         findElements(this.el, 'button').forEach(function (buttonEl) {
             if (buttonName && buttonEl.classList.contains('fc-' + buttonName + '-button')) {
                 buttonEl.classList.add(className);
@@ -6389,24 +6396,29 @@ var Toolbar = /** @class */ (function (_super) {
 
 var CalendarComponent = /** @class */ (function (_super) {
     __extends(CalendarComponent, _super);
-    function CalendarComponent(context, el) {
-        var _this = _super.call(this, context) || this;
-        _this._renderToolbars = memoizeRendering(_this.renderToolbars);
+    function CalendarComponent(el) {
+        var _this = _super.call(this) || this;
+        _this.elClassNames = [];
+        _this.renderSkeleton = memoizeRendering(_this._renderSkeleton, _this._unrenderSkeleton);
+        _this.renderToolbars = memoizeRendering(_this._renderToolbars, _this._unrenderToolbars, [_this.renderSkeleton]);
+        _this.buildComponentContext = memoize(buildComponentContext);
         _this.buildViewPropTransformers = memoize(buildViewPropTransformers);
         _this.el = el;
-        prependToElement(el, _this.contentEl = createElement('div', { className: 'fc-view-container' }));
-        var calendar = _this.calendar;
-        for (var _i = 0, _a = calendar.pluginSystem.hooks.viewContainerModifiers; _i < _a.length; _i++) {
-            var modifyViewContainer = _a[_i];
-            modifyViewContainer(_this.contentEl, calendar);
-        }
-        _this.toggleElClassNames(true);
         _this.computeTitle = memoize(computeTitle);
         _this.parseBusinessHours = memoize(function (input) {
-            return parseBusinessHours(input, _this.calendar);
+            return parseBusinessHours(input, _this.context.calendar);
         });
         return _this;
     }
+    CalendarComponent.prototype.render = function (props, context) {
+        this.freezeHeight();
+        var title = this.computeTitle(props.dateProfile, props.viewSpec.options);
+        this.renderSkeleton(context);
+        this.renderToolbars(props.viewSpec, props.dateProfile, props.currentDate, title);
+        this.renderView(props, title);
+        this.updateSize();
+        this.thawHeight();
+    };
     CalendarComponent.prototype.destroy = function () {
         if (this.header) {
             this.header.destroy();
@@ -6414,40 +6426,57 @@ var CalendarComponent = /** @class */ (function (_super) {
         if (this.footer) {
             this.footer.destroy();
         }
-        if (this.view) {
-            this.view.destroy();
-        }
-        removeElement(this.contentEl);
-        this.toggleElClassNames(false);
+        this.renderSkeleton.unrender(); // will call destroyView
         _super.prototype.destroy.call(this);
     };
-    CalendarComponent.prototype.toggleElClassNames = function (bool) {
+    CalendarComponent.prototype._renderSkeleton = function (context) {
+        this.updateElClassNames(context);
+        prependToElement(this.el, this.contentEl = createElement('div', { className: 'fc-view-container' }));
+        var calendar = context.calendar;
+        for (var _i = 0, _a = calendar.pluginSystem.hooks.viewContainerModifiers; _i < _a.length; _i++) {
+            var modifyViewContainer = _a[_i];
+            modifyViewContainer(this.contentEl, calendar);
+        }
+    };
+    CalendarComponent.prototype._unrenderSkeleton = function () {
+        // weird to have this here
+        if (this.view) {
+            this.savedScroll = this.view.queryScroll();
+            this.view.destroy();
+            this.view = null;
+        }
+        removeElement(this.contentEl);
+        this.removeElClassNames();
+    };
+    CalendarComponent.prototype.removeElClassNames = function () {
         var classList = this.el.classList;
-        var dirClassName = 'fc-' + this.opt('dir');
-        var themeClassName = this.theme.getClass('widget');
-        if (bool) {
-            classList.add('fc');
-            classList.add(dirClassName);
-            classList.add(themeClassName);
+        for (var _i = 0, _a = this.elClassNames; _i < _a.length; _i++) {
+            var className = _a[_i];
+            classList.remove(className);
         }
-        else {
-            classList.remove('fc');
-            classList.remove(dirClassName);
-            classList.remove(themeClassName);
+        this.elClassNames = [];
+    };
+    CalendarComponent.prototype.updateElClassNames = function (context) {
+        this.removeElClassNames();
+        var theme = context.theme, options = context.options;
+        this.elClassNames = [
+            'fc',
+            'fc-' + options.dir,
+            theme.getClass('widget')
+        ];
+        var classList = this.el.classList;
+        for (var _i = 0, _a = this.elClassNames; _i < _a.length; _i++) {
+            var className = _a[_i];
+            classList.add(className);
         }
     };
-    CalendarComponent.prototype.render = function (props) {
-        this.freezeHeight();
-        var title = this.computeTitle(props.dateProfile, props.viewSpec.options);
-        this._renderToolbars(props.viewSpec, props.dateProfile, props.currentDate, props.dateProfileGenerator, title);
-        this.renderView(props, title);
-        this.updateSize();
-        this.thawHeight();
-    };
-    CalendarComponent.prototype.renderToolbars = function (viewSpec, dateProfile, currentDate, dateProfileGenerator, title) {
-        var headerLayout = this.opt('header');
-        var footerLayout = this.opt('footer');
-        var now = this.calendar.getNow();
+    CalendarComponent.prototype._renderToolbars = function (viewSpec, dateProfile, currentDate, title) {
+        var _a = this, context = _a.context, header = _a.header, footer = _a.footer;
+        var options = context.options, calendar = context.calendar;
+        var headerLayout = options.header;
+        var footerLayout = options.footer;
+        var dateProfileGenerator = this.props.dateProfileGenerator;
+        var now = calendar.getNow();
         var todayInfo = dateProfileGenerator.build(now);
         var prevInfo = dateProfileGenerator.buildPrev(dateProfile, currentDate);
         var nextInfo = dateProfileGenerator.buildNext(dateProfile, currentDate);
@@ -6459,48 +6488,55 @@ var CalendarComponent = /** @class */ (function (_super) {
             isNextEnabled: nextInfo.isValid
         };
         if (headerLayout) {
-            if (!this.header) {
-                this.header = new Toolbar(this.context, 'fc-header-toolbar');
-                prependToElement(this.el, this.header.el);
+            if (!header) {
+                header = this.header = new Toolbar('fc-header-toolbar');
+                prependToElement(this.el, header.el);
             }
-            this.header.receiveProps(__assign({ layout: headerLayout }, toolbarProps));
+            header.receiveProps(__assign({ layout: headerLayout }, toolbarProps), context);
         }
-        else if (this.header) {
+        else if (header) {
+            header.destroy();
+            header = this.header = null;
+        }
+        if (footerLayout) {
+            if (!footer) {
+                footer = this.footer = new Toolbar('fc-footer-toolbar');
+                appendToElement(this.el, footer.el);
+            }
+            footer.receiveProps(__assign({ layout: footerLayout }, toolbarProps), context);
+        }
+        else if (footer) {
+            footer.destroy();
+            footer = this.footer = null;
+        }
+    };
+    CalendarComponent.prototype._unrenderToolbars = function () {
+        if (this.header) {
             this.header.destroy();
             this.header = null;
         }
-        if (footerLayout) {
-            if (!this.footer) {
-                this.footer = new Toolbar(this.context, 'fc-footer-toolbar');
-                appendToElement(this.el, this.footer.el);
-            }
-            this.footer.receiveProps(__assign({ layout: footerLayout }, toolbarProps));
-        }
-        else if (this.footer) {
+        if (this.footer) {
             this.footer.destroy();
             this.footer = null;
         }
     };
     CalendarComponent.prototype.renderView = function (props, title) {
         var view = this.view;
+        var _a = this.context, calendar = _a.calendar, options = _a.options;
         var viewSpec = props.viewSpec, dateProfileGenerator = props.dateProfileGenerator;
         if (!view || view.viewSpec !== viewSpec) {
             if (view) {
                 view.destroy();
             }
-            view = this.view = new viewSpec['class']({
-                calendar: this.calendar,
-                view: null,
-                dateEnv: this.dateEnv,
-                theme: this.theme,
-                options: viewSpec.options
-            }, viewSpec, dateProfileGenerator, this.contentEl);
-        }
-        else {
-            view.addScroll(view.queryScroll());
+            view = this.view = new viewSpec['class'](viewSpec, this.contentEl);
+            if (this.savedScroll) {
+                view.addScroll(this.savedScroll, true);
+                this.savedScroll = null;
+            }
         }
         view.title = title; // for the API
         var viewProps = {
+            dateProfileGenerator: dateProfileGenerator,
             dateProfile: props.dateProfile,
             businessHours: this.parseBusinessHours(viewSpec.options.businessHours),
             eventStore: props.eventStore,
@@ -6510,20 +6546,20 @@ var CalendarComponent = /** @class */ (function (_super) {
             eventDrag: props.eventDrag,
             eventResize: props.eventResize
         };
-        var transformers = this.buildViewPropTransformers(this.calendar.pluginSystem.hooks.viewPropsTransformers);
+        var transformers = this.buildViewPropTransformers(calendar.pluginSystem.hooks.viewPropsTransformers);
         for (var _i = 0, transformers_1 = transformers; _i < transformers_1.length; _i++) {
             var transformer = transformers_1[_i];
-            __assign(viewProps, transformer.transform(viewProps, viewSpec, props, view));
+            __assign(viewProps, transformer.transform(viewProps, viewSpec, props, options));
         }
-        view.receiveProps(viewProps);
+        view.receiveProps(viewProps, this.buildComponentContext(this.context, viewSpec, view));
     };
     // Sizing
     // -----------------------------------------------------------------------------------------------------------------
     CalendarComponent.prototype.updateSize = function (isResize) {
         if (isResize === void 0) { isResize = false; }
         var view = this.view;
-        if (isResize) {
-            view.addScroll(view.queryScroll());
+        if (!view) {
+            return; // why?
         }
         if (isResize || this.isHeightAuto == null) {
             this.computeHeightVars();
@@ -6533,7 +6569,7 @@ var CalendarComponent = /** @class */ (function (_super) {
         view.popScroll(isResize);
     };
     CalendarComponent.prototype.computeHeightVars = function () {
-        var calendar = this.calendar; // yuck. need to handle dynamic options
+        var calendar = this.context.calendar; // yuck. need to handle dynamic options
         var heightInput = calendar.opt('height');
         var contentHeightInput = calendar.opt('contentHeight');
         this.isHeightAuto = heightInput === 'auto' || contentHeightInput === 'auto';
@@ -6596,7 +6632,7 @@ function computeTitle(dateProfile, viewOptions) {
     else { // for day units or smaller, use the actual day range
         range = dateProfile.activeRange;
     }
-    return this.dateEnv.formatRange(range.start, range.end, createFormatter(viewOptions.titleFormat || computeTitleFormat(dateProfile), viewOptions.titleRangeSeparator), { isEndExclusive: dateProfile.isRangeAllDay });
+    return this.context.dateEnv.formatRange(range.start, range.end, createFormatter(viewOptions.titleFormat || computeTitleFormat(dateProfile), viewOptions.titleRangeSeparator), { isEndExclusive: dateProfile.isRangeAllDay });
 }
 // Generates the format string that should be used to generate the title for the current date range.
 // Attempts to compute the most appropriate format if not explicitly specified with `titleFormat`.
@@ -6619,6 +6655,10 @@ function computeTitleFormat(dateProfile) {
             return { year: 'numeric', month: 'long', day: 'numeric' };
         }
     }
+}
+// build a context scoped to the view
+function buildComponentContext(context, viewSpec, view) {
+    return context.extend(viewSpec.options, view);
 }
 // Plugin
 // -----------------------------------------------------------------------------------------------------------------
@@ -6661,6 +6701,7 @@ var EventClicking = /** @class */ (function (_super) {
         var _this = _super.call(this, settings) || this;
         _this.handleSegClick = function (ev, segEl) {
             var component = _this.component;
+            var _a = component.context, calendar = _a.calendar, view = _a.view;
             var seg = getElSeg(segEl);
             if (seg && // might be the <div> surrounding the more link
                 component.isValidSegDownEl(ev.target)) {
@@ -6668,12 +6709,12 @@ var EventClicking = /** @class */ (function (_super) {
                 // grab before trigger fired in case trigger trashes DOM thru rerendering
                 var hasUrlContainer = elementClosest(ev.target, '.fc-has-url');
                 var url = hasUrlContainer ? hasUrlContainer.querySelector('a[href]').href : '';
-                component.publiclyTrigger('eventClick', [
+                calendar.publiclyTrigger('eventClick', [
                     {
                         el: segEl,
-                        event: new EventApi(component.calendar, seg.eventRange.def, seg.eventRange.instance),
+                        event: new EventApi(component.context.calendar, seg.eventRange.def, seg.eventRange.instance),
                         jsEvent: ev,
-                        view: component.view
+                        view: view
                     }
                 ]);
                 if (url && !ev.defaultPrevented) {
@@ -6718,23 +6759,25 @@ var EventHovering = /** @class */ (function (_super) {
         };
         var component = settings.component;
         _this.removeHoverListeners = listenToHoverBySelector(component.el, component.fgSegSelector + ',' + component.bgSegSelector, _this.handleSegEnter, _this.handleSegLeave);
-        component.calendar.on('eventElRemove', _this.handleEventElRemove);
+        // how to make sure component already has context?
+        component.context.calendar.on('eventElRemove', _this.handleEventElRemove);
         return _this;
     }
     EventHovering.prototype.destroy = function () {
         this.removeHoverListeners();
-        this.component.calendar.off('eventElRemove', this.handleEventElRemove);
+        this.component.context.calendar.off('eventElRemove', this.handleEventElRemove);
     };
     EventHovering.prototype.triggerEvent = function (publicEvName, ev, segEl) {
         var component = this.component;
+        var _a = component.context, calendar = _a.calendar, view = _a.view;
         var seg = getElSeg(segEl);
         if (!ev || component.isValidSegDownEl(ev.target)) {
-            component.publiclyTrigger(publicEvName, [
+            calendar.publiclyTrigger(publicEvName, [
                 {
                     el: segEl,
-                    event: new EventApi(this.component.calendar, seg.eventRange.def, seg.eventRange.instance),
+                    event: new EventApi(calendar, seg.eventRange.def, seg.eventRange.instance),
                     jsEvent: ev,
-                    view: component.view
+                    view: view
                 }
             ]);
         }
@@ -6779,6 +6822,7 @@ StandardTheme.prototype.iconOverridePrefix = 'fc-icon-';
 var Calendar = /** @class */ (function () {
     function Calendar(el, overrides) {
         var _this = this;
+        this.buildComponentContext = memoize(buildComponentContext$1);
         this.parseRawLocales = memoize(parseRawLocales);
         this.buildLocale = memoize(buildLocale);
         this.buildDateEnv = memoize(buildDateEnv);
@@ -6792,7 +6836,6 @@ var Calendar = /** @class */ (function () {
         this.isReducing = false;
         // isDisplaying: boolean = false // installed in DOM? accepting renders?
         this.needsRerender = false; // needs a render?
-        this.needsFullRerender = false;
         this.isRendering = false; // currently in the executeRender function?
         this.renderingPauseDepth = 0;
         this.buildDelayedRerender = memoize(buildDelayedRerender);
@@ -6832,12 +6875,13 @@ var Calendar = /** @class */ (function () {
     // -----------------------------------------------------------------------------------------------------------------
     Calendar.prototype.render = function () {
         if (!this.component) {
+            this.component = new CalendarComponent(this.el);
             this.renderableEventStore = createEmptyEventStore();
             this.bindHandlers();
             this.executeRender();
         }
         else {
-            this.requestRerender(true);
+            this.requestRerender();
         }
     };
     Calendar.prototype.destroy = function () {
@@ -6946,12 +6990,12 @@ var Calendar = /** @class */ (function () {
                 this.publiclyTrigger('loading', [false]);
             }
             var view = this.component && this.component.view;
-            if (oldState.eventStore !== newState.eventStore || this.needsFullRerender) {
+            if (oldState.eventStore !== newState.eventStore) {
                 if (oldState.eventStore) {
                     this.isEventsUpdated = true;
                 }
             }
-            if (oldState.dateProfile !== newState.dateProfile || this.needsFullRerender) {
+            if (oldState.dateProfile !== newState.dateProfile) {
                 if (oldState.dateProfile && view) { // why would view be null!?
                     this.publiclyTrigger('datesDestroy', [
                         {
@@ -6962,7 +7006,7 @@ var Calendar = /** @class */ (function () {
                 }
                 this.isDatesUpdated = true;
             }
-            if (oldState.viewType !== newState.viewType || this.needsFullRerender) {
+            if (oldState.viewType !== newState.viewType) {
                 if (oldState.viewType && view) { // why would view be null!?
                     this.publiclyTrigger('viewSkeletonDestroy', [
                         {
@@ -6981,10 +7025,8 @@ var Calendar = /** @class */ (function () {
     };
     // Render Queue
     // -----------------------------------------------------------------------------------------------------------------
-    Calendar.prototype.requestRerender = function (needsFull) {
-        if (needsFull === void 0) { needsFull = false; }
+    Calendar.prototype.requestRerender = function () {
         this.needsRerender = true;
-        this.needsFullRerender = this.needsFullRerender || needsFull;
         this.delayedRerender(); // will call a debounced-version of tryRerender
     };
     Calendar.prototype.tryRerender = function () {
@@ -7007,12 +7049,10 @@ var Calendar = /** @class */ (function () {
     // Rendering
     // -----------------------------------------------------------------------------------------------------------------
     Calendar.prototype.executeRender = function () {
-        var needsFullRerender = this.needsFullRerender; // save before clearing
         // clear these BEFORE the render so that new values will accumulate during render
         this.needsRerender = false;
-        this.needsFullRerender = false;
         this.isRendering = true;
-        this.renderComponent(needsFullRerender);
+        this.renderComponent();
         this.isRendering = false;
         // received a rerender request while rendering
         if (this.needsRerender) {
@@ -7022,11 +7062,10 @@ var Calendar = /** @class */ (function () {
     /*
     don't call this directly. use executeRender instead
     */
-    Calendar.prototype.renderComponent = function (needsFull) {
+    Calendar.prototype.renderComponent = function () {
         var _a = this, state = _a.state, component = _a.component;
         var viewType = state.viewType;
         var viewSpec = this.viewSpecs[viewType];
-        var savedScroll = (needsFull && component) ? component.view.queryScroll() : null;
         if (!viewSpec) {
             throw new Error("View type \"" + viewType + "\" is not valid");
         }
@@ -7039,26 +7078,7 @@ var Calendar = /** @class */ (function () {
         var eventUiSingleBase = this.buildEventUiSingleBase(viewSpec.options);
         var eventUiBySource = this.buildEventUiBySource(state.eventSources);
         var eventUiBases = this.eventUiBases = this.buildEventUiBases(renderableEventStore.defs, eventUiSingleBase, eventUiBySource);
-        if (needsFull || !component) {
-            if (component) {
-                component.freezeHeight(); // next component will unfreeze it
-                component.destroy();
-            }
-            component = this.component = new CalendarComponent({
-                calendar: this,
-                view: null,
-                dateEnv: this.dateEnv,
-                theme: this.theme,
-                options: this.optionsManager.computed
-            }, this.el);
-            this.isViewUpdated = true;
-            this.isDatesUpdated = true;
-            this.isEventsUpdated = true;
-        }
-        component.receiveProps(__assign({}, state, { viewSpec: viewSpec, dateProfile: state.dateProfile, dateProfileGenerator: this.dateProfileGenerators[viewType], eventStore: renderableEventStore, eventUiBases: eventUiBases, dateSelection: state.dateSelection, eventSelection: state.eventSelection, eventDrag: state.eventDrag, eventResize: state.eventResize }));
-        if (savedScroll) {
-            component.view.applyScroll(savedScroll, false);
-        }
+        component.receiveProps(__assign({}, state, { viewSpec: viewSpec, dateProfileGenerator: this.dateProfileGenerators[viewType], dateProfile: state.dateProfile, eventStore: renderableEventStore, eventUiBases: eventUiBases, dateSelection: state.dateSelection, eventSelection: state.eventSelection, eventDrag: state.eventDrag, eventResize: state.eventResize }), this.buildComponentContext(this.theme, this.dateEnv, this.optionsManager.computed));
         if (this.isViewUpdated) {
             this.isViewUpdated = false;
             this.publiclyTrigger('viewSkeletonRender', [
@@ -7135,7 +7155,6 @@ var Calendar = /** @class */ (function () {
         this.optionsManager.mutate(normalUpdates, removals, isDynamic);
         if (anyDifficultOptions) {
             this.handleOptions(this.optionsManager.computed);
-            this.needsFullRerender = true;
         }
         this.batchRendering(function () {
             if (anyDifficultOptions) {
@@ -7146,7 +7165,7 @@ var Calendar = /** @class */ (function () {
                     });
                 }
                 /* HACK
-                has the same effect as calling this.requestRerender(true)
+                has the same effect as calling this.requestRerender()
                 but recomputes the state's dateProfile
                 */
                 _this.dispatch({
@@ -7652,6 +7671,9 @@ var Calendar = /** @class */ (function () {
 EmitterMixin.mixInto(Calendar);
 // for memoizers
 // -----------------------------------------------------------------------------------------------------------------
+function buildComponentContext$1(theme, dateEnv, options) {
+    return new ComponentContext(this, theme, dateEnv, options, null);
+}
 function buildDateEnv(locale, timeZone, namedTimeZoneImpl, firstDay, weekNumberCalculation, weekLabel, cmdFormatter) {
     return new DateEnv({
         calendarSystem: 'gregory',
@@ -7693,9 +7715,8 @@ function buildEventUiBases(eventDefs, eventUiSingleBase, eventUiBySource) {
 
 var View = /** @class */ (function (_super) {
     __extends(View, _super);
-    function View(context, viewSpec, dateProfileGenerator, parentEl) {
-        var _this = _super.call(this, context, createElement('div', { className: 'fc-view fc-' + viewSpec.type + '-view' }), true // isView (HACK)
-        ) || this;
+    function View(viewSpec, parentEl) {
+        var _this = _super.call(this, createElement('div', { className: 'fc-view fc-' + viewSpec.type + '-view' })) || this;
         _this.renderDatesMem = memoizeRendering(_this.renderDatesWrap, _this.unrenderDatesWrap);
         _this.renderBusinessHoursMem = memoizeRendering(_this.renderBusinessHours, _this.unrenderBusinessHours, [_this.renderDatesMem]);
         _this.renderDateSelectionMem = memoizeRendering(_this.renderDateSelectionWrap, _this.unrenderDateSelectionWrap, [_this.renderDatesMem]);
@@ -7704,10 +7725,7 @@ var View = /** @class */ (function (_super) {
         _this.renderEventDragMem = memoizeRendering(_this.renderEventDragWrap, _this.unrenderEventDragWrap, [_this.renderDatesMem]);
         _this.renderEventResizeMem = memoizeRendering(_this.renderEventResizeWrap, _this.unrenderEventResizeWrap, [_this.renderDatesMem]);
         _this.viewSpec = viewSpec;
-        _this.dateProfileGenerator = dateProfileGenerator;
         _this.type = viewSpec.type;
-        _this.eventOrderSpecs = parseFieldSpecs(_this.opt('eventOrder'));
-        _this.nextDayThreshold = createDuration(_this.opt('nextDayThreshold'));
         parentEl.appendChild(_this.el);
         _this.initialize();
         return _this;
@@ -7718,35 +7736,35 @@ var View = /** @class */ (function (_super) {
         // Date Setting/Unsetting
         // -----------------------------------------------------------------------------------------------------------------
         get: function () {
-            return this.dateEnv.toDate(this.props.dateProfile.activeRange.start);
+            return this.context.dateEnv.toDate(this.props.dateProfile.activeRange.start);
         },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(View.prototype, "activeEnd", {
         get: function () {
-            return this.dateEnv.toDate(this.props.dateProfile.activeRange.end);
+            return this.context.dateEnv.toDate(this.props.dateProfile.activeRange.end);
         },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(View.prototype, "currentStart", {
         get: function () {
-            return this.dateEnv.toDate(this.props.dateProfile.currentRange.start);
+            return this.context.dateEnv.toDate(this.props.dateProfile.currentRange.start);
         },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(View.prototype, "currentEnd", {
         get: function () {
-            return this.dateEnv.toDate(this.props.dateProfile.currentRange.end);
+            return this.context.dateEnv.toDate(this.props.dateProfile.currentRange.end);
         },
         enumerable: true,
         configurable: true
     });
     // General Rendering
     // -----------------------------------------------------------------------------------------------------------------
-    View.prototype.render = function (props) {
+    View.prototype.render = function (props, context) {
         this.renderDatesMem(props.dateProfile);
         this.renderBusinessHoursMem(props.businessHours);
         this.renderDateSelectionMem(props.dateSelection);
@@ -7755,6 +7773,9 @@ var View = /** @class */ (function (_super) {
         this.renderEventDragMem(props.eventDrag);
         this.renderEventResizeMem(props.eventResize);
     };
+    View.prototype.beforeUpdate = function () {
+        this.addScroll(this.queryScroll());
+    };
     View.prototype.destroy = function () {
         _super.prototype.destroy.call(this);
         this.renderDatesMem.unrender(); // should unrender everything else
@@ -7762,7 +7783,10 @@ var View = /** @class */ (function (_super) {
     // Sizing
     // -----------------------------------------------------------------------------------------------------------------
     View.prototype.updateSize = function (isResize, viewHeight, isAuto) {
-        var calendar = this.calendar;
+        var calendar = this.context.calendar;
+        if (isResize) {
+            this.addScroll(this.queryScroll()); // NOTE: same code as in beforeUpdate
+        }
         if (isResize || // HACKS...
             calendar.isViewUpdated ||
             calendar.isDatesUpdated ||
@@ -7771,6 +7795,7 @@ var View = /** @class */ (function (_super) {
             // anything that might cause dimension changes
             this.updateBaseSize(isResize, viewHeight, isAuto);
         }
+        // NOTE: popScroll is called by CalendarComponent
     };
     View.prototype.updateBaseSize = function (isResize, viewHeight, isAuto) {
     };
@@ -7779,9 +7804,8 @@ var View = /** @class */ (function (_super) {
     View.prototype.renderDatesWrap = function (dateProfile) {
         this.renderDates(dateProfile);
         this.addScroll({
-            duration: createDuration(this.opt('scrollTime'))
+            duration: createDuration(this.context.options.scrollTime)
         });
-        this.startNowIndicator(dateProfile); // shouldn't render yet because updateSize will be called soon
     };
     View.prototype.unrenderDatesWrap = function () {
         this.stopNowIndicator();
@@ -7814,22 +7838,7 @@ var View = /** @class */ (function (_super) {
     // util for subclasses
     View.prototype.sliceEvents = function (eventStore, allDay) {
         var props = this.props;
-        return sliceEventStore(eventStore, props.eventUiBases, props.dateProfile.activeRange, allDay ? this.nextDayThreshold : null).fg;
-    };
-    View.prototype.computeEventDraggable = function (eventDef, eventUi) {
-        var transformers = this.calendar.pluginSystem.hooks.isDraggableTransformers;
-        var val = eventUi.startEditable;
-        for (var _i = 0, transformers_1 = transformers; _i < transformers_1.length; _i++) {
-            var transformer = transformers_1[_i];
-            val = transformer(val, eventDef, eventUi, this);
-        }
-        return val;
-    };
-    View.prototype.computeEventStartResizable = function (eventDef, eventUi) {
-        return eventUi.durationEditable && this.opt('eventResizableFromStart');
-    };
-    View.prototype.computeEventEndResizable = function (eventDef, eventUi) {
-        return eventUi.durationEditable;
+        return sliceEventStore(eventStore, props.eventUiBases, props.dateProfile.activeRange, allDay ? this.context.nextDayThreshold : null).fg;
     };
     // Event Selection
     // -----------------------------------------------------------------------------------------------------------------
@@ -7878,17 +7887,18 @@ var View = /** @class */ (function (_super) {
     // Immediately render the current time indicator and begins re-rendering it at an interval,
     // which is defined by this.getNowIndicatorUnit().
     // TODO: somehow do this for the current whole day's background too
-    View.prototype.startNowIndicator = function (dateProfile) {
+    // USAGE: must be called manually from subclasses' render methods! don't need to call stopNowIndicator tho
+    View.prototype.startNowIndicator = function (dateProfile, dateProfileGenerator) {
         var _this = this;
-        var dateEnv = this.dateEnv;
+        var _a = this.context, calendar = _a.calendar, dateEnv = _a.dateEnv, options = _a.options;
         var unit;
         var update;
         var delay; // ms wait value
-        if (this.opt('nowIndicator')) {
-            unit = this.getNowIndicatorUnit(dateProfile);
+        if (options.nowIndicator && !this.initialNowDate) {
+            unit = this.getNowIndicatorUnit(dateProfile, dateProfileGenerator);
             if (unit) {
                 update = this.updateNowIndicator.bind(this);
-                this.initialNowDate = this.calendar.getNow();
+                this.initialNowDate = calendar.getNow();
                 this.initialNowQueriedMs = new Date().valueOf();
                 // wait until the beginning of the next interval
                 delay = dateEnv.add(dateEnv.startOf(this.initialNowDate, unit), createDuration(1, unit)).valueOf() - this.initialNowDate.valueOf();
@@ -7922,20 +7932,20 @@ var View = /** @class */ (function (_super) {
     // Immediately unrenders the view's current time indicator and stops any re-rendering timers.
     // Won't cause side effects if indicator isn't rendered.
     View.prototype.stopNowIndicator = function () {
+        if (this.nowIndicatorTimeoutID) {
+            clearTimeout(this.nowIndicatorTimeoutID);
+            this.nowIndicatorTimeoutID = null;
+        }
+        if (this.nowIndicatorIntervalID) {
+            clearInterval(this.nowIndicatorIntervalID);
+            this.nowIndicatorIntervalID = null;
+        }
         if (this.isNowIndicatorRendered) {
-            if (this.nowIndicatorTimeoutID) {
-                clearTimeout(this.nowIndicatorTimeoutID);
-                this.nowIndicatorTimeoutID = null;
-            }
-            if (this.nowIndicatorIntervalID) {
-                clearInterval(this.nowIndicatorIntervalID);
-                this.nowIndicatorIntervalID = null;
-            }
             this.unrenderNowIndicator();
             this.isNowIndicatorRendered = false;
         }
     };
-    View.prototype.getNowIndicatorUnit = function (dateProfile) {
+    View.prototype.getNowIndicatorUnit = function (dateProfile, dateProfileGenerator) {
         // subclasses should implement
     };
     // Renders a current time indicator at the given datetime
@@ -7948,16 +7958,20 @@ var View = /** @class */ (function (_super) {
     };
     /* Scroller
     ------------------------------------------------------------------------------------------------------------------*/
-    View.prototype.addScroll = function (scroll) {
-        var queuedScroll = this.queuedScroll || (this.queuedScroll = {});
-        __assign(queuedScroll, scroll);
+    View.prototype.addScroll = function (scroll, isForced) {
+        if (isForced) {
+            scroll.isForced = isForced;
+        }
+        __assign(this.queuedScroll || (this.queuedScroll = {}), scroll);
     };
     View.prototype.popScroll = function (isResize) {
         this.applyQueuedScroll(isResize);
         this.queuedScroll = null;
     };
     View.prototype.applyQueuedScroll = function (isResize) {
-        this.applyScroll(this.queuedScroll || {}, isResize);
+        if (this.queuedScroll) {
+            this.applyScroll(this.queuedScroll, isResize);
+        }
     };
     View.prototype.queryScroll = function () {
         var scroll = {};
@@ -7967,8 +7981,8 @@ var View = /** @class */ (function (_super) {
         return scroll;
     };
     View.prototype.applyScroll = function (scroll, isResize) {
-        var duration = scroll.duration;
-        if (duration != null) {
+        var duration = scroll.duration, isForced = scroll.isForced;
+        if (duration != null && !isForced) {
             delete scroll.duration;
             if (this.props.dateProfile) { // dates rendered yet?
                 __assign(scroll, this.computeDateScroll(duration));
@@ -7998,12 +8012,12 @@ View.prototype.usesMinMaxTime = false;
 View.prototype.dateProfileGeneratorClass = DateProfileGenerator;
 
 var FgEventRenderer = /** @class */ (function () {
-    function FgEventRenderer(context) {
+    function FgEventRenderer() {
         this.segs = [];
         this.isSizeDirty = false;
-        this.context = context;
     }
-    FgEventRenderer.prototype.renderSegs = function (segs, mirrorInfo) {
+    FgEventRenderer.prototype.renderSegs = function (context, segs, mirrorInfo) {
+        this.context = context;
         this.rangeUpdated(); // called too frequently :(
         // render an `.el` on each seg
         // returns a subset of the segs. segs that were actually rendered
@@ -8011,10 +8025,10 @@ var FgEventRenderer = /** @class */ (function () {
         this.segs = segs;
         this.attachSegs(segs, mirrorInfo);
         this.isSizeDirty = true;
-        this.context.view.triggerRenderedSegs(this.segs, Boolean(mirrorInfo));
+        triggerRenderedSegs(this.context, this.segs, Boolean(mirrorInfo));
     };
-    FgEventRenderer.prototype.unrender = function (_segs, mirrorInfo) {
-        this.context.view.triggerWillRemoveSegs(this.segs, Boolean(mirrorInfo));
+    FgEventRenderer.prototype.unrender = function (context, _segs, mirrorInfo) {
+        triggerWillRemoveSegs(this.context, this.segs, Boolean(mirrorInfo));
         this.detachSegs(this.segs);
         this.segs = [];
     };
@@ -8053,7 +8067,7 @@ var FgEventRenderer = /** @class */ (function () {
                     seg.el = el;
                 }
             });
-            segs = filterSegsViaEls(this.context.view, segs, Boolean(mirrorInfo));
+            segs = filterSegsViaEls(this.context, segs, Boolean(mirrorInfo));
         }
         return segs;
     };
@@ -8135,7 +8149,7 @@ var FgEventRenderer = /** @class */ (function () {
         };
     };
     FgEventRenderer.prototype.sortEventSegs = function (segs) {
-        var specs = this.context.view.eventOrderSpecs;
+        var specs = this.context.eventOrderSpecs;
         var objs = segs.map(buildSegCompareObj);
         objs.sort(function (obj0, obj1) {
             return compareByFieldSpecs(obj0, obj1, specs);
@@ -8216,19 +8230,22 @@ function buildSegCompareObj(seg) {
      });
 }
 
+/*
+TODO: when refactoring this class, make a new FillRenderer instance for each `type`
+*/
 var FillRenderer = /** @class */ (function () {
-    function FillRenderer(context) {
+    function FillRenderer() {
         this.fillSegTag = 'div';
         this.dirtySizeFlags = {};
-        this.context = context;
         this.containerElsByType = {};
         this.segsByType = {};
     }
     FillRenderer.prototype.getSegsByType = function (type) {
         return this.segsByType[type] || [];
     };
-    FillRenderer.prototype.renderSegs = function (type, segs) {
+    FillRenderer.prototype.renderSegs = function (type, context, segs) {
         var _a;
+        this.context = context;
         var renderedSegs = this.renderSegEls(type, segs); // assignes `.el` to each seg. returns successfully rendered segs
         var containerEls = this.attachSegs(type, renderedSegs);
         if (containerEls) {
@@ -8236,16 +8253,16 @@ var FillRenderer = /** @class */ (function () {
         }
         this.segsByType[type] = renderedSegs;
         if (type === 'bgEvent') {
-            this.context.view.triggerRenderedSegs(renderedSegs, false); // isMirror=false
+            triggerRenderedSegs(context, renderedSegs, false); // isMirror=false
         }
         this.dirtySizeFlags[type] = true;
     };
     // Unrenders a specific type of fill that is currently rendered on the grid
-    FillRenderer.prototype.unrender = function (type) {
+    FillRenderer.prototype.unrender = function (type, context) {
         var segs = this.segsByType[type];
         if (segs) {
             if (type === 'bgEvent') {
-                this.context.view.triggerWillRemoveSegs(segs, false); // isMirror=false
+                triggerWillRemoveSegs(context, segs, false); // isMirror=false
             }
             this.detachSegs(type, segs);
         }
@@ -8270,7 +8287,7 @@ var FillRenderer = /** @class */ (function () {
                 }
             });
             if (type === 'bgEvent') {
-                segs = filterSegsViaEls(this.context.view, segs, false // isMirror. background events can never be mirror elements
+                segs = filterSegsViaEls(this.context, segs, false // isMirror. background events can never be mirror elements
                 );
             }
             // correct element type? (would be bad if a non-TD were inserted into a table for example)
@@ -8436,7 +8453,7 @@ function computeFallbackHeaderFormat(datesRepDistinctDays, dayCnt) {
     }
 }
 function renderDateCell(dateMarker, dateProfile, datesRepDistinctDays, colCnt, colHeadFormat, context, colspan, otherAttrs) {
-    var view = context.view, dateEnv = context.dateEnv, theme = context.theme, options = context.options;
+    var dateEnv = context.dateEnv, theme = context.theme, options = context.options;
     var isDateValid = rangeContainsMarker(dateProfile.activeRange, dateMarker); // TODO: called too frequently. cache somehow.
     var classNames = [
         'fc-day-header',
@@ -8476,7 +8493,7 @@ function renderDateCell(dateMarker, dateProfile, datesRepDistinctDays, colCnt, c
         '>' +
         (isDateValid ?
             // don't make a link if the heading could represent multiple days, or if there's only one day (forceOff)
-            buildGotoAnchorHtml(view, { date: dateMarker, forceOff: !datesRepDistinctDays || colCnt === 1 }, innerHtml) :
+            buildGotoAnchorHtml(options, dateEnv, { date: dateMarker, forceOff: !datesRepDistinctDays || colCnt === 1 }, innerHtml) :
             // if not valid, display text, but no link
             innerHtml) +
         '</th>';
@@ -8484,36 +8501,47 @@ function renderDateCell(dateMarker, dateProfile, datesRepDistinctDays, colCnt, c
 
 var DayHeader = /** @class */ (function (_super) {
     __extends(DayHeader, _super);
-    function DayHeader(context, parentEl) {
-        var _this = _super.call(this, context) || this;
-        parentEl.innerHTML = ''; // because might be nbsp
-        parentEl.appendChild(_this.el = htmlToElement('<div class="fc-row ' + _this.theme.getClass('headerRow') + '">' +
-            '<table class="' + _this.theme.getClass('tableGrid') + '">' +
-            '<thead></thead>' +
-            '</table>' +
-            '</div>'));
-        _this.thead = _this.el.querySelector('thead');
+    function DayHeader(parentEl) {
+        var _this = _super.call(this) || this;
+        _this.renderSkeleton = memoizeRendering(_this._renderSkeleton, _this._unrenderSkeleton);
+        _this.parentEl = parentEl;
         return _this;
     }
-    DayHeader.prototype.destroy = function () {
-        removeElement(this.el);
-    };
-    DayHeader.prototype.render = function (props) {
+    DayHeader.prototype.render = function (props, context) {
         var dates = props.dates, datesRepDistinctDays = props.datesRepDistinctDays;
         var parts = [];
+        this.renderSkeleton(context);
         if (props.renderIntroHtml) {
             parts.push(props.renderIntroHtml());
         }
-        var colHeadFormat = createFormatter(this.opt('columnHeaderFormat') ||
+        var colHeadFormat = createFormatter(context.options.columnHeaderFormat ||
             computeFallbackHeaderFormat(datesRepDistinctDays, dates.length));
         for (var _i = 0, dates_1 = dates; _i < dates_1.length; _i++) {
             var date = dates_1[_i];
-            parts.push(renderDateCell(date, props.dateProfile, datesRepDistinctDays, dates.length, colHeadFormat, this.context));
+            parts.push(renderDateCell(date, props.dateProfile, datesRepDistinctDays, dates.length, colHeadFormat, context));
         }
-        if (this.isRtl) {
+        if (context.isRtl) {
             parts.reverse();
         }
         this.thead.innerHTML = '<tr>' + parts.join('') + '</tr>';
+    };
+    DayHeader.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.renderSkeleton.unrender();
+    };
+    DayHeader.prototype._renderSkeleton = function (context) {
+        var theme = context.theme;
+        var parentEl = this.parentEl;
+        parentEl.innerHTML = ''; // because might be nbsp
+        parentEl.appendChild(this.el = htmlToElement('<div class="fc-row ' + theme.getClass('headerRow') + '">' +
+            '<table class="' + theme.getClass('tableGrid') + '">' +
+            '<thead></thead>' +
+            '</table>' +
+            '</div>'));
+        this.thead = this.el.querySelector('thead');
+    };
+    DayHeader.prototype._unrenderSkeleton = function () {
+        removeElement(this.el);
     };
     return DayHeader;
 }(Component));
@@ -8663,16 +8691,16 @@ var Slicer = /** @class */ (function () {
         this.sliceEventDrag = memoize(this._sliceInteraction);
         this.sliceEventResize = memoize(this._sliceInteraction);
     }
-    Slicer.prototype.sliceProps = function (props, dateProfile, nextDayThreshold, component) {
+    Slicer.prototype.sliceProps = function (props, dateProfile, nextDayThreshold, calendar, component) {
         var extraArgs = [];
-        for (var _i = 4; _i < arguments.length; _i++) {
-            extraArgs[_i - 4] = arguments[_i];
+        for (var _i = 5; _i < arguments.length; _i++) {
+            extraArgs[_i - 5] = arguments[_i];
         }
         var eventUiBases = props.eventUiBases;
         var eventSegs = this.sliceEventStore.apply(this, [props.eventStore, eventUiBases, dateProfile, nextDayThreshold, component].concat(extraArgs));
         return {
             dateSelectionSegs: this.sliceDateSelection.apply(this, [props.dateSelection, eventUiBases, component].concat(extraArgs)),
-            businessHourSegs: this.sliceBusinessHours.apply(this, [props.businessHours, dateProfile, nextDayThreshold, component].concat(extraArgs)),
+            businessHourSegs: this.sliceBusinessHours.apply(this, [props.businessHours, dateProfile, nextDayThreshold, calendar, component].concat(extraArgs)),
             fgEventSegs: eventSegs.fg,
             bgEventSegs: eventSegs.bg,
             eventDrag: this.sliceEventDrag.apply(this, [props.eventDrag, eventUiBases, dateProfile, nextDayThreshold, component].concat(extraArgs)),
@@ -8690,15 +8718,15 @@ var Slicer = /** @class */ (function () {
             {},
             component].concat(extraArgs));
     };
-    Slicer.prototype._sliceBusinessHours = function (businessHours, dateProfile, nextDayThreshold, component) {
+    Slicer.prototype._sliceBusinessHours = function (businessHours, dateProfile, nextDayThreshold, calendar, component) {
         var extraArgs = [];
-        for (var _i = 4; _i < arguments.length; _i++) {
-            extraArgs[_i - 4] = arguments[_i];
+        for (var _i = 5; _i < arguments.length; _i++) {
+            extraArgs[_i - 5] = arguments[_i];
         }
         if (!businessHours) {
             return [];
         }
-        return this._sliceEventStore.apply(this, [expandRecurring(businessHours, computeActiveRange(dateProfile, Boolean(nextDayThreshold)), component.calendar),
+        return this._sliceEventStore.apply(this, [expandRecurring(businessHours, computeActiveRange(dateProfile, Boolean(nextDayThreshold)), calendar),
             {},
             dateProfile,
             nextDayThreshold,
@@ -8744,7 +8772,7 @@ var Slicer = /** @class */ (function () {
         if (!dateSpan) {
             return [];
         }
-        var eventRange = fabricateEventRange(dateSpan, eventUiBases, component.calendar);
+        var eventRange = fabricateEventRange(dateSpan, eventUiBases, component.context.calendar);
         var segs = this.sliceRange.apply(this, [dateSpan.range].concat(extraArgs));
         for (var _a = 0, segs_1 = segs; _a < segs_1.length; _a++) {
             var seg = segs_1[_a];
@@ -8800,7 +8828,7 @@ function computeActiveRange(dateProfile, isComponentAllDay) {
 
 // exports
 // --------------------------------------------------------------------------------------------------
-var version = '4.3.1';
+var version = '4.4.2';
 
 
 
@@ -8816,16 +8844,16 @@ var version = '4.3.1';
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractDayGridView", function() { return DayGridView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AbstractDayGridView", function() { return AbstractDayGridView; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayBgRow", function() { return DayBgRow; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayGrid", function() { return DayGrid; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayGridSlicer", function() { return DayGridSlicer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayGridView", function() { return DayGridView$1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayGridView", function() { return DayGridView; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SimpleDayGrid", function() { return SimpleDayGrid; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildBasicDayTable", function() { return buildDayTable; });
 /* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fullcalendar/core */ "./node_modules/@fullcalendar/core/main.esm.js");
 /*!
-FullCalendar Day Grid Plugin v4.3.0
+FullCalendar Day Grid Plugin v4.4.2
 Docs & License: https://fullcalendar.io/
 (c) 2019 Adam Shaw
 */
@@ -8833,18 +8861,18 @@ Docs & License: https://fullcalendar.io/
 
 
 /*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
+Copyright (c) Microsoft Corporation.
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
 
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 /* global Reflect, Promise */
 
@@ -9036,14 +9064,14 @@ var SimpleDayGridEventRenderer = /** @class */ (function (_super) {
     }
     // Builds the HTML to be used for the default element for an individual segment
     SimpleDayGridEventRenderer.prototype.renderSegHtml = function (seg, mirrorInfo) {
-        var _a = this.context, view = _a.view, options = _a.options;
+        var context = this.context;
         var eventRange = seg.eventRange;
         var eventDef = eventRange.def;
         var eventUi = eventRange.ui;
         var allDay = eventDef.allDay;
-        var isDraggable = view.computeEventDraggable(eventDef, eventUi);
-        var isResizableFromStart = allDay && seg.isStart && view.computeEventStartResizable(eventDef, eventUi);
-        var isResizableFromEnd = allDay && seg.isEnd && view.computeEventEndResizable(eventDef, eventUi);
+        var isDraggable = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeEventDraggable"])(context, eventDef, eventUi);
+        var isResizableFromStart = allDay && seg.isStart && Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeEventStartResizable"])(context, eventDef, eventUi);
+        var isResizableFromEnd = allDay && seg.isEnd && Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeEventEndResizable"])(context, eventDef, eventUi);
         var classes = this.getSegClasses(seg, isDraggable, isResizableFromStart || isResizableFromEnd, mirrorInfo);
         var skinCss = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["cssToStr"])(this.getSkinCss(eventUi));
         var timeHtml = '';
@@ -9070,7 +9098,7 @@ var SimpleDayGridEventRenderer = /** @class */ (function (_super) {
                 '') +
             '>' +
             '<div class="fc-content">' +
-            (options.dir === 'rtl' ?
+            (context.options.dir === 'rtl' ?
                 titleHtml + ' ' + timeHtml : // put a natural space in between
                 timeHtml + ' ' + titleHtml //
             ) +
@@ -9103,7 +9131,7 @@ var SimpleDayGridEventRenderer = /** @class */ (function (_super) {
 var DayGridEventRenderer = /** @class */ (function (_super) {
     __extends(DayGridEventRenderer, _super);
     function DayGridEventRenderer(dayGrid) {
-        var _this = _super.call(this, dayGrid.context) || this;
+        var _this = _super.call(this) || this;
         _this.dayGrid = dayGrid;
         return _this;
     }
@@ -9146,8 +9174,9 @@ var DayGridEventRenderer = /** @class */ (function (_super) {
     // the segments. Returns object with a bunch of internal data about how the render was calculated.
     // NOTE: modifies rowSegs
     DayGridEventRenderer.prototype.renderSegRow = function (row, rowSegs) {
+        var isRtl = this.context.isRtl;
         var dayGrid = this.dayGrid;
-        var colCnt = dayGrid.colCnt, isRtl = dayGrid.isRtl;
+        var colCnt = dayGrid.colCnt;
         var segLevels = this.buildSegLevels(rowSegs); // group into sub-arrays of levels
         var levelCnt = Math.max(1, segLevels.length); // ensure at least one level
         var tbody = document.createElement('tbody');
@@ -9212,7 +9241,7 @@ var DayGridEventRenderer = /** @class */ (function (_super) {
             emptyCellsUntil(colCnt); // finish off the row
             var introHtml = dayGrid.renderProps.renderIntroHtml();
             if (introHtml) {
-                if (dayGrid.isRtl) {
+                if (isRtl) {
                     Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["appendToElement"])(tr, introHtml);
                 }
                 else {
@@ -9233,7 +9262,8 @@ var DayGridEventRenderer = /** @class */ (function (_super) {
     // Stacks a flat array of segments, which are all assumed to be in the same row, into subarrays of vertical levels.
     // NOTE: modifies segs
     DayGridEventRenderer.prototype.buildSegLevels = function (segs) {
-        var _a = this.dayGrid, isRtl = _a.isRtl, colCnt = _a.colCnt;
+        var isRtl = this.context.isRtl;
+        var colCnt = this.dayGrid.colCnt;
         var levels = [];
         var i;
         var seg;
@@ -9335,19 +9365,19 @@ var EMPTY_CELL_HTML = '<td style="pointer-events:none"></td>';
 var DayGridFillRenderer = /** @class */ (function (_super) {
     __extends(DayGridFillRenderer, _super);
     function DayGridFillRenderer(dayGrid) {
-        var _this = _super.call(this, dayGrid.context) || this;
+        var _this = _super.call(this) || this;
         _this.fillSegTag = 'td'; // override the default tag name
         _this.dayGrid = dayGrid;
         return _this;
     }
-    DayGridFillRenderer.prototype.renderSegs = function (type, segs) {
+    DayGridFillRenderer.prototype.renderSegs = function (type, context, segs) {
         // don't render timed background events
         if (type === 'bgEvent') {
             segs = segs.filter(function (seg) {
                 return seg.eventRange.def.allDay;
             });
         }
-        _super.prototype.renderSegs.call(this, type, segs);
+        _super.prototype.renderSegs.call(this, type, context, segs);
     };
     DayGridFillRenderer.prototype.attachSegs = function (type, segs) {
         var els = [];
@@ -9365,7 +9395,8 @@ var DayGridFillRenderer = /** @class */ (function (_super) {
     // Generates the HTML needed for one row of a fill. Requires the seg's el to be rendered.
     DayGridFillRenderer.prototype.renderFillRow = function (type, seg) {
         var dayGrid = this.dayGrid;
-        var colCnt = dayGrid.colCnt, isRtl = dayGrid.isRtl;
+        var isRtl = this.context.isRtl;
+        var colCnt = dayGrid.colCnt;
         var leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol;
         var rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol;
         var startCol = leftCol;
@@ -9397,7 +9428,7 @@ var DayGridFillRenderer = /** @class */ (function (_super) {
         }
         var introHtml = dayGrid.renderProps.renderIntroHtml();
         if (introHtml) {
-            if (dayGrid.isRtl) {
+            if (isRtl) {
                 Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["appendToElement"])(trEl, introHtml);
             }
             else {
@@ -9411,23 +9442,25 @@ var DayGridFillRenderer = /** @class */ (function (_super) {
 
 var DayTile = /** @class */ (function (_super) {
     __extends(DayTile, _super);
-    function DayTile(context, el) {
-        var _this = _super.call(this, context, el) || this;
+    function DayTile(el) {
+        var _this = _super.call(this, el) || this;
         var eventRenderer = _this.eventRenderer = new DayTileEventRenderer(_this);
         var renderFrame = _this.renderFrame = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderFrame);
         _this.renderFgEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.renderSegs.bind(eventRenderer), eventRenderer.unrender.bind(eventRenderer), [renderFrame]);
         _this.renderEventSelection = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.selectByInstanceId.bind(eventRenderer), eventRenderer.unselectByInstanceId.bind(eventRenderer), [_this.renderFgEvents]);
         _this.renderEventDrag = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.hideByHash.bind(eventRenderer), eventRenderer.showByHash.bind(eventRenderer), [renderFrame]);
         _this.renderEventResize = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.hideByHash.bind(eventRenderer), eventRenderer.showByHash.bind(eventRenderer), [renderFrame]);
-        context.calendar.registerInteractiveComponent(_this, {
-            el: _this.el,
-            useEventCenter: false
-        });
         return _this;
     }
-    DayTile.prototype.render = function (props) {
+    DayTile.prototype.firstContext = function (context) {
+        context.calendar.registerInteractiveComponent(this, {
+            el: this.el,
+            useEventCenter: false
+        });
+    };
+    DayTile.prototype.render = function (props, context) {
         this.renderFrame(props.date);
-        this.renderFgEvents(props.fgSegs);
+        this.renderFgEvents(context, props.fgSegs);
         this.renderEventSelection(props.eventSelection);
         this.renderEventDrag(props.eventDragInstances);
         this.renderEventResize(props.eventResizeInstances);
@@ -9435,11 +9468,11 @@ var DayTile = /** @class */ (function (_super) {
     DayTile.prototype.destroy = function () {
         _super.prototype.destroy.call(this);
         this.renderFrame.unrender(); // should unrender everything else
-        this.calendar.unregisterInteractiveComponent(this);
+        this.context.calendar.unregisterInteractiveComponent(this);
     };
     DayTile.prototype._renderFrame = function (date) {
-        var _a = this, theme = _a.theme, dateEnv = _a.dateEnv;
-        var title = dateEnv.format(date, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createFormatter"])(this.opt('dayPopoverFormat')) // TODO: cache
+        var _a = this.context, theme = _a.theme, dateEnv = _a.dateEnv, options = _a.options;
+        var title = dateEnv.format(date, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createFormatter"])(options.dayPopoverFormat) // TODO: cache
         );
         this.el.innerHTML =
             '<div class="fc-header ' + theme.getClass('popoverHeader') + '">' +
@@ -9478,7 +9511,7 @@ var DayTile = /** @class */ (function (_super) {
 var DayTileEventRenderer = /** @class */ (function (_super) {
     __extends(DayTileEventRenderer, _super);
     function DayTileEventRenderer(dayTile) {
-        var _this = _super.call(this, dayTile.context) || this;
+        var _this = _super.call(this) || this;
         _this.dayTile = dayTile;
         return _this;
     }
@@ -9539,10 +9572,11 @@ var DAY_NUM_FORMAT = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["cre
 var WEEK_NUM_FORMAT = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createFormatter"])({ week: 'numeric' });
 var DayGrid = /** @class */ (function (_super) {
     __extends(DayGrid, _super);
-    function DayGrid(context, el, renderProps) {
-        var _this = _super.call(this, context, el) || this;
+    function DayGrid(el, renderProps) {
+        var _this = _super.call(this, el) || this;
         _this.bottomCoordPadding = 0; // hack for extending the hit area for the last row of the coordinate grid
         _this.isCellSizesDirty = false;
+        _this.renderProps = renderProps;
         var eventRenderer = _this.eventRenderer = new DayGridEventRenderer(_this);
         var fillRenderer = _this.fillRenderer = new DayGridFillRenderer(_this);
         _this.mirrorRenderer = new DayGridMirrorRenderer(_this);
@@ -9554,18 +9588,17 @@ var DayGrid = /** @class */ (function (_super) {
         _this.renderEventSelection = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(eventRenderer.selectByInstanceId.bind(eventRenderer), eventRenderer.unselectByInstanceId.bind(eventRenderer), [_this.renderFgEvents]);
         _this.renderEventDrag = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderEventDrag, _this._unrenderEventDrag, [renderCells]);
         _this.renderEventResize = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderEventResize, _this._unrenderEventResize, [renderCells]);
-        _this.renderProps = renderProps;
         return _this;
     }
-    DayGrid.prototype.render = function (props) {
+    DayGrid.prototype.render = function (props, context) {
         var cells = props.cells;
         this.rowCnt = cells.length;
         this.colCnt = cells[0].length;
         this.renderCells(cells, props.isRigid);
-        this.renderBusinessHours(props.businessHourSegs);
-        this.renderDateSelection(props.dateSelectionSegs);
-        this.renderBgEvents(props.bgEventSegs);
-        this.renderFgEvents(props.fgEventSegs);
+        this.renderBusinessHours(context, props.businessHourSegs);
+        this.renderDateSelection(context, props.dateSelectionSegs);
+        this.renderBgEvents(context, props.bgEventSegs);
+        this.renderFgEvents(context, props.fgEventSegs);
         this.renderEventSelection(props.eventSelection);
         this.renderEventDrag(props.eventDrag);
         this.renderEventResize(props.eventResize);
@@ -9590,12 +9623,12 @@ var DayGrid = /** @class */ (function (_super) {
             eventSelection: ownProps.eventSelection,
             eventDragInstances: ownProps.eventDrag ? ownProps.eventDrag.affectedInstances : null,
             eventResizeInstances: ownProps.eventResize ? ownProps.eventResize.affectedInstances : null
-        });
+        }, this.context);
     };
     /* Date Rendering
     ------------------------------------------------------------------------------------------------------------------*/
     DayGrid.prototype._renderCells = function (cells, isRigid) {
-        var _a = this, view = _a.view, dateEnv = _a.dateEnv;
+        var _a = this.context, calendar = _a.calendar, view = _a.view, isRtl = _a.isRtl, dateEnv = _a.dateEnv;
         var _b = this, rowCnt = _b.rowCnt, colCnt = _b.colCnt;
         var html = '';
         var row;
@@ -9606,7 +9639,7 @@ var DayGrid = /** @class */ (function (_super) {
         this.el.innerHTML = html;
         this.rowEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(this.el, '.fc-row');
         this.cellEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["findElements"])(this.el, '.fc-day, .fc-disabled-day');
-        if (this.isRtl) {
+        if (isRtl) {
             this.cellEls.reverse();
         }
         this.rowPositions = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["PositionCache"](this.el, this.rowEls, false, true // vertical
@@ -9617,7 +9650,7 @@ var DayGrid = /** @class */ (function (_super) {
         // trigger dayRender with each cell's element
         for (row = 0; row < rowCnt; row++) {
             for (col = 0; col < colCnt; col++) {
-                this.publiclyTrigger('dayRender', [
+                calendar.publiclyTrigger('dayRender', [
                     {
                         date: dateEnv.toDate(cells[row][col].date),
                         el: this.getCellEl(row, col),
@@ -9634,7 +9667,7 @@ var DayGrid = /** @class */ (function (_super) {
     // Generates the HTML for a single row, which is a div that wraps a table.
     // `row` is the row number.
     DayGrid.prototype.renderDayRowHtml = function (row, isRigid) {
-        var theme = this.theme;
+        var theme = this.context.theme;
         var classes = ['fc-row', 'fc-week', theme.getClass('dayRow')];
         if (isRigid) {
             classes.push('fc-rigid');
@@ -9673,12 +9706,13 @@ var DayGrid = /** @class */ (function (_super) {
     /* Grid Number Rendering
     ------------------------------------------------------------------------------------------------------------------*/
     DayGrid.prototype.renderNumberTrHtml = function (row) {
+        var isRtl = this.context.isRtl;
         var intro = this.renderProps.renderNumberIntroHtml(row, this);
         return '' +
             '<tr>' +
-            (this.isRtl ? '' : intro) +
+            (isRtl ? '' : intro) +
             this.renderNumberCellsHtml(row) +
-            (this.isRtl ? intro : '') +
+            (isRtl ? intro : '') +
             '</tr>';
     };
     DayGrid.prototype.renderNumberCellsHtml = function (row) {
@@ -9689,7 +9723,7 @@ var DayGrid = /** @class */ (function (_super) {
             date = this.props.cells[row][col].date;
             htmls.push(this.renderNumberCellHtml(date));
         }
-        if (this.isRtl) {
+        if (this.context.isRtl) {
             htmls.reverse();
         }
         return htmls.join('');
@@ -9697,7 +9731,7 @@ var DayGrid = /** @class */ (function (_super) {
     // Generates the HTML for the <td>s of the "number" row in the DayGrid's content skeleton.
     // The number row will only exist if either day numbers or week numbers are turned on.
     DayGrid.prototype.renderNumberCellHtml = function (date) {
-        var _a = this, view = _a.view, dateEnv = _a.dateEnv;
+        var _a = this.context, dateEnv = _a.dateEnv, options = _a.options;
         var html = '';
         var isDateValid = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["rangeContainsMarker"])(this.props.dateProfile.activeRange, date); // TODO: called too frequently. cache somehow.
         var isDayNumberVisible = this.getIsDayNumbersVisible() && isDateValid;
@@ -9718,11 +9752,11 @@ var DayGrid = /** @class */ (function (_super) {
                 '') +
             '>';
         if (this.renderProps.cellWeekNumbersVisible && (date.getUTCDay() === weekCalcFirstDow)) {
-            html += Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["buildGotoAnchorHtml"])(view, { date: date, type: 'week' }, { 'class': 'fc-week-number' }, dateEnv.format(date, WEEK_NUM_FORMAT) // inner HTML
+            html += Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["buildGotoAnchorHtml"])(options, dateEnv, { date: date, type: 'week' }, { 'class': 'fc-week-number' }, dateEnv.format(date, WEEK_NUM_FORMAT) // inner HTML
             );
         }
         if (isDayNumberVisible) {
-            html += Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["buildGotoAnchorHtml"])(view, date, { 'class': 'fc-day-number' }, dateEnv.format(date, DAY_NUM_FORMAT) // inner HTML
+            html += Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["buildGotoAnchorHtml"])(options, dateEnv, date, { 'class': 'fc-day-number' }, dateEnv.format(date, DAY_NUM_FORMAT) // inner HTML
             );
         }
         html += '</td>';
@@ -9731,10 +9765,11 @@ var DayGrid = /** @class */ (function (_super) {
     /* Sizing
     ------------------------------------------------------------------------------------------------------------------*/
     DayGrid.prototype.updateSize = function (isResize) {
+        var calendar = this.context.calendar;
         var _a = this, fillRenderer = _a.fillRenderer, eventRenderer = _a.eventRenderer, mirrorRenderer = _a.mirrorRenderer;
         if (isResize ||
             this.isCellSizesDirty ||
-            this.view.calendar.isEventsUpdated // hack
+            calendar.isEventsUpdated // hack
         ) {
             this.buildPositionCaches();
             this.isCellSizesDirty = false;
@@ -9792,13 +9827,13 @@ var DayGrid = /** @class */ (function (_super) {
     DayGrid.prototype._renderEventDrag = function (state) {
         if (state) {
             this.eventRenderer.hideByHash(state.affectedInstances);
-            this.fillRenderer.renderSegs('highlight', state.segs);
+            this.fillRenderer.renderSegs('highlight', this.context, state.segs);
         }
     };
     DayGrid.prototype._unrenderEventDrag = function (state) {
         if (state) {
             this.eventRenderer.showByHash(state.affectedInstances);
-            this.fillRenderer.unrender('highlight');
+            this.fillRenderer.unrender('highlight', this.context);
         }
     };
     /* Event Resize Visualization
@@ -9806,15 +9841,15 @@ var DayGrid = /** @class */ (function (_super) {
     DayGrid.prototype._renderEventResize = function (state) {
         if (state) {
             this.eventRenderer.hideByHash(state.affectedInstances);
-            this.fillRenderer.renderSegs('highlight', state.segs);
-            this.mirrorRenderer.renderSegs(state.segs, { isResizing: true, sourceSeg: state.sourceSeg });
+            this.fillRenderer.renderSegs('highlight', this.context, state.segs);
+            this.mirrorRenderer.renderSegs(this.context, state.segs, { isResizing: true, sourceSeg: state.sourceSeg });
         }
     };
     DayGrid.prototype._unrenderEventResize = function (state) {
         if (state) {
             this.eventRenderer.showByHash(state.affectedInstances);
-            this.fillRenderer.unrender('highlight');
-            this.mirrorRenderer.unrender(state.segs, { isResizing: true, sourceSeg: state.sourceSeg });
+            this.fillRenderer.unrender('highlight', this.context);
+            this.mirrorRenderer.unrender(this.context, state.segs, { isResizing: true, sourceSeg: state.sourceSeg });
         }
     };
     /* More+ Link Popover
@@ -9870,7 +9905,8 @@ var DayGrid = /** @class */ (function (_super) {
     // `levelLimit` is a number for the maximum (inclusive) number of levels allowed.
     DayGrid.prototype.limitRow = function (row, levelLimit) {
         var _this = this;
-        var _a = this, colCnt = _a.colCnt, isRtl = _a.isRtl;
+        var colCnt = this.colCnt;
+        var isRtl = this.context.isRtl;
         var rowStruct = this.eventRenderer.rowStructs[row];
         var moreNodes = []; // array of "more" <a> links and <td> DOM nodes
         var col = 0; // col #, left-to-right (not chronologically)
@@ -9969,12 +10005,12 @@ var DayGrid = /** @class */ (function (_super) {
     // Responsible for attaching click handler as well.
     DayGrid.prototype.renderMoreLink = function (row, col, hiddenSegs) {
         var _this = this;
-        var _a = this, view = _a.view, dateEnv = _a.dateEnv;
+        var _a = this.context, calendar = _a.calendar, view = _a.view, dateEnv = _a.dateEnv, options = _a.options, isRtl = _a.isRtl;
         var a = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('a', { className: 'fc-more' });
         a.innerText = this.getMoreLinkText(hiddenSegs.length);
         a.addEventListener('click', function (ev) {
-            var clickOption = _this.opt('eventLimitClick');
-            var _col = _this.isRtl ? _this.colCnt - col - 1 : col; // HACK: props.cells has different dir system?
+            var clickOption = options.eventLimitClick;
+            var _col = isRtl ? _this.colCnt - col - 1 : col; // HACK: props.cells has different dir system?
             var date = _this.props.cells[row][_col].date;
             var moreEl = ev.currentTarget;
             var dayEl = _this.getCellEl(row, col);
@@ -9984,7 +10020,7 @@ var DayGrid = /** @class */ (function (_super) {
             var reslicedHiddenSegs = _this.resliceDaySegs(hiddenSegs, date);
             if (typeof clickOption === 'function') {
                 // the returned value can be an atomic option
-                clickOption = _this.publiclyTrigger('eventLimitClick', [
+                clickOption = calendar.publiclyTrigger('eventLimitClick', [
                     {
                         date: dateEnv.toDate(date),
                         allDay: true,
@@ -10001,7 +10037,7 @@ var DayGrid = /** @class */ (function (_super) {
                 _this.showSegPopover(row, col, moreEl, reslicedAllSegs);
             }
             else if (typeof clickOption === 'string') { // a view name
-                view.calendar.zoomTo(date, clickOption);
+                calendar.zoomTo(date, clickOption);
             }
         });
         return a;
@@ -10009,8 +10045,8 @@ var DayGrid = /** @class */ (function (_super) {
     // Reveals the popover that displays all events within a cell
     DayGrid.prototype.showSegPopover = function (row, col, moreLink, segs) {
         var _this = this;
-        var _a = this, calendar = _a.calendar, view = _a.view, theme = _a.theme;
-        var _col = this.isRtl ? this.colCnt - col - 1 : col; // HACK: props.cells has different dir system?
+        var _a = this.context, calendar = _a.calendar, view = _a.view, theme = _a.theme, isRtl = _a.isRtl;
+        var _col = isRtl ? this.colCnt - col - 1 : col; // HACK: props.cells has different dir system?
         var moreWrap = moreLink.parentNode; // the <div> wrapper around the <a>
         var topEl; // the element we want to match the top coordinate of
         var options;
@@ -10026,7 +10062,7 @@ var DayGrid = /** @class */ (function (_super) {
             top: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeRect"])(topEl).top,
             autoHide: true,
             content: function (el) {
-                _this.segPopoverTile = new DayTile(_this.context, el);
+                _this.segPopoverTile = new DayTile(el);
                 _this.updateSegPopoverTile(_this.props.cells[row][_col].date, segs);
             },
             hide: function () {
@@ -10038,7 +10074,7 @@ var DayGrid = /** @class */ (function (_super) {
         };
         // Determine horizontal coordinate.
         // We use the moreWrap instead of the <td> to avoid border confusion.
-        if (this.isRtl) {
+        if (isRtl) {
             options.right = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeRect"])(moreWrap).right + 1; // +1 to be over cell border
         }
         else {
@@ -10072,7 +10108,7 @@ var DayGrid = /** @class */ (function (_super) {
     };
     // Generates the text that should be inside a "more" link, given the number of events it represents
     DayGrid.prototype.getMoreLinkText = function (num) {
-        var opt = this.opt('eventLimitText');
+        var opt = this.context.options.eventLimitText;
         if (typeof opt === 'function') {
             return opt(num);
         }
@@ -10104,20 +10140,22 @@ var WEEK_NUM_FORMAT$1 = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["
 ----------------------------------------------------------------------------------------------------------------------*/
 // It is a manager for a DayGrid subcomponent, which does most of the heavy lifting.
 // It is responsible for managing width/height.
-var DayGridView = /** @class */ (function (_super) {
-    __extends(DayGridView, _super);
-    function DayGridView(context, viewSpec, dateProfileGenerator, parentEl) {
-        var _this = _super.call(this, context, viewSpec, dateProfileGenerator, parentEl) || this;
+var AbstractDayGridView = /** @class */ (function (_super) {
+    __extends(AbstractDayGridView, _super);
+    function AbstractDayGridView() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.processOptions = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoize"])(_this._processOptions);
+        _this.renderSkeleton = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoizeRendering"])(_this._renderSkeleton, _this._unrenderSkeleton);
         /* Header Rendering
         ------------------------------------------------------------------------------------------------------------------*/
         // Generates the HTML that will go before the day-of week header cells
         _this.renderHeadIntroHtml = function () {
-            var theme = _this.theme;
+            var _a = _this.context, theme = _a.theme, options = _a.options;
             if (_this.colWeekNumbersVisible) {
                 return '' +
                     '<th class="fc-week-number ' + theme.getClass('widgetHeader') + '" ' + _this.weekNumberStyleAttr() + '>' +
                     '<span>' + // needed for matchCellWidths
-                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(_this.opt('weekLabel')) +
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["htmlEscape"])(options.weekLabel) +
                     '</span>' +
                     '</th>';
             }
@@ -10127,13 +10165,13 @@ var DayGridView = /** @class */ (function (_super) {
         ------------------------------------------------------------------------------------------------------------------*/
         // Generates the HTML that will go before content-skeleton cells that display the day/week numbers
         _this.renderDayGridNumberIntroHtml = function (row, dayGrid) {
-            var dateEnv = _this.dateEnv;
+            var _a = _this.context, options = _a.options, dateEnv = _a.dateEnv;
             var weekStart = dayGrid.props.cells[row][0].date;
             if (_this.colWeekNumbersVisible) {
                 return '' +
                     '<td class="fc-week-number" ' + _this.weekNumberStyleAttr() + '>' +
                     Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["buildGotoAnchorHtml"])(// aside from link, important for matchCellWidths
-                    _this, { date: weekStart, type: 'week', forceOff: dayGrid.colCnt === 1 }, dateEnv.format(weekStart, WEEK_NUM_FORMAT$1) // inner HTML
+                    options, dateEnv, { date: weekStart, type: 'week', forceOff: dayGrid.colCnt === 1 }, dateEnv.format(weekStart, WEEK_NUM_FORMAT$1) // inner HTML
                     ) +
                     '</td>';
             }
@@ -10141,7 +10179,7 @@ var DayGridView = /** @class */ (function (_super) {
         };
         // Generates the HTML that goes before the day bg cells for each day-row
         _this.renderDayGridBgIntroHtml = function () {
-            var theme = _this.theme;
+            var theme = _this.context.theme;
             if (_this.colWeekNumbersVisible) {
                 return '<td class="fc-week-number ' + theme.getClass('widgetContent') + '" ' + _this.weekNumberStyleAttr() + '></td>';
             }
@@ -10155,52 +10193,64 @@ var DayGridView = /** @class */ (function (_super) {
             }
             return '';
         };
-        _this.el.classList.add('fc-dayGrid-view');
-        _this.el.innerHTML = _this.renderSkeletonHtml();
-        _this.scroller = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["ScrollComponent"]('hidden', // overflow x
-        'auto' // overflow y
-        );
-        var dayGridContainerEl = _this.scroller.el;
-        _this.el.querySelector('.fc-body > tr > td').appendChild(dayGridContainerEl);
-        dayGridContainerEl.classList.add('fc-day-grid-container');
-        var dayGridEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('div', { className: 'fc-day-grid' });
-        dayGridContainerEl.appendChild(dayGridEl);
-        var cellWeekNumbersVisible;
-        if (_this.opt('weekNumbers')) {
-            if (_this.opt('weekNumbersWithinDays')) {
-                cellWeekNumbersVisible = true;
-                _this.colWeekNumbersVisible = false;
+        return _this;
+    }
+    AbstractDayGridView.prototype._processOptions = function (options) {
+        if (options.weekNumbers) {
+            if (options.weekNumbersWithinDays) {
+                this.cellWeekNumbersVisible = true;
+                this.colWeekNumbersVisible = false;
             }
             else {
-                cellWeekNumbersVisible = false;
-                _this.colWeekNumbersVisible = true;
+                this.cellWeekNumbersVisible = false;
+                this.colWeekNumbersVisible = true;
             }
         }
         else {
-            _this.colWeekNumbersVisible = false;
-            cellWeekNumbersVisible = false;
+            this.colWeekNumbersVisible = false;
+            this.cellWeekNumbersVisible = false;
         }
-        _this.dayGrid = new DayGrid(_this.context, dayGridEl, {
-            renderNumberIntroHtml: _this.renderDayGridNumberIntroHtml,
-            renderBgIntroHtml: _this.renderDayGridBgIntroHtml,
-            renderIntroHtml: _this.renderDayGridIntroHtml,
-            colWeekNumbersVisible: _this.colWeekNumbersVisible,
-            cellWeekNumbersVisible: cellWeekNumbersVisible
-        });
-        return _this;
-    }
-    DayGridView.prototype.destroy = function () {
+    };
+    AbstractDayGridView.prototype.render = function (props, context) {
+        _super.prototype.render.call(this, props, context);
+        this.processOptions(context.options);
+        this.renderSkeleton(context);
+    };
+    AbstractDayGridView.prototype.destroy = function () {
         _super.prototype.destroy.call(this);
+        this.renderSkeleton.unrender();
+    };
+    AbstractDayGridView.prototype._renderSkeleton = function (context) {
+        this.el.classList.add('fc-dayGrid-view');
+        this.el.innerHTML = this.renderSkeletonHtml();
+        this.scroller = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["ScrollComponent"]('hidden', // overflow x
+        'auto' // overflow y
+        );
+        var dayGridContainerEl = this.scroller.el;
+        this.el.querySelector('.fc-body > tr > td').appendChild(dayGridContainerEl);
+        dayGridContainerEl.classList.add('fc-day-grid-container');
+        var dayGridEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('div', { className: 'fc-day-grid' });
+        dayGridContainerEl.appendChild(dayGridEl);
+        this.dayGrid = new DayGrid(dayGridEl, {
+            renderNumberIntroHtml: this.renderDayGridNumberIntroHtml,
+            renderBgIntroHtml: this.renderDayGridBgIntroHtml,
+            renderIntroHtml: this.renderDayGridIntroHtml,
+            colWeekNumbersVisible: this.colWeekNumbersVisible,
+            cellWeekNumbersVisible: this.cellWeekNumbersVisible
+        });
+    };
+    AbstractDayGridView.prototype._unrenderSkeleton = function () {
+        this.el.classList.remove('fc-dayGrid-view');
         this.dayGrid.destroy();
         this.scroller.destroy();
     };
     // Builds the HTML skeleton for the view.
     // The day-grid component will render inside of a container defined by this HTML.
-    DayGridView.prototype.renderSkeletonHtml = function () {
-        var theme = this.theme;
+    AbstractDayGridView.prototype.renderSkeletonHtml = function () {
+        var _a = this.context, theme = _a.theme, options = _a.options;
         return '' +
             '<table class="' + theme.getClass('tableGrid') + '">' +
-            (this.opt('columnHeader') ?
+            (options.columnHeader ?
                 '<thead class="fc-head">' +
                     '<tr>' +
                     '<td class="fc-head-container ' + theme.getClass('widgetHeader') + '">&nbsp;</td>' +
@@ -10215,27 +10265,27 @@ var DayGridView = /** @class */ (function (_super) {
             '</table>';
     };
     // Generates an HTML attribute string for setting the width of the week number column, if it is known
-    DayGridView.prototype.weekNumberStyleAttr = function () {
+    AbstractDayGridView.prototype.weekNumberStyleAttr = function () {
         if (this.weekNumberWidth != null) {
             return 'style="width:' + this.weekNumberWidth + 'px"';
         }
         return '';
     };
     // Determines whether each row should have a constant height
-    DayGridView.prototype.hasRigidRows = function () {
-        var eventLimit = this.opt('eventLimit');
+    AbstractDayGridView.prototype.hasRigidRows = function () {
+        var eventLimit = this.context.options.eventLimit;
         return eventLimit && typeof eventLimit !== 'number';
     };
     /* Dimensions
     ------------------------------------------------------------------------------------------------------------------*/
-    DayGridView.prototype.updateSize = function (isResize, viewHeight, isAuto) {
+    AbstractDayGridView.prototype.updateSize = function (isResize, viewHeight, isAuto) {
         _super.prototype.updateSize.call(this, isResize, viewHeight, isAuto); // will call updateBaseSize. important that executes first
         this.dayGrid.updateSize(isResize);
     };
     // Refreshes the horizontal dimensions of the view
-    DayGridView.prototype.updateBaseSize = function (isResize, viewHeight, isAuto) {
+    AbstractDayGridView.prototype.updateBaseSize = function (isResize, viewHeight, isAuto) {
         var dayGrid = this.dayGrid;
-        var eventLimit = this.opt('eventLimit');
+        var eventLimit = this.context.options.eventLimit;
         var headRowEl = this.header ? this.header.el : null; // HACK
         var scrollerHeight;
         var scrollbarWidths;
@@ -10286,13 +10336,13 @@ var DayGridView = /** @class */ (function (_super) {
         }
     };
     // given a desired total height of the view, returns what the height of the scroller should be
-    DayGridView.prototype.computeScrollerHeight = function (viewHeight) {
+    AbstractDayGridView.prototype.computeScrollerHeight = function (viewHeight) {
         return viewHeight -
             Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["subtractInnerElHeight"])(this.el, this.scroller.el); // everything that's NOT the scroller
     };
     // Sets the height of just the DayGrid component in this view
-    DayGridView.prototype.setGridHeight = function (height, isAuto) {
-        if (this.opt('monthMode')) {
+    AbstractDayGridView.prototype.setGridHeight = function (height, isAuto) {
+        if (this.context.options.monthMode) {
             // if auto, make the height of each row the height that it would be if there were 6 weeks
             if (isAuto) {
                 height *= this.dayGrid.rowCnt / 6;
@@ -10310,38 +10360,41 @@ var DayGridView = /** @class */ (function (_super) {
     };
     /* Scroll
     ------------------------------------------------------------------------------------------------------------------*/
-    DayGridView.prototype.computeDateScroll = function (duration) {
+    AbstractDayGridView.prototype.computeDateScroll = function (duration) {
         return { top: 0 };
     };
-    DayGridView.prototype.queryDateScroll = function () {
+    AbstractDayGridView.prototype.queryDateScroll = function () {
         return { top: this.scroller.getScrollTop() };
     };
-    DayGridView.prototype.applyDateScroll = function (scroll) {
+    AbstractDayGridView.prototype.applyDateScroll = function (scroll) {
         if (scroll.top !== undefined) {
             this.scroller.setScrollTop(scroll.top);
         }
     };
-    return DayGridView;
+    return AbstractDayGridView;
 }(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["View"]));
-DayGridView.prototype.dateProfileGeneratorClass = DayGridDateProfileGenerator;
+AbstractDayGridView.prototype.dateProfileGeneratorClass = DayGridDateProfileGenerator;
 
 var SimpleDayGrid = /** @class */ (function (_super) {
     __extends(SimpleDayGrid, _super);
-    function SimpleDayGrid(context, dayGrid) {
-        var _this = _super.call(this, context, dayGrid.el) || this;
+    function SimpleDayGrid(dayGrid) {
+        var _this = _super.call(this, dayGrid.el) || this;
         _this.slicer = new DayGridSlicer();
         _this.dayGrid = dayGrid;
-        context.calendar.registerInteractiveComponent(_this, { el: _this.dayGrid.el });
         return _this;
     }
+    SimpleDayGrid.prototype.firstContext = function (context) {
+        context.calendar.registerInteractiveComponent(this, { el: this.dayGrid.el });
+    };
     SimpleDayGrid.prototype.destroy = function () {
         _super.prototype.destroy.call(this);
-        this.calendar.unregisterInteractiveComponent(this);
+        this.context.calendar.unregisterInteractiveComponent(this);
     };
-    SimpleDayGrid.prototype.render = function (props) {
+    SimpleDayGrid.prototype.render = function (props, context) {
         var dayGrid = this.dayGrid;
         var dateProfile = props.dateProfile, dayTable = props.dayTable;
-        dayGrid.receiveProps(__assign({}, this.slicer.sliceProps(props, dateProfile, props.nextDayThreshold, dayGrid, dayTable), { dateProfile: dateProfile, cells: dayTable.cells, isRigid: props.isRigid }));
+        dayGrid.receiveContext(context); // hack because context is used in sliceProps
+        dayGrid.receiveProps(__assign({}, this.slicer.sliceProps(props, dateProfile, props.nextDayThreshold, context.calendar, dayGrid, dayTable), { dateProfile: dateProfile, cells: dayTable.cells, isRigid: props.isRigid }), context);
     };
     SimpleDayGrid.prototype.buildPositionCaches = function () {
         this.dayGrid.buildPositionCaches();
@@ -10376,36 +10429,25 @@ var DayGridSlicer = /** @class */ (function (_super) {
     return DayGridSlicer;
 }(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Slicer"]));
 
-var DayGridView$1 = /** @class */ (function (_super) {
+var DayGridView = /** @class */ (function (_super) {
     __extends(DayGridView, _super);
-    function DayGridView(_context, viewSpec, dateProfileGenerator, parentEl) {
-        var _this = _super.call(this, _context, viewSpec, dateProfileGenerator, parentEl) || this;
+    function DayGridView() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.buildDayTable = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["memoize"])(buildDayTable);
-        if (_this.opt('columnHeader')) {
-            _this.header = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DayHeader"](_this.context, _this.el.querySelector('.fc-head-container'));
-        }
-        _this.simpleDayGrid = new SimpleDayGrid(_this.context, _this.dayGrid);
         return _this;
     }
-    DayGridView.prototype.destroy = function () {
-        _super.prototype.destroy.call(this);
-        if (this.header) {
-            this.header.destroy();
-        }
-        this.simpleDayGrid.destroy();
-    };
-    DayGridView.prototype.render = function (props) {
-        _super.prototype.render.call(this, props);
+    DayGridView.prototype.render = function (props, context) {
+        _super.prototype.render.call(this, props, context); // will call _renderSkeleton/_unrenderSkeleton
         var dateProfile = this.props.dateProfile;
         var dayTable = this.dayTable =
-            this.buildDayTable(dateProfile, this.dateProfileGenerator);
+            this.buildDayTable(dateProfile, props.dateProfileGenerator);
         if (this.header) {
             this.header.receiveProps({
                 dateProfile: dateProfile,
                 dates: dayTable.headerDates,
                 datesRepDistinctDays: dayTable.rowCnt === 1,
                 renderIntroHtml: this.renderHeadIntroHtml
-            });
+            }, context);
         }
         this.simpleDayGrid.receiveProps({
             dateProfile: dateProfile,
@@ -10418,11 +10460,25 @@ var DayGridView$1 = /** @class */ (function (_super) {
             eventDrag: props.eventDrag,
             eventResize: props.eventResize,
             isRigid: this.hasRigidRows(),
-            nextDayThreshold: this.nextDayThreshold
-        });
+            nextDayThreshold: this.context.nextDayThreshold
+        }, context);
+    };
+    DayGridView.prototype._renderSkeleton = function (context) {
+        _super.prototype._renderSkeleton.call(this, context);
+        if (context.options.columnHeader) {
+            this.header = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DayHeader"](this.el.querySelector('.fc-head-container'));
+        }
+        this.simpleDayGrid = new SimpleDayGrid(this.dayGrid);
+    };
+    DayGridView.prototype._unrenderSkeleton = function () {
+        _super.prototype._unrenderSkeleton.call(this);
+        if (this.header) {
+            this.header.destroy();
+        }
+        this.simpleDayGrid.destroy();
     };
     return DayGridView;
-}(DayGridView));
+}(AbstractDayGridView));
 function buildDayTable(dateProfile, dateProfileGenerator) {
     var daySeries = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DaySeries"](dateProfile.renderRange, dateProfileGenerator);
     return new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["DayTable"](daySeries, /year|month|week/.test(dateProfile.currentRangeUnit));
@@ -10431,7 +10487,7 @@ function buildDayTable(dateProfile, dateProfileGenerator) {
 var main = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createPlugin"])({
     defaultView: 'dayGridMonth',
     views: {
-        dayGrid: DayGridView$1,
+        dayGrid: DayGridView,
         dayGridDay: {
             type: 'dayGrid',
             duration: { days: 1 }
@@ -10447,6 +10503,2165 @@ var main = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createPlugin"
             fixedWeekCount: true
         }
     }
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (main);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@fullcalendar/interaction/main.esm.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@fullcalendar/interaction/main.esm.js ***!
+  \************************************************************/
+/*! exports provided: default, Draggable, FeaturefulElementDragging, PointerDragging, ThirdPartyDraggable */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Draggable", function() { return ExternalDraggable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeaturefulElementDragging", function() { return FeaturefulElementDragging; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PointerDragging", function() { return PointerDragging; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThirdPartyDraggable", function() { return ThirdPartyDraggable; });
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fullcalendar/core */ "./node_modules/@fullcalendar/core/main.esm.js");
+/*!
+FullCalendar Interaction Plugin v4.4.2
+Docs & License: https://fullcalendar.io/
+(c) 2019 Adam Shaw
+*/
+
+
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["config"].touchMouseIgnoreWait = 500;
+var ignoreMouseDepth = 0;
+var listenerCnt = 0;
+var isWindowTouchMoveCancelled = false;
+/*
+Uses a "pointer" abstraction, which monitors UI events for both mouse and touch.
+Tracks when the pointer "drags" on a certain element, meaning down+move+up.
+
+Also, tracks if there was touch-scrolling.
+Also, can prevent touch-scrolling from happening.
+Also, can fire pointermove events when scrolling happens underneath, even when no real pointer movement.
+
+emits:
+- pointerdown
+- pointermove
+- pointerup
+*/
+var PointerDragging = /** @class */ (function () {
+    function PointerDragging(containerEl) {
+        var _this = this;
+        this.subjectEl = null;
+        this.downEl = null;
+        // options that can be directly assigned by caller
+        this.selector = ''; // will cause subjectEl in all emitted events to be this element
+        this.handleSelector = '';
+        this.shouldIgnoreMove = false;
+        this.shouldWatchScroll = true; // for simulating pointermove on scroll
+        // internal states
+        this.isDragging = false;
+        this.isTouchDragging = false;
+        this.wasTouchScroll = false;
+        // Mouse
+        // ----------------------------------------------------------------------------------------------------
+        this.handleMouseDown = function (ev) {
+            if (!_this.shouldIgnoreMouse() &&
+                isPrimaryMouseButton(ev) &&
+                _this.tryStart(ev)) {
+                var pev = _this.createEventFromMouse(ev, true);
+                _this.emitter.trigger('pointerdown', pev);
+                _this.initScrollWatch(pev);
+                if (!_this.shouldIgnoreMove) {
+                    document.addEventListener('mousemove', _this.handleMouseMove);
+                }
+                document.addEventListener('mouseup', _this.handleMouseUp);
+            }
+        };
+        this.handleMouseMove = function (ev) {
+            var pev = _this.createEventFromMouse(ev);
+            _this.recordCoords(pev);
+            _this.emitter.trigger('pointermove', pev);
+        };
+        this.handleMouseUp = function (ev) {
+            document.removeEventListener('mousemove', _this.handleMouseMove);
+            document.removeEventListener('mouseup', _this.handleMouseUp);
+            _this.emitter.trigger('pointerup', _this.createEventFromMouse(ev));
+            _this.cleanup(); // call last so that pointerup has access to props
+        };
+        // Touch
+        // ----------------------------------------------------------------------------------------------------
+        this.handleTouchStart = function (ev) {
+            if (_this.tryStart(ev)) {
+                _this.isTouchDragging = true;
+                var pev = _this.createEventFromTouch(ev, true);
+                _this.emitter.trigger('pointerdown', pev);
+                _this.initScrollWatch(pev);
+                // unlike mouse, need to attach to target, not document
+                // https://stackoverflow.com/a/45760014
+                var target = ev.target;
+                if (!_this.shouldIgnoreMove) {
+                    target.addEventListener('touchmove', _this.handleTouchMove);
+                }
+                target.addEventListener('touchend', _this.handleTouchEnd);
+                target.addEventListener('touchcancel', _this.handleTouchEnd); // treat it as a touch end
+                // attach a handler to get called when ANY scroll action happens on the page.
+                // this was impossible to do with normal on/off because 'scroll' doesn't bubble.
+                // http://stackoverflow.com/a/32954565/96342
+                window.addEventListener('scroll', _this.handleTouchScroll, true // useCapture
+                );
+            }
+        };
+        this.handleTouchMove = function (ev) {
+            var pev = _this.createEventFromTouch(ev);
+            _this.recordCoords(pev);
+            _this.emitter.trigger('pointermove', pev);
+        };
+        this.handleTouchEnd = function (ev) {
+            if (_this.isDragging) { // done to guard against touchend followed by touchcancel
+                var target = ev.target;
+                target.removeEventListener('touchmove', _this.handleTouchMove);
+                target.removeEventListener('touchend', _this.handleTouchEnd);
+                target.removeEventListener('touchcancel', _this.handleTouchEnd);
+                window.removeEventListener('scroll', _this.handleTouchScroll, true); // useCaptured=true
+                _this.emitter.trigger('pointerup', _this.createEventFromTouch(ev));
+                _this.cleanup(); // call last so that pointerup has access to props
+                _this.isTouchDragging = false;
+                startIgnoringMouse();
+            }
+        };
+        this.handleTouchScroll = function () {
+            _this.wasTouchScroll = true;
+        };
+        this.handleScroll = function (ev) {
+            if (!_this.shouldIgnoreMove) {
+                var pageX = (window.pageXOffset - _this.prevScrollX) + _this.prevPageX;
+                var pageY = (window.pageYOffset - _this.prevScrollY) + _this.prevPageY;
+                _this.emitter.trigger('pointermove', {
+                    origEvent: ev,
+                    isTouch: _this.isTouchDragging,
+                    subjectEl: _this.subjectEl,
+                    pageX: pageX,
+                    pageY: pageY,
+                    deltaX: pageX - _this.origPageX,
+                    deltaY: pageY - _this.origPageY
+                });
+            }
+        };
+        this.containerEl = containerEl;
+        this.emitter = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EmitterMixin"]();
+        containerEl.addEventListener('mousedown', this.handleMouseDown);
+        containerEl.addEventListener('touchstart', this.handleTouchStart, { passive: true });
+        listenerCreated();
+    }
+    PointerDragging.prototype.destroy = function () {
+        this.containerEl.removeEventListener('mousedown', this.handleMouseDown);
+        this.containerEl.removeEventListener('touchstart', this.handleTouchStart, { passive: true });
+        listenerDestroyed();
+    };
+    PointerDragging.prototype.tryStart = function (ev) {
+        var subjectEl = this.querySubjectEl(ev);
+        var downEl = ev.target;
+        if (subjectEl &&
+            (!this.handleSelector || Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(downEl, this.handleSelector))) {
+            this.subjectEl = subjectEl;
+            this.downEl = downEl;
+            this.isDragging = true; // do this first so cancelTouchScroll will work
+            this.wasTouchScroll = false;
+            return true;
+        }
+        return false;
+    };
+    PointerDragging.prototype.cleanup = function () {
+        isWindowTouchMoveCancelled = false;
+        this.isDragging = false;
+        this.subjectEl = null;
+        this.downEl = null;
+        // keep wasTouchScroll around for later access
+        this.destroyScrollWatch();
+    };
+    PointerDragging.prototype.querySubjectEl = function (ev) {
+        if (this.selector) {
+            return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(ev.target, this.selector);
+        }
+        else {
+            return this.containerEl;
+        }
+    };
+    PointerDragging.prototype.shouldIgnoreMouse = function () {
+        return ignoreMouseDepth || this.isTouchDragging;
+    };
+    // can be called by user of this class, to cancel touch-based scrolling for the current drag
+    PointerDragging.prototype.cancelTouchScroll = function () {
+        if (this.isDragging) {
+            isWindowTouchMoveCancelled = true;
+        }
+    };
+    // Scrolling that simulates pointermoves
+    // ----------------------------------------------------------------------------------------------------
+    PointerDragging.prototype.initScrollWatch = function (ev) {
+        if (this.shouldWatchScroll) {
+            this.recordCoords(ev);
+            window.addEventListener('scroll', this.handleScroll, true); // useCapture=true
+        }
+    };
+    PointerDragging.prototype.recordCoords = function (ev) {
+        if (this.shouldWatchScroll) {
+            this.prevPageX = ev.pageX;
+            this.prevPageY = ev.pageY;
+            this.prevScrollX = window.pageXOffset;
+            this.prevScrollY = window.pageYOffset;
+        }
+    };
+    PointerDragging.prototype.destroyScrollWatch = function () {
+        if (this.shouldWatchScroll) {
+            window.removeEventListener('scroll', this.handleScroll, true); // useCaptured=true
+        }
+    };
+    // Event Normalization
+    // ----------------------------------------------------------------------------------------------------
+    PointerDragging.prototype.createEventFromMouse = function (ev, isFirst) {
+        var deltaX = 0;
+        var deltaY = 0;
+        // TODO: repeat code
+        if (isFirst) {
+            this.origPageX = ev.pageX;
+            this.origPageY = ev.pageY;
+        }
+        else {
+            deltaX = ev.pageX - this.origPageX;
+            deltaY = ev.pageY - this.origPageY;
+        }
+        return {
+            origEvent: ev,
+            isTouch: false,
+            subjectEl: this.subjectEl,
+            pageX: ev.pageX,
+            pageY: ev.pageY,
+            deltaX: deltaX,
+            deltaY: deltaY
+        };
+    };
+    PointerDragging.prototype.createEventFromTouch = function (ev, isFirst) {
+        var touches = ev.touches;
+        var pageX;
+        var pageY;
+        var deltaX = 0;
+        var deltaY = 0;
+        // if touch coords available, prefer,
+        // because FF would give bad ev.pageX ev.pageY
+        if (touches && touches.length) {
+            pageX = touches[0].pageX;
+            pageY = touches[0].pageY;
+        }
+        else {
+            pageX = ev.pageX;
+            pageY = ev.pageY;
+        }
+        // TODO: repeat code
+        if (isFirst) {
+            this.origPageX = pageX;
+            this.origPageY = pageY;
+        }
+        else {
+            deltaX = pageX - this.origPageX;
+            deltaY = pageY - this.origPageY;
+        }
+        return {
+            origEvent: ev,
+            isTouch: true,
+            subjectEl: this.subjectEl,
+            pageX: pageX,
+            pageY: pageY,
+            deltaX: deltaX,
+            deltaY: deltaY
+        };
+    };
+    return PointerDragging;
+}());
+// Returns a boolean whether this was a left mouse click and no ctrl key (which means right click on Mac)
+function isPrimaryMouseButton(ev) {
+    return ev.button === 0 && !ev.ctrlKey;
+}
+// Ignoring fake mouse events generated by touch
+// ----------------------------------------------------------------------------------------------------
+function startIgnoringMouse() {
+    ignoreMouseDepth++;
+    setTimeout(function () {
+        ignoreMouseDepth--;
+    }, _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["config"].touchMouseIgnoreWait);
+}
+// We want to attach touchmove as early as possible for Safari
+// ----------------------------------------------------------------------------------------------------
+function listenerCreated() {
+    if (!(listenerCnt++)) {
+        window.addEventListener('touchmove', onWindowTouchMove, { passive: false });
+    }
+}
+function listenerDestroyed() {
+    if (!(--listenerCnt)) {
+        window.removeEventListener('touchmove', onWindowTouchMove, { passive: false });
+    }
+}
+function onWindowTouchMove(ev) {
+    if (isWindowTouchMoveCancelled) {
+        ev.preventDefault();
+    }
+}
+
+/*
+An effect in which an element follows the movement of a pointer across the screen.
+The moving element is a clone of some other element.
+Must call start + handleMove + stop.
+*/
+var ElementMirror = /** @class */ (function () {
+    function ElementMirror() {
+        this.isVisible = false; // must be explicitly enabled
+        this.sourceEl = null;
+        this.mirrorEl = null;
+        this.sourceElRect = null; // screen coords relative to viewport
+        // options that can be set directly by caller
+        this.parentNode = document.body;
+        this.zIndex = 9999;
+        this.revertDuration = 0;
+    }
+    ElementMirror.prototype.start = function (sourceEl, pageX, pageY) {
+        this.sourceEl = sourceEl;
+        this.sourceElRect = this.sourceEl.getBoundingClientRect();
+        this.origScreenX = pageX - window.pageXOffset;
+        this.origScreenY = pageY - window.pageYOffset;
+        this.deltaX = 0;
+        this.deltaY = 0;
+        this.updateElPosition();
+    };
+    ElementMirror.prototype.handleMove = function (pageX, pageY) {
+        this.deltaX = (pageX - window.pageXOffset) - this.origScreenX;
+        this.deltaY = (pageY - window.pageYOffset) - this.origScreenY;
+        this.updateElPosition();
+    };
+    // can be called before start
+    ElementMirror.prototype.setIsVisible = function (bool) {
+        if (bool) {
+            if (!this.isVisible) {
+                if (this.mirrorEl) {
+                    this.mirrorEl.style.display = '';
+                }
+                this.isVisible = bool; // needs to happen before updateElPosition
+                this.updateElPosition(); // because was not updating the position while invisible
+            }
+        }
+        else {
+            if (this.isVisible) {
+                if (this.mirrorEl) {
+                    this.mirrorEl.style.display = 'none';
+                }
+                this.isVisible = bool;
+            }
+        }
+    };
+    // always async
+    ElementMirror.prototype.stop = function (needsRevertAnimation, callback) {
+        var _this = this;
+        var done = function () {
+            _this.cleanup();
+            callback();
+        };
+        if (needsRevertAnimation &&
+            this.mirrorEl &&
+            this.isVisible &&
+            this.revertDuration && // if 0, transition won't work
+            (this.deltaX || this.deltaY) // if same coords, transition won't work
+        ) {
+            this.doRevertAnimation(done, this.revertDuration);
+        }
+        else {
+            setTimeout(done, 0);
+        }
+    };
+    ElementMirror.prototype.doRevertAnimation = function (callback, revertDuration) {
+        var mirrorEl = this.mirrorEl;
+        var finalSourceElRect = this.sourceEl.getBoundingClientRect(); // because autoscrolling might have happened
+        mirrorEl.style.transition =
+            'top ' + revertDuration + 'ms,' +
+                'left ' + revertDuration + 'ms';
+        Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyStyle"])(mirrorEl, {
+            left: finalSourceElRect.left,
+            top: finalSourceElRect.top
+        });
+        Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["whenTransitionDone"])(mirrorEl, function () {
+            mirrorEl.style.transition = '';
+            callback();
+        });
+    };
+    ElementMirror.prototype.cleanup = function () {
+        if (this.mirrorEl) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["removeElement"])(this.mirrorEl);
+            this.mirrorEl = null;
+        }
+        this.sourceEl = null;
+    };
+    ElementMirror.prototype.updateElPosition = function () {
+        if (this.sourceEl && this.isVisible) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyStyle"])(this.getMirrorEl(), {
+                left: this.sourceElRect.left + this.deltaX,
+                top: this.sourceElRect.top + this.deltaY
+            });
+        }
+    };
+    ElementMirror.prototype.getMirrorEl = function () {
+        var sourceElRect = this.sourceElRect;
+        var mirrorEl = this.mirrorEl;
+        if (!mirrorEl) {
+            mirrorEl = this.mirrorEl = this.sourceEl.cloneNode(true); // cloneChildren=true
+            // we don't want long taps or any mouse interaction causing selection/menus.
+            // would use preventSelection(), but that prevents selectstart, causing problems.
+            mirrorEl.classList.add('fc-unselectable');
+            mirrorEl.classList.add('fc-dragging');
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyStyle"])(mirrorEl, {
+                position: 'fixed',
+                zIndex: this.zIndex,
+                visibility: '',
+                boxSizing: 'border-box',
+                width: sourceElRect.right - sourceElRect.left,
+                height: sourceElRect.bottom - sourceElRect.top,
+                right: 'auto',
+                bottom: 'auto',
+                margin: 0
+            });
+            this.parentNode.appendChild(mirrorEl);
+        }
+        return mirrorEl;
+    };
+    return ElementMirror;
+}());
+
+/*
+Is a cache for a given element's scroll information (all the info that ScrollController stores)
+in addition the "client rectangle" of the element.. the area within the scrollbars.
+
+The cache can be in one of two modes:
+- doesListening:false - ignores when the container is scrolled by someone else
+- doesListening:true - watch for scrolling and update the cache
+*/
+var ScrollGeomCache = /** @class */ (function (_super) {
+    __extends(ScrollGeomCache, _super);
+    function ScrollGeomCache(scrollController, doesListening) {
+        var _this = _super.call(this) || this;
+        _this.handleScroll = function () {
+            _this.scrollTop = _this.scrollController.getScrollTop();
+            _this.scrollLeft = _this.scrollController.getScrollLeft();
+            _this.handleScrollChange();
+        };
+        _this.scrollController = scrollController;
+        _this.doesListening = doesListening;
+        _this.scrollTop = _this.origScrollTop = scrollController.getScrollTop();
+        _this.scrollLeft = _this.origScrollLeft = scrollController.getScrollLeft();
+        _this.scrollWidth = scrollController.getScrollWidth();
+        _this.scrollHeight = scrollController.getScrollHeight();
+        _this.clientWidth = scrollController.getClientWidth();
+        _this.clientHeight = scrollController.getClientHeight();
+        _this.clientRect = _this.computeClientRect(); // do last in case it needs cached values
+        if (_this.doesListening) {
+            _this.getEventTarget().addEventListener('scroll', _this.handleScroll);
+        }
+        return _this;
+    }
+    ScrollGeomCache.prototype.destroy = function () {
+        if (this.doesListening) {
+            this.getEventTarget().removeEventListener('scroll', this.handleScroll);
+        }
+    };
+    ScrollGeomCache.prototype.getScrollTop = function () {
+        return this.scrollTop;
+    };
+    ScrollGeomCache.prototype.getScrollLeft = function () {
+        return this.scrollLeft;
+    };
+    ScrollGeomCache.prototype.setScrollTop = function (top) {
+        this.scrollController.setScrollTop(top);
+        if (!this.doesListening) {
+            // we are not relying on the element to normalize out-of-bounds scroll values
+            // so we need to sanitize ourselves
+            this.scrollTop = Math.max(Math.min(top, this.getMaxScrollTop()), 0);
+            this.handleScrollChange();
+        }
+    };
+    ScrollGeomCache.prototype.setScrollLeft = function (top) {
+        this.scrollController.setScrollLeft(top);
+        if (!this.doesListening) {
+            // we are not relying on the element to normalize out-of-bounds scroll values
+            // so we need to sanitize ourselves
+            this.scrollLeft = Math.max(Math.min(top, this.getMaxScrollLeft()), 0);
+            this.handleScrollChange();
+        }
+    };
+    ScrollGeomCache.prototype.getClientWidth = function () {
+        return this.clientWidth;
+    };
+    ScrollGeomCache.prototype.getClientHeight = function () {
+        return this.clientHeight;
+    };
+    ScrollGeomCache.prototype.getScrollWidth = function () {
+        return this.scrollWidth;
+    };
+    ScrollGeomCache.prototype.getScrollHeight = function () {
+        return this.scrollHeight;
+    };
+    ScrollGeomCache.prototype.handleScrollChange = function () {
+    };
+    return ScrollGeomCache;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["ScrollController"]));
+var ElementScrollGeomCache = /** @class */ (function (_super) {
+    __extends(ElementScrollGeomCache, _super);
+    function ElementScrollGeomCache(el, doesListening) {
+        return _super.call(this, new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["ElementScrollController"](el), doesListening) || this;
+    }
+    ElementScrollGeomCache.prototype.getEventTarget = function () {
+        return this.scrollController.el;
+    };
+    ElementScrollGeomCache.prototype.computeClientRect = function () {
+        return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeInnerRect"])(this.scrollController.el);
+    };
+    return ElementScrollGeomCache;
+}(ScrollGeomCache));
+var WindowScrollGeomCache = /** @class */ (function (_super) {
+    __extends(WindowScrollGeomCache, _super);
+    function WindowScrollGeomCache(doesListening) {
+        return _super.call(this, new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["WindowScrollController"](), doesListening) || this;
+    }
+    WindowScrollGeomCache.prototype.getEventTarget = function () {
+        return window;
+    };
+    WindowScrollGeomCache.prototype.computeClientRect = function () {
+        return {
+            left: this.scrollLeft,
+            right: this.scrollLeft + this.clientWidth,
+            top: this.scrollTop,
+            bottom: this.scrollTop + this.clientHeight
+        };
+    };
+    // the window is the only scroll object that changes it's rectangle relative
+    // to the document's topleft as it scrolls
+    WindowScrollGeomCache.prototype.handleScrollChange = function () {
+        this.clientRect = this.computeClientRect();
+    };
+    return WindowScrollGeomCache;
+}(ScrollGeomCache));
+
+// If available we are using native "performance" API instead of "Date"
+// Read more about it on MDN:
+// https://developer.mozilla.org/en-US/docs/Web/API/Performance
+var getTime = typeof performance === 'function' ? performance.now : Date.now;
+/*
+For a pointer interaction, automatically scrolls certain scroll containers when the pointer
+approaches the edge.
+
+The caller must call start + handleMove + stop.
+*/
+var AutoScroller = /** @class */ (function () {
+    function AutoScroller() {
+        var _this = this;
+        // options that can be set by caller
+        this.isEnabled = true;
+        this.scrollQuery = [window, '.fc-scroller'];
+        this.edgeThreshold = 50; // pixels
+        this.maxVelocity = 300; // pixels per second
+        // internal state
+        this.pointerScreenX = null;
+        this.pointerScreenY = null;
+        this.isAnimating = false;
+        this.scrollCaches = null;
+        // protect against the initial pointerdown being too close to an edge and starting the scroll
+        this.everMovedUp = false;
+        this.everMovedDown = false;
+        this.everMovedLeft = false;
+        this.everMovedRight = false;
+        this.animate = function () {
+            if (_this.isAnimating) { // wasn't cancelled between animation calls
+                var edge = _this.computeBestEdge(_this.pointerScreenX + window.pageXOffset, _this.pointerScreenY + window.pageYOffset);
+                if (edge) {
+                    var now = getTime();
+                    _this.handleSide(edge, (now - _this.msSinceRequest) / 1000);
+                    _this.requestAnimation(now);
+                }
+                else {
+                    _this.isAnimating = false; // will stop animation
+                }
+            }
+        };
+    }
+    AutoScroller.prototype.start = function (pageX, pageY) {
+        if (this.isEnabled) {
+            this.scrollCaches = this.buildCaches();
+            this.pointerScreenX = null;
+            this.pointerScreenY = null;
+            this.everMovedUp = false;
+            this.everMovedDown = false;
+            this.everMovedLeft = false;
+            this.everMovedRight = false;
+            this.handleMove(pageX, pageY);
+        }
+    };
+    AutoScroller.prototype.handleMove = function (pageX, pageY) {
+        if (this.isEnabled) {
+            var pointerScreenX = pageX - window.pageXOffset;
+            var pointerScreenY = pageY - window.pageYOffset;
+            var yDelta = this.pointerScreenY === null ? 0 : pointerScreenY - this.pointerScreenY;
+            var xDelta = this.pointerScreenX === null ? 0 : pointerScreenX - this.pointerScreenX;
+            if (yDelta < 0) {
+                this.everMovedUp = true;
+            }
+            else if (yDelta > 0) {
+                this.everMovedDown = true;
+            }
+            if (xDelta < 0) {
+                this.everMovedLeft = true;
+            }
+            else if (xDelta > 0) {
+                this.everMovedRight = true;
+            }
+            this.pointerScreenX = pointerScreenX;
+            this.pointerScreenY = pointerScreenY;
+            if (!this.isAnimating) {
+                this.isAnimating = true;
+                this.requestAnimation(getTime());
+            }
+        }
+    };
+    AutoScroller.prototype.stop = function () {
+        if (this.isEnabled) {
+            this.isAnimating = false; // will stop animation
+            for (var _i = 0, _a = this.scrollCaches; _i < _a.length; _i++) {
+                var scrollCache = _a[_i];
+                scrollCache.destroy();
+            }
+            this.scrollCaches = null;
+        }
+    };
+    AutoScroller.prototype.requestAnimation = function (now) {
+        this.msSinceRequest = now;
+        requestAnimationFrame(this.animate);
+    };
+    AutoScroller.prototype.handleSide = function (edge, seconds) {
+        var scrollCache = edge.scrollCache;
+        var edgeThreshold = this.edgeThreshold;
+        var invDistance = edgeThreshold - edge.distance;
+        var velocity = // the closer to the edge, the faster we scroll
+         (invDistance * invDistance) / (edgeThreshold * edgeThreshold) * // quadratic
+            this.maxVelocity * seconds;
+        var sign = 1;
+        switch (edge.name) {
+            case 'left':
+                sign = -1;
+            // falls through
+            case 'right':
+                scrollCache.setScrollLeft(scrollCache.getScrollLeft() + velocity * sign);
+                break;
+            case 'top':
+                sign = -1;
+            // falls through
+            case 'bottom':
+                scrollCache.setScrollTop(scrollCache.getScrollTop() + velocity * sign);
+                break;
+        }
+    };
+    // left/top are relative to document topleft
+    AutoScroller.prototype.computeBestEdge = function (left, top) {
+        var edgeThreshold = this.edgeThreshold;
+        var bestSide = null;
+        for (var _i = 0, _a = this.scrollCaches; _i < _a.length; _i++) {
+            var scrollCache = _a[_i];
+            var rect = scrollCache.clientRect;
+            var leftDist = left - rect.left;
+            var rightDist = rect.right - left;
+            var topDist = top - rect.top;
+            var bottomDist = rect.bottom - top;
+            // completely within the rect?
+            if (leftDist >= 0 && rightDist >= 0 && topDist >= 0 && bottomDist >= 0) {
+                if (topDist <= edgeThreshold && this.everMovedUp && scrollCache.canScrollUp() &&
+                    (!bestSide || bestSide.distance > topDist)) {
+                    bestSide = { scrollCache: scrollCache, name: 'top', distance: topDist };
+                }
+                if (bottomDist <= edgeThreshold && this.everMovedDown && scrollCache.canScrollDown() &&
+                    (!bestSide || bestSide.distance > bottomDist)) {
+                    bestSide = { scrollCache: scrollCache, name: 'bottom', distance: bottomDist };
+                }
+                if (leftDist <= edgeThreshold && this.everMovedLeft && scrollCache.canScrollLeft() &&
+                    (!bestSide || bestSide.distance > leftDist)) {
+                    bestSide = { scrollCache: scrollCache, name: 'left', distance: leftDist };
+                }
+                if (rightDist <= edgeThreshold && this.everMovedRight && scrollCache.canScrollRight() &&
+                    (!bestSide || bestSide.distance > rightDist)) {
+                    bestSide = { scrollCache: scrollCache, name: 'right', distance: rightDist };
+                }
+            }
+        }
+        return bestSide;
+    };
+    AutoScroller.prototype.buildCaches = function () {
+        return this.queryScrollEls().map(function (el) {
+            if (el === window) {
+                return new WindowScrollGeomCache(false); // false = don't listen to user-generated scrolls
+            }
+            else {
+                return new ElementScrollGeomCache(el, false); // false = don't listen to user-generated scrolls
+            }
+        });
+    };
+    AutoScroller.prototype.queryScrollEls = function () {
+        var els = [];
+        for (var _i = 0, _a = this.scrollQuery; _i < _a.length; _i++) {
+            var query = _a[_i];
+            if (typeof query === 'object') {
+                els.push(query);
+            }
+            else {
+                els.push.apply(els, Array.prototype.slice.call(document.querySelectorAll(query)));
+            }
+        }
+        return els;
+    };
+    return AutoScroller;
+}());
+
+/*
+Monitors dragging on an element. Has a number of high-level features:
+- minimum distance required before dragging
+- minimum wait time ("delay") before dragging
+- a mirror element that follows the pointer
+*/
+var FeaturefulElementDragging = /** @class */ (function (_super) {
+    __extends(FeaturefulElementDragging, _super);
+    function FeaturefulElementDragging(containerEl) {
+        var _this = _super.call(this, containerEl) || this;
+        // options that can be directly set by caller
+        // the caller can also set the PointerDragging's options as well
+        _this.delay = null;
+        _this.minDistance = 0;
+        _this.touchScrollAllowed = true; // prevents drag from starting and blocks scrolling during drag
+        _this.mirrorNeedsRevert = false;
+        _this.isInteracting = false; // is the user validly moving the pointer? lasts until pointerup
+        _this.isDragging = false; // is it INTENTFULLY dragging? lasts until after revert animation
+        _this.isDelayEnded = false;
+        _this.isDistanceSurpassed = false;
+        _this.delayTimeoutId = null;
+        _this.onPointerDown = function (ev) {
+            if (!_this.isDragging) { // so new drag doesn't happen while revert animation is going
+                _this.isInteracting = true;
+                _this.isDelayEnded = false;
+                _this.isDistanceSurpassed = false;
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["preventSelection"])(document.body);
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["preventContextMenu"])(document.body);
+                // prevent links from being visited if there's an eventual drag.
+                // also prevents selection in older browsers (maybe?).
+                // not necessary for touch, besides, browser would complain about passiveness.
+                if (!ev.isTouch) {
+                    ev.origEvent.preventDefault();
+                }
+                _this.emitter.trigger('pointerdown', ev);
+                if (!_this.pointer.shouldIgnoreMove) {
+                    // actions related to initiating dragstart+dragmove+dragend...
+                    _this.mirror.setIsVisible(false); // reset. caller must set-visible
+                    _this.mirror.start(ev.subjectEl, ev.pageX, ev.pageY); // must happen on first pointer down
+                    _this.startDelay(ev);
+                    if (!_this.minDistance) {
+                        _this.handleDistanceSurpassed(ev);
+                    }
+                }
+            }
+        };
+        _this.onPointerMove = function (ev) {
+            if (_this.isInteracting) { // if false, still waiting for previous drag's revert
+                _this.emitter.trigger('pointermove', ev);
+                if (!_this.isDistanceSurpassed) {
+                    var minDistance = _this.minDistance;
+                    var distanceSq = void 0; // current distance from the origin, squared
+                    var deltaX = ev.deltaX, deltaY = ev.deltaY;
+                    distanceSq = deltaX * deltaX + deltaY * deltaY;
+                    if (distanceSq >= minDistance * minDistance) { // use pythagorean theorem
+                        _this.handleDistanceSurpassed(ev);
+                    }
+                }
+                if (_this.isDragging) {
+                    // a real pointer move? (not one simulated by scrolling)
+                    if (ev.origEvent.type !== 'scroll') {
+                        _this.mirror.handleMove(ev.pageX, ev.pageY);
+                        _this.autoScroller.handleMove(ev.pageX, ev.pageY);
+                    }
+                    _this.emitter.trigger('dragmove', ev);
+                }
+            }
+        };
+        _this.onPointerUp = function (ev) {
+            if (_this.isInteracting) { // if false, still waiting for previous drag's revert
+                _this.isInteracting = false;
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["allowSelection"])(document.body);
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["allowContextMenu"])(document.body);
+                _this.emitter.trigger('pointerup', ev); // can potentially set mirrorNeedsRevert
+                if (_this.isDragging) {
+                    _this.autoScroller.stop();
+                    _this.tryStopDrag(ev); // which will stop the mirror
+                }
+                if (_this.delayTimeoutId) {
+                    clearTimeout(_this.delayTimeoutId);
+                    _this.delayTimeoutId = null;
+                }
+            }
+        };
+        var pointer = _this.pointer = new PointerDragging(containerEl);
+        pointer.emitter.on('pointerdown', _this.onPointerDown);
+        pointer.emitter.on('pointermove', _this.onPointerMove);
+        pointer.emitter.on('pointerup', _this.onPointerUp);
+        _this.mirror = new ElementMirror();
+        _this.autoScroller = new AutoScroller();
+        return _this;
+    }
+    FeaturefulElementDragging.prototype.destroy = function () {
+        this.pointer.destroy();
+    };
+    FeaturefulElementDragging.prototype.startDelay = function (ev) {
+        var _this = this;
+        if (typeof this.delay === 'number') {
+            this.delayTimeoutId = setTimeout(function () {
+                _this.delayTimeoutId = null;
+                _this.handleDelayEnd(ev);
+            }, this.delay); // not assignable to number!
+        }
+        else {
+            this.handleDelayEnd(ev);
+        }
+    };
+    FeaturefulElementDragging.prototype.handleDelayEnd = function (ev) {
+        this.isDelayEnded = true;
+        this.tryStartDrag(ev);
+    };
+    FeaturefulElementDragging.prototype.handleDistanceSurpassed = function (ev) {
+        this.isDistanceSurpassed = true;
+        this.tryStartDrag(ev);
+    };
+    FeaturefulElementDragging.prototype.tryStartDrag = function (ev) {
+        if (this.isDelayEnded && this.isDistanceSurpassed) {
+            if (!this.pointer.wasTouchScroll || this.touchScrollAllowed) {
+                this.isDragging = true;
+                this.mirrorNeedsRevert = false;
+                this.autoScroller.start(ev.pageX, ev.pageY);
+                this.emitter.trigger('dragstart', ev);
+                if (this.touchScrollAllowed === false) {
+                    this.pointer.cancelTouchScroll();
+                }
+            }
+        }
+    };
+    FeaturefulElementDragging.prototype.tryStopDrag = function (ev) {
+        // .stop() is ALWAYS asynchronous, which we NEED because we want all pointerup events
+        // that come from the document to fire beforehand. much more convenient this way.
+        this.mirror.stop(this.mirrorNeedsRevert, this.stopDrag.bind(this, ev) // bound with args
+        );
+    };
+    FeaturefulElementDragging.prototype.stopDrag = function (ev) {
+        this.isDragging = false;
+        this.emitter.trigger('dragend', ev);
+    };
+    // fill in the implementations...
+    FeaturefulElementDragging.prototype.setIgnoreMove = function (bool) {
+        this.pointer.shouldIgnoreMove = bool;
+    };
+    FeaturefulElementDragging.prototype.setMirrorIsVisible = function (bool) {
+        this.mirror.setIsVisible(bool);
+    };
+    FeaturefulElementDragging.prototype.setMirrorNeedsRevert = function (bool) {
+        this.mirrorNeedsRevert = bool;
+    };
+    FeaturefulElementDragging.prototype.setAutoScrollEnabled = function (bool) {
+        this.autoScroller.isEnabled = bool;
+    };
+    return FeaturefulElementDragging;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["ElementDragging"]));
+
+/*
+When this class is instantiated, it records the offset of an element (relative to the document topleft),
+and continues to monitor scrolling, updating the cached coordinates if it needs to.
+Does not access the DOM after instantiation, so highly performant.
+
+Also keeps track of all scrolling/overflow:hidden containers that are parents of the given element
+and an determine if a given point is inside the combined clipping rectangle.
+*/
+var OffsetTracker = /** @class */ (function () {
+    function OffsetTracker(el) {
+        this.origRect = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeRect"])(el);
+        // will work fine for divs that have overflow:hidden
+        this.scrollCaches = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getClippingParents"])(el).map(function (el) {
+            return new ElementScrollGeomCache(el, true); // listen=true
+        });
+    }
+    OffsetTracker.prototype.destroy = function () {
+        for (var _i = 0, _a = this.scrollCaches; _i < _a.length; _i++) {
+            var scrollCache = _a[_i];
+            scrollCache.destroy();
+        }
+    };
+    OffsetTracker.prototype.computeLeft = function () {
+        var left = this.origRect.left;
+        for (var _i = 0, _a = this.scrollCaches; _i < _a.length; _i++) {
+            var scrollCache = _a[_i];
+            left += scrollCache.origScrollLeft - scrollCache.getScrollLeft();
+        }
+        return left;
+    };
+    OffsetTracker.prototype.computeTop = function () {
+        var top = this.origRect.top;
+        for (var _i = 0, _a = this.scrollCaches; _i < _a.length; _i++) {
+            var scrollCache = _a[_i];
+            top += scrollCache.origScrollTop - scrollCache.getScrollTop();
+        }
+        return top;
+    };
+    OffsetTracker.prototype.isWithinClipping = function (pageX, pageY) {
+        var point = { left: pageX, top: pageY };
+        for (var _i = 0, _a = this.scrollCaches; _i < _a.length; _i++) {
+            var scrollCache = _a[_i];
+            if (!isIgnoredClipping(scrollCache.getEventTarget()) &&
+                !Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["pointInsideRect"])(point, scrollCache.clientRect)) {
+                return false;
+            }
+        }
+        return true;
+    };
+    return OffsetTracker;
+}());
+// certain clipping containers should never constrain interactions, like <html> and <body>
+// https://github.com/fullcalendar/fullcalendar/issues/3615
+function isIgnoredClipping(node) {
+    var tagName = node.tagName;
+    return tagName === 'HTML' || tagName === 'BODY';
+}
+
+/*
+Tracks movement over multiple droppable areas (aka "hits")
+that exist in one or more DateComponents.
+Relies on an existing draggable.
+
+emits:
+- pointerdown
+- dragstart
+- hitchange - fires initially, even if not over a hit
+- pointerup
+- (hitchange - again, to null, if ended over a hit)
+- dragend
+*/
+var HitDragging = /** @class */ (function () {
+    function HitDragging(dragging, droppableStore) {
+        var _this = this;
+        // options that can be set by caller
+        this.useSubjectCenter = false;
+        this.requireInitial = true; // if doesn't start out on a hit, won't emit any events
+        this.initialHit = null;
+        this.movingHit = null;
+        this.finalHit = null; // won't ever be populated if shouldIgnoreMove
+        this.handlePointerDown = function (ev) {
+            var dragging = _this.dragging;
+            _this.initialHit = null;
+            _this.movingHit = null;
+            _this.finalHit = null;
+            _this.prepareHits();
+            _this.processFirstCoord(ev);
+            if (_this.initialHit || !_this.requireInitial) {
+                dragging.setIgnoreMove(false);
+                _this.emitter.trigger('pointerdown', ev); // TODO: fire this before computing processFirstCoord, so listeners can cancel. this gets fired by almost every handler :(
+            }
+            else {
+                dragging.setIgnoreMove(true);
+            }
+        };
+        this.handleDragStart = function (ev) {
+            _this.emitter.trigger('dragstart', ev);
+            _this.handleMove(ev, true); // force = fire even if initially null
+        };
+        this.handleDragMove = function (ev) {
+            _this.emitter.trigger('dragmove', ev);
+            _this.handleMove(ev);
+        };
+        this.handlePointerUp = function (ev) {
+            _this.releaseHits();
+            _this.emitter.trigger('pointerup', ev);
+        };
+        this.handleDragEnd = function (ev) {
+            if (_this.movingHit) {
+                _this.emitter.trigger('hitupdate', null, true, ev);
+            }
+            _this.finalHit = _this.movingHit;
+            _this.movingHit = null;
+            _this.emitter.trigger('dragend', ev);
+        };
+        this.droppableStore = droppableStore;
+        dragging.emitter.on('pointerdown', this.handlePointerDown);
+        dragging.emitter.on('dragstart', this.handleDragStart);
+        dragging.emitter.on('dragmove', this.handleDragMove);
+        dragging.emitter.on('pointerup', this.handlePointerUp);
+        dragging.emitter.on('dragend', this.handleDragEnd);
+        this.dragging = dragging;
+        this.emitter = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EmitterMixin"]();
+    }
+    // sets initialHit
+    // sets coordAdjust
+    HitDragging.prototype.processFirstCoord = function (ev) {
+        var origPoint = { left: ev.pageX, top: ev.pageY };
+        var adjustedPoint = origPoint;
+        var subjectEl = ev.subjectEl;
+        var subjectRect;
+        if (subjectEl !== document) {
+            subjectRect = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeRect"])(subjectEl);
+            adjustedPoint = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["constrainPoint"])(adjustedPoint, subjectRect);
+        }
+        var initialHit = this.initialHit = this.queryHitForOffset(adjustedPoint.left, adjustedPoint.top);
+        if (initialHit) {
+            if (this.useSubjectCenter && subjectRect) {
+                var slicedSubjectRect = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["intersectRects"])(subjectRect, initialHit.rect);
+                if (slicedSubjectRect) {
+                    adjustedPoint = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getRectCenter"])(slicedSubjectRect);
+                }
+            }
+            this.coordAdjust = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["diffPoints"])(adjustedPoint, origPoint);
+        }
+        else {
+            this.coordAdjust = { left: 0, top: 0 };
+        }
+    };
+    HitDragging.prototype.handleMove = function (ev, forceHandle) {
+        var hit = this.queryHitForOffset(ev.pageX + this.coordAdjust.left, ev.pageY + this.coordAdjust.top);
+        if (forceHandle || !isHitsEqual(this.movingHit, hit)) {
+            this.movingHit = hit;
+            this.emitter.trigger('hitupdate', hit, false, ev);
+        }
+    };
+    HitDragging.prototype.prepareHits = function () {
+        this.offsetTrackers = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["mapHash"])(this.droppableStore, function (interactionSettings) {
+            interactionSettings.component.buildPositionCaches();
+            return new OffsetTracker(interactionSettings.el);
+        });
+    };
+    HitDragging.prototype.releaseHits = function () {
+        var offsetTrackers = this.offsetTrackers;
+        for (var id in offsetTrackers) {
+            offsetTrackers[id].destroy();
+        }
+        this.offsetTrackers = {};
+    };
+    HitDragging.prototype.queryHitForOffset = function (offsetLeft, offsetTop) {
+        var _a = this, droppableStore = _a.droppableStore, offsetTrackers = _a.offsetTrackers;
+        var bestHit = null;
+        for (var id in droppableStore) {
+            var component = droppableStore[id].component;
+            var offsetTracker = offsetTrackers[id];
+            if (offsetTracker.isWithinClipping(offsetLeft, offsetTop)) {
+                var originLeft = offsetTracker.computeLeft();
+                var originTop = offsetTracker.computeTop();
+                var positionLeft = offsetLeft - originLeft;
+                var positionTop = offsetTop - originTop;
+                var origRect = offsetTracker.origRect;
+                var width = origRect.right - origRect.left;
+                var height = origRect.bottom - origRect.top;
+                if (
+                // must be within the element's bounds
+                positionLeft >= 0 && positionLeft < width &&
+                    positionTop >= 0 && positionTop < height) {
+                    var hit = component.queryHit(positionLeft, positionTop, width, height);
+                    if (hit &&
+                        (
+                        // make sure the hit is within activeRange, meaning it's not a deal cell
+                        !component.props.dateProfile || // hack for DayTile
+                            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["rangeContainsRange"])(component.props.dateProfile.activeRange, hit.dateSpan.range)) &&
+                        (!bestHit || hit.layer > bestHit.layer)) {
+                        // TODO: better way to re-orient rectangle
+                        hit.rect.left += originLeft;
+                        hit.rect.right += originLeft;
+                        hit.rect.top += originTop;
+                        hit.rect.bottom += originTop;
+                        bestHit = hit;
+                    }
+                }
+            }
+        }
+        return bestHit;
+    };
+    return HitDragging;
+}());
+function isHitsEqual(hit0, hit1) {
+    if (!hit0 && !hit1) {
+        return true;
+    }
+    if (Boolean(hit0) !== Boolean(hit1)) {
+        return false;
+    }
+    return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["isDateSpansEqual"])(hit0.dateSpan, hit1.dateSpan);
+}
+
+/*
+Monitors when the user clicks on a specific date/time of a component.
+A pointerdown+pointerup on the same "hit" constitutes a click.
+*/
+var DateClicking = /** @class */ (function (_super) {
+    __extends(DateClicking, _super);
+    function DateClicking(settings) {
+        var _this = _super.call(this, settings) || this;
+        _this.handlePointerDown = function (ev) {
+            var dragging = _this.dragging;
+            // do this in pointerdown (not dragend) because DOM might be mutated by the time dragend is fired
+            dragging.setIgnoreMove(!_this.component.isValidDateDownEl(dragging.pointer.downEl));
+        };
+        // won't even fire if moving was ignored
+        _this.handleDragEnd = function (ev) {
+            var component = _this.component;
+            var _a = component.context, calendar = _a.calendar, view = _a.view;
+            var pointer = _this.dragging.pointer;
+            if (!pointer.wasTouchScroll) {
+                var _b = _this.hitDragging, initialHit = _b.initialHit, finalHit = _b.finalHit;
+                if (initialHit && finalHit && isHitsEqual(initialHit, finalHit)) {
+                    calendar.triggerDateClick(initialHit.dateSpan, initialHit.dayEl, view, ev.origEvent);
+                }
+            }
+        };
+        var component = settings.component;
+        // we DO want to watch pointer moves because otherwise finalHit won't get populated
+        _this.dragging = new FeaturefulElementDragging(component.el);
+        _this.dragging.autoScroller.isEnabled = false;
+        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsToStore"])(settings));
+        hitDragging.emitter.on('pointerdown', _this.handlePointerDown);
+        hitDragging.emitter.on('dragend', _this.handleDragEnd);
+        return _this;
+    }
+    DateClicking.prototype.destroy = function () {
+        this.dragging.destroy();
+    };
+    return DateClicking;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Interaction"]));
+
+/*
+Tracks when the user selects a portion of time of a component,
+constituted by a drag over date cells, with a possible delay at the beginning of the drag.
+*/
+var DateSelecting = /** @class */ (function (_super) {
+    __extends(DateSelecting, _super);
+    function DateSelecting(settings) {
+        var _this = _super.call(this, settings) || this;
+        _this.dragSelection = null;
+        _this.handlePointerDown = function (ev) {
+            var _a = _this, component = _a.component, dragging = _a.dragging;
+            var options = component.context.options;
+            var canSelect = options.selectable &&
+                component.isValidDateDownEl(ev.origEvent.target);
+            // don't bother to watch expensive moves if component won't do selection
+            dragging.setIgnoreMove(!canSelect);
+            // if touch, require user to hold down
+            dragging.delay = ev.isTouch ? getComponentTouchDelay(component) : null;
+        };
+        _this.handleDragStart = function (ev) {
+            _this.component.context.calendar.unselect(ev); // unselect previous selections
+        };
+        _this.handleHitUpdate = function (hit, isFinal) {
+            var calendar = _this.component.context.calendar;
+            var dragSelection = null;
+            var isInvalid = false;
+            if (hit) {
+                dragSelection = joinHitsIntoSelection(_this.hitDragging.initialHit, hit, calendar.pluginSystem.hooks.dateSelectionTransformers);
+                if (!dragSelection || !_this.component.isDateSelectionValid(dragSelection)) {
+                    isInvalid = true;
+                    dragSelection = null;
+                }
+            }
+            if (dragSelection) {
+                calendar.dispatch({ type: 'SELECT_DATES', selection: dragSelection });
+            }
+            else if (!isFinal) { // only unselect if moved away while dragging
+                calendar.dispatch({ type: 'UNSELECT_DATES' });
+            }
+            if (!isInvalid) {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["enableCursor"])();
+            }
+            else {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["disableCursor"])();
+            }
+            if (!isFinal) {
+                _this.dragSelection = dragSelection; // only clear if moved away from all hits while dragging
+            }
+        };
+        _this.handlePointerUp = function (pev) {
+            if (_this.dragSelection) {
+                // selection is already rendered, so just need to report selection
+                _this.component.context.calendar.triggerDateSelect(_this.dragSelection, pev);
+                _this.dragSelection = null;
+            }
+        };
+        var component = settings.component;
+        var options = component.context.options;
+        var dragging = _this.dragging = new FeaturefulElementDragging(component.el);
+        dragging.touchScrollAllowed = false;
+        dragging.minDistance = options.selectMinDistance || 0;
+        dragging.autoScroller.isEnabled = options.dragScroll;
+        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsToStore"])(settings));
+        hitDragging.emitter.on('pointerdown', _this.handlePointerDown);
+        hitDragging.emitter.on('dragstart', _this.handleDragStart);
+        hitDragging.emitter.on('hitupdate', _this.handleHitUpdate);
+        hitDragging.emitter.on('pointerup', _this.handlePointerUp);
+        return _this;
+    }
+    DateSelecting.prototype.destroy = function () {
+        this.dragging.destroy();
+    };
+    return DateSelecting;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Interaction"]));
+function getComponentTouchDelay(component) {
+    var options = component.context.options;
+    var delay = options.selectLongPressDelay;
+    if (delay == null) {
+        delay = options.longPressDelay;
+    }
+    return delay;
+}
+function joinHitsIntoSelection(hit0, hit1, dateSelectionTransformers) {
+    var dateSpan0 = hit0.dateSpan;
+    var dateSpan1 = hit1.dateSpan;
+    var ms = [
+        dateSpan0.range.start,
+        dateSpan0.range.end,
+        dateSpan1.range.start,
+        dateSpan1.range.end
+    ];
+    ms.sort(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["compareNumbers"]);
+    var props = {};
+    for (var _i = 0, dateSelectionTransformers_1 = dateSelectionTransformers; _i < dateSelectionTransformers_1.length; _i++) {
+        var transformer = dateSelectionTransformers_1[_i];
+        var res = transformer(hit0, hit1);
+        if (res === false) {
+            return null;
+        }
+        else if (res) {
+            __assign(props, res);
+        }
+    }
+    props.range = { start: ms[0], end: ms[3] };
+    props.allDay = dateSpan0.allDay;
+    return props;
+}
+
+var EventDragging = /** @class */ (function (_super) {
+    __extends(EventDragging, _super);
+    function EventDragging(settings) {
+        var _this = _super.call(this, settings) || this;
+        // internal state
+        _this.subjectSeg = null; // the seg being selected/dragged
+        _this.isDragging = false;
+        _this.eventRange = null;
+        _this.relevantEvents = null; // the events being dragged
+        _this.receivingCalendar = null;
+        _this.validMutation = null;
+        _this.mutatedRelevantEvents = null;
+        _this.handlePointerDown = function (ev) {
+            var origTarget = ev.origEvent.target;
+            var _a = _this, component = _a.component, dragging = _a.dragging;
+            var mirror = dragging.mirror;
+            var options = component.context.options;
+            var initialCalendar = component.context.calendar;
+            var subjectSeg = _this.subjectSeg = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getElSeg"])(ev.subjectEl);
+            var eventRange = _this.eventRange = subjectSeg.eventRange;
+            var eventInstanceId = eventRange.instance.instanceId;
+            _this.relevantEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getRelevantEvents"])(initialCalendar.state.eventStore, eventInstanceId);
+            dragging.minDistance = ev.isTouch ? 0 : options.eventDragMinDistance;
+            dragging.delay =
+                // only do a touch delay if touch and this event hasn't been selected yet
+                (ev.isTouch && eventInstanceId !== component.props.eventSelection) ?
+                    getComponentTouchDelay$1(component) :
+                    null;
+            mirror.parentNode = initialCalendar.el;
+            mirror.revertDuration = options.dragRevertDuration;
+            var isValid = component.isValidSegDownEl(origTarget) &&
+                !Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(origTarget, '.fc-resizer'); // NOT on a resizer
+            dragging.setIgnoreMove(!isValid);
+            // disable dragging for elements that are resizable (ie, selectable)
+            // but are not draggable
+            _this.isDragging = isValid &&
+                ev.subjectEl.classList.contains('fc-draggable');
+        };
+        _this.handleDragStart = function (ev) {
+            var context = _this.component.context;
+            var initialCalendar = context.calendar;
+            var eventRange = _this.eventRange;
+            var eventInstanceId = eventRange.instance.instanceId;
+            if (ev.isTouch) {
+                // need to select a different event?
+                if (eventInstanceId !== _this.component.props.eventSelection) {
+                    initialCalendar.dispatch({ type: 'SELECT_EVENT', eventInstanceId: eventInstanceId });
+                }
+            }
+            else {
+                // if now using mouse, but was previous touch interaction, clear selected event
+                initialCalendar.dispatch({ type: 'UNSELECT_EVENT' });
+            }
+            if (_this.isDragging) {
+                initialCalendar.unselect(ev); // unselect *date* selection
+                initialCalendar.publiclyTrigger('eventDragStart', [
+                    {
+                        el: _this.subjectSeg.el,
+                        event: new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](initialCalendar, eventRange.def, eventRange.instance),
+                        jsEvent: ev.origEvent,
+                        view: context.view
+                    }
+                ]);
+            }
+        };
+        _this.handleHitUpdate = function (hit, isFinal) {
+            if (!_this.isDragging) {
+                return;
+            }
+            var relevantEvents = _this.relevantEvents;
+            var initialHit = _this.hitDragging.initialHit;
+            var initialCalendar = _this.component.context.calendar;
+            // states based on new hit
+            var receivingCalendar = null;
+            var mutation = null;
+            var mutatedRelevantEvents = null;
+            var isInvalid = false;
+            var interaction = {
+                affectedEvents: relevantEvents,
+                mutatedEvents: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                isEvent: true,
+                origSeg: _this.subjectSeg
+            };
+            if (hit) {
+                var receivingComponent = hit.component;
+                receivingCalendar = receivingComponent.context.calendar;
+                var receivingOptions = receivingComponent.context.options;
+                if (initialCalendar === receivingCalendar ||
+                    receivingOptions.editable && receivingOptions.droppable) {
+                    mutation = computeEventMutation(initialHit, hit, receivingCalendar.pluginSystem.hooks.eventDragMutationMassagers);
+                    if (mutation) {
+                        mutatedRelevantEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyMutationToEventStore"])(relevantEvents, receivingCalendar.eventUiBases, mutation, receivingCalendar);
+                        interaction.mutatedEvents = mutatedRelevantEvents;
+                        if (!receivingComponent.isInteractionValid(interaction)) {
+                            isInvalid = true;
+                            mutation = null;
+                            mutatedRelevantEvents = null;
+                            interaction.mutatedEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])();
+                        }
+                    }
+                }
+                else {
+                    receivingCalendar = null;
+                }
+            }
+            _this.displayDrag(receivingCalendar, interaction);
+            if (!isInvalid) {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["enableCursor"])();
+            }
+            else {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["disableCursor"])();
+            }
+            if (!isFinal) {
+                if (initialCalendar === receivingCalendar && // TODO: write test for this
+                    isHitsEqual(initialHit, hit)) {
+                    mutation = null;
+                }
+                _this.dragging.setMirrorNeedsRevert(!mutation);
+                // render the mirror if no already-rendered mirror
+                // TODO: wish we could somehow wait for dispatch to guarantee render
+                _this.dragging.setMirrorIsVisible(!hit || !document.querySelector('.fc-mirror'));
+                // assign states based on new hit
+                _this.receivingCalendar = receivingCalendar;
+                _this.validMutation = mutation;
+                _this.mutatedRelevantEvents = mutatedRelevantEvents;
+            }
+        };
+        _this.handlePointerUp = function () {
+            if (!_this.isDragging) {
+                _this.cleanup(); // because handleDragEnd won't fire
+            }
+        };
+        _this.handleDragEnd = function (ev) {
+            if (_this.isDragging) {
+                var context = _this.component.context;
+                var initialCalendar_1 = context.calendar;
+                var initialView = context.view;
+                var _a = _this, receivingCalendar = _a.receivingCalendar, validMutation = _a.validMutation;
+                var eventDef = _this.eventRange.def;
+                var eventInstance = _this.eventRange.instance;
+                var eventApi = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](initialCalendar_1, eventDef, eventInstance);
+                var relevantEvents_1 = _this.relevantEvents;
+                var mutatedRelevantEvents = _this.mutatedRelevantEvents;
+                var finalHit = _this.hitDragging.finalHit;
+                _this.clearDrag(); // must happen after revert animation
+                initialCalendar_1.publiclyTrigger('eventDragStop', [
+                    {
+                        el: _this.subjectSeg.el,
+                        event: eventApi,
+                        jsEvent: ev.origEvent,
+                        view: initialView
+                    }
+                ]);
+                if (validMutation) {
+                    // dropped within same calendar
+                    if (receivingCalendar === initialCalendar_1) {
+                        initialCalendar_1.dispatch({
+                            type: 'MERGE_EVENTS',
+                            eventStore: mutatedRelevantEvents
+                        });
+                        var transformed = {};
+                        for (var _i = 0, _b = initialCalendar_1.pluginSystem.hooks.eventDropTransformers; _i < _b.length; _i++) {
+                            var transformer = _b[_i];
+                            __assign(transformed, transformer(validMutation, initialCalendar_1));
+                        }
+                        var eventDropArg = __assign({}, transformed, { el: ev.subjectEl, delta: validMutation.datesDelta, oldEvent: eventApi, event: new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](// the data AFTER the mutation
+                            initialCalendar_1, mutatedRelevantEvents.defs[eventDef.defId], eventInstance ? mutatedRelevantEvents.instances[eventInstance.instanceId] : null), revert: function () {
+                                initialCalendar_1.dispatch({
+                                    type: 'MERGE_EVENTS',
+                                    eventStore: relevantEvents_1
+                                });
+                            }, jsEvent: ev.origEvent, view: initialView });
+                        initialCalendar_1.publiclyTrigger('eventDrop', [eventDropArg]);
+                        // dropped in different calendar
+                    }
+                    else if (receivingCalendar) {
+                        initialCalendar_1.publiclyTrigger('eventLeave', [
+                            {
+                                draggedEl: ev.subjectEl,
+                                event: eventApi,
+                                view: initialView
+                            }
+                        ]);
+                        initialCalendar_1.dispatch({
+                            type: 'REMOVE_EVENT_INSTANCES',
+                            instances: _this.mutatedRelevantEvents.instances
+                        });
+                        receivingCalendar.dispatch({
+                            type: 'MERGE_EVENTS',
+                            eventStore: _this.mutatedRelevantEvents
+                        });
+                        if (ev.isTouch) {
+                            receivingCalendar.dispatch({
+                                type: 'SELECT_EVENT',
+                                eventInstanceId: eventInstance.instanceId
+                            });
+                        }
+                        var dropArg = __assign({}, receivingCalendar.buildDatePointApi(finalHit.dateSpan), { draggedEl: ev.subjectEl, jsEvent: ev.origEvent, view: finalHit.component // should this be finalHit.component.view? See #4644
+                         });
+                        receivingCalendar.publiclyTrigger('drop', [dropArg]);
+                        receivingCalendar.publiclyTrigger('eventReceive', [
+                            {
+                                draggedEl: ev.subjectEl,
+                                event: new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](// the data AFTER the mutation
+                                receivingCalendar, mutatedRelevantEvents.defs[eventDef.defId], mutatedRelevantEvents.instances[eventInstance.instanceId]),
+                                view: finalHit.component // should this be finalHit.component.view? See #4644
+                            }
+                        ]);
+                    }
+                }
+                else {
+                    initialCalendar_1.publiclyTrigger('_noEventDrop');
+                }
+            }
+            _this.cleanup();
+        };
+        var component = _this.component;
+        var options = component.context.options;
+        var dragging = _this.dragging = new FeaturefulElementDragging(component.el);
+        dragging.pointer.selector = EventDragging.SELECTOR;
+        dragging.touchScrollAllowed = false;
+        dragging.autoScroller.isEnabled = options.dragScroll;
+        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsStore"]);
+        hitDragging.useSubjectCenter = settings.useEventCenter;
+        hitDragging.emitter.on('pointerdown', _this.handlePointerDown);
+        hitDragging.emitter.on('dragstart', _this.handleDragStart);
+        hitDragging.emitter.on('hitupdate', _this.handleHitUpdate);
+        hitDragging.emitter.on('pointerup', _this.handlePointerUp);
+        hitDragging.emitter.on('dragend', _this.handleDragEnd);
+        return _this;
+    }
+    EventDragging.prototype.destroy = function () {
+        this.dragging.destroy();
+    };
+    // render a drag state on the next receivingCalendar
+    EventDragging.prototype.displayDrag = function (nextCalendar, state) {
+        var initialCalendar = this.component.context.calendar;
+        var prevCalendar = this.receivingCalendar;
+        // does the previous calendar need to be cleared?
+        if (prevCalendar && prevCalendar !== nextCalendar) {
+            // does the initial calendar need to be cleared?
+            // if so, don't clear all the way. we still need to to hide the affectedEvents
+            if (prevCalendar === initialCalendar) {
+                prevCalendar.dispatch({
+                    type: 'SET_EVENT_DRAG',
+                    state: {
+                        affectedEvents: state.affectedEvents,
+                        mutatedEvents: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                        isEvent: true,
+                        origSeg: state.origSeg
+                    }
+                });
+                // completely clear the old calendar if it wasn't the initial
+            }
+            else {
+                prevCalendar.dispatch({ type: 'UNSET_EVENT_DRAG' });
+            }
+        }
+        if (nextCalendar) {
+            nextCalendar.dispatch({ type: 'SET_EVENT_DRAG', state: state });
+        }
+    };
+    EventDragging.prototype.clearDrag = function () {
+        var initialCalendar = this.component.context.calendar;
+        var receivingCalendar = this.receivingCalendar;
+        if (receivingCalendar) {
+            receivingCalendar.dispatch({ type: 'UNSET_EVENT_DRAG' });
+        }
+        // the initial calendar might have an dummy drag state from displayDrag
+        if (initialCalendar !== receivingCalendar) {
+            initialCalendar.dispatch({ type: 'UNSET_EVENT_DRAG' });
+        }
+    };
+    EventDragging.prototype.cleanup = function () {
+        this.subjectSeg = null;
+        this.isDragging = false;
+        this.eventRange = null;
+        this.relevantEvents = null;
+        this.receivingCalendar = null;
+        this.validMutation = null;
+        this.mutatedRelevantEvents = null;
+    };
+    EventDragging.SELECTOR = '.fc-draggable, .fc-resizable'; // TODO: test this in IE11
+    return EventDragging;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Interaction"]));
+function computeEventMutation(hit0, hit1, massagers) {
+    var dateSpan0 = hit0.dateSpan;
+    var dateSpan1 = hit1.dateSpan;
+    var date0 = dateSpan0.range.start;
+    var date1 = dateSpan1.range.start;
+    var standardProps = {};
+    if (dateSpan0.allDay !== dateSpan1.allDay) {
+        standardProps.allDay = dateSpan1.allDay;
+        standardProps.hasEnd = hit1.component.context.options.allDayMaintainDuration;
+        if (dateSpan1.allDay) {
+            // means date1 is already start-of-day,
+            // but date0 needs to be converted
+            date0 = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["startOfDay"])(date0);
+        }
+    }
+    var delta = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["diffDates"])(date0, date1, hit0.component.context.dateEnv, hit0.component === hit1.component ?
+        hit0.component.largeUnit :
+        null);
+    if (delta.milliseconds) { // has hours/minutes/seconds
+        standardProps.allDay = false;
+    }
+    var mutation = {
+        datesDelta: delta,
+        standardProps: standardProps
+    };
+    for (var _i = 0, massagers_1 = massagers; _i < massagers_1.length; _i++) {
+        var massager = massagers_1[_i];
+        massager(mutation, hit0, hit1);
+    }
+    return mutation;
+}
+function getComponentTouchDelay$1(component) {
+    var options = component.context.options;
+    var delay = options.eventLongPressDelay;
+    if (delay == null) {
+        delay = options.longPressDelay;
+    }
+    return delay;
+}
+
+var EventDragging$1 = /** @class */ (function (_super) {
+    __extends(EventDragging, _super);
+    function EventDragging(settings) {
+        var _this = _super.call(this, settings) || this;
+        // internal state
+        _this.draggingSeg = null; // TODO: rename to resizingSeg? subjectSeg?
+        _this.eventRange = null;
+        _this.relevantEvents = null;
+        _this.validMutation = null;
+        _this.mutatedRelevantEvents = null;
+        _this.handlePointerDown = function (ev) {
+            var component = _this.component;
+            var seg = _this.querySeg(ev);
+            var eventRange = _this.eventRange = seg.eventRange;
+            _this.dragging.minDistance = component.context.options.eventDragMinDistance;
+            // if touch, need to be working with a selected event
+            _this.dragging.setIgnoreMove(!_this.component.isValidSegDownEl(ev.origEvent.target) ||
+                (ev.isTouch && _this.component.props.eventSelection !== eventRange.instance.instanceId));
+        };
+        _this.handleDragStart = function (ev) {
+            var _a = _this.component.context, calendar = _a.calendar, view = _a.view;
+            var eventRange = _this.eventRange;
+            _this.relevantEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getRelevantEvents"])(calendar.state.eventStore, _this.eventRange.instance.instanceId);
+            _this.draggingSeg = _this.querySeg(ev);
+            calendar.unselect();
+            calendar.publiclyTrigger('eventResizeStart', [
+                {
+                    el: _this.draggingSeg.el,
+                    event: new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](calendar, eventRange.def, eventRange.instance),
+                    jsEvent: ev.origEvent,
+                    view: view
+                }
+            ]);
+        };
+        _this.handleHitUpdate = function (hit, isFinal, ev) {
+            var calendar = _this.component.context.calendar;
+            var relevantEvents = _this.relevantEvents;
+            var initialHit = _this.hitDragging.initialHit;
+            var eventInstance = _this.eventRange.instance;
+            var mutation = null;
+            var mutatedRelevantEvents = null;
+            var isInvalid = false;
+            var interaction = {
+                affectedEvents: relevantEvents,
+                mutatedEvents: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                isEvent: true,
+                origSeg: _this.draggingSeg
+            };
+            if (hit) {
+                mutation = computeMutation(initialHit, hit, ev.subjectEl.classList.contains('fc-start-resizer'), eventInstance.range, calendar.pluginSystem.hooks.eventResizeJoinTransforms);
+            }
+            if (mutation) {
+                mutatedRelevantEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyMutationToEventStore"])(relevantEvents, calendar.eventUiBases, mutation, calendar);
+                interaction.mutatedEvents = mutatedRelevantEvents;
+                if (!_this.component.isInteractionValid(interaction)) {
+                    isInvalid = true;
+                    mutation = null;
+                    mutatedRelevantEvents = null;
+                    interaction.mutatedEvents = null;
+                }
+            }
+            if (mutatedRelevantEvents) {
+                calendar.dispatch({
+                    type: 'SET_EVENT_RESIZE',
+                    state: interaction
+                });
+            }
+            else {
+                calendar.dispatch({ type: 'UNSET_EVENT_RESIZE' });
+            }
+            if (!isInvalid) {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["enableCursor"])();
+            }
+            else {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["disableCursor"])();
+            }
+            if (!isFinal) {
+                if (mutation && isHitsEqual(initialHit, hit)) {
+                    mutation = null;
+                }
+                _this.validMutation = mutation;
+                _this.mutatedRelevantEvents = mutatedRelevantEvents;
+            }
+        };
+        _this.handleDragEnd = function (ev) {
+            var _a = _this.component.context, calendar = _a.calendar, view = _a.view;
+            var eventDef = _this.eventRange.def;
+            var eventInstance = _this.eventRange.instance;
+            var eventApi = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](calendar, eventDef, eventInstance);
+            var relevantEvents = _this.relevantEvents;
+            var mutatedRelevantEvents = _this.mutatedRelevantEvents;
+            calendar.publiclyTrigger('eventResizeStop', [
+                {
+                    el: _this.draggingSeg.el,
+                    event: eventApi,
+                    jsEvent: ev.origEvent,
+                    view: view
+                }
+            ]);
+            if (_this.validMutation) {
+                calendar.dispatch({
+                    type: 'MERGE_EVENTS',
+                    eventStore: mutatedRelevantEvents
+                });
+                calendar.publiclyTrigger('eventResize', [
+                    {
+                        el: _this.draggingSeg.el,
+                        startDelta: _this.validMutation.startDelta || Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createDuration"])(0),
+                        endDelta: _this.validMutation.endDelta || Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createDuration"])(0),
+                        prevEvent: eventApi,
+                        event: new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](// the data AFTER the mutation
+                        calendar, mutatedRelevantEvents.defs[eventDef.defId], eventInstance ? mutatedRelevantEvents.instances[eventInstance.instanceId] : null),
+                        revert: function () {
+                            calendar.dispatch({
+                                type: 'MERGE_EVENTS',
+                                eventStore: relevantEvents
+                            });
+                        },
+                        jsEvent: ev.origEvent,
+                        view: view
+                    }
+                ]);
+            }
+            else {
+                calendar.publiclyTrigger('_noEventResize');
+            }
+            // reset all internal state
+            _this.draggingSeg = null;
+            _this.relevantEvents = null;
+            _this.validMutation = null;
+            // okay to keep eventInstance around. useful to set it in handlePointerDown
+        };
+        var component = settings.component;
+        var dragging = _this.dragging = new FeaturefulElementDragging(component.el);
+        dragging.pointer.selector = '.fc-resizer';
+        dragging.touchScrollAllowed = false;
+        dragging.autoScroller.isEnabled = component.context.options.dragScroll;
+        var hitDragging = _this.hitDragging = new HitDragging(_this.dragging, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsToStore"])(settings));
+        hitDragging.emitter.on('pointerdown', _this.handlePointerDown);
+        hitDragging.emitter.on('dragstart', _this.handleDragStart);
+        hitDragging.emitter.on('hitupdate', _this.handleHitUpdate);
+        hitDragging.emitter.on('dragend', _this.handleDragEnd);
+        return _this;
+    }
+    EventDragging.prototype.destroy = function () {
+        this.dragging.destroy();
+    };
+    EventDragging.prototype.querySeg = function (ev) {
+        return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getElSeg"])(Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(ev.subjectEl, this.component.fgSegSelector));
+    };
+    return EventDragging;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Interaction"]));
+function computeMutation(hit0, hit1, isFromStart, instanceRange, transforms) {
+    var dateEnv = hit0.component.context.dateEnv;
+    var date0 = hit0.dateSpan.range.start;
+    var date1 = hit1.dateSpan.range.start;
+    var delta = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["diffDates"])(date0, date1, dateEnv, hit0.component.largeUnit);
+    var props = {};
+    for (var _i = 0, transforms_1 = transforms; _i < transforms_1.length; _i++) {
+        var transform = transforms_1[_i];
+        var res = transform(hit0, hit1);
+        if (res === false) {
+            return null;
+        }
+        else if (res) {
+            __assign(props, res);
+        }
+    }
+    if (isFromStart) {
+        if (dateEnv.add(instanceRange.start, delta) < instanceRange.end) {
+            props.startDelta = delta;
+            return props;
+        }
+    }
+    else {
+        if (dateEnv.add(instanceRange.end, delta) > instanceRange.start) {
+            props.endDelta = delta;
+            return props;
+        }
+    }
+    return null;
+}
+
+var UnselectAuto = /** @class */ (function () {
+    function UnselectAuto(calendar) {
+        var _this = this;
+        this.isRecentPointerDateSelect = false; // wish we could use a selector to detect date selection, but uses hit system
+        this.onSelect = function (selectInfo) {
+            if (selectInfo.jsEvent) {
+                _this.isRecentPointerDateSelect = true;
+            }
+        };
+        this.onDocumentPointerUp = function (pev) {
+            var _a = _this, calendar = _a.calendar, documentPointer = _a.documentPointer;
+            var state = calendar.state;
+            // touch-scrolling should never unfocus any type of selection
+            if (!documentPointer.wasTouchScroll) {
+                if (state.dateSelection && // an existing date selection?
+                    !_this.isRecentPointerDateSelect // a new pointer-initiated date selection since last onDocumentPointerUp?
+                ) {
+                    var unselectAuto = calendar.viewOpt('unselectAuto');
+                    var unselectCancel = calendar.viewOpt('unselectCancel');
+                    if (unselectAuto && (!unselectAuto || !Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(documentPointer.downEl, unselectCancel))) {
+                        calendar.unselect(pev);
+                    }
+                }
+                if (state.eventSelection && // an existing event selected?
+                    !Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementClosest"])(documentPointer.downEl, EventDragging.SELECTOR) // interaction DIDN'T start on an event
+                ) {
+                    calendar.dispatch({ type: 'UNSELECT_EVENT' });
+                }
+            }
+            _this.isRecentPointerDateSelect = false;
+        };
+        this.calendar = calendar;
+        var documentPointer = this.documentPointer = new PointerDragging(document);
+        documentPointer.shouldIgnoreMove = true;
+        documentPointer.shouldWatchScroll = false;
+        documentPointer.emitter.on('pointerup', this.onDocumentPointerUp);
+        /*
+        TODO: better way to know about whether there was a selection with the pointer
+        */
+        calendar.on('select', this.onSelect);
+    }
+    UnselectAuto.prototype.destroy = function () {
+        this.calendar.off('select', this.onSelect);
+        this.documentPointer.destroy();
+    };
+    return UnselectAuto;
+}());
+
+/*
+Given an already instantiated draggable object for one-or-more elements,
+Interprets any dragging as an attempt to drag an events that lives outside
+of a calendar onto a calendar.
+*/
+var ExternalElementDragging = /** @class */ (function () {
+    function ExternalElementDragging(dragging, suppliedDragMeta) {
+        var _this = this;
+        this.receivingCalendar = null;
+        this.droppableEvent = null; // will exist for all drags, even if create:false
+        this.suppliedDragMeta = null;
+        this.dragMeta = null;
+        this.handleDragStart = function (ev) {
+            _this.dragMeta = _this.buildDragMeta(ev.subjectEl);
+        };
+        this.handleHitUpdate = function (hit, isFinal, ev) {
+            var dragging = _this.hitDragging.dragging;
+            var receivingCalendar = null;
+            var droppableEvent = null;
+            var isInvalid = false;
+            var interaction = {
+                affectedEvents: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                mutatedEvents: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])(),
+                isEvent: _this.dragMeta.create,
+                origSeg: null
+            };
+            if (hit) {
+                receivingCalendar = hit.component.context.calendar;
+                if (_this.canDropElOnCalendar(ev.subjectEl, receivingCalendar)) {
+                    droppableEvent = computeEventForDateSpan(hit.dateSpan, _this.dragMeta, receivingCalendar);
+                    interaction.mutatedEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["eventTupleToStore"])(droppableEvent);
+                    isInvalid = !Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["isInteractionValid"])(interaction, receivingCalendar);
+                    if (isInvalid) {
+                        interaction.mutatedEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEmptyEventStore"])();
+                        droppableEvent = null;
+                    }
+                }
+            }
+            _this.displayDrag(receivingCalendar, interaction);
+            // show mirror if no already-rendered mirror element OR if we are shutting down the mirror (?)
+            // TODO: wish we could somehow wait for dispatch to guarantee render
+            dragging.setMirrorIsVisible(isFinal || !droppableEvent || !document.querySelector('.fc-mirror'));
+            if (!isInvalid) {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["enableCursor"])();
+            }
+            else {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["disableCursor"])();
+            }
+            if (!isFinal) {
+                dragging.setMirrorNeedsRevert(!droppableEvent);
+                _this.receivingCalendar = receivingCalendar;
+                _this.droppableEvent = droppableEvent;
+            }
+        };
+        this.handleDragEnd = function (pev) {
+            var _a = _this, receivingCalendar = _a.receivingCalendar, droppableEvent = _a.droppableEvent;
+            _this.clearDrag();
+            if (receivingCalendar && droppableEvent) {
+                var finalHit = _this.hitDragging.finalHit;
+                var finalView = finalHit.component.context.view;
+                var dragMeta = _this.dragMeta;
+                var arg = __assign({}, receivingCalendar.buildDatePointApi(finalHit.dateSpan), { draggedEl: pev.subjectEl, jsEvent: pev.origEvent, view: finalView });
+                receivingCalendar.publiclyTrigger('drop', [arg]);
+                if (dragMeta.create) {
+                    receivingCalendar.dispatch({
+                        type: 'MERGE_EVENTS',
+                        eventStore: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["eventTupleToStore"])(droppableEvent)
+                    });
+                    if (pev.isTouch) {
+                        receivingCalendar.dispatch({
+                            type: 'SELECT_EVENT',
+                            eventInstanceId: droppableEvent.instance.instanceId
+                        });
+                    }
+                    // signal that an external event landed
+                    receivingCalendar.publiclyTrigger('eventReceive', [
+                        {
+                            draggedEl: pev.subjectEl,
+                            event: new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["EventApi"](receivingCalendar, droppableEvent.def, droppableEvent.instance),
+                            view: finalView
+                        }
+                    ]);
+                }
+            }
+            _this.receivingCalendar = null;
+            _this.droppableEvent = null;
+        };
+        var hitDragging = this.hitDragging = new HitDragging(dragging, _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["interactionSettingsStore"]);
+        hitDragging.requireInitial = false; // will start outside of a component
+        hitDragging.emitter.on('dragstart', this.handleDragStart);
+        hitDragging.emitter.on('hitupdate', this.handleHitUpdate);
+        hitDragging.emitter.on('dragend', this.handleDragEnd);
+        this.suppliedDragMeta = suppliedDragMeta;
+    }
+    ExternalElementDragging.prototype.buildDragMeta = function (subjectEl) {
+        if (typeof this.suppliedDragMeta === 'object') {
+            return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["parseDragMeta"])(this.suppliedDragMeta);
+        }
+        else if (typeof this.suppliedDragMeta === 'function') {
+            return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["parseDragMeta"])(this.suppliedDragMeta(subjectEl));
+        }
+        else {
+            return getDragMetaFromEl(subjectEl);
+        }
+    };
+    ExternalElementDragging.prototype.displayDrag = function (nextCalendar, state) {
+        var prevCalendar = this.receivingCalendar;
+        if (prevCalendar && prevCalendar !== nextCalendar) {
+            prevCalendar.dispatch({ type: 'UNSET_EVENT_DRAG' });
+        }
+        if (nextCalendar) {
+            nextCalendar.dispatch({ type: 'SET_EVENT_DRAG', state: state });
+        }
+    };
+    ExternalElementDragging.prototype.clearDrag = function () {
+        if (this.receivingCalendar) {
+            this.receivingCalendar.dispatch({ type: 'UNSET_EVENT_DRAG' });
+        }
+    };
+    ExternalElementDragging.prototype.canDropElOnCalendar = function (el, receivingCalendar) {
+        var dropAccept = receivingCalendar.opt('dropAccept');
+        if (typeof dropAccept === 'function') {
+            return dropAccept(el);
+        }
+        else if (typeof dropAccept === 'string' && dropAccept) {
+            return Boolean(Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["elementMatches"])(el, dropAccept));
+        }
+        return true;
+    };
+    return ExternalElementDragging;
+}());
+// Utils for computing event store from the DragMeta
+// ----------------------------------------------------------------------------------------------------
+function computeEventForDateSpan(dateSpan, dragMeta, calendar) {
+    var defProps = __assign({}, dragMeta.leftoverProps);
+    for (var _i = 0, _a = calendar.pluginSystem.hooks.externalDefTransforms; _i < _a.length; _i++) {
+        var transform = _a[_i];
+        __assign(defProps, transform(dateSpan, dragMeta));
+    }
+    var def = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["parseEventDef"])(defProps, dragMeta.sourceId, dateSpan.allDay, calendar.opt('forceEventDuration') || Boolean(dragMeta.duration), // hasEnd
+    calendar);
+    var start = dateSpan.range.start;
+    // only rely on time info if drop zone is all-day,
+    // otherwise, we already know the time
+    if (dateSpan.allDay && dragMeta.startTime) {
+        start = calendar.dateEnv.add(start, dragMeta.startTime);
+    }
+    var end = dragMeta.duration ?
+        calendar.dateEnv.add(start, dragMeta.duration) :
+        calendar.getDefaultEventEnd(dateSpan.allDay, start);
+    var instance = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createEventInstance"])(def.defId, { start: start, end: end });
+    return { def: def, instance: instance };
+}
+// Utils for extracting data from element
+// ----------------------------------------------------------------------------------------------------
+function getDragMetaFromEl(el) {
+    var str = getEmbeddedElData(el, 'event');
+    var obj = str ?
+        JSON.parse(str) :
+        { create: false }; // if no embedded data, assume no event creation
+    return Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["parseDragMeta"])(obj);
+}
+_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["config"].dataAttrPrefix = '';
+function getEmbeddedElData(el, name) {
+    var prefix = _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["config"].dataAttrPrefix;
+    var prefixedName = (prefix ? prefix + '-' : '') + name;
+    return el.getAttribute('data-' + prefixedName) || '';
+}
+
+/*
+Makes an element (that is *external* to any calendar) draggable.
+Can pass in data that determines how an event will be created when dropped onto a calendar.
+Leverages FullCalendar's internal drag-n-drop functionality WITHOUT a third-party drag system.
+*/
+var ExternalDraggable = /** @class */ (function () {
+    function ExternalDraggable(el, settings) {
+        var _this = this;
+        if (settings === void 0) { settings = {}; }
+        this.handlePointerDown = function (ev) {
+            var dragging = _this.dragging;
+            var _a = _this.settings, minDistance = _a.minDistance, longPressDelay = _a.longPressDelay;
+            dragging.minDistance =
+                minDistance != null ?
+                    minDistance :
+                    (ev.isTouch ? 0 : _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["globalDefaults"].eventDragMinDistance);
+            dragging.delay =
+                ev.isTouch ? // TODO: eventually read eventLongPressDelay instead vvv
+                    (longPressDelay != null ? longPressDelay : _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["globalDefaults"].longPressDelay) :
+                    0;
+        };
+        this.handleDragStart = function (ev) {
+            if (ev.isTouch &&
+                _this.dragging.delay &&
+                ev.subjectEl.classList.contains('fc-event')) {
+                _this.dragging.mirror.getMirrorEl().classList.add('fc-selected');
+            }
+        };
+        this.settings = settings;
+        var dragging = this.dragging = new FeaturefulElementDragging(el);
+        dragging.touchScrollAllowed = false;
+        if (settings.itemSelector != null) {
+            dragging.pointer.selector = settings.itemSelector;
+        }
+        if (settings.appendTo != null) {
+            dragging.mirror.parentNode = settings.appendTo; // TODO: write tests
+        }
+        dragging.emitter.on('pointerdown', this.handlePointerDown);
+        dragging.emitter.on('dragstart', this.handleDragStart);
+        new ExternalElementDragging(dragging, settings.eventData);
+    }
+    ExternalDraggable.prototype.destroy = function () {
+        this.dragging.destroy();
+    };
+    return ExternalDraggable;
+}());
+
+/*
+Detects when a *THIRD-PARTY* drag-n-drop system interacts with elements.
+The third-party system is responsible for drawing the visuals effects of the drag.
+This class simply monitors for pointer movements and fires events.
+It also has the ability to hide the moving element (the "mirror") during the drag.
+*/
+var InferredElementDragging = /** @class */ (function (_super) {
+    __extends(InferredElementDragging, _super);
+    function InferredElementDragging(containerEl) {
+        var _this = _super.call(this, containerEl) || this;
+        _this.shouldIgnoreMove = false;
+        _this.mirrorSelector = '';
+        _this.currentMirrorEl = null;
+        _this.handlePointerDown = function (ev) {
+            _this.emitter.trigger('pointerdown', ev);
+            if (!_this.shouldIgnoreMove) {
+                // fire dragstart right away. does not support delay or min-distance
+                _this.emitter.trigger('dragstart', ev);
+            }
+        };
+        _this.handlePointerMove = function (ev) {
+            if (!_this.shouldIgnoreMove) {
+                _this.emitter.trigger('dragmove', ev);
+            }
+        };
+        _this.handlePointerUp = function (ev) {
+            _this.emitter.trigger('pointerup', ev);
+            if (!_this.shouldIgnoreMove) {
+                // fire dragend right away. does not support a revert animation
+                _this.emitter.trigger('dragend', ev);
+            }
+        };
+        var pointer = _this.pointer = new PointerDragging(containerEl);
+        pointer.emitter.on('pointerdown', _this.handlePointerDown);
+        pointer.emitter.on('pointermove', _this.handlePointerMove);
+        pointer.emitter.on('pointerup', _this.handlePointerUp);
+        return _this;
+    }
+    InferredElementDragging.prototype.destroy = function () {
+        this.pointer.destroy();
+    };
+    InferredElementDragging.prototype.setIgnoreMove = function (bool) {
+        this.shouldIgnoreMove = bool;
+    };
+    InferredElementDragging.prototype.setMirrorIsVisible = function (bool) {
+        if (bool) {
+            // restore a previously hidden element.
+            // use the reference in case the selector class has already been removed.
+            if (this.currentMirrorEl) {
+                this.currentMirrorEl.style.visibility = '';
+                this.currentMirrorEl = null;
+            }
+        }
+        else {
+            var mirrorEl = this.mirrorSelector ?
+                document.querySelector(this.mirrorSelector) :
+                null;
+            if (mirrorEl) {
+                this.currentMirrorEl = mirrorEl;
+                mirrorEl.style.visibility = 'hidden';
+            }
+        }
+    };
+    return InferredElementDragging;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["ElementDragging"]));
+
+/*
+Bridges third-party drag-n-drop systems with FullCalendar.
+Must be instantiated and destroyed by caller.
+*/
+var ThirdPartyDraggable = /** @class */ (function () {
+    function ThirdPartyDraggable(containerOrSettings, settings) {
+        var containerEl = document;
+        if (
+        // wish we could just test instanceof EventTarget, but doesn't work in IE11
+        containerOrSettings === document ||
+            containerOrSettings instanceof Element) {
+            containerEl = containerOrSettings;
+            settings = settings || {};
+        }
+        else {
+            settings = (containerOrSettings || {});
+        }
+        var dragging = this.dragging = new InferredElementDragging(containerEl);
+        if (typeof settings.itemSelector === 'string') {
+            dragging.pointer.selector = settings.itemSelector;
+        }
+        else if (containerEl === document) {
+            dragging.pointer.selector = '[data-event]';
+        }
+        if (typeof settings.mirrorSelector === 'string') {
+            dragging.mirrorSelector = settings.mirrorSelector;
+        }
+        new ExternalElementDragging(dragging, settings.eventData);
+    }
+    ThirdPartyDraggable.prototype.destroy = function () {
+        this.dragging.destroy();
+    };
+    return ThirdPartyDraggable;
+}());
+
+var main = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createPlugin"])({
+    componentInteractions: [DateClicking, DateSelecting, EventDragging, EventDragging$1],
+    calendarInteractions: [UnselectAuto],
+    elementDraggingImpl: FeaturefulElementDragging
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (main);
@@ -10479,6 +12694,7 @@ module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/li
 var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 var settle = __webpack_require__(/*! ./../core/settle */ "./node_modules/axios/lib/core/settle.js");
 var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
+var buildFullPath = __webpack_require__(/*! ../core/buildFullPath */ "./node_modules/axios/lib/core/buildFullPath.js");
 var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ "./node_modules/axios/lib/helpers/parseHeaders.js");
 var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ "./node_modules/axios/lib/helpers/isURLSameOrigin.js");
 var createError = __webpack_require__(/*! ../core/createError */ "./node_modules/axios/lib/core/createError.js");
@@ -10501,7 +12717,8 @@ module.exports = function xhrAdapter(config) {
       requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
     }
 
-    request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
+    var fullPath = buildFullPath(config.baseURL, config.url);
+    request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
 
     // Set the request timeout in MS
     request.timeout = config.timeout;
@@ -10562,7 +12779,11 @@ module.exports = function xhrAdapter(config) {
 
     // Handle timeout
     request.ontimeout = function handleTimeout() {
-      reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED',
+      var timeoutErrorMessage = 'timeout of ' + config.timeout + 'ms exceeded';
+      if (config.timeoutErrorMessage) {
+        timeoutErrorMessage = config.timeoutErrorMessage;
+      }
+      reject(createError(timeoutErrorMessage, config, 'ECONNABORTED',
         request));
 
       // Clean up request
@@ -10576,7 +12797,7 @@ module.exports = function xhrAdapter(config) {
       var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./node_modules/axios/lib/helpers/cookies.js");
 
       // Add xsrf header
-      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
+      var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ?
         cookies.read(config.xsrfCookieName) :
         undefined;
 
@@ -10599,8 +12820,8 @@ module.exports = function xhrAdapter(config) {
     }
 
     // Add withCredentials to request if needed
-    if (config.withCredentials) {
-      request.withCredentials = true;
+    if (!utils.isUndefined(config.withCredentials)) {
+      request.withCredentials = !!config.withCredentials;
     }
 
     // Add responseType to request if needed
@@ -10879,7 +13100,15 @@ Axios.prototype.request = function request(config) {
   }
 
   config = mergeConfig(this.defaults, config);
-  config.method = config.method ? config.method.toLowerCase() : 'get';
+
+  // Set config.method
+  if (config.method) {
+    config.method = config.method.toLowerCase();
+  } else if (this.defaults.method) {
+    config.method = this.defaults.method.toLowerCase();
+  } else {
+    config.method = 'get';
+  }
 
   // Hook up interceptors middleware
   var chain = [dispatchRequest, undefined];
@@ -10996,6 +13225,38 @@ module.exports = InterceptorManager;
 
 /***/ }),
 
+/***/ "./node_modules/axios/lib/core/buildFullPath.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/core/buildFullPath.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var isAbsoluteURL = __webpack_require__(/*! ../helpers/isAbsoluteURL */ "./node_modules/axios/lib/helpers/isAbsoluteURL.js");
+var combineURLs = __webpack_require__(/*! ../helpers/combineURLs */ "./node_modules/axios/lib/helpers/combineURLs.js");
+
+/**
+ * Creates a new URL by combining the baseURL with the requestedURL,
+ * only when the requestedURL is not already an absolute URL.
+ * If the requestURL is absolute, this function returns the requestedURL untouched.
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} requestedURL Absolute or relative URL to combine
+ * @returns {string} The combined full path
+ */
+module.exports = function buildFullPath(baseURL, requestedURL) {
+  if (baseURL && !isAbsoluteURL(requestedURL)) {
+    return combineURLs(baseURL, requestedURL);
+  }
+  return requestedURL;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/lib/core/createError.js":
 /*!****************************************************!*\
   !*** ./node_modules/axios/lib/core/createError.js ***!
@@ -11040,8 +13301,6 @@ var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/util
 var transformData = __webpack_require__(/*! ./transformData */ "./node_modules/axios/lib/core/transformData.js");
 var isCancel = __webpack_require__(/*! ../cancel/isCancel */ "./node_modules/axios/lib/cancel/isCancel.js");
 var defaults = __webpack_require__(/*! ../defaults */ "./node_modules/axios/lib/defaults.js");
-var isAbsoluteURL = __webpack_require__(/*! ./../helpers/isAbsoluteURL */ "./node_modules/axios/lib/helpers/isAbsoluteURL.js");
-var combineURLs = __webpack_require__(/*! ./../helpers/combineURLs */ "./node_modules/axios/lib/helpers/combineURLs.js");
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -11061,11 +13320,6 @@ function throwIfCancellationRequested(config) {
 module.exports = function dispatchRequest(config) {
   throwIfCancellationRequested(config);
 
-  // Support baseURL config
-  if (config.baseURL && !isAbsoluteURL(config.url)) {
-    config.url = combineURLs(config.baseURL, config.url);
-  }
-
   // Ensure headers exist
   config.headers = config.headers || {};
 
@@ -11080,7 +13334,7 @@ module.exports = function dispatchRequest(config) {
   config.headers = utils.merge(
     config.headers.common || {},
     config.headers[config.method] || {},
-    config.headers || {}
+    config.headers
   );
 
   utils.forEach(
@@ -11203,13 +13457,23 @@ module.exports = function mergeConfig(config1, config2) {
   config2 = config2 || {};
   var config = {};
 
-  utils.forEach(['url', 'method', 'params', 'data'], function valueFromConfig2(prop) {
+  var valueFromConfig2Keys = ['url', 'method', 'params', 'data'];
+  var mergeDeepPropertiesKeys = ['headers', 'auth', 'proxy'];
+  var defaultToConfig2Keys = [
+    'baseURL', 'url', 'transformRequest', 'transformResponse', 'paramsSerializer',
+    'timeout', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
+    'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress',
+    'maxContentLength', 'validateStatus', 'maxRedirects', 'httpAgent',
+    'httpsAgent', 'cancelToken', 'socketPath'
+  ];
+
+  utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
     if (typeof config2[prop] !== 'undefined') {
       config[prop] = config2[prop];
     }
   });
 
-  utils.forEach(['headers', 'auth', 'proxy'], function mergeDeepProperties(prop) {
+  utils.forEach(mergeDeepPropertiesKeys, function mergeDeepProperties(prop) {
     if (utils.isObject(config2[prop])) {
       config[prop] = utils.deepMerge(config1[prop], config2[prop]);
     } else if (typeof config2[prop] !== 'undefined') {
@@ -11221,13 +13485,25 @@ module.exports = function mergeConfig(config1, config2) {
     }
   });
 
-  utils.forEach([
-    'baseURL', 'transformRequest', 'transformResponse', 'paramsSerializer',
-    'timeout', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
-    'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress', 'maxContentLength',
-    'validateStatus', 'maxRedirects', 'httpAgent', 'httpsAgent', 'cancelToken',
-    'socketPath'
-  ], function defaultToConfig2(prop) {
+  utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
+    if (typeof config2[prop] !== 'undefined') {
+      config[prop] = config2[prop];
+    } else if (typeof config1[prop] !== 'undefined') {
+      config[prop] = config1[prop];
+    }
+  });
+
+  var axiosKeys = valueFromConfig2Keys
+    .concat(mergeDeepPropertiesKeys)
+    .concat(defaultToConfig2Keys);
+
+  var otherKeys = Object
+    .keys(config2)
+    .filter(function filterAxiosKeys(key) {
+      return axiosKeys.indexOf(key) === -1;
+    });
+
+  utils.forEach(otherKeys, function otherKeysDefaultToConfig2(prop) {
     if (typeof config2[prop] !== 'undefined') {
       config[prop] = config2[prop];
     } else if (typeof config1[prop] !== 'undefined') {
@@ -11335,13 +13611,12 @@ function setContentTypeIfUnset(headers, value) {
 
 function getDefaultAdapter() {
   var adapter;
-  // Only Node.JS has a process variable that is of [[Class]] process
-  if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
-    // For node use HTTP adapter
-    adapter = __webpack_require__(/*! ./adapters/http */ "./node_modules/axios/lib/adapters/xhr.js");
-  } else if (typeof XMLHttpRequest !== 'undefined') {
+  if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
     adapter = __webpack_require__(/*! ./adapters/xhr */ "./node_modules/axios/lib/adapters/xhr.js");
+  } else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
+    // For node use HTTP adapter
+    adapter = __webpack_require__(/*! ./adapters/http */ "./node_modules/axios/lib/adapters/xhr.js");
   }
   return adapter;
 }
@@ -11863,7 +14138,6 @@ module.exports = function spread(callback) {
 
 
 var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
-var isBuffer = __webpack_require__(/*! is-buffer */ "./node_modules/is-buffer/index.js");
 
 /*global toString:true*/
 
@@ -11879,6 +14153,27 @@ var toString = Object.prototype.toString;
  */
 function isArray(val) {
   return toString.call(val) === '[object Array]';
+}
+
+/**
+ * Determine if a value is undefined
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if the value is undefined, otherwise false
+ */
+function isUndefined(val) {
+  return typeof val === 'undefined';
+}
+
+/**
+ * Determine if a value is a Buffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Buffer, otherwise false
+ */
+function isBuffer(val) {
+  return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor)
+    && typeof val.constructor.isBuffer === 'function' && val.constructor.isBuffer(val);
 }
 
 /**
@@ -11935,16 +14230,6 @@ function isString(val) {
  */
 function isNumber(val) {
   return typeof val === 'number';
-}
-
-/**
- * Determine if a value is undefined
- *
- * @param {Object} val The value to test
- * @returns {boolean} True if the value is undefined, otherwise false
- */
-function isUndefined(val) {
-  return typeof val === 'undefined';
 }
 
 /**
@@ -12239,17 +14524,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
-  * Bootstrap v4.3.1 (https://getbootstrap.com/)
-  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Bootstrap v4.5.0 (https://getbootstrap.com/)
+  * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
    true ? factory(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")) :
   undefined;
-}(this, function (exports, $, Popper) { 'use strict';
+}(this, (function (exports, $, Popper) { 'use strict';
 
-  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
-  Popper = Popper && Popper.hasOwnProperty('default') ? Popper['default'] : Popper;
+  $ = $ && Object.prototype.hasOwnProperty.call($, 'default') ? $['default'] : $;
+  Popper = Popper && Object.prototype.hasOwnProperty.call(Popper, 'default') ? Popper['default'] : Popper;
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -12282,20 +14567,35 @@ __webpack_require__.r(__webpack_exports__);
     return obj;
   }
 
-  function _objectSpread(target) {
+  function ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+
+    if (Object.getOwnPropertySymbols) {
+      var symbols = Object.getOwnPropertySymbols(object);
+      if (enumerableOnly) symbols = symbols.filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+      });
+      keys.push.apply(keys, symbols);
+    }
+
+    return keys;
+  }
+
+  function _objectSpread2(target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i] != null ? arguments[i] : {};
-      var ownKeys = Object.keys(source);
 
-      if (typeof Object.getOwnPropertySymbols === 'function') {
-        ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-          return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-        }));
+      if (i % 2) {
+        ownKeys(Object(source), true).forEach(function (key) {
+          _defineProperty(target, key, source[key]);
+        });
+      } else if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+      } else {
+        ownKeys(Object(source)).forEach(function (key) {
+          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
       }
-
-      ownKeys.forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
     }
 
     return target;
@@ -12309,7 +14609,7 @@ __webpack_require__.r(__webpack_exports__);
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): util.js
+   * Bootstrap (v4.5.0): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -12324,6 +14624,10 @@ __webpack_require__.r(__webpack_exports__);
   var MILLISECONDS_MULTIPLIER = 1000; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
   function toType(obj) {
+    if (obj === null || typeof obj === 'undefined') {
+      return "" + obj;
+    }
+
     return {}.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase();
   }
 
@@ -12336,7 +14640,7 @@ __webpack_require__.r(__webpack_exports__);
           return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
         }
 
-        return undefined; // eslint-disable-line no-undefined
+        return undefined;
       }
     };
   }
@@ -12458,8 +14762,25 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       return Util.findShadowRoot(element.parentNode);
+    },
+    jQueryDetection: function jQueryDetection() {
+      if (typeof $ === 'undefined') {
+        throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
+      }
+
+      var version = $.fn.jquery.split(' ')[0].split('.');
+      var minMajor = 1;
+      var ltMajor = 2;
+      var minMinor = 9;
+      var minPatch = 1;
+      var maxMajor = 4;
+
+      if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
+        throw new Error('Bootstrap\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
+      }
     }
   };
+  Util.jQueryDetection();
   setTransitionEndSupport();
 
   /**
@@ -12469,34 +14790,25 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME = 'alert';
-  var VERSION = '4.3.1';
+  var VERSION = '4.5.0';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
-  var Selector = {
-    DISMISS: '[data-dismiss="alert"]'
-  };
-  var Event = {
-    CLOSE: "close" + EVENT_KEY,
-    CLOSED: "closed" + EVENT_KEY,
-    CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
-  };
-  var ClassName = {
-    ALERT: 'alert',
-    FADE: 'fade',
-    SHOW: 'show'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+  var SELECTOR_DISMISS = '[data-dismiss="alert"]';
+  var EVENT_CLOSE = "close" + EVENT_KEY;
+  var EVENT_CLOSED = "closed" + EVENT_KEY;
+  var EVENT_CLICK_DATA_API = "click" + EVENT_KEY + DATA_API_KEY;
+  var CLASS_NAME_ALERT = 'alert';
+  var CLASS_NAME_FADE = 'fade';
+  var CLASS_NAME_SHOW = 'show';
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
-  };
-
-  var Alert =
-  /*#__PURE__*/
-  function () {
+  var Alert = /*#__PURE__*/function () {
     function Alert(element) {
       this._element = element;
     } // Getters
@@ -12536,14 +14848,14 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (!parent) {
-        parent = $(element).closest("." + ClassName.ALERT)[0];
+        parent = $(element).closest("." + CLASS_NAME_ALERT)[0];
       }
 
       return parent;
     };
 
     _proto._triggerCloseEvent = function _triggerCloseEvent(element) {
-      var closeEvent = $.Event(Event.CLOSE);
+      var closeEvent = $.Event(EVENT_CLOSE);
       $(element).trigger(closeEvent);
       return closeEvent;
     };
@@ -12551,9 +14863,9 @@ __webpack_require__.r(__webpack_exports__);
     _proto._removeElement = function _removeElement(element) {
       var _this = this;
 
-      $(element).removeClass(ClassName.SHOW);
+      $(element).removeClass(CLASS_NAME_SHOW);
 
-      if (!$(element).hasClass(ClassName.FADE)) {
+      if (!$(element).hasClass(CLASS_NAME_FADE)) {
         this._destroyElement(element);
 
         return;
@@ -12566,7 +14878,7 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._destroyElement = function _destroyElement(element) {
-      $(element).detach().trigger(Event.CLOSED).remove();
+      $(element).detach().trigger(EVENT_CLOSED).remove();
     } // Static
     ;
 
@@ -12612,7 +14924,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event.CLICK_DATA_API, Selector.DISMISS, Alert._handleDismiss(new Alert()));
+  $(document).on(EVENT_CLICK_DATA_API, SELECTOR_DISMISS, Alert._handleDismiss(new Alert()));
   /**
    * ------------------------------------------------------------------------
    * jQuery
@@ -12634,37 +14946,31 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$1 = 'button';
-  var VERSION$1 = '4.3.1';
+  var VERSION$1 = '4.5.0';
   var DATA_KEY$1 = 'bs.button';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY$1 = '.data-api';
   var JQUERY_NO_CONFLICT$1 = $.fn[NAME$1];
-  var ClassName$1 = {
-    ACTIVE: 'active',
-    BUTTON: 'btn',
-    FOCUS: 'focus'
-  };
-  var Selector$1 = {
-    DATA_TOGGLE_CARROT: '[data-toggle^="button"]',
-    DATA_TOGGLE: '[data-toggle="buttons"]',
-    INPUT: 'input:not([type="hidden"])',
-    ACTIVE: '.active',
-    BUTTON: '.btn'
-  };
-  var Event$1 = {
-    CLICK_DATA_API: "click" + EVENT_KEY$1 + DATA_API_KEY$1,
-    FOCUS_BLUR_DATA_API: "focus" + EVENT_KEY$1 + DATA_API_KEY$1 + " " + ("blur" + EVENT_KEY$1 + DATA_API_KEY$1)
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+  var CLASS_NAME_ACTIVE = 'active';
+  var CLASS_NAME_BUTTON = 'btn';
+  var CLASS_NAME_FOCUS = 'focus';
+  var SELECTOR_DATA_TOGGLE_CARROT = '[data-toggle^="button"]';
+  var SELECTOR_DATA_TOGGLES = '[data-toggle="buttons"]';
+  var SELECTOR_DATA_TOGGLE = '[data-toggle="button"]';
+  var SELECTOR_DATA_TOGGLES_BUTTONS = '[data-toggle="buttons"] .btn';
+  var SELECTOR_INPUT = 'input:not([type="hidden"])';
+  var SELECTOR_ACTIVE = '.active';
+  var SELECTOR_BUTTON = '.btn';
+  var EVENT_CLICK_DATA_API$1 = "click" + EVENT_KEY$1 + DATA_API_KEY$1;
+  var EVENT_FOCUS_BLUR_DATA_API = "focus" + EVENT_KEY$1 + DATA_API_KEY$1 + " " + ("blur" + EVENT_KEY$1 + DATA_API_KEY$1);
+  var EVENT_LOAD_DATA_API = "load" + EVENT_KEY$1 + DATA_API_KEY$1;
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
-  };
-
-  var Button =
-  /*#__PURE__*/
-  function () {
+  var Button = /*#__PURE__*/function () {
     function Button(element) {
       this._element = element;
     } // Getters
@@ -12676,30 +14982,30 @@ __webpack_require__.r(__webpack_exports__);
     _proto.toggle = function toggle() {
       var triggerChangeEvent = true;
       var addAriaPressed = true;
-      var rootElement = $(this._element).closest(Selector$1.DATA_TOGGLE)[0];
+      var rootElement = $(this._element).closest(SELECTOR_DATA_TOGGLES)[0];
 
       if (rootElement) {
-        var input = this._element.querySelector(Selector$1.INPUT);
+        var input = this._element.querySelector(SELECTOR_INPUT);
 
         if (input) {
           if (input.type === 'radio') {
-            if (input.checked && this._element.classList.contains(ClassName$1.ACTIVE)) {
+            if (input.checked && this._element.classList.contains(CLASS_NAME_ACTIVE)) {
               triggerChangeEvent = false;
             } else {
-              var activeElement = rootElement.querySelector(Selector$1.ACTIVE);
+              var activeElement = rootElement.querySelector(SELECTOR_ACTIVE);
 
               if (activeElement) {
-                $(activeElement).removeClass(ClassName$1.ACTIVE);
+                $(activeElement).removeClass(CLASS_NAME_ACTIVE);
               }
             }
           }
 
           if (triggerChangeEvent) {
-            if (input.hasAttribute('disabled') || rootElement.hasAttribute('disabled') || input.classList.contains('disabled') || rootElement.classList.contains('disabled')) {
-              return;
+            // if it's not a radio button or checkbox don't add a pointless/invalid checked property to the input
+            if (input.type === 'checkbox' || input.type === 'radio') {
+              input.checked = !this._element.classList.contains(CLASS_NAME_ACTIVE);
             }
 
-            input.checked = !this._element.classList.contains(ClassName$1.ACTIVE);
             $(input).trigger('change');
           }
 
@@ -12708,12 +15014,14 @@ __webpack_require__.r(__webpack_exports__);
         }
       }
 
-      if (addAriaPressed) {
-        this._element.setAttribute('aria-pressed', !this._element.classList.contains(ClassName$1.ACTIVE));
-      }
+      if (!(this._element.hasAttribute('disabled') || this._element.classList.contains('disabled'))) {
+        if (addAriaPressed) {
+          this._element.setAttribute('aria-pressed', !this._element.classList.contains(CLASS_NAME_ACTIVE));
+        }
 
-      if (triggerChangeEvent) {
-        $(this._element).toggleClass(ClassName$1.ACTIVE);
+        if (triggerChangeEvent) {
+          $(this._element).toggleClass(CLASS_NAME_ACTIVE);
+        }
       }
     };
 
@@ -12754,18 +15062,63 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event$1.CLICK_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
-    event.preventDefault();
+  $(document).on(EVENT_CLICK_DATA_API$1, SELECTOR_DATA_TOGGLE_CARROT, function (event) {
     var button = event.target;
+    var initialButton = button;
 
-    if (!$(button).hasClass(ClassName$1.BUTTON)) {
-      button = $(button).closest(Selector$1.BUTTON);
+    if (!$(button).hasClass(CLASS_NAME_BUTTON)) {
+      button = $(button).closest(SELECTOR_BUTTON)[0];
     }
 
-    Button._jQueryInterface.call($(button), 'toggle');
-  }).on(Event$1.FOCUS_BLUR_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
-    var button = $(event.target).closest(Selector$1.BUTTON)[0];
-    $(button).toggleClass(ClassName$1.FOCUS, /^focus(in)?$/.test(event.type));
+    if (!button || button.hasAttribute('disabled') || button.classList.contains('disabled')) {
+      event.preventDefault(); // work around Firefox bug #1540995
+    } else {
+      var inputBtn = button.querySelector(SELECTOR_INPUT);
+
+      if (inputBtn && (inputBtn.hasAttribute('disabled') || inputBtn.classList.contains('disabled'))) {
+        event.preventDefault(); // work around Firefox bug #1540995
+
+        return;
+      }
+
+      if (initialButton.tagName === 'LABEL' && inputBtn && inputBtn.type === 'checkbox') {
+        event.preventDefault(); // work around event sent to label and input
+      }
+
+      Button._jQueryInterface.call($(button), 'toggle');
+    }
+  }).on(EVENT_FOCUS_BLUR_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, function (event) {
+    var button = $(event.target).closest(SELECTOR_BUTTON)[0];
+    $(button).toggleClass(CLASS_NAME_FOCUS, /^focus(in)?$/.test(event.type));
+  });
+  $(window).on(EVENT_LOAD_DATA_API, function () {
+    // ensure correct active class is set to match the controls' actual values/states
+    // find all checkboxes/readio buttons inside data-toggle groups
+    var buttons = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLES_BUTTONS));
+
+    for (var i = 0, len = buttons.length; i < len; i++) {
+      var button = buttons[i];
+      var input = button.querySelector(SELECTOR_INPUT);
+
+      if (input.checked || input.hasAttribute('checked')) {
+        button.classList.add(CLASS_NAME_ACTIVE);
+      } else {
+        button.classList.remove(CLASS_NAME_ACTIVE);
+      }
+    } // find all button toggles
+
+
+    buttons = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE));
+
+    for (var _i = 0, _len = buttons.length; _i < _len; _i++) {
+      var _button = buttons[_i];
+
+      if (_button.getAttribute('aria-pressed') === 'true') {
+        _button.classList.add(CLASS_NAME_ACTIVE);
+      } else {
+        _button.classList.remove(CLASS_NAME_ACTIVE);
+      }
+    }
   });
   /**
    * ------------------------------------------------------------------------
@@ -12788,7 +15141,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$2 = 'carousel';
-  var VERSION$2 = '4.3.1';
+  var VERSION$2 = '4.5.0';
   var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
@@ -12816,62 +15169,50 @@ __webpack_require__.r(__webpack_exports__);
     wrap: 'boolean',
     touch: 'boolean'
   };
-  var Direction = {
-    NEXT: 'next',
-    PREV: 'prev',
-    LEFT: 'left',
-    RIGHT: 'right'
-  };
-  var Event$2 = {
-    SLIDE: "slide" + EVENT_KEY$2,
-    SLID: "slid" + EVENT_KEY$2,
-    KEYDOWN: "keydown" + EVENT_KEY$2,
-    MOUSEENTER: "mouseenter" + EVENT_KEY$2,
-    MOUSELEAVE: "mouseleave" + EVENT_KEY$2,
-    TOUCHSTART: "touchstart" + EVENT_KEY$2,
-    TOUCHMOVE: "touchmove" + EVENT_KEY$2,
-    TOUCHEND: "touchend" + EVENT_KEY$2,
-    POINTERDOWN: "pointerdown" + EVENT_KEY$2,
-    POINTERUP: "pointerup" + EVENT_KEY$2,
-    DRAG_START: "dragstart" + EVENT_KEY$2,
-    LOAD_DATA_API: "load" + EVENT_KEY$2 + DATA_API_KEY$2,
-    CLICK_DATA_API: "click" + EVENT_KEY$2 + DATA_API_KEY$2
-  };
-  var ClassName$2 = {
-    CAROUSEL: 'carousel',
-    ACTIVE: 'active',
-    SLIDE: 'slide',
-    RIGHT: 'carousel-item-right',
-    LEFT: 'carousel-item-left',
-    NEXT: 'carousel-item-next',
-    PREV: 'carousel-item-prev',
-    ITEM: 'carousel-item',
-    POINTER_EVENT: 'pointer-event'
-  };
-  var Selector$2 = {
-    ACTIVE: '.active',
-    ACTIVE_ITEM: '.active.carousel-item',
-    ITEM: '.carousel-item',
-    ITEM_IMG: '.carousel-item img',
-    NEXT_PREV: '.carousel-item-next, .carousel-item-prev',
-    INDICATORS: '.carousel-indicators',
-    DATA_SLIDE: '[data-slide], [data-slide-to]',
-    DATA_RIDE: '[data-ride="carousel"]'
-  };
+  var DIRECTION_NEXT = 'next';
+  var DIRECTION_PREV = 'prev';
+  var DIRECTION_LEFT = 'left';
+  var DIRECTION_RIGHT = 'right';
+  var EVENT_SLIDE = "slide" + EVENT_KEY$2;
+  var EVENT_SLID = "slid" + EVENT_KEY$2;
+  var EVENT_KEYDOWN = "keydown" + EVENT_KEY$2;
+  var EVENT_MOUSEENTER = "mouseenter" + EVENT_KEY$2;
+  var EVENT_MOUSELEAVE = "mouseleave" + EVENT_KEY$2;
+  var EVENT_TOUCHSTART = "touchstart" + EVENT_KEY$2;
+  var EVENT_TOUCHMOVE = "touchmove" + EVENT_KEY$2;
+  var EVENT_TOUCHEND = "touchend" + EVENT_KEY$2;
+  var EVENT_POINTERDOWN = "pointerdown" + EVENT_KEY$2;
+  var EVENT_POINTERUP = "pointerup" + EVENT_KEY$2;
+  var EVENT_DRAG_START = "dragstart" + EVENT_KEY$2;
+  var EVENT_LOAD_DATA_API$1 = "load" + EVENT_KEY$2 + DATA_API_KEY$2;
+  var EVENT_CLICK_DATA_API$2 = "click" + EVENT_KEY$2 + DATA_API_KEY$2;
+  var CLASS_NAME_CAROUSEL = 'carousel';
+  var CLASS_NAME_ACTIVE$1 = 'active';
+  var CLASS_NAME_SLIDE = 'slide';
+  var CLASS_NAME_RIGHT = 'carousel-item-right';
+  var CLASS_NAME_LEFT = 'carousel-item-left';
+  var CLASS_NAME_NEXT = 'carousel-item-next';
+  var CLASS_NAME_PREV = 'carousel-item-prev';
+  var CLASS_NAME_POINTER_EVENT = 'pointer-event';
+  var SELECTOR_ACTIVE$1 = '.active';
+  var SELECTOR_ACTIVE_ITEM = '.active.carousel-item';
+  var SELECTOR_ITEM = '.carousel-item';
+  var SELECTOR_ITEM_IMG = '.carousel-item img';
+  var SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev';
+  var SELECTOR_INDICATORS = '.carousel-indicators';
+  var SELECTOR_DATA_SLIDE = '[data-slide], [data-slide-to]';
+  var SELECTOR_DATA_RIDE = '[data-ride="carousel"]';
   var PointerType = {
     TOUCH: 'touch',
     PEN: 'pen'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
-  var Carousel =
-  /*#__PURE__*/
-  function () {
+  var Carousel = /*#__PURE__*/function () {
     function Carousel(element, config) {
       this._items = null;
       this._interval = null;
@@ -12883,7 +15224,7 @@ __webpack_require__.r(__webpack_exports__);
       this.touchDeltaX = 0;
       this._config = this._getConfig(config);
       this._element = element;
-      this._indicatorsElement = this._element.querySelector(Selector$2.INDICATORS);
+      this._indicatorsElement = this._element.querySelector(SELECTOR_INDICATORS);
       this._touchSupported = 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0;
       this._pointerEvent = Boolean(window.PointerEvent || window.MSPointerEvent);
 
@@ -12896,7 +15237,7 @@ __webpack_require__.r(__webpack_exports__);
     // Public
     _proto.next = function next() {
       if (!this._isSliding) {
-        this._slide(Direction.NEXT);
+        this._slide(DIRECTION_NEXT);
       }
     };
 
@@ -12910,7 +15251,7 @@ __webpack_require__.r(__webpack_exports__);
 
     _proto.prev = function prev() {
       if (!this._isSliding) {
-        this._slide(Direction.PREV);
+        this._slide(DIRECTION_PREV);
       }
     };
 
@@ -12919,7 +15260,7 @@ __webpack_require__.r(__webpack_exports__);
         this._isPaused = true;
       }
 
-      if (this._element.querySelector(Selector$2.NEXT_PREV)) {
+      if (this._element.querySelector(SELECTOR_NEXT_PREV)) {
         Util.triggerTransitionEnd(this._element);
         this.cycle(true);
       }
@@ -12946,7 +15287,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto.to = function to(index) {
       var _this = this;
 
-      this._activeElement = this._element.querySelector(Selector$2.ACTIVE_ITEM);
+      this._activeElement = this._element.querySelector(SELECTOR_ACTIVE_ITEM);
 
       var activeIndex = this._getItemIndex(this._activeElement);
 
@@ -12955,7 +15296,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (this._isSliding) {
-        $(this._element).one(Event$2.SLID, function () {
+        $(this._element).one(EVENT_SLID, function () {
           return _this.to(index);
         });
         return;
@@ -12967,7 +15308,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var direction = index > activeIndex ? Direction.NEXT : Direction.PREV;
+      var direction = index > activeIndex ? DIRECTION_NEXT : DIRECTION_PREV;
 
       this._slide(direction, this._items[index]);
     };
@@ -12987,7 +15328,7 @@ __webpack_require__.r(__webpack_exports__);
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default, config);
+      config = _objectSpread2(_objectSpread2({}, Default), config);
       Util.typeCheckConfig(NAME$2, config, DefaultType);
       return config;
     };
@@ -12999,7 +15340,8 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var direction = absDeltax / this.touchDeltaX; // swipe left
+      var direction = absDeltax / this.touchDeltaX;
+      this.touchDeltaX = 0; // swipe left
 
       if (direction > 0) {
         this.prev();
@@ -13015,15 +15357,15 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       if (this._config.keyboard) {
-        $(this._element).on(Event$2.KEYDOWN, function (event) {
+        $(this._element).on(EVENT_KEYDOWN, function (event) {
           return _this2._keydown(event);
         });
       }
 
       if (this._config.pause === 'hover') {
-        $(this._element).on(Event$2.MOUSEENTER, function (event) {
+        $(this._element).on(EVENT_MOUSEENTER, function (event) {
           return _this2.pause(event);
-        }).on(Event$2.MOUSELEAVE, function (event) {
+        }).on(EVENT_MOUSELEAVE, function (event) {
           return _this2.cycle(event);
         });
       }
@@ -13084,27 +15426,27 @@ __webpack_require__.r(__webpack_exports__);
         }
       };
 
-      $(this._element.querySelectorAll(Selector$2.ITEM_IMG)).on(Event$2.DRAG_START, function (e) {
+      $(this._element.querySelectorAll(SELECTOR_ITEM_IMG)).on(EVENT_DRAG_START, function (e) {
         return e.preventDefault();
       });
 
       if (this._pointerEvent) {
-        $(this._element).on(Event$2.POINTERDOWN, function (event) {
+        $(this._element).on(EVENT_POINTERDOWN, function (event) {
           return start(event);
         });
-        $(this._element).on(Event$2.POINTERUP, function (event) {
+        $(this._element).on(EVENT_POINTERUP, function (event) {
           return end(event);
         });
 
-        this._element.classList.add(ClassName$2.POINTER_EVENT);
+        this._element.classList.add(CLASS_NAME_POINTER_EVENT);
       } else {
-        $(this._element).on(Event$2.TOUCHSTART, function (event) {
+        $(this._element).on(EVENT_TOUCHSTART, function (event) {
           return start(event);
         });
-        $(this._element).on(Event$2.TOUCHMOVE, function (event) {
+        $(this._element).on(EVENT_TOUCHMOVE, function (event) {
           return move(event);
         });
-        $(this._element).on(Event$2.TOUCHEND, function (event) {
+        $(this._element).on(EVENT_TOUCHEND, function (event) {
           return end(event);
         });
       }
@@ -13125,19 +15467,17 @@ __webpack_require__.r(__webpack_exports__);
           event.preventDefault();
           this.next();
           break;
-
-        default:
       }
     };
 
     _proto._getItemIndex = function _getItemIndex(element) {
-      this._items = element && element.parentNode ? [].slice.call(element.parentNode.querySelectorAll(Selector$2.ITEM)) : [];
+      this._items = element && element.parentNode ? [].slice.call(element.parentNode.querySelectorAll(SELECTOR_ITEM)) : [];
       return this._items.indexOf(element);
     };
 
     _proto._getItemByDirection = function _getItemByDirection(direction, activeElement) {
-      var isNextDirection = direction === Direction.NEXT;
-      var isPrevDirection = direction === Direction.PREV;
+      var isNextDirection = direction === DIRECTION_NEXT;
+      var isPrevDirection = direction === DIRECTION_PREV;
 
       var activeIndex = this._getItemIndex(activeElement);
 
@@ -13148,7 +15488,7 @@ __webpack_require__.r(__webpack_exports__);
         return activeElement;
       }
 
-      var delta = direction === Direction.PREV ? -1 : 1;
+      var delta = direction === DIRECTION_PREV ? -1 : 1;
       var itemIndex = (activeIndex + delta) % this._items.length;
       return itemIndex === -1 ? this._items[this._items.length - 1] : this._items[itemIndex];
     };
@@ -13156,9 +15496,9 @@ __webpack_require__.r(__webpack_exports__);
     _proto._triggerSlideEvent = function _triggerSlideEvent(relatedTarget, eventDirectionName) {
       var targetIndex = this._getItemIndex(relatedTarget);
 
-      var fromIndex = this._getItemIndex(this._element.querySelector(Selector$2.ACTIVE_ITEM));
+      var fromIndex = this._getItemIndex(this._element.querySelector(SELECTOR_ACTIVE_ITEM));
 
-      var slideEvent = $.Event(Event$2.SLIDE, {
+      var slideEvent = $.Event(EVENT_SLIDE, {
         relatedTarget: relatedTarget,
         direction: eventDirectionName,
         from: fromIndex,
@@ -13170,13 +15510,13 @@ __webpack_require__.r(__webpack_exports__);
 
     _proto._setActiveIndicatorElement = function _setActiveIndicatorElement(element) {
       if (this._indicatorsElement) {
-        var indicators = [].slice.call(this._indicatorsElement.querySelectorAll(Selector$2.ACTIVE));
-        $(indicators).removeClass(ClassName$2.ACTIVE);
+        var indicators = [].slice.call(this._indicatorsElement.querySelectorAll(SELECTOR_ACTIVE$1));
+        $(indicators).removeClass(CLASS_NAME_ACTIVE$1);
 
         var nextIndicator = this._indicatorsElement.children[this._getItemIndex(element)];
 
         if (nextIndicator) {
-          $(nextIndicator).addClass(ClassName$2.ACTIVE);
+          $(nextIndicator).addClass(CLASS_NAME_ACTIVE$1);
         }
       }
     };
@@ -13184,7 +15524,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto._slide = function _slide(direction, element) {
       var _this4 = this;
 
-      var activeElement = this._element.querySelector(Selector$2.ACTIVE_ITEM);
+      var activeElement = this._element.querySelector(SELECTOR_ACTIVE_ITEM);
 
       var activeElementIndex = this._getItemIndex(activeElement);
 
@@ -13197,17 +15537,17 @@ __webpack_require__.r(__webpack_exports__);
       var orderClassName;
       var eventDirectionName;
 
-      if (direction === Direction.NEXT) {
-        directionalClassName = ClassName$2.LEFT;
-        orderClassName = ClassName$2.NEXT;
-        eventDirectionName = Direction.LEFT;
+      if (direction === DIRECTION_NEXT) {
+        directionalClassName = CLASS_NAME_LEFT;
+        orderClassName = CLASS_NAME_NEXT;
+        eventDirectionName = DIRECTION_LEFT;
       } else {
-        directionalClassName = ClassName$2.RIGHT;
-        orderClassName = ClassName$2.PREV;
-        eventDirectionName = Direction.RIGHT;
+        directionalClassName = CLASS_NAME_RIGHT;
+        orderClassName = CLASS_NAME_PREV;
+        eventDirectionName = DIRECTION_RIGHT;
       }
 
-      if (nextElement && $(nextElement).hasClass(ClassName$2.ACTIVE)) {
+      if (nextElement && $(nextElement).hasClass(CLASS_NAME_ACTIVE$1)) {
         this._isSliding = false;
         return;
       }
@@ -13231,14 +15571,14 @@ __webpack_require__.r(__webpack_exports__);
 
       this._setActiveIndicatorElement(nextElement);
 
-      var slidEvent = $.Event(Event$2.SLID, {
+      var slidEvent = $.Event(EVENT_SLID, {
         relatedTarget: nextElement,
         direction: eventDirectionName,
         from: activeElementIndex,
         to: nextElementIndex
       });
 
-      if ($(this._element).hasClass(ClassName$2.SLIDE)) {
+      if ($(this._element).hasClass(CLASS_NAME_SLIDE)) {
         $(nextElement).addClass(orderClassName);
         Util.reflow(nextElement);
         $(activeElement).addClass(directionalClassName);
@@ -13254,16 +15594,16 @@ __webpack_require__.r(__webpack_exports__);
 
         var transitionDuration = Util.getTransitionDurationFromElement(activeElement);
         $(activeElement).one(Util.TRANSITION_END, function () {
-          $(nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(ClassName$2.ACTIVE);
-          $(activeElement).removeClass(ClassName$2.ACTIVE + " " + orderClassName + " " + directionalClassName);
+          $(nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(CLASS_NAME_ACTIVE$1);
+          $(activeElement).removeClass(CLASS_NAME_ACTIVE$1 + " " + orderClassName + " " + directionalClassName);
           _this4._isSliding = false;
           setTimeout(function () {
             return $(_this4._element).trigger(slidEvent);
           }, 0);
         }).emulateTransitionEnd(transitionDuration);
       } else {
-        $(activeElement).removeClass(ClassName$2.ACTIVE);
-        $(nextElement).addClass(ClassName$2.ACTIVE);
+        $(activeElement).removeClass(CLASS_NAME_ACTIVE$1);
+        $(nextElement).addClass(CLASS_NAME_ACTIVE$1);
         this._isSliding = false;
         $(this._element).trigger(slidEvent);
       }
@@ -13278,10 +15618,10 @@ __webpack_require__.r(__webpack_exports__);
       return this.each(function () {
         var data = $(this).data(DATA_KEY$2);
 
-        var _config = _objectSpread({}, Default, $(this).data());
+        var _config = _objectSpread2(_objectSpread2({}, Default), $(this).data());
 
         if (typeof config === 'object') {
-          _config = _objectSpread({}, _config, config);
+          _config = _objectSpread2(_objectSpread2({}, _config), config);
         }
 
         var action = typeof config === 'string' ? config : _config.slide;
@@ -13315,11 +15655,11 @@ __webpack_require__.r(__webpack_exports__);
 
       var target = $(selector)[0];
 
-      if (!target || !$(target).hasClass(ClassName$2.CAROUSEL)) {
+      if (!target || !$(target).hasClass(CLASS_NAME_CAROUSEL)) {
         return;
       }
 
-      var config = _objectSpread({}, $(target).data(), $(this).data());
+      var config = _objectSpread2(_objectSpread2({}, $(target).data()), $(this).data());
 
       var slideIndex = this.getAttribute('data-slide-to');
 
@@ -13357,9 +15697,9 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event$2.CLICK_DATA_API, Selector$2.DATA_SLIDE, Carousel._dataApiClickHandler);
-  $(window).on(Event$2.LOAD_DATA_API, function () {
-    var carousels = [].slice.call(document.querySelectorAll(Selector$2.DATA_RIDE));
+  $(document).on(EVENT_CLICK_DATA_API$2, SELECTOR_DATA_SLIDE, Carousel._dataApiClickHandler);
+  $(window).on(EVENT_LOAD_DATA_API$1, function () {
+    var carousels = [].slice.call(document.querySelectorAll(SELECTOR_DATA_RIDE));
 
     for (var i = 0, len = carousels.length; i < len; i++) {
       var $carousel = $(carousels[i]);
@@ -13388,7 +15728,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$3 = 'collapse';
-  var VERSION$3 = '4.3.1';
+  var VERSION$3 = '4.5.0';
   var DATA_KEY$3 = 'bs.collapse';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var DATA_API_KEY$3 = '.data-api';
@@ -13401,43 +15741,32 @@ __webpack_require__.r(__webpack_exports__);
     toggle: 'boolean',
     parent: '(string|element)'
   };
-  var Event$3 = {
-    SHOW: "show" + EVENT_KEY$3,
-    SHOWN: "shown" + EVENT_KEY$3,
-    HIDE: "hide" + EVENT_KEY$3,
-    HIDDEN: "hidden" + EVENT_KEY$3,
-    CLICK_DATA_API: "click" + EVENT_KEY$3 + DATA_API_KEY$3
-  };
-  var ClassName$3 = {
-    SHOW: 'show',
-    COLLAPSE: 'collapse',
-    COLLAPSING: 'collapsing',
-    COLLAPSED: 'collapsed'
-  };
-  var Dimension = {
-    WIDTH: 'width',
-    HEIGHT: 'height'
-  };
-  var Selector$3 = {
-    ACTIVES: '.show, .collapsing',
-    DATA_TOGGLE: '[data-toggle="collapse"]'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+  var EVENT_SHOW = "show" + EVENT_KEY$3;
+  var EVENT_SHOWN = "shown" + EVENT_KEY$3;
+  var EVENT_HIDE = "hide" + EVENT_KEY$3;
+  var EVENT_HIDDEN = "hidden" + EVENT_KEY$3;
+  var EVENT_CLICK_DATA_API$3 = "click" + EVENT_KEY$3 + DATA_API_KEY$3;
+  var CLASS_NAME_SHOW$1 = 'show';
+  var CLASS_NAME_COLLAPSE = 'collapse';
+  var CLASS_NAME_COLLAPSING = 'collapsing';
+  var CLASS_NAME_COLLAPSED = 'collapsed';
+  var DIMENSION_WIDTH = 'width';
+  var DIMENSION_HEIGHT = 'height';
+  var SELECTOR_ACTIVES = '.show, .collapsing';
+  var SELECTOR_DATA_TOGGLE$1 = '[data-toggle="collapse"]';
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
-  };
-
-  var Collapse =
-  /*#__PURE__*/
-  function () {
+  var Collapse = /*#__PURE__*/function () {
     function Collapse(element, config) {
       this._isTransitioning = false;
       this._element = element;
       this._config = this._getConfig(config);
       this._triggerArray = [].slice.call(document.querySelectorAll("[data-toggle=\"collapse\"][href=\"#" + element.id + "\"]," + ("[data-toggle=\"collapse\"][data-target=\"#" + element.id + "\"]")));
-      var toggleList = [].slice.call(document.querySelectorAll(Selector$3.DATA_TOGGLE));
+      var toggleList = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE$1));
 
       for (var i = 0, len = toggleList.length; i < len; i++) {
         var elem = toggleList[i];
@@ -13469,7 +15798,7 @@ __webpack_require__.r(__webpack_exports__);
 
     // Public
     _proto.toggle = function toggle() {
-      if ($(this._element).hasClass(ClassName$3.SHOW)) {
+      if ($(this._element).hasClass(CLASS_NAME_SHOW$1)) {
         this.hide();
       } else {
         this.show();
@@ -13479,7 +15808,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto.show = function show() {
       var _this = this;
 
-      if (this._isTransitioning || $(this._element).hasClass(ClassName$3.SHOW)) {
+      if (this._isTransitioning || $(this._element).hasClass(CLASS_NAME_SHOW$1)) {
         return;
       }
 
@@ -13487,12 +15816,12 @@ __webpack_require__.r(__webpack_exports__);
       var activesData;
 
       if (this._parent) {
-        actives = [].slice.call(this._parent.querySelectorAll(Selector$3.ACTIVES)).filter(function (elem) {
+        actives = [].slice.call(this._parent.querySelectorAll(SELECTOR_ACTIVES)).filter(function (elem) {
           if (typeof _this._config.parent === 'string') {
             return elem.getAttribute('data-parent') === _this._config.parent;
           }
 
-          return elem.classList.contains(ClassName$3.COLLAPSE);
+          return elem.classList.contains(CLASS_NAME_COLLAPSE);
         });
 
         if (actives.length === 0) {
@@ -13508,7 +15837,7 @@ __webpack_require__.r(__webpack_exports__);
         }
       }
 
-      var startEvent = $.Event(Event$3.SHOW);
+      var startEvent = $.Event(EVENT_SHOW);
       $(this._element).trigger(startEvent);
 
       if (startEvent.isDefaultPrevented()) {
@@ -13525,22 +15854,22 @@ __webpack_require__.r(__webpack_exports__);
 
       var dimension = this._getDimension();
 
-      $(this._element).removeClass(ClassName$3.COLLAPSE).addClass(ClassName$3.COLLAPSING);
+      $(this._element).removeClass(CLASS_NAME_COLLAPSE).addClass(CLASS_NAME_COLLAPSING);
       this._element.style[dimension] = 0;
 
       if (this._triggerArray.length) {
-        $(this._triggerArray).removeClass(ClassName$3.COLLAPSED).attr('aria-expanded', true);
+        $(this._triggerArray).removeClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', true);
       }
 
       this.setTransitioning(true);
 
       var complete = function complete() {
-        $(_this._element).removeClass(ClassName$3.COLLAPSING).addClass(ClassName$3.COLLAPSE).addClass(ClassName$3.SHOW);
+        $(_this._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$1);
         _this._element.style[dimension] = '';
 
         _this.setTransitioning(false);
 
-        $(_this._element).trigger(Event$3.SHOWN);
+        $(_this._element).trigger(EVENT_SHOWN);
       };
 
       var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
@@ -13553,11 +15882,11 @@ __webpack_require__.r(__webpack_exports__);
     _proto.hide = function hide() {
       var _this2 = this;
 
-      if (this._isTransitioning || !$(this._element).hasClass(ClassName$3.SHOW)) {
+      if (this._isTransitioning || !$(this._element).hasClass(CLASS_NAME_SHOW$1)) {
         return;
       }
 
-      var startEvent = $.Event(Event$3.HIDE);
+      var startEvent = $.Event(EVENT_HIDE);
       $(this._element).trigger(startEvent);
 
       if (startEvent.isDefaultPrevented()) {
@@ -13568,7 +15897,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + "px";
       Util.reflow(this._element);
-      $(this._element).addClass(ClassName$3.COLLAPSING).removeClass(ClassName$3.COLLAPSE).removeClass(ClassName$3.SHOW);
+      $(this._element).addClass(CLASS_NAME_COLLAPSING).removeClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$1);
       var triggerArrayLength = this._triggerArray.length;
 
       if (triggerArrayLength > 0) {
@@ -13579,8 +15908,8 @@ __webpack_require__.r(__webpack_exports__);
           if (selector !== null) {
             var $elem = $([].slice.call(document.querySelectorAll(selector)));
 
-            if (!$elem.hasClass(ClassName$3.SHOW)) {
-              $(trigger).addClass(ClassName$3.COLLAPSED).attr('aria-expanded', false);
+            if (!$elem.hasClass(CLASS_NAME_SHOW$1)) {
+              $(trigger).addClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', false);
             }
           }
         }
@@ -13591,7 +15920,7 @@ __webpack_require__.r(__webpack_exports__);
       var complete = function complete() {
         _this2.setTransitioning(false);
 
-        $(_this2._element).removeClass(ClassName$3.COLLAPSING).addClass(ClassName$3.COLLAPSE).trigger(Event$3.HIDDEN);
+        $(_this2._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE).trigger(EVENT_HIDDEN);
       };
 
       this._element.style[dimension] = '';
@@ -13614,7 +15943,7 @@ __webpack_require__.r(__webpack_exports__);
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default$1, config);
+      config = _objectSpread2(_objectSpread2({}, Default$1), config);
       config.toggle = Boolean(config.toggle); // Coerce string values
 
       Util.typeCheckConfig(NAME$3, config, DefaultType$1);
@@ -13622,8 +15951,8 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._getDimension = function _getDimension() {
-      var hasWidth = $(this._element).hasClass(Dimension.WIDTH);
-      return hasWidth ? Dimension.WIDTH : Dimension.HEIGHT;
+      var hasWidth = $(this._element).hasClass(DIMENSION_WIDTH);
+      return hasWidth ? DIMENSION_WIDTH : DIMENSION_HEIGHT;
     };
 
     _proto._getParent = function _getParent() {
@@ -13650,10 +15979,10 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(element, triggerArray) {
-      var isOpen = $(element).hasClass(ClassName$3.SHOW);
+      var isOpen = $(element).hasClass(CLASS_NAME_SHOW$1);
 
       if (triggerArray.length) {
-        $(triggerArray).toggleClass(ClassName$3.COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
+        $(triggerArray).toggleClass(CLASS_NAME_COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
       }
     } // Static
     ;
@@ -13668,9 +15997,9 @@ __webpack_require__.r(__webpack_exports__);
         var $this = $(this);
         var data = $this.data(DATA_KEY$3);
 
-        var _config = _objectSpread({}, Default$1, $this.data(), typeof config === 'object' && config ? config : {});
+        var _config = _objectSpread2(_objectSpread2(_objectSpread2({}, Default$1), $this.data()), typeof config === 'object' && config ? config : {});
 
-        if (!data && _config.toggle && /show|hide/.test(config)) {
+        if (!data && _config.toggle && typeof config === 'string' && /show|hide/.test(config)) {
           _config.toggle = false;
         }
 
@@ -13710,7 +16039,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event$3.CLICK_DATA_API, Selector$3.DATA_TOGGLE, function (event) {
+  $(document).on(EVENT_CLICK_DATA_API$3, SELECTOR_DATA_TOGGLE$1, function (event) {
     // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
     if (event.currentTarget.tagName === 'A') {
       event.preventDefault();
@@ -13748,7 +16077,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$4 = 'dropdown';
-  var VERSION$4 = '4.3.1';
+  var VERSION$4 = '4.5.0';
   var DATA_KEY$4 = 'bs.dropdown';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var DATA_API_KEY$4 = '.data-api';
@@ -13766,67 +16095,55 @@ __webpack_require__.r(__webpack_exports__);
   var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
 
   var REGEXP_KEYDOWN = new RegExp(ARROW_UP_KEYCODE + "|" + ARROW_DOWN_KEYCODE + "|" + ESCAPE_KEYCODE);
-  var Event$4 = {
-    HIDE: "hide" + EVENT_KEY$4,
-    HIDDEN: "hidden" + EVENT_KEY$4,
-    SHOW: "show" + EVENT_KEY$4,
-    SHOWN: "shown" + EVENT_KEY$4,
-    CLICK: "click" + EVENT_KEY$4,
-    CLICK_DATA_API: "click" + EVENT_KEY$4 + DATA_API_KEY$4,
-    KEYDOWN_DATA_API: "keydown" + EVENT_KEY$4 + DATA_API_KEY$4,
-    KEYUP_DATA_API: "keyup" + EVENT_KEY$4 + DATA_API_KEY$4
-  };
-  var ClassName$4 = {
-    DISABLED: 'disabled',
-    SHOW: 'show',
-    DROPUP: 'dropup',
-    DROPRIGHT: 'dropright',
-    DROPLEFT: 'dropleft',
-    MENURIGHT: 'dropdown-menu-right',
-    MENULEFT: 'dropdown-menu-left',
-    POSITION_STATIC: 'position-static'
-  };
-  var Selector$4 = {
-    DATA_TOGGLE: '[data-toggle="dropdown"]',
-    FORM_CHILD: '.dropdown form',
-    MENU: '.dropdown-menu',
-    NAVBAR_NAV: '.navbar-nav',
-    VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
-  };
-  var AttachmentMap = {
-    TOP: 'top-start',
-    TOPEND: 'top-end',
-    BOTTOM: 'bottom-start',
-    BOTTOMEND: 'bottom-end',
-    RIGHT: 'right-start',
-    RIGHTEND: 'right-end',
-    LEFT: 'left-start',
-    LEFTEND: 'left-end'
-  };
+  var EVENT_HIDE$1 = "hide" + EVENT_KEY$4;
+  var EVENT_HIDDEN$1 = "hidden" + EVENT_KEY$4;
+  var EVENT_SHOW$1 = "show" + EVENT_KEY$4;
+  var EVENT_SHOWN$1 = "shown" + EVENT_KEY$4;
+  var EVENT_CLICK = "click" + EVENT_KEY$4;
+  var EVENT_CLICK_DATA_API$4 = "click" + EVENT_KEY$4 + DATA_API_KEY$4;
+  var EVENT_KEYDOWN_DATA_API = "keydown" + EVENT_KEY$4 + DATA_API_KEY$4;
+  var EVENT_KEYUP_DATA_API = "keyup" + EVENT_KEY$4 + DATA_API_KEY$4;
+  var CLASS_NAME_DISABLED = 'disabled';
+  var CLASS_NAME_SHOW$2 = 'show';
+  var CLASS_NAME_DROPUP = 'dropup';
+  var CLASS_NAME_DROPRIGHT = 'dropright';
+  var CLASS_NAME_DROPLEFT = 'dropleft';
+  var CLASS_NAME_MENURIGHT = 'dropdown-menu-right';
+  var CLASS_NAME_POSITION_STATIC = 'position-static';
+  var SELECTOR_DATA_TOGGLE$2 = '[data-toggle="dropdown"]';
+  var SELECTOR_FORM_CHILD = '.dropdown form';
+  var SELECTOR_MENU = '.dropdown-menu';
+  var SELECTOR_NAVBAR_NAV = '.navbar-nav';
+  var SELECTOR_VISIBLE_ITEMS = '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)';
+  var PLACEMENT_TOP = 'top-start';
+  var PLACEMENT_TOPEND = 'top-end';
+  var PLACEMENT_BOTTOM = 'bottom-start';
+  var PLACEMENT_BOTTOMEND = 'bottom-end';
+  var PLACEMENT_RIGHT = 'right-start';
+  var PLACEMENT_LEFT = 'left-start';
   var Default$2 = {
     offset: 0,
     flip: true,
     boundary: 'scrollParent',
     reference: 'toggle',
-    display: 'dynamic'
+    display: 'dynamic',
+    popperConfig: null
   };
   var DefaultType$2 = {
     offset: '(number|string|function)',
     flip: 'boolean',
     boundary: '(string|element)',
     reference: '(string|element)',
-    display: 'string'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
+    display: 'string',
+    popperConfig: '(null|object)'
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
-  var Dropdown =
-  /*#__PURE__*/
-  function () {
+  var Dropdown = /*#__PURE__*/function () {
     function Dropdown(element, config) {
       this._element = element;
       this._popper = null;
@@ -13842,13 +16159,11 @@ __webpack_require__.r(__webpack_exports__);
 
     // Public
     _proto.toggle = function toggle() {
-      if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED)) {
+      if (this._element.disabled || $(this._element).hasClass(CLASS_NAME_DISABLED)) {
         return;
       }
 
-      var parent = Dropdown._getParentFromElement(this._element);
-
-      var isActive = $(this._menu).hasClass(ClassName$4.SHOW);
+      var isActive = $(this._menu).hasClass(CLASS_NAME_SHOW$2);
 
       Dropdown._clearMenus();
 
@@ -13856,10 +16171,25 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
+      this.show(true);
+    };
+
+    _proto.show = function show(usePopper) {
+      if (usePopper === void 0) {
+        usePopper = false;
+      }
+
+      if (this._element.disabled || $(this._element).hasClass(CLASS_NAME_DISABLED) || $(this._menu).hasClass(CLASS_NAME_SHOW$2)) {
+        return;
+      }
+
       var relatedTarget = {
         relatedTarget: this._element
       };
-      var showEvent = $.Event(Event$4.SHOW, relatedTarget);
+      var showEvent = $.Event(EVENT_SHOW$1, relatedTarget);
+
+      var parent = Dropdown._getParentFromElement(this._element);
+
       $(parent).trigger(showEvent);
 
       if (showEvent.isDefaultPrevented()) {
@@ -13867,7 +16197,7 @@ __webpack_require__.r(__webpack_exports__);
       } // Disable totally Popper.js for Dropdown in Navbar
 
 
-      if (!this._inNavbar) {
+      if (!this._inNavbar && usePopper) {
         /**
          * Check for Popper dependency
          * Popper - https://popper.js.org
@@ -13892,7 +16222,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
         if (this._config.boundary !== 'scrollParent') {
-          $(parent).addClass(ClassName$4.POSITION_STATIC);
+          $(parent).addClass(CLASS_NAME_POSITION_STATIC);
         }
 
         this._popper = new Popper(referenceElement, this._menu, this._getPopperConfig());
@@ -13902,7 +16232,7 @@ __webpack_require__.r(__webpack_exports__);
       // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
 
-      if ('ontouchstart' in document.documentElement && $(parent).closest(Selector$4.NAVBAR_NAV).length === 0) {
+      if ('ontouchstart' in document.documentElement && $(parent).closest(SELECTOR_NAVBAR_NAV).length === 0) {
         $(document.body).children().on('mouseover', null, $.noop);
       }
 
@@ -13910,41 +16240,19 @@ __webpack_require__.r(__webpack_exports__);
 
       this._element.setAttribute('aria-expanded', true);
 
-      $(this._menu).toggleClass(ClassName$4.SHOW);
-      $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.SHOWN, relatedTarget));
-    };
-
-    _proto.show = function show() {
-      if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || $(this._menu).hasClass(ClassName$4.SHOW)) {
-        return;
-      }
-
-      var relatedTarget = {
-        relatedTarget: this._element
-      };
-      var showEvent = $.Event(Event$4.SHOW, relatedTarget);
-
-      var parent = Dropdown._getParentFromElement(this._element);
-
-      $(parent).trigger(showEvent);
-
-      if (showEvent.isDefaultPrevented()) {
-        return;
-      }
-
-      $(this._menu).toggleClass(ClassName$4.SHOW);
-      $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.SHOWN, relatedTarget));
+      $(this._menu).toggleClass(CLASS_NAME_SHOW$2);
+      $(parent).toggleClass(CLASS_NAME_SHOW$2).trigger($.Event(EVENT_SHOWN$1, relatedTarget));
     };
 
     _proto.hide = function hide() {
-      if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || !$(this._menu).hasClass(ClassName$4.SHOW)) {
+      if (this._element.disabled || $(this._element).hasClass(CLASS_NAME_DISABLED) || !$(this._menu).hasClass(CLASS_NAME_SHOW$2)) {
         return;
       }
 
       var relatedTarget = {
         relatedTarget: this._element
       };
-      var hideEvent = $.Event(Event$4.HIDE, relatedTarget);
+      var hideEvent = $.Event(EVENT_HIDE$1, relatedTarget);
 
       var parent = Dropdown._getParentFromElement(this._element);
 
@@ -13954,8 +16262,12 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      $(this._menu).toggleClass(ClassName$4.SHOW);
-      $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.HIDDEN, relatedTarget));
+      if (this._popper) {
+        this._popper.destroy();
+      }
+
+      $(this._menu).toggleClass(CLASS_NAME_SHOW$2);
+      $(parent).toggleClass(CLASS_NAME_SHOW$2).trigger($.Event(EVENT_HIDDEN$1, relatedTarget));
     };
 
     _proto.dispose = function dispose() {
@@ -13983,7 +16295,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto._addEventListeners = function _addEventListeners() {
       var _this = this;
 
-      $(this._element).on(Event$4.CLICK, function (event) {
+      $(this._element).on(EVENT_CLICK, function (event) {
         event.preventDefault();
         event.stopPropagation();
 
@@ -13992,7 +16304,7 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, this.constructor.Default, $(this._element).data(), config);
+      config = _objectSpread2(_objectSpread2(_objectSpread2({}, this.constructor.Default), $(this._element).data()), config);
       Util.typeCheckConfig(NAME$4, config, this.constructor.DefaultType);
       return config;
     };
@@ -14002,7 +16314,7 @@ __webpack_require__.r(__webpack_exports__);
         var parent = Dropdown._getParentFromElement(this._element);
 
         if (parent) {
-          this._menu = parent.querySelector(Selector$4.MENU);
+          this._menu = parent.querySelector(SELECTOR_MENU);
         }
       }
 
@@ -14011,20 +16323,16 @@ __webpack_require__.r(__webpack_exports__);
 
     _proto._getPlacement = function _getPlacement() {
       var $parentDropdown = $(this._element.parentNode);
-      var placement = AttachmentMap.BOTTOM; // Handle dropup
+      var placement = PLACEMENT_BOTTOM; // Handle dropup
 
-      if ($parentDropdown.hasClass(ClassName$4.DROPUP)) {
-        placement = AttachmentMap.TOP;
-
-        if ($(this._menu).hasClass(ClassName$4.MENURIGHT)) {
-          placement = AttachmentMap.TOPEND;
-        }
-      } else if ($parentDropdown.hasClass(ClassName$4.DROPRIGHT)) {
-        placement = AttachmentMap.RIGHT;
-      } else if ($parentDropdown.hasClass(ClassName$4.DROPLEFT)) {
-        placement = AttachmentMap.LEFT;
-      } else if ($(this._menu).hasClass(ClassName$4.MENURIGHT)) {
-        placement = AttachmentMap.BOTTOMEND;
+      if ($parentDropdown.hasClass(CLASS_NAME_DROPUP)) {
+        placement = $(this._menu).hasClass(CLASS_NAME_MENURIGHT) ? PLACEMENT_TOPEND : PLACEMENT_TOP;
+      } else if ($parentDropdown.hasClass(CLASS_NAME_DROPRIGHT)) {
+        placement = PLACEMENT_RIGHT;
+      } else if ($parentDropdown.hasClass(CLASS_NAME_DROPLEFT)) {
+        placement = PLACEMENT_LEFT;
+      } else if ($(this._menu).hasClass(CLASS_NAME_MENURIGHT)) {
+        placement = PLACEMENT_BOTTOMEND;
       }
 
       return placement;
@@ -14041,7 +16349,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (typeof this._config.offset === 'function') {
         offset.fn = function (data) {
-          data.offsets = _objectSpread({}, data.offsets, _this2._config.offset(data.offsets, _this2._element) || {});
+          data.offsets = _objectSpread2(_objectSpread2({}, data.offsets), _this2._config.offset(data.offsets, _this2._element) || {});
           return data;
         };
       } else {
@@ -14062,9 +16370,8 @@ __webpack_require__.r(__webpack_exports__);
           preventOverflow: {
             boundariesElement: this._config.boundary
           }
-        } // Disable Popper.js if we have a static display
-
-      };
+        }
+      }; // Disable Popper.js if we have a static display
 
       if (this._config.display === 'static') {
         popperConfig.modifiers.applyStyle = {
@@ -14072,7 +16379,7 @@ __webpack_require__.r(__webpack_exports__);
         };
       }
 
-      return popperConfig;
+      return _objectSpread2(_objectSpread2({}, popperConfig), this._config.popperConfig);
     } // Static
     ;
 
@@ -14102,7 +16409,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var toggles = [].slice.call(document.querySelectorAll(Selector$4.DATA_TOGGLE));
+      var toggles = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE$2));
 
       for (var i = 0, len = toggles.length; i < len; i++) {
         var parent = Dropdown._getParentFromElement(toggles[i]);
@@ -14122,7 +16429,7 @@ __webpack_require__.r(__webpack_exports__);
 
         var dropdownMenu = context._menu;
 
-        if (!$(parent).hasClass(ClassName$4.SHOW)) {
+        if (!$(parent).hasClass(CLASS_NAME_SHOW$2)) {
           continue;
         }
 
@@ -14130,7 +16437,7 @@ __webpack_require__.r(__webpack_exports__);
           continue;
         }
 
-        var hideEvent = $.Event(Event$4.HIDE, relatedTarget);
+        var hideEvent = $.Event(EVENT_HIDE$1, relatedTarget);
         $(parent).trigger(hideEvent);
 
         if (hideEvent.isDefaultPrevented()) {
@@ -14144,8 +16451,13 @@ __webpack_require__.r(__webpack_exports__);
         }
 
         toggles[i].setAttribute('aria-expanded', 'false');
-        $(dropdownMenu).removeClass(ClassName$4.SHOW);
-        $(parent).removeClass(ClassName$4.SHOW).trigger($.Event(Event$4.HIDDEN, relatedTarget));
+
+        if (context._popper) {
+          context._popper.destroy();
+        }
+
+        $(dropdownMenu).removeClass(CLASS_NAME_SHOW$2);
+        $(parent).removeClass(CLASS_NAME_SHOW$2).trigger($.Event(EVENT_HIDDEN$1, relatedTarget));
       }
     };
 
@@ -14169,32 +16481,37 @@ __webpack_require__.r(__webpack_exports__);
       //  - If key is other than escape
       //    - If key is not up or down => not a dropdown command
       //    - If trigger inside the menu => not a dropdown command
-      if (/input|textarea/i.test(event.target.tagName) ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE && (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE || $(event.target).closest(Selector$4.MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
+      if (/input|textarea/i.test(event.target.tagName) ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE && (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE || $(event.target).closest(SELECTOR_MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
+        return;
+      }
+
+      if (this.disabled || $(this).hasClass(CLASS_NAME_DISABLED)) {
+        return;
+      }
+
+      var parent = Dropdown._getParentFromElement(this);
+
+      var isActive = $(parent).hasClass(CLASS_NAME_SHOW$2);
+
+      if (!isActive && event.which === ESCAPE_KEYCODE) {
         return;
       }
 
       event.preventDefault();
       event.stopPropagation();
 
-      if (this.disabled || $(this).hasClass(ClassName$4.DISABLED)) {
-        return;
-      }
-
-      var parent = Dropdown._getParentFromElement(this);
-
-      var isActive = $(parent).hasClass(ClassName$4.SHOW);
-
       if (!isActive || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
         if (event.which === ESCAPE_KEYCODE) {
-          var toggle = parent.querySelector(Selector$4.DATA_TOGGLE);
-          $(toggle).trigger('focus');
+          $(parent.querySelector(SELECTOR_DATA_TOGGLE$2)).trigger('focus');
         }
 
         $(this).trigger('click');
         return;
       }
 
-      var items = [].slice.call(parent.querySelectorAll(Selector$4.VISIBLE_ITEMS));
+      var items = [].slice.call(parent.querySelectorAll(SELECTOR_VISIBLE_ITEMS)).filter(function (item) {
+        return $(item).is(':visible');
+      });
 
       if (items.length === 0) {
         return;
@@ -14245,12 +16562,12 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event$4.KEYDOWN_DATA_API, Selector$4.DATA_TOGGLE, Dropdown._dataApiKeydownHandler).on(Event$4.KEYDOWN_DATA_API, Selector$4.MENU, Dropdown._dataApiKeydownHandler).on(Event$4.CLICK_DATA_API + " " + Event$4.KEYUP_DATA_API, Dropdown._clearMenus).on(Event$4.CLICK_DATA_API, Selector$4.DATA_TOGGLE, function (event) {
+  $(document).on(EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE$2, Dropdown._dataApiKeydownHandler).on(EVENT_KEYDOWN_DATA_API, SELECTOR_MENU, Dropdown._dataApiKeydownHandler).on(EVENT_CLICK_DATA_API$4 + " " + EVENT_KEYUP_DATA_API, Dropdown._clearMenus).on(EVENT_CLICK_DATA_API$4, SELECTOR_DATA_TOGGLE$2, function (event) {
     event.preventDefault();
     event.stopPropagation();
 
     Dropdown._jQueryInterface.call($(this), 'toggle');
-  }).on(Event$4.CLICK_DATA_API, Selector$4.FORM_CHILD, function (e) {
+  }).on(EVENT_CLICK_DATA_API$4, SELECTOR_FORM_CHILD, function (e) {
     e.stopPropagation();
   });
   /**
@@ -14274,7 +16591,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$5 = 'modal';
-  var VERSION$5 = '4.3.1';
+  var VERSION$5 = '4.5.0';
   var DATA_KEY$5 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$5;
   var DATA_API_KEY$5 = '.data-api';
@@ -14293,49 +16610,42 @@ __webpack_require__.r(__webpack_exports__);
     focus: 'boolean',
     show: 'boolean'
   };
-  var Event$5 = {
-    HIDE: "hide" + EVENT_KEY$5,
-    HIDDEN: "hidden" + EVENT_KEY$5,
-    SHOW: "show" + EVENT_KEY$5,
-    SHOWN: "shown" + EVENT_KEY$5,
-    FOCUSIN: "focusin" + EVENT_KEY$5,
-    RESIZE: "resize" + EVENT_KEY$5,
-    CLICK_DISMISS: "click.dismiss" + EVENT_KEY$5,
-    KEYDOWN_DISMISS: "keydown.dismiss" + EVENT_KEY$5,
-    MOUSEUP_DISMISS: "mouseup.dismiss" + EVENT_KEY$5,
-    MOUSEDOWN_DISMISS: "mousedown.dismiss" + EVENT_KEY$5,
-    CLICK_DATA_API: "click" + EVENT_KEY$5 + DATA_API_KEY$5
-  };
-  var ClassName$5 = {
-    SCROLLABLE: 'modal-dialog-scrollable',
-    SCROLLBAR_MEASURER: 'modal-scrollbar-measure',
-    BACKDROP: 'modal-backdrop',
-    OPEN: 'modal-open',
-    FADE: 'fade',
-    SHOW: 'show'
-  };
-  var Selector$5 = {
-    DIALOG: '.modal-dialog',
-    MODAL_BODY: '.modal-body',
-    DATA_TOGGLE: '[data-toggle="modal"]',
-    DATA_DISMISS: '[data-dismiss="modal"]',
-    FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
-    STICKY_CONTENT: '.sticky-top'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+  var EVENT_HIDE$2 = "hide" + EVENT_KEY$5;
+  var EVENT_HIDE_PREVENTED = "hidePrevented" + EVENT_KEY$5;
+  var EVENT_HIDDEN$2 = "hidden" + EVENT_KEY$5;
+  var EVENT_SHOW$2 = "show" + EVENT_KEY$5;
+  var EVENT_SHOWN$2 = "shown" + EVENT_KEY$5;
+  var EVENT_FOCUSIN = "focusin" + EVENT_KEY$5;
+  var EVENT_RESIZE = "resize" + EVENT_KEY$5;
+  var EVENT_CLICK_DISMISS = "click.dismiss" + EVENT_KEY$5;
+  var EVENT_KEYDOWN_DISMISS = "keydown.dismiss" + EVENT_KEY$5;
+  var EVENT_MOUSEUP_DISMISS = "mouseup.dismiss" + EVENT_KEY$5;
+  var EVENT_MOUSEDOWN_DISMISS = "mousedown.dismiss" + EVENT_KEY$5;
+  var EVENT_CLICK_DATA_API$5 = "click" + EVENT_KEY$5 + DATA_API_KEY$5;
+  var CLASS_NAME_SCROLLABLE = 'modal-dialog-scrollable';
+  var CLASS_NAME_SCROLLBAR_MEASURER = 'modal-scrollbar-measure';
+  var CLASS_NAME_BACKDROP = 'modal-backdrop';
+  var CLASS_NAME_OPEN = 'modal-open';
+  var CLASS_NAME_FADE$1 = 'fade';
+  var CLASS_NAME_SHOW$3 = 'show';
+  var CLASS_NAME_STATIC = 'modal-static';
+  var SELECTOR_DIALOG = '.modal-dialog';
+  var SELECTOR_MODAL_BODY = '.modal-body';
+  var SELECTOR_DATA_TOGGLE$3 = '[data-toggle="modal"]';
+  var SELECTOR_DATA_DISMISS = '[data-dismiss="modal"]';
+  var SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top';
+  var SELECTOR_STICKY_CONTENT = '.sticky-top';
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
-  };
-
-  var Modal =
-  /*#__PURE__*/
-  function () {
+  var Modal = /*#__PURE__*/function () {
     function Modal(element, config) {
       this._config = this._getConfig(config);
       this._element = element;
-      this._dialog = element.querySelector(Selector$5.DIALOG);
+      this._dialog = element.querySelector(SELECTOR_DIALOG);
       this._backdrop = null;
       this._isShown = false;
       this._isBodyOverflowing = false;
@@ -14359,11 +16669,11 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      if ($(this._element).hasClass(ClassName$5.FADE)) {
+      if ($(this._element).hasClass(CLASS_NAME_FADE$1)) {
         this._isTransitioning = true;
       }
 
-      var showEvent = $.Event(Event$5.SHOW, {
+      var showEvent = $.Event(EVENT_SHOW$2, {
         relatedTarget: relatedTarget
       });
       $(this._element).trigger(showEvent);
@@ -14384,11 +16694,11 @@ __webpack_require__.r(__webpack_exports__);
 
       this._setResizeEvent();
 
-      $(this._element).on(Event$5.CLICK_DISMISS, Selector$5.DATA_DISMISS, function (event) {
+      $(this._element).on(EVENT_CLICK_DISMISS, SELECTOR_DATA_DISMISS, function (event) {
         return _this.hide(event);
       });
-      $(this._dialog).on(Event$5.MOUSEDOWN_DISMISS, function () {
-        $(_this._element).one(Event$5.MOUSEUP_DISMISS, function (event) {
+      $(this._dialog).on(EVENT_MOUSEDOWN_DISMISS, function () {
+        $(_this._element).one(EVENT_MOUSEUP_DISMISS, function (event) {
           if ($(event.target).is(_this._element)) {
             _this._ignoreBackdropClick = true;
           }
@@ -14411,7 +16721,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var hideEvent = $.Event(Event$5.HIDE);
+      var hideEvent = $.Event(EVENT_HIDE$2);
       $(this._element).trigger(hideEvent);
 
       if (!this._isShown || hideEvent.isDefaultPrevented()) {
@@ -14419,7 +16729,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       this._isShown = false;
-      var transition = $(this._element).hasClass(ClassName$5.FADE);
+      var transition = $(this._element).hasClass(CLASS_NAME_FADE$1);
 
       if (transition) {
         this._isTransitioning = true;
@@ -14429,10 +16739,10 @@ __webpack_require__.r(__webpack_exports__);
 
       this._setResizeEvent();
 
-      $(document).off(Event$5.FOCUSIN);
-      $(this._element).removeClass(ClassName$5.SHOW);
-      $(this._element).off(Event$5.CLICK_DISMISS);
-      $(this._dialog).off(Event$5.MOUSEDOWN_DISMISS);
+      $(document).off(EVENT_FOCUSIN);
+      $(this._element).removeClass(CLASS_NAME_SHOW$3);
+      $(this._element).off(EVENT_CLICK_DISMISS);
+      $(this._dialog).off(EVENT_MOUSEDOWN_DISMISS);
 
       if (transition) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);
@@ -14449,12 +16759,12 @@ __webpack_require__.r(__webpack_exports__);
         return $(htmlElement).off(EVENT_KEY$5);
       });
       /**
-       * `document` has 2 events `Event.FOCUSIN` and `Event.CLICK_DATA_API`
+       * `document` has 2 events `EVENT_FOCUSIN` and `EVENT_CLICK_DATA_API`
        * Do not move `document` in `htmlElements` array
-       * It will remove `Event.CLICK_DATA_API` event that should remain
+       * It will remove `EVENT_CLICK_DATA_API` event that should remain
        */
 
-      $(document).off(Event$5.FOCUSIN);
+      $(document).off(EVENT_FOCUSIN);
       $.removeData(this._element, DATA_KEY$5);
       this._config = null;
       this._element = null;
@@ -14473,15 +16783,40 @@ __webpack_require__.r(__webpack_exports__);
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default$3, config);
+      config = _objectSpread2(_objectSpread2({}, Default$3), config);
       Util.typeCheckConfig(NAME$5, config, DefaultType$3);
       return config;
     };
 
-    _proto._showElement = function _showElement(relatedTarget) {
+    _proto._triggerBackdropTransition = function _triggerBackdropTransition() {
       var _this3 = this;
 
-      var transition = $(this._element).hasClass(ClassName$5.FADE);
+      if (this._config.backdrop === 'static') {
+        var hideEventPrevented = $.Event(EVENT_HIDE_PREVENTED);
+        $(this._element).trigger(hideEventPrevented);
+
+        if (hideEventPrevented.defaultPrevented) {
+          return;
+        }
+
+        this._element.classList.add(CLASS_NAME_STATIC);
+
+        var modalTransitionDuration = Util.getTransitionDurationFromElement(this._element);
+        $(this._element).one(Util.TRANSITION_END, function () {
+          _this3._element.classList.remove(CLASS_NAME_STATIC);
+        }).emulateTransitionEnd(modalTransitionDuration);
+
+        this._element.focus();
+      } else {
+        this.hide();
+      }
+    };
+
+    _proto._showElement = function _showElement(relatedTarget) {
+      var _this4 = this;
+
+      var transition = $(this._element).hasClass(CLASS_NAME_FADE$1);
+      var modalBody = this._dialog ? this._dialog.querySelector(SELECTOR_MODAL_BODY) : null;
 
       if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
         // Don't move modal's DOM position
@@ -14494,8 +16829,8 @@ __webpack_require__.r(__webpack_exports__);
 
       this._element.setAttribute('aria-modal', true);
 
-      if ($(this._dialog).hasClass(ClassName$5.SCROLLABLE)) {
-        this._dialog.querySelector(Selector$5.MODAL_BODY).scrollTop = 0;
+      if ($(this._dialog).hasClass(CLASS_NAME_SCROLLABLE) && modalBody) {
+        modalBody.scrollTop = 0;
       } else {
         this._element.scrollTop = 0;
       }
@@ -14504,23 +16839,23 @@ __webpack_require__.r(__webpack_exports__);
         Util.reflow(this._element);
       }
 
-      $(this._element).addClass(ClassName$5.SHOW);
+      $(this._element).addClass(CLASS_NAME_SHOW$3);
 
       if (this._config.focus) {
         this._enforceFocus();
       }
 
-      var shownEvent = $.Event(Event$5.SHOWN, {
+      var shownEvent = $.Event(EVENT_SHOWN$2, {
         relatedTarget: relatedTarget
       });
 
       var transitionComplete = function transitionComplete() {
-        if (_this3._config.focus) {
-          _this3._element.focus();
+        if (_this4._config.focus) {
+          _this4._element.focus();
         }
 
-        _this3._isTransitioning = false;
-        $(_this3._element).trigger(shownEvent);
+        _this4._isTransitioning = false;
+        $(_this4._element).trigger(shownEvent);
       };
 
       if (transition) {
@@ -14532,46 +16867,48 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._enforceFocus = function _enforceFocus() {
-      var _this4 = this;
+      var _this5 = this;
 
-      $(document).off(Event$5.FOCUSIN) // Guard against infinite focus loop
-      .on(Event$5.FOCUSIN, function (event) {
-        if (document !== event.target && _this4._element !== event.target && $(_this4._element).has(event.target).length === 0) {
-          _this4._element.focus();
+      $(document).off(EVENT_FOCUSIN) // Guard against infinite focus loop
+      .on(EVENT_FOCUSIN, function (event) {
+        if (document !== event.target && _this5._element !== event.target && $(_this5._element).has(event.target).length === 0) {
+          _this5._element.focus();
         }
       });
     };
 
     _proto._setEscapeEvent = function _setEscapeEvent() {
-      var _this5 = this;
+      var _this6 = this;
 
-      if (this._isShown && this._config.keyboard) {
-        $(this._element).on(Event$5.KEYDOWN_DISMISS, function (event) {
-          if (event.which === ESCAPE_KEYCODE$1) {
+      if (this._isShown) {
+        $(this._element).on(EVENT_KEYDOWN_DISMISS, function (event) {
+          if (_this6._config.keyboard && event.which === ESCAPE_KEYCODE$1) {
             event.preventDefault();
 
-            _this5.hide();
+            _this6.hide();
+          } else if (!_this6._config.keyboard && event.which === ESCAPE_KEYCODE$1) {
+            _this6._triggerBackdropTransition();
           }
         });
       } else if (!this._isShown) {
-        $(this._element).off(Event$5.KEYDOWN_DISMISS);
+        $(this._element).off(EVENT_KEYDOWN_DISMISS);
       }
     };
 
     _proto._setResizeEvent = function _setResizeEvent() {
-      var _this6 = this;
+      var _this7 = this;
 
       if (this._isShown) {
-        $(window).on(Event$5.RESIZE, function (event) {
-          return _this6.handleUpdate(event);
+        $(window).on(EVENT_RESIZE, function (event) {
+          return _this7.handleUpdate(event);
         });
       } else {
-        $(window).off(Event$5.RESIZE);
+        $(window).off(EVENT_RESIZE);
       }
     };
 
     _proto._hideModal = function _hideModal() {
-      var _this7 = this;
+      var _this8 = this;
 
       this._element.style.display = 'none';
 
@@ -14582,13 +16919,13 @@ __webpack_require__.r(__webpack_exports__);
       this._isTransitioning = false;
 
       this._showBackdrop(function () {
-        $(document.body).removeClass(ClassName$5.OPEN);
+        $(document.body).removeClass(CLASS_NAME_OPEN);
 
-        _this7._resetAdjustments();
+        _this8._resetAdjustments();
 
-        _this7._resetScrollbar();
+        _this8._resetScrollbar();
 
-        $(_this7._element).trigger(Event$5.HIDDEN);
+        $(_this8._element).trigger(EVENT_HIDDEN$2);
       });
     };
 
@@ -14600,22 +16937,22 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._showBackdrop = function _showBackdrop(callback) {
-      var _this8 = this;
+      var _this9 = this;
 
-      var animate = $(this._element).hasClass(ClassName$5.FADE) ? ClassName$5.FADE : '';
+      var animate = $(this._element).hasClass(CLASS_NAME_FADE$1) ? CLASS_NAME_FADE$1 : '';
 
       if (this._isShown && this._config.backdrop) {
         this._backdrop = document.createElement('div');
-        this._backdrop.className = ClassName$5.BACKDROP;
+        this._backdrop.className = CLASS_NAME_BACKDROP;
 
         if (animate) {
           this._backdrop.classList.add(animate);
         }
 
         $(this._backdrop).appendTo(document.body);
-        $(this._element).on(Event$5.CLICK_DISMISS, function (event) {
-          if (_this8._ignoreBackdropClick) {
-            _this8._ignoreBackdropClick = false;
+        $(this._element).on(EVENT_CLICK_DISMISS, function (event) {
+          if (_this9._ignoreBackdropClick) {
+            _this9._ignoreBackdropClick = false;
             return;
           }
 
@@ -14623,18 +16960,14 @@ __webpack_require__.r(__webpack_exports__);
             return;
           }
 
-          if (_this8._config.backdrop === 'static') {
-            _this8._element.focus();
-          } else {
-            _this8.hide();
-          }
+          _this9._triggerBackdropTransition();
         });
 
         if (animate) {
           Util.reflow(this._backdrop);
         }
 
-        $(this._backdrop).addClass(ClassName$5.SHOW);
+        $(this._backdrop).addClass(CLASS_NAME_SHOW$3);
 
         if (!callback) {
           return;
@@ -14648,17 +16981,17 @@ __webpack_require__.r(__webpack_exports__);
         var backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
         $(this._backdrop).one(Util.TRANSITION_END, callback).emulateTransitionEnd(backdropTransitionDuration);
       } else if (!this._isShown && this._backdrop) {
-        $(this._backdrop).removeClass(ClassName$5.SHOW);
+        $(this._backdrop).removeClass(CLASS_NAME_SHOW$3);
 
         var callbackRemove = function callbackRemove() {
-          _this8._removeBackdrop();
+          _this9._removeBackdrop();
 
           if (callback) {
             callback();
           }
         };
 
-        if ($(this._element).hasClass(ClassName$5.FADE)) {
+        if ($(this._element).hasClass(CLASS_NAME_FADE$1)) {
           var _backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
 
           $(this._backdrop).one(Util.TRANSITION_END, callbackRemove).emulateTransitionEnd(_backdropTransitionDuration);
@@ -14693,29 +17026,29 @@ __webpack_require__.r(__webpack_exports__);
 
     _proto._checkScrollbar = function _checkScrollbar() {
       var rect = document.body.getBoundingClientRect();
-      this._isBodyOverflowing = rect.left + rect.right < window.innerWidth;
+      this._isBodyOverflowing = Math.round(rect.left + rect.right) < window.innerWidth;
       this._scrollbarWidth = this._getScrollbarWidth();
     };
 
     _proto._setScrollbar = function _setScrollbar() {
-      var _this9 = this;
+      var _this10 = this;
 
       if (this._isBodyOverflowing) {
         // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
         //   while $(DOMNode).css('padding-right') returns the calculated value or 0 if not set
-        var fixedContent = [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
-        var stickyContent = [].slice.call(document.querySelectorAll(Selector$5.STICKY_CONTENT)); // Adjust fixed content padding
+        var fixedContent = [].slice.call(document.querySelectorAll(SELECTOR_FIXED_CONTENT));
+        var stickyContent = [].slice.call(document.querySelectorAll(SELECTOR_STICKY_CONTENT)); // Adjust fixed content padding
 
         $(fixedContent).each(function (index, element) {
           var actualPadding = element.style.paddingRight;
           var calculatedPadding = $(element).css('padding-right');
-          $(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this9._scrollbarWidth + "px");
+          $(element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this10._scrollbarWidth + "px");
         }); // Adjust sticky content margin
 
         $(stickyContent).each(function (index, element) {
           var actualMargin = element.style.marginRight;
           var calculatedMargin = $(element).css('margin-right');
-          $(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this9._scrollbarWidth + "px");
+          $(element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this10._scrollbarWidth + "px");
         }); // Adjust body padding
 
         var actualPadding = document.body.style.paddingRight;
@@ -14723,19 +17056,19 @@ __webpack_require__.r(__webpack_exports__);
         $(document.body).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + this._scrollbarWidth + "px");
       }
 
-      $(document.body).addClass(ClassName$5.OPEN);
+      $(document.body).addClass(CLASS_NAME_OPEN);
     };
 
     _proto._resetScrollbar = function _resetScrollbar() {
       // Restore fixed content padding
-      var fixedContent = [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
+      var fixedContent = [].slice.call(document.querySelectorAll(SELECTOR_FIXED_CONTENT));
       $(fixedContent).each(function (index, element) {
         var padding = $(element).data('padding-right');
         $(element).removeData('padding-right');
         element.style.paddingRight = padding ? padding : '';
       }); // Restore sticky content
 
-      var elements = [].slice.call(document.querySelectorAll("" + Selector$5.STICKY_CONTENT));
+      var elements = [].slice.call(document.querySelectorAll("" + SELECTOR_STICKY_CONTENT));
       $(elements).each(function (index, element) {
         var margin = $(element).data('margin-right');
 
@@ -14752,7 +17085,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto._getScrollbarWidth = function _getScrollbarWidth() {
       // thx d.walsh
       var scrollDiv = document.createElement('div');
-      scrollDiv.className = ClassName$5.SCROLLBAR_MEASURER;
+      scrollDiv.className = CLASS_NAME_SCROLLBAR_MEASURER;
       document.body.appendChild(scrollDiv);
       var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
       document.body.removeChild(scrollDiv);
@@ -14764,7 +17097,7 @@ __webpack_require__.r(__webpack_exports__);
       return this.each(function () {
         var data = $(this).data(DATA_KEY$5);
 
-        var _config = _objectSpread({}, Default$3, $(this).data(), typeof config === 'object' && config ? config : {});
+        var _config = _objectSpread2(_objectSpread2(_objectSpread2({}, Default$3), $(this).data()), typeof config === 'object' && config ? config : {});
 
         if (!data) {
           data = new Modal(this, _config);
@@ -14804,8 +17137,8 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event$5.CLICK_DATA_API, Selector$5.DATA_TOGGLE, function (event) {
-    var _this10 = this;
+  $(document).on(EVENT_CLICK_DATA_API$5, SELECTOR_DATA_TOGGLE$3, function (event) {
+    var _this11 = this;
 
     var target;
     var selector = Util.getSelectorFromElement(this);
@@ -14814,21 +17147,21 @@ __webpack_require__.r(__webpack_exports__);
       target = document.querySelector(selector);
     }
 
-    var config = $(target).data(DATA_KEY$5) ? 'toggle' : _objectSpread({}, $(target).data(), $(this).data());
+    var config = $(target).data(DATA_KEY$5) ? 'toggle' : _objectSpread2(_objectSpread2({}, $(target).data()), $(this).data());
 
     if (this.tagName === 'A' || this.tagName === 'AREA') {
       event.preventDefault();
     }
 
-    var $target = $(target).one(Event$5.SHOW, function (showEvent) {
+    var $target = $(target).one(EVENT_SHOW$2, function (showEvent) {
       if (showEvent.isDefaultPrevented()) {
         // Only register focus restorer if modal will actually get shown
         return;
       }
 
-      $target.one(Event$5.HIDDEN, function () {
-        if ($(_this10).is(':visible')) {
-          _this10.focus();
+      $target.one(EVENT_HIDDEN$2, function () {
+        if ($(_this11).is(':visible')) {
+          _this11.focus();
         }
       });
     });
@@ -14851,7 +17184,7 @@ __webpack_require__.r(__webpack_exports__);
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): tools/sanitizer.js
+   * Bootstrap (v4.5.0): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -14876,7 +17209,7 @@ __webpack_require__.r(__webpack_exports__);
     h5: [],
     h6: [],
     i: [],
-    img: ['src', 'alt', 'title', 'width', 'height'],
+    img: ['src', 'srcset', 'alt', 'title', 'width', 'height'],
     li: [],
     ol: [],
     p: [],
@@ -14889,21 +17222,21 @@ __webpack_require__.r(__webpack_exports__);
     strong: [],
     u: [],
     ul: []
-    /**
-     * A pattern that recognizes a commonly useful subset of URLs that are safe.
-     *
-     * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
-     */
-
   };
-  var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
+  /**
+   * A pattern that recognizes a commonly useful subset of URLs that are safe.
+   *
+   * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
+   */
+
+  var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^#&/:?]*(?:[#/?]|$))/gi;
   /**
    * A pattern that matches safe data URLs. Only matches image, video and audio types.
    *
    * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
    */
 
-  var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[a-z0-9+/]+=*$/i;
+  var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[\d+/a-z]+=*$/i;
 
   function allowedAttribute(attr, allowedAttributeList) {
     var attrName = attr.nodeName.toLowerCase();
@@ -14920,7 +17253,7 @@ __webpack_require__.r(__webpack_exports__);
       return attrRegex instanceof RegExp;
     }); // Check if a regular expression validates the attribute.
 
-    for (var i = 0, l = regExp.length; i < l; i++) {
+    for (var i = 0, len = regExp.length; i < len; i++) {
       if (attrName.match(regExp[i])) {
         return true;
       }
@@ -14962,7 +17295,7 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     for (var i = 0, len = elements.length; i < len; i++) {
-      var _ret = _loop(i, len);
+      var _ret = _loop(i);
 
       if (_ret === "continue") continue;
     }
@@ -14977,7 +17310,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$6 = 'tooltip';
-  var VERSION$6 = '4.3.1';
+  var VERSION$6 = '4.5.0';
   var DATA_KEY$6 = 'bs.tooltip';
   var EVENT_KEY$6 = "." + DATA_KEY$6;
   var JQUERY_NO_CONFLICT$6 = $.fn[NAME$6];
@@ -14999,9 +17332,10 @@ __webpack_require__.r(__webpack_exports__);
     boundary: '(string|element)',
     sanitize: 'boolean',
     sanitizeFn: '(null|function)',
-    whiteList: 'object'
+    whiteList: 'object',
+    popperConfig: '(null|object)'
   };
-  var AttachmentMap$1 = {
+  var AttachmentMap = {
     AUTO: 'auto',
     TOP: 'top',
     RIGHT: 'right',
@@ -15023,13 +17357,12 @@ __webpack_require__.r(__webpack_exports__);
     boundary: 'scrollParent',
     sanitize: true,
     sanitizeFn: null,
-    whiteList: DefaultWhitelist
+    whiteList: DefaultWhitelist,
+    popperConfig: null
   };
-  var HoverState = {
-    SHOW: 'show',
-    OUT: 'out'
-  };
-  var Event$6 = {
+  var HOVER_STATE_SHOW = 'show';
+  var HOVER_STATE_OUT = 'out';
+  var Event = {
     HIDE: "hide" + EVENT_KEY$6,
     HIDDEN: "hidden" + EVENT_KEY$6,
     SHOW: "show" + EVENT_KEY$6,
@@ -15041,36 +17374,22 @@ __webpack_require__.r(__webpack_exports__);
     MOUSEENTER: "mouseenter" + EVENT_KEY$6,
     MOUSELEAVE: "mouseleave" + EVENT_KEY$6
   };
-  var ClassName$6 = {
-    FADE: 'fade',
-    SHOW: 'show'
-  };
-  var Selector$6 = {
-    TOOLTIP: '.tooltip',
-    TOOLTIP_INNER: '.tooltip-inner',
-    ARROW: '.arrow'
-  };
-  var Trigger = {
-    HOVER: 'hover',
-    FOCUS: 'focus',
-    CLICK: 'click',
-    MANUAL: 'manual'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+  var CLASS_NAME_FADE$2 = 'fade';
+  var CLASS_NAME_SHOW$4 = 'show';
+  var SELECTOR_TOOLTIP_INNER = '.tooltip-inner';
+  var SELECTOR_ARROW = '.arrow';
+  var TRIGGER_HOVER = 'hover';
+  var TRIGGER_FOCUS = 'focus';
+  var TRIGGER_CLICK = 'click';
+  var TRIGGER_MANUAL = 'manual';
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
-  };
-
-  var Tooltip =
-  /*#__PURE__*/
-  function () {
+  var Tooltip = /*#__PURE__*/function () {
     function Tooltip(element, config) {
-      /**
-       * Check for Popper dependency
-       * Popper - https://popper.js.org
-       */
       if (typeof Popper === 'undefined') {
         throw new TypeError('Bootstrap\'s tooltips require Popper.js (https://popper.js.org/)');
       } // private
@@ -15127,7 +17446,7 @@ __webpack_require__.r(__webpack_exports__);
           context._leave(null, context);
         }
       } else {
-        if ($(this.getTipElement()).hasClass(ClassName$6.SHOW)) {
+        if ($(this.getTipElement()).hasClass(CLASS_NAME_SHOW$4)) {
           this._leave(null, this);
 
           return;
@@ -15141,7 +17460,7 @@ __webpack_require__.r(__webpack_exports__);
       clearTimeout(this._timeout);
       $.removeData(this.element, this.constructor.DATA_KEY);
       $(this.element).off(this.constructor.EVENT_KEY);
-      $(this.element).closest('.modal').off('hide.bs.modal');
+      $(this.element).closest('.modal').off('hide.bs.modal', this._hideModalHandler);
 
       if (this.tip) {
         $(this.tip).remove();
@@ -15152,7 +17471,7 @@ __webpack_require__.r(__webpack_exports__);
       this._hoverState = null;
       this._activeTrigger = null;
 
-      if (this._popper !== null) {
+      if (this._popper) {
         this._popper.destroy();
       }
 
@@ -15187,7 +17506,7 @@ __webpack_require__.r(__webpack_exports__);
         this.setContent();
 
         if (this.config.animation) {
-          $(tip).addClass(ClassName$6.FADE);
+          $(tip).addClass(CLASS_NAME_FADE$2);
         }
 
         var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement;
@@ -15205,30 +17524,8 @@ __webpack_require__.r(__webpack_exports__);
         }
 
         $(this.element).trigger(this.constructor.Event.INSERTED);
-        this._popper = new Popper(this.element, tip, {
-          placement: attachment,
-          modifiers: {
-            offset: this._getOffset(),
-            flip: {
-              behavior: this.config.fallbackPlacement
-            },
-            arrow: {
-              element: Selector$6.ARROW
-            },
-            preventOverflow: {
-              boundariesElement: this.config.boundary
-            }
-          },
-          onCreate: function onCreate(data) {
-            if (data.originalPlacement !== data.placement) {
-              _this._handlePopperPlacementChange(data);
-            }
-          },
-          onUpdate: function onUpdate(data) {
-            return _this._handlePopperPlacementChange(data);
-          }
-        });
-        $(tip).addClass(ClassName$6.SHOW); // If this is a touch-enabled device we add extra
+        this._popper = new Popper(this.element, tip, this._getPopperConfig(attachment));
+        $(tip).addClass(CLASS_NAME_SHOW$4); // If this is a touch-enabled device we add extra
         // empty mouseover listeners to the body's immediate children;
         // only needed because of broken event delegation on iOS
         // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
@@ -15246,12 +17543,12 @@ __webpack_require__.r(__webpack_exports__);
           _this._hoverState = null;
           $(_this.element).trigger(_this.constructor.Event.SHOWN);
 
-          if (prevHoverState === HoverState.OUT) {
+          if (prevHoverState === HOVER_STATE_OUT) {
             _this._leave(null, _this);
           }
         };
 
-        if ($(this.tip).hasClass(ClassName$6.FADE)) {
+        if ($(this.tip).hasClass(CLASS_NAME_FADE$2)) {
           var transitionDuration = Util.getTransitionDurationFromElement(this.tip);
           $(this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
         } else {
@@ -15267,7 +17564,7 @@ __webpack_require__.r(__webpack_exports__);
       var hideEvent = $.Event(this.constructor.Event.HIDE);
 
       var complete = function complete() {
-        if (_this2._hoverState !== HoverState.SHOW && tip.parentNode) {
+        if (_this2._hoverState !== HOVER_STATE_SHOW && tip.parentNode) {
           tip.parentNode.removeChild(tip);
         }
 
@@ -15292,18 +17589,18 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      $(tip).removeClass(ClassName$6.SHOW); // If this is a touch-enabled device we remove the extra
+      $(tip).removeClass(CLASS_NAME_SHOW$4); // If this is a touch-enabled device we remove the extra
       // empty mouseover listeners we added for iOS support
 
       if ('ontouchstart' in document.documentElement) {
         $(document.body).children().off('mouseover', null, $.noop);
       }
 
-      this._activeTrigger[Trigger.CLICK] = false;
-      this._activeTrigger[Trigger.FOCUS] = false;
-      this._activeTrigger[Trigger.HOVER] = false;
+      this._activeTrigger[TRIGGER_CLICK] = false;
+      this._activeTrigger[TRIGGER_FOCUS] = false;
+      this._activeTrigger[TRIGGER_HOVER] = false;
 
-      if ($(this.tip).hasClass(ClassName$6.FADE)) {
+      if ($(this.tip).hasClass(CLASS_NAME_FADE$2)) {
         var transitionDuration = Util.getTransitionDurationFromElement(tip);
         $(tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
@@ -15335,8 +17632,8 @@ __webpack_require__.r(__webpack_exports__);
 
     _proto.setContent = function setContent() {
       var tip = this.getTipElement();
-      this.setElementContent($(tip.querySelectorAll(Selector$6.TOOLTIP_INNER)), this.getTitle());
-      $(tip).removeClass(ClassName$6.FADE + " " + ClassName$6.SHOW);
+      this.setElementContent($(tip.querySelectorAll(SELECTOR_TOOLTIP_INNER)), this.getTitle());
+      $(tip).removeClass(CLASS_NAME_FADE$2 + " " + CLASS_NAME_SHOW$4);
     };
 
     _proto.setElementContent = function setElementContent($element, content) {
@@ -15375,14 +17672,43 @@ __webpack_require__.r(__webpack_exports__);
     } // Private
     ;
 
-    _proto._getOffset = function _getOffset() {
+    _proto._getPopperConfig = function _getPopperConfig(attachment) {
       var _this3 = this;
+
+      var defaultBsConfig = {
+        placement: attachment,
+        modifiers: {
+          offset: this._getOffset(),
+          flip: {
+            behavior: this.config.fallbackPlacement
+          },
+          arrow: {
+            element: SELECTOR_ARROW
+          },
+          preventOverflow: {
+            boundariesElement: this.config.boundary
+          }
+        },
+        onCreate: function onCreate(data) {
+          if (data.originalPlacement !== data.placement) {
+            _this3._handlePopperPlacementChange(data);
+          }
+        },
+        onUpdate: function onUpdate(data) {
+          return _this3._handlePopperPlacementChange(data);
+        }
+      };
+      return _objectSpread2(_objectSpread2({}, defaultBsConfig), this.config.popperConfig);
+    };
+
+    _proto._getOffset = function _getOffset() {
+      var _this4 = this;
 
       var offset = {};
 
       if (typeof this.config.offset === 'function') {
         offset.fn = function (data) {
-          data.offsets = _objectSpread({}, data.offsets, _this3.config.offset(data.offsets, _this3.element) || {});
+          data.offsets = _objectSpread2(_objectSpread2({}, data.offsets), _this4.config.offset(data.offsets, _this4.element) || {});
           return data;
         };
       } else {
@@ -15405,36 +17731,39 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._getAttachment = function _getAttachment(placement) {
-      return AttachmentMap$1[placement.toUpperCase()];
+      return AttachmentMap[placement.toUpperCase()];
     };
 
     _proto._setListeners = function _setListeners() {
-      var _this4 = this;
+      var _this5 = this;
 
       var triggers = this.config.trigger.split(' ');
       triggers.forEach(function (trigger) {
         if (trigger === 'click') {
-          $(_this4.element).on(_this4.constructor.Event.CLICK, _this4.config.selector, function (event) {
-            return _this4.toggle(event);
+          $(_this5.element).on(_this5.constructor.Event.CLICK, _this5.config.selector, function (event) {
+            return _this5.toggle(event);
           });
-        } else if (trigger !== Trigger.MANUAL) {
-          var eventIn = trigger === Trigger.HOVER ? _this4.constructor.Event.MOUSEENTER : _this4.constructor.Event.FOCUSIN;
-          var eventOut = trigger === Trigger.HOVER ? _this4.constructor.Event.MOUSELEAVE : _this4.constructor.Event.FOCUSOUT;
-          $(_this4.element).on(eventIn, _this4.config.selector, function (event) {
-            return _this4._enter(event);
-          }).on(eventOut, _this4.config.selector, function (event) {
-            return _this4._leave(event);
+        } else if (trigger !== TRIGGER_MANUAL) {
+          var eventIn = trigger === TRIGGER_HOVER ? _this5.constructor.Event.MOUSEENTER : _this5.constructor.Event.FOCUSIN;
+          var eventOut = trigger === TRIGGER_HOVER ? _this5.constructor.Event.MOUSELEAVE : _this5.constructor.Event.FOCUSOUT;
+          $(_this5.element).on(eventIn, _this5.config.selector, function (event) {
+            return _this5._enter(event);
+          }).on(eventOut, _this5.config.selector, function (event) {
+            return _this5._leave(event);
           });
-        }
-      });
-      $(this.element).closest('.modal').on('hide.bs.modal', function () {
-        if (_this4.element) {
-          _this4.hide();
         }
       });
 
+      this._hideModalHandler = function () {
+        if (_this5.element) {
+          _this5.hide();
+        }
+      };
+
+      $(this.element).closest('.modal').on('hide.bs.modal', this._hideModalHandler);
+
       if (this.config.selector) {
-        this.config = _objectSpread({}, this.config, {
+        this.config = _objectSpread2(_objectSpread2({}, this.config), {}, {
           trigger: 'manual',
           selector: ''
         });
@@ -15462,16 +17791,16 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (event) {
-        context._activeTrigger[event.type === 'focusin' ? Trigger.FOCUS : Trigger.HOVER] = true;
+        context._activeTrigger[event.type === 'focusin' ? TRIGGER_FOCUS : TRIGGER_HOVER] = true;
       }
 
-      if ($(context.getTipElement()).hasClass(ClassName$6.SHOW) || context._hoverState === HoverState.SHOW) {
-        context._hoverState = HoverState.SHOW;
+      if ($(context.getTipElement()).hasClass(CLASS_NAME_SHOW$4) || context._hoverState === HOVER_STATE_SHOW) {
+        context._hoverState = HOVER_STATE_SHOW;
         return;
       }
 
       clearTimeout(context._timeout);
-      context._hoverState = HoverState.SHOW;
+      context._hoverState = HOVER_STATE_SHOW;
 
       if (!context.config.delay || !context.config.delay.show) {
         context.show();
@@ -15479,7 +17808,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       context._timeout = setTimeout(function () {
-        if (context._hoverState === HoverState.SHOW) {
+        if (context._hoverState === HOVER_STATE_SHOW) {
           context.show();
         }
       }, context.config.delay.show);
@@ -15495,7 +17824,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (event) {
-        context._activeTrigger[event.type === 'focusout' ? Trigger.FOCUS : Trigger.HOVER] = false;
+        context._activeTrigger[event.type === 'focusout' ? TRIGGER_FOCUS : TRIGGER_HOVER] = false;
       }
 
       if (context._isWithActiveTrigger()) {
@@ -15503,7 +17832,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       clearTimeout(context._timeout);
-      context._hoverState = HoverState.OUT;
+      context._hoverState = HOVER_STATE_OUT;
 
       if (!context.config.delay || !context.config.delay.hide) {
         context.hide();
@@ -15511,7 +17840,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       context._timeout = setTimeout(function () {
-        if (context._hoverState === HoverState.OUT) {
+        if (context._hoverState === HOVER_STATE_OUT) {
           context.hide();
         }
       }, context.config.delay.hide);
@@ -15534,7 +17863,7 @@ __webpack_require__.r(__webpack_exports__);
           delete dataAttributes[dataAttr];
         }
       });
-      config = _objectSpread({}, this.constructor.Default, dataAttributes, typeof config === 'object' && config ? config : {});
+      config = _objectSpread2(_objectSpread2(_objectSpread2({}, this.constructor.Default), dataAttributes), typeof config === 'object' && config ? config : {});
 
       if (typeof config.delay === 'number') {
         config.delay = {
@@ -15584,8 +17913,7 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._handlePopperPlacementChange = function _handlePopperPlacementChange(popperData) {
-      var popperInstance = popperData.instance;
-      this.tip = popperInstance.popper;
+      this.tip = popperData.instance.popper;
 
       this._cleanTipClass();
 
@@ -15600,7 +17928,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      $(tip).removeClass(ClassName$6.FADE);
+      $(tip).removeClass(CLASS_NAME_FADE$2);
       this.config.animation = false;
       this.hide();
       this.show();
@@ -15656,7 +17984,7 @@ __webpack_require__.r(__webpack_exports__);
     }, {
       key: "Event",
       get: function get() {
-        return Event$6;
+        return Event;
       }
     }, {
       key: "EVENT_KEY",
@@ -15694,33 +18022,29 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$7 = 'popover';
-  var VERSION$7 = '4.3.1';
+  var VERSION$7 = '4.5.0';
   var DATA_KEY$7 = 'bs.popover';
   var EVENT_KEY$7 = "." + DATA_KEY$7;
   var JQUERY_NO_CONFLICT$7 = $.fn[NAME$7];
   var CLASS_PREFIX$1 = 'bs-popover';
   var BSCLS_PREFIX_REGEX$1 = new RegExp("(^|\\s)" + CLASS_PREFIX$1 + "\\S+", 'g');
 
-  var Default$5 = _objectSpread({}, Tooltip.Default, {
+  var Default$5 = _objectSpread2(_objectSpread2({}, Tooltip.Default), {}, {
     placement: 'right',
     trigger: 'click',
     content: '',
     template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
   });
 
-  var DefaultType$5 = _objectSpread({}, Tooltip.DefaultType, {
+  var DefaultType$5 = _objectSpread2(_objectSpread2({}, Tooltip.DefaultType), {}, {
     content: '(string|element|function)'
   });
 
-  var ClassName$7 = {
-    FADE: 'fade',
-    SHOW: 'show'
-  };
-  var Selector$7 = {
-    TITLE: '.popover-header',
-    CONTENT: '.popover-body'
-  };
-  var Event$7 = {
+  var CLASS_NAME_FADE$3 = 'fade';
+  var CLASS_NAME_SHOW$5 = 'show';
+  var SELECTOR_TITLE = '.popover-header';
+  var SELECTOR_CONTENT = '.popover-body';
+  var Event$1 = {
     HIDE: "hide" + EVENT_KEY$7,
     HIDDEN: "hidden" + EVENT_KEY$7,
     SHOW: "show" + EVENT_KEY$7,
@@ -15731,17 +18055,14 @@ __webpack_require__.r(__webpack_exports__);
     FOCUSOUT: "focusout" + EVENT_KEY$7,
     MOUSEENTER: "mouseenter" + EVENT_KEY$7,
     MOUSELEAVE: "mouseleave" + EVENT_KEY$7
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
-
   };
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
-  var Popover =
-  /*#__PURE__*/
-  function (_Tooltip) {
+  var Popover = /*#__PURE__*/function (_Tooltip) {
     _inheritsLoose(Popover, _Tooltip);
 
     function Popover() {
@@ -15767,7 +18088,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto.setContent = function setContent() {
       var $tip = $(this.getTipElement()); // We use append for html objects to maintain js events
 
-      this.setElementContent($tip.find(Selector$7.TITLE), this.getTitle());
+      this.setElementContent($tip.find(SELECTOR_TITLE), this.getTitle());
 
       var content = this._getContent();
 
@@ -15775,8 +18096,8 @@ __webpack_require__.r(__webpack_exports__);
         content = content.call(this.element);
       }
 
-      this.setElementContent($tip.find(Selector$7.CONTENT), content);
-      $tip.removeClass(ClassName$7.FADE + " " + ClassName$7.SHOW);
+      this.setElementContent($tip.find(SELECTOR_CONTENT), content);
+      $tip.removeClass(CLASS_NAME_FADE$3 + " " + CLASS_NAME_SHOW$5);
     } // Private
     ;
 
@@ -15843,7 +18164,7 @@ __webpack_require__.r(__webpack_exports__);
     }, {
       key: "Event",
       get: function get() {
-        return Event$7;
+        return Event$1;
       }
     }, {
       key: "EVENT_KEY",
@@ -15881,7 +18202,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$8 = 'scrollspy';
-  var VERSION$8 = '4.3.1';
+  var VERSION$8 = '4.5.0';
   var DATA_KEY$8 = 'bs.scrollspy';
   var EVENT_KEY$8 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
@@ -15896,53 +18217,40 @@ __webpack_require__.r(__webpack_exports__);
     method: 'string',
     target: '(string|element)'
   };
-  var Event$8 = {
-    ACTIVATE: "activate" + EVENT_KEY$8,
-    SCROLL: "scroll" + EVENT_KEY$8,
-    LOAD_DATA_API: "load" + EVENT_KEY$8 + DATA_API_KEY$6
-  };
-  var ClassName$8 = {
-    DROPDOWN_ITEM: 'dropdown-item',
-    DROPDOWN_MENU: 'dropdown-menu',
-    ACTIVE: 'active'
-  };
-  var Selector$8 = {
-    DATA_SPY: '[data-spy="scroll"]',
-    ACTIVE: '.active',
-    NAV_LIST_GROUP: '.nav, .list-group',
-    NAV_LINKS: '.nav-link',
-    NAV_ITEMS: '.nav-item',
-    LIST_ITEMS: '.list-group-item',
-    DROPDOWN: '.dropdown',
-    DROPDOWN_ITEMS: '.dropdown-item',
-    DROPDOWN_TOGGLE: '.dropdown-toggle'
-  };
-  var OffsetMethod = {
-    OFFSET: 'offset',
-    POSITION: 'position'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+  var EVENT_ACTIVATE = "activate" + EVENT_KEY$8;
+  var EVENT_SCROLL = "scroll" + EVENT_KEY$8;
+  var EVENT_LOAD_DATA_API$2 = "load" + EVENT_KEY$8 + DATA_API_KEY$6;
+  var CLASS_NAME_DROPDOWN_ITEM = 'dropdown-item';
+  var CLASS_NAME_ACTIVE$2 = 'active';
+  var SELECTOR_DATA_SPY = '[data-spy="scroll"]';
+  var SELECTOR_NAV_LIST_GROUP = '.nav, .list-group';
+  var SELECTOR_NAV_LINKS = '.nav-link';
+  var SELECTOR_NAV_ITEMS = '.nav-item';
+  var SELECTOR_LIST_ITEMS = '.list-group-item';
+  var SELECTOR_DROPDOWN = '.dropdown';
+  var SELECTOR_DROPDOWN_ITEMS = '.dropdown-item';
+  var SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle';
+  var METHOD_OFFSET = 'offset';
+  var METHOD_POSITION = 'position';
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
-  };
-
-  var ScrollSpy =
-  /*#__PURE__*/
-  function () {
+  var ScrollSpy = /*#__PURE__*/function () {
     function ScrollSpy(element, config) {
       var _this = this;
 
       this._element = element;
       this._scrollElement = element.tagName === 'BODY' ? window : element;
       this._config = this._getConfig(config);
-      this._selector = this._config.target + " " + Selector$8.NAV_LINKS + "," + (this._config.target + " " + Selector$8.LIST_ITEMS + ",") + (this._config.target + " " + Selector$8.DROPDOWN_ITEMS);
+      this._selector = this._config.target + " " + SELECTOR_NAV_LINKS + "," + (this._config.target + " " + SELECTOR_LIST_ITEMS + ",") + (this._config.target + " " + SELECTOR_DROPDOWN_ITEMS);
       this._offsets = [];
       this._targets = [];
       this._activeTarget = null;
       this._scrollHeight = 0;
-      $(this._scrollElement).on(Event$8.SCROLL, function (event) {
+      $(this._scrollElement).on(EVENT_SCROLL, function (event) {
         return _this._process(event);
       });
       this.refresh();
@@ -15957,9 +18265,9 @@ __webpack_require__.r(__webpack_exports__);
     _proto.refresh = function refresh() {
       var _this2 = this;
 
-      var autoMethod = this._scrollElement === this._scrollElement.window ? OffsetMethod.OFFSET : OffsetMethod.POSITION;
+      var autoMethod = this._scrollElement === this._scrollElement.window ? METHOD_OFFSET : METHOD_POSITION;
       var offsetMethod = this._config.method === 'auto' ? autoMethod : this._config.method;
-      var offsetBase = offsetMethod === OffsetMethod.POSITION ? this._getScrollTop() : 0;
+      var offsetBase = offsetMethod === METHOD_POSITION ? this._getScrollTop() : 0;
       this._offsets = [];
       this._targets = [];
       this._scrollHeight = this._getScrollHeight();
@@ -16008,9 +18316,9 @@ __webpack_require__.r(__webpack_exports__);
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default$6, typeof config === 'object' && config ? config : {});
+      config = _objectSpread2(_objectSpread2({}, Default$6), typeof config === 'object' && config ? config : {});
 
-      if (typeof config.target !== 'string') {
+      if (typeof config.target !== 'string' && Util.isElement(config.target)) {
         var id = $(config.target).attr('id');
 
         if (!id) {
@@ -16066,9 +18374,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var offsetLength = this._offsets.length;
-
-      for (var i = offsetLength; i--;) {
+      for (var i = this._offsets.length; i--;) {
         var isActiveTarget = this._activeTarget !== this._targets[i] && scrollTop >= this._offsets[i] && (typeof this._offsets[i + 1] === 'undefined' || scrollTop < this._offsets[i + 1]);
 
         if (isActiveTarget) {
@@ -16088,29 +18394,29 @@ __webpack_require__.r(__webpack_exports__);
 
       var $link = $([].slice.call(document.querySelectorAll(queries.join(','))));
 
-      if ($link.hasClass(ClassName$8.DROPDOWN_ITEM)) {
-        $link.closest(Selector$8.DROPDOWN).find(Selector$8.DROPDOWN_TOGGLE).addClass(ClassName$8.ACTIVE);
-        $link.addClass(ClassName$8.ACTIVE);
+      if ($link.hasClass(CLASS_NAME_DROPDOWN_ITEM)) {
+        $link.closest(SELECTOR_DROPDOWN).find(SELECTOR_DROPDOWN_TOGGLE).addClass(CLASS_NAME_ACTIVE$2);
+        $link.addClass(CLASS_NAME_ACTIVE$2);
       } else {
         // Set triggered link as active
-        $link.addClass(ClassName$8.ACTIVE); // Set triggered links parents as active
+        $link.addClass(CLASS_NAME_ACTIVE$2); // Set triggered links parents as active
         // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
 
-        $link.parents(Selector$8.NAV_LIST_GROUP).prev(Selector$8.NAV_LINKS + ", " + Selector$8.LIST_ITEMS).addClass(ClassName$8.ACTIVE); // Handle special case when .nav-link is inside .nav-item
+        $link.parents(SELECTOR_NAV_LIST_GROUP).prev(SELECTOR_NAV_LINKS + ", " + SELECTOR_LIST_ITEMS).addClass(CLASS_NAME_ACTIVE$2); // Handle special case when .nav-link is inside .nav-item
 
-        $link.parents(Selector$8.NAV_LIST_GROUP).prev(Selector$8.NAV_ITEMS).children(Selector$8.NAV_LINKS).addClass(ClassName$8.ACTIVE);
+        $link.parents(SELECTOR_NAV_LIST_GROUP).prev(SELECTOR_NAV_ITEMS).children(SELECTOR_NAV_LINKS).addClass(CLASS_NAME_ACTIVE$2);
       }
 
-      $(this._scrollElement).trigger(Event$8.ACTIVATE, {
+      $(this._scrollElement).trigger(EVENT_ACTIVATE, {
         relatedTarget: target
       });
     };
 
     _proto._clear = function _clear() {
       [].slice.call(document.querySelectorAll(this._selector)).filter(function (node) {
-        return node.classList.contains(ClassName$8.ACTIVE);
+        return node.classList.contains(CLASS_NAME_ACTIVE$2);
       }).forEach(function (node) {
-        return node.classList.remove(ClassName$8.ACTIVE);
+        return node.classList.remove(CLASS_NAME_ACTIVE$2);
       });
     } // Static
     ;
@@ -16157,8 +18463,8 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(window).on(Event$8.LOAD_DATA_API, function () {
-    var scrollSpys = [].slice.call(document.querySelectorAll(Selector$8.DATA_SPY));
+  $(window).on(EVENT_LOAD_DATA_API$2, function () {
+    var scrollSpys = [].slice.call(document.querySelectorAll(SELECTOR_DATA_SPY));
     var scrollSpysLength = scrollSpys.length;
 
     for (var i = scrollSpysLength; i--;) {
@@ -16188,44 +18494,35 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$9 = 'tab';
-  var VERSION$9 = '4.3.1';
+  var VERSION$9 = '4.5.0';
   var DATA_KEY$9 = 'bs.tab';
   var EVENT_KEY$9 = "." + DATA_KEY$9;
   var DATA_API_KEY$7 = '.data-api';
   var JQUERY_NO_CONFLICT$9 = $.fn[NAME$9];
-  var Event$9 = {
-    HIDE: "hide" + EVENT_KEY$9,
-    HIDDEN: "hidden" + EVENT_KEY$9,
-    SHOW: "show" + EVENT_KEY$9,
-    SHOWN: "shown" + EVENT_KEY$9,
-    CLICK_DATA_API: "click" + EVENT_KEY$9 + DATA_API_KEY$7
-  };
-  var ClassName$9 = {
-    DROPDOWN_MENU: 'dropdown-menu',
-    ACTIVE: 'active',
-    DISABLED: 'disabled',
-    FADE: 'fade',
-    SHOW: 'show'
-  };
-  var Selector$9 = {
-    DROPDOWN: '.dropdown',
-    NAV_LIST_GROUP: '.nav, .list-group',
-    ACTIVE: '.active',
-    ACTIVE_UL: '> li > .active',
-    DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
-    DROPDOWN_TOGGLE: '.dropdown-toggle',
-    DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+  var EVENT_HIDE$3 = "hide" + EVENT_KEY$9;
+  var EVENT_HIDDEN$3 = "hidden" + EVENT_KEY$9;
+  var EVENT_SHOW$3 = "show" + EVENT_KEY$9;
+  var EVENT_SHOWN$3 = "shown" + EVENT_KEY$9;
+  var EVENT_CLICK_DATA_API$6 = "click" + EVENT_KEY$9 + DATA_API_KEY$7;
+  var CLASS_NAME_DROPDOWN_MENU = 'dropdown-menu';
+  var CLASS_NAME_ACTIVE$3 = 'active';
+  var CLASS_NAME_DISABLED$1 = 'disabled';
+  var CLASS_NAME_FADE$4 = 'fade';
+  var CLASS_NAME_SHOW$6 = 'show';
+  var SELECTOR_DROPDOWN$1 = '.dropdown';
+  var SELECTOR_NAV_LIST_GROUP$1 = '.nav, .list-group';
+  var SELECTOR_ACTIVE$2 = '.active';
+  var SELECTOR_ACTIVE_UL = '> li > .active';
+  var SELECTOR_DATA_TOGGLE$4 = '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]';
+  var SELECTOR_DROPDOWN_TOGGLE$1 = '.dropdown-toggle';
+  var SELECTOR_DROPDOWN_ACTIVE_CHILD = '> .dropdown-menu .active';
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
-  };
-
-  var Tab =
-  /*#__PURE__*/
-  function () {
+  var Tab = /*#__PURE__*/function () {
     function Tab(element) {
       this._element = element;
     } // Getters
@@ -16237,25 +18534,25 @@ __webpack_require__.r(__webpack_exports__);
     _proto.show = function show() {
       var _this = this;
 
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $(this._element).hasClass(ClassName$9.ACTIVE) || $(this._element).hasClass(ClassName$9.DISABLED)) {
+      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $(this._element).hasClass(CLASS_NAME_ACTIVE$3) || $(this._element).hasClass(CLASS_NAME_DISABLED$1)) {
         return;
       }
 
       var target;
       var previous;
-      var listElement = $(this._element).closest(Selector$9.NAV_LIST_GROUP)[0];
+      var listElement = $(this._element).closest(SELECTOR_NAV_LIST_GROUP$1)[0];
       var selector = Util.getSelectorFromElement(this._element);
 
       if (listElement) {
-        var itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? Selector$9.ACTIVE_UL : Selector$9.ACTIVE;
+        var itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? SELECTOR_ACTIVE_UL : SELECTOR_ACTIVE$2;
         previous = $.makeArray($(listElement).find(itemSelector));
         previous = previous[previous.length - 1];
       }
 
-      var hideEvent = $.Event(Event$9.HIDE, {
+      var hideEvent = $.Event(EVENT_HIDE$3, {
         relatedTarget: this._element
       });
-      var showEvent = $.Event(Event$9.SHOW, {
+      var showEvent = $.Event(EVENT_SHOW$3, {
         relatedTarget: previous
       });
 
@@ -16276,10 +18573,10 @@ __webpack_require__.r(__webpack_exports__);
       this._activate(this._element, listElement);
 
       var complete = function complete() {
-        var hiddenEvent = $.Event(Event$9.HIDDEN, {
+        var hiddenEvent = $.Event(EVENT_HIDDEN$3, {
           relatedTarget: _this._element
         });
-        var shownEvent = $.Event(Event$9.SHOWN, {
+        var shownEvent = $.Event(EVENT_SHOWN$3, {
           relatedTarget: previous
         });
         $(previous).trigger(hiddenEvent);
@@ -16302,9 +18599,9 @@ __webpack_require__.r(__webpack_exports__);
     _proto._activate = function _activate(element, container, callback) {
       var _this2 = this;
 
-      var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? $(container).find(Selector$9.ACTIVE_UL) : $(container).children(Selector$9.ACTIVE);
+      var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? $(container).find(SELECTOR_ACTIVE_UL) : $(container).children(SELECTOR_ACTIVE$2);
       var active = activeElements[0];
-      var isTransitioning = callback && active && $(active).hasClass(ClassName$9.FADE);
+      var isTransitioning = callback && active && $(active).hasClass(CLASS_NAME_FADE$4);
 
       var complete = function complete() {
         return _this2._transitionComplete(element, active, callback);
@@ -16312,7 +18609,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (active && isTransitioning) {
         var transitionDuration = Util.getTransitionDurationFromElement(active);
-        $(active).removeClass(ClassName$9.SHOW).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+        $(active).removeClass(CLASS_NAME_SHOW$6).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
         complete();
       }
@@ -16320,11 +18617,11 @@ __webpack_require__.r(__webpack_exports__);
 
     _proto._transitionComplete = function _transitionComplete(element, active, callback) {
       if (active) {
-        $(active).removeClass(ClassName$9.ACTIVE);
-        var dropdownChild = $(active.parentNode).find(Selector$9.DROPDOWN_ACTIVE_CHILD)[0];
+        $(active).removeClass(CLASS_NAME_ACTIVE$3);
+        var dropdownChild = $(active.parentNode).find(SELECTOR_DROPDOWN_ACTIVE_CHILD)[0];
 
         if (dropdownChild) {
-          $(dropdownChild).removeClass(ClassName$9.ACTIVE);
+          $(dropdownChild).removeClass(CLASS_NAME_ACTIVE$3);
         }
 
         if (active.getAttribute('role') === 'tab') {
@@ -16332,7 +18629,7 @@ __webpack_require__.r(__webpack_exports__);
         }
       }
 
-      $(element).addClass(ClassName$9.ACTIVE);
+      $(element).addClass(CLASS_NAME_ACTIVE$3);
 
       if (element.getAttribute('role') === 'tab') {
         element.setAttribute('aria-selected', true);
@@ -16340,16 +18637,16 @@ __webpack_require__.r(__webpack_exports__);
 
       Util.reflow(element);
 
-      if (element.classList.contains(ClassName$9.FADE)) {
-        element.classList.add(ClassName$9.SHOW);
+      if (element.classList.contains(CLASS_NAME_FADE$4)) {
+        element.classList.add(CLASS_NAME_SHOW$6);
       }
 
-      if (element.parentNode && $(element.parentNode).hasClass(ClassName$9.DROPDOWN_MENU)) {
-        var dropdownElement = $(element).closest(Selector$9.DROPDOWN)[0];
+      if (element.parentNode && $(element.parentNode).hasClass(CLASS_NAME_DROPDOWN_MENU)) {
+        var dropdownElement = $(element).closest(SELECTOR_DROPDOWN$1)[0];
 
         if (dropdownElement) {
-          var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(Selector$9.DROPDOWN_TOGGLE));
-          $(dropdownToggleList).addClass(ClassName$9.ACTIVE);
+          var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(SELECTOR_DROPDOWN_TOGGLE$1));
+          $(dropdownToggleList).addClass(CLASS_NAME_ACTIVE$3);
         }
 
         element.setAttribute('aria-expanded', true);
@@ -16397,7 +18694,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event$9.CLICK_DATA_API, Selector$9.DATA_TOGGLE, function (event) {
+  $(document).on(EVENT_CLICK_DATA_API$6, SELECTOR_DATA_TOGGLE$4, function (event) {
     event.preventDefault();
 
     Tab._jQueryInterface.call($(this), 'show');
@@ -16423,23 +18720,19 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$a = 'toast';
-  var VERSION$a = '4.3.1';
+  var VERSION$a = '4.5.0';
   var DATA_KEY$a = 'bs.toast';
   var EVENT_KEY$a = "." + DATA_KEY$a;
   var JQUERY_NO_CONFLICT$a = $.fn[NAME$a];
-  var Event$a = {
-    CLICK_DISMISS: "click.dismiss" + EVENT_KEY$a,
-    HIDE: "hide" + EVENT_KEY$a,
-    HIDDEN: "hidden" + EVENT_KEY$a,
-    SHOW: "show" + EVENT_KEY$a,
-    SHOWN: "shown" + EVENT_KEY$a
-  };
-  var ClassName$a = {
-    FADE: 'fade',
-    HIDE: 'hide',
-    SHOW: 'show',
-    SHOWING: 'showing'
-  };
+  var EVENT_CLICK_DISMISS$1 = "click.dismiss" + EVENT_KEY$a;
+  var EVENT_HIDE$4 = "hide" + EVENT_KEY$a;
+  var EVENT_HIDDEN$4 = "hidden" + EVENT_KEY$a;
+  var EVENT_SHOW$4 = "show" + EVENT_KEY$a;
+  var EVENT_SHOWN$4 = "shown" + EVENT_KEY$a;
+  var CLASS_NAME_FADE$5 = 'fade';
+  var CLASS_NAME_HIDE = 'hide';
+  var CLASS_NAME_SHOW$7 = 'show';
+  var CLASS_NAME_SHOWING = 'showing';
   var DefaultType$7 = {
     animation: 'boolean',
     autohide: 'boolean',
@@ -16450,19 +18743,14 @@ __webpack_require__.r(__webpack_exports__);
     autohide: true,
     delay: 500
   };
-  var Selector$a = {
-    DATA_DISMISS: '[data-dismiss="toast"]'
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+  var SELECTOR_DATA_DISMISS$1 = '[data-dismiss="toast"]';
+  /**
+   * ------------------------------------------------------------------------
+   * Class Definition
+   * ------------------------------------------------------------------------
+   */
 
-  };
-
-  var Toast =
-  /*#__PURE__*/
-  function () {
+  var Toast = /*#__PURE__*/function () {
     function Toast(element, config) {
       this._element = element;
       this._config = this._getConfig(config);
@@ -16478,27 +18766,36 @@ __webpack_require__.r(__webpack_exports__);
     _proto.show = function show() {
       var _this = this;
 
-      $(this._element).trigger(Event$a.SHOW);
+      var showEvent = $.Event(EVENT_SHOW$4);
+      $(this._element).trigger(showEvent);
+
+      if (showEvent.isDefaultPrevented()) {
+        return;
+      }
 
       if (this._config.animation) {
-        this._element.classList.add(ClassName$a.FADE);
+        this._element.classList.add(CLASS_NAME_FADE$5);
       }
 
       var complete = function complete() {
-        _this._element.classList.remove(ClassName$a.SHOWING);
+        _this._element.classList.remove(CLASS_NAME_SHOWING);
 
-        _this._element.classList.add(ClassName$a.SHOW);
+        _this._element.classList.add(CLASS_NAME_SHOW$7);
 
-        $(_this._element).trigger(Event$a.SHOWN);
+        $(_this._element).trigger(EVENT_SHOWN$4);
 
         if (_this._config.autohide) {
-          _this.hide();
+          _this._timeout = setTimeout(function () {
+            _this.hide();
+          }, _this._config.delay);
         }
       };
 
-      this._element.classList.remove(ClassName$a.HIDE);
+      this._element.classList.remove(CLASS_NAME_HIDE);
 
-      this._element.classList.add(ClassName$a.SHOWING);
+      Util.reflow(this._element);
+
+      this._element.classList.add(CLASS_NAME_SHOWING);
 
       if (this._config.animation) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);
@@ -16508,33 +18805,30 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
 
-    _proto.hide = function hide(withoutTimeout) {
-      var _this2 = this;
-
-      if (!this._element.classList.contains(ClassName$a.SHOW)) {
+    _proto.hide = function hide() {
+      if (!this._element.classList.contains(CLASS_NAME_SHOW$7)) {
         return;
       }
 
-      $(this._element).trigger(Event$a.HIDE);
+      var hideEvent = $.Event(EVENT_HIDE$4);
+      $(this._element).trigger(hideEvent);
 
-      if (withoutTimeout) {
-        this._close();
-      } else {
-        this._timeout = setTimeout(function () {
-          _this2._close();
-        }, this._config.delay);
+      if (hideEvent.isDefaultPrevented()) {
+        return;
       }
+
+      this._close();
     };
 
     _proto.dispose = function dispose() {
       clearTimeout(this._timeout);
       this._timeout = null;
 
-      if (this._element.classList.contains(ClassName$a.SHOW)) {
-        this._element.classList.remove(ClassName$a.SHOW);
+      if (this._element.classList.contains(CLASS_NAME_SHOW$7)) {
+        this._element.classList.remove(CLASS_NAME_SHOW$7);
       }
 
-      $(this._element).off(Event$a.CLICK_DISMISS);
+      $(this._element).off(EVENT_CLICK_DISMISS$1);
       $.removeData(this._element, DATA_KEY$a);
       this._element = null;
       this._config = null;
@@ -16542,29 +18836,29 @@ __webpack_require__.r(__webpack_exports__);
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread({}, Default$7, $(this._element).data(), typeof config === 'object' && config ? config : {});
+      config = _objectSpread2(_objectSpread2(_objectSpread2({}, Default$7), $(this._element).data()), typeof config === 'object' && config ? config : {});
       Util.typeCheckConfig(NAME$a, config, this.constructor.DefaultType);
       return config;
     };
 
     _proto._setListeners = function _setListeners() {
-      var _this3 = this;
+      var _this2 = this;
 
-      $(this._element).on(Event$a.CLICK_DISMISS, Selector$a.DATA_DISMISS, function () {
-        return _this3.hide(true);
+      $(this._element).on(EVENT_CLICK_DISMISS$1, SELECTOR_DATA_DISMISS$1, function () {
+        return _this2.hide();
       });
     };
 
     _proto._close = function _close() {
-      var _this4 = this;
+      var _this3 = this;
 
       var complete = function complete() {
-        _this4._element.classList.add(ClassName$a.HIDE);
+        _this3._element.classList.add(CLASS_NAME_HIDE);
 
-        $(_this4._element).trigger(Event$a.HIDDEN);
+        $(_this3._element).trigger(EVENT_HIDDEN$4);
       };
 
-      this._element.classList.remove(ClassName$a.SHOW);
+      this._element.classList.remove(CLASS_NAME_SHOW$7);
 
       if (this._config.animation) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);
@@ -16631,31 +18925,6 @@ __webpack_require__.r(__webpack_exports__);
     return Toast._jQueryInterface;
   };
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.3.1): index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-
-  (function () {
-    if (typeof $ === 'undefined') {
-      throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
-    }
-
-    var version = $.fn.jquery.split(' ')[0].split('.');
-    var minMajor = 1;
-    var ltMajor = 2;
-    var minMinor = 9;
-    var minPatch = 1;
-    var maxMajor = 4;
-
-    if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
-      throw new Error('Bootstrap\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
-    }
-  })();
-
-  exports.Util = Util;
   exports.Alert = Alert;
   exports.Button = Button;
   exports.Carousel = Carousel;
@@ -16667,33 +18936,2224 @@ __webpack_require__.r(__webpack_exports__);
   exports.Tab = Tab;
   exports.Toast = Toast;
   exports.Tooltip = Tooltip;
+  exports.Util = Util;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=bootstrap.js.map
 
 
 /***/ }),
 
-/***/ "./node_modules/is-buffer/index.js":
-/*!*****************************************!*\
-  !*** ./node_modules/is-buffer/index.js ***!
-  \*****************************************/
+/***/ "./node_modules/jquery-ui/ui/keycode.js":
+/*!**********************************************!*\
+  !*** ./node_modules/jquery-ui/ui/keycode.js ***!
+  \**********************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-/*!
- * Determine if an object is a Buffer
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+ * jQuery UI Keycode 1.12.1
+ * http://jqueryui.com
  *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
  */
 
-module.exports = function isBuffer (obj) {
-  return obj != null && obj.constructor != null &&
-    typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
+//>>label: Keycode
+//>>group: Core
+//>>description: Provide keycodes as keynames
+//>>docs: http://api.jqueryui.com/jQuery.ui.keyCode/
+
+( function( factory ) {
+	if ( true ) {
+
+		// AMD. Register as an anonymous module.
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! ./version */ "./node_modules/jquery-ui/ui/version.js") ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+} ( function( $ ) {
+return $.ui.keyCode = {
+	BACKSPACE: 8,
+	COMMA: 188,
+	DELETE: 46,
+	DOWN: 40,
+	END: 35,
+	ENTER: 13,
+	ESCAPE: 27,
+	HOME: 36,
+	LEFT: 37,
+	PAGE_DOWN: 34,
+	PAGE_UP: 33,
+	PERIOD: 190,
+	RIGHT: 39,
+	SPACE: 32,
+	TAB: 9,
+	UP: 38
+};
+
+} ) );
+
+
+/***/ }),
+
+/***/ "./node_modules/jquery-ui/ui/version.js":
+/*!**********************************************!*\
+  !*** ./node_modules/jquery-ui/ui/version.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
+	if ( true ) {
+
+		// AMD. Register as an anonymous module.
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js") ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+} ( function( $ ) {
+
+$.ui = $.ui || {};
+
+return $.ui.version = "1.12.1";
+
+} ) );
+
+
+/***/ }),
+
+/***/ "./node_modules/jquery-ui/ui/widgets/datepicker.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/jquery-ui/ui/widgets/datepicker.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// jscs:disable maximumLineLength
+/* jscs:disable requireCamelCaseOrUpperCaseIdentifiers */
+/*!
+ * jQuery UI Datepicker 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+
+//>>label: Datepicker
+//>>group: Widgets
+//>>description: Displays a calendar from an input or inline for selecting dates.
+//>>docs: http://api.jqueryui.com/datepicker/
+//>>demos: http://jqueryui.com/datepicker/
+//>>css.structure: ../../themes/base/core.css
+//>>css.structure: ../../themes/base/datepicker.css
+//>>css.theme: ../../themes/base/theme.css
+
+( function( factory ) {
+	if ( true ) {
+
+		// AMD. Register as an anonymous module.
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+			__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"),
+			__webpack_require__(/*! ../version */ "./node_modules/jquery-ui/ui/version.js"),
+			__webpack_require__(/*! ../keycode */ "./node_modules/jquery-ui/ui/keycode.js")
+		], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}( function( $ ) {
+
+$.extend( $.ui, { datepicker: { version: "1.12.1" } } );
+
+var datepicker_instActive;
+
+function datepicker_getZindex( elem ) {
+	var position, value;
+	while ( elem.length && elem[ 0 ] !== document ) {
+
+		// Ignore z-index if position is set to a value where z-index is ignored by the browser
+		// This makes behavior of this function consistent across browsers
+		// WebKit always returns auto if the element is positioned
+		position = elem.css( "position" );
+		if ( position === "absolute" || position === "relative" || position === "fixed" ) {
+
+			// IE returns 0 when zIndex is not specified
+			// other browsers return a string
+			// we ignore the case of nested elements with an explicit value of 0
+			// <div style="z-index: -10;"><div style="z-index: 0;"></div></div>
+			value = parseInt( elem.css( "zIndex" ), 10 );
+			if ( !isNaN( value ) && value !== 0 ) {
+				return value;
+			}
+		}
+		elem = elem.parent();
+	}
+
+	return 0;
 }
+/* Date picker manager.
+   Use the singleton instance of this class, $.datepicker, to interact with the date picker.
+   Settings for (groups of) date pickers are maintained in an instance object,
+   allowing multiple different settings on the same page. */
+
+function Datepicker() {
+	this._curInst = null; // The current instance in use
+	this._keyEvent = false; // If the last event was a key event
+	this._disabledInputs = []; // List of date picker inputs that have been disabled
+	this._datepickerShowing = false; // True if the popup picker is showing , false if not
+	this._inDialog = false; // True if showing within a "dialog", false if not
+	this._mainDivId = "ui-datepicker-div"; // The ID of the main datepicker division
+	this._inlineClass = "ui-datepicker-inline"; // The name of the inline marker class
+	this._appendClass = "ui-datepicker-append"; // The name of the append marker class
+	this._triggerClass = "ui-datepicker-trigger"; // The name of the trigger marker class
+	this._dialogClass = "ui-datepicker-dialog"; // The name of the dialog marker class
+	this._disableClass = "ui-datepicker-disabled"; // The name of the disabled covering marker class
+	this._unselectableClass = "ui-datepicker-unselectable"; // The name of the unselectable cell marker class
+	this._currentClass = "ui-datepicker-current-day"; // The name of the current day marker class
+	this._dayOverClass = "ui-datepicker-days-cell-over"; // The name of the day hover marker class
+	this.regional = []; // Available regional settings, indexed by language code
+	this.regional[ "" ] = { // Default regional settings
+		closeText: "Done", // Display text for close link
+		prevText: "Prev", // Display text for previous month link
+		nextText: "Next", // Display text for next month link
+		currentText: "Today", // Display text for current month link
+		monthNames: [ "January","February","March","April","May","June",
+			"July","August","September","October","November","December" ], // Names of months for drop-down and formatting
+		monthNamesShort: [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ], // For formatting
+		dayNames: [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ], // For formatting
+		dayNamesShort: [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ], // For formatting
+		dayNamesMin: [ "Su","Mo","Tu","We","Th","Fr","Sa" ], // Column headings for days starting at Sunday
+		weekHeader: "Wk", // Column header for week of the year
+		dateFormat: "mm/dd/yy", // See format options on parseDate
+		firstDay: 0, // The first day of the week, Sun = 0, Mon = 1, ...
+		isRTL: false, // True if right-to-left language, false if left-to-right
+		showMonthAfterYear: false, // True if the year select precedes month, false for month then year
+		yearSuffix: "" // Additional text to append to the year in the month headers
+	};
+	this._defaults = { // Global defaults for all the date picker instances
+		showOn: "focus", // "focus" for popup on focus,
+			// "button" for trigger button, or "both" for either
+		showAnim: "fadeIn", // Name of jQuery animation for popup
+		showOptions: {}, // Options for enhanced animations
+		defaultDate: null, // Used when field is blank: actual date,
+			// +/-number for offset from today, null for today
+		appendText: "", // Display text following the input box, e.g. showing the format
+		buttonText: "...", // Text for trigger button
+		buttonImage: "", // URL for trigger button image
+		buttonImageOnly: false, // True if the image appears alone, false if it appears on a button
+		hideIfNoPrevNext: false, // True to hide next/previous month links
+			// if not applicable, false to just disable them
+		navigationAsDateFormat: false, // True if date formatting applied to prev/today/next links
+		gotoCurrent: false, // True if today link goes back to current selection instead
+		changeMonth: false, // True if month can be selected directly, false if only prev/next
+		changeYear: false, // True if year can be selected directly, false if only prev/next
+		yearRange: "c-10:c+10", // Range of years to display in drop-down,
+			// either relative to today's year (-nn:+nn), relative to currently displayed year
+			// (c-nn:c+nn), absolute (nnnn:nnnn), or a combination of the above (nnnn:-n)
+		showOtherMonths: false, // True to show dates in other months, false to leave blank
+		selectOtherMonths: false, // True to allow selection of dates in other months, false for unselectable
+		showWeek: false, // True to show week of the year, false to not show it
+		calculateWeek: this.iso8601Week, // How to calculate the week of the year,
+			// takes a Date and returns the number of the week for it
+		shortYearCutoff: "+10", // Short year values < this are in the current century,
+			// > this are in the previous century,
+			// string value starting with "+" for current year + value
+		minDate: null, // The earliest selectable date, or null for no limit
+		maxDate: null, // The latest selectable date, or null for no limit
+		duration: "fast", // Duration of display/closure
+		beforeShowDay: null, // Function that takes a date and returns an array with
+			// [0] = true if selectable, false if not, [1] = custom CSS class name(s) or "",
+			// [2] = cell title (optional), e.g. $.datepicker.noWeekends
+		beforeShow: null, // Function that takes an input field and
+			// returns a set of custom settings for the date picker
+		onSelect: null, // Define a callback function when a date is selected
+		onChangeMonthYear: null, // Define a callback function when the month or year is changed
+		onClose: null, // Define a callback function when the datepicker is closed
+		numberOfMonths: 1, // Number of months to show at a time
+		showCurrentAtPos: 0, // The position in multipe months at which to show the current month (starting at 0)
+		stepMonths: 1, // Number of months to step back/forward
+		stepBigMonths: 12, // Number of months to step back/forward for the big links
+		altField: "", // Selector for an alternate field to store selected dates into
+		altFormat: "", // The date format to use for the alternate field
+		constrainInput: true, // The input is constrained by the current date format
+		showButtonPanel: false, // True to show button panel, false to not show it
+		autoSize: false, // True to size the input for the date format, false to leave as is
+		disabled: false // The initial disabled state
+	};
+	$.extend( this._defaults, this.regional[ "" ] );
+	this.regional.en = $.extend( true, {}, this.regional[ "" ] );
+	this.regional[ "en-US" ] = $.extend( true, {}, this.regional.en );
+	this.dpDiv = datepicker_bindHover( $( "<div id='" + this._mainDivId + "' class='ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'></div>" ) );
+}
+
+$.extend( Datepicker.prototype, {
+	/* Class name added to elements to indicate already configured with a date picker. */
+	markerClassName: "hasDatepicker",
+
+	//Keep track of the maximum number of rows displayed (see #7043)
+	maxRows: 4,
+
+	// TODO rename to "widget" when switching to widget factory
+	_widgetDatepicker: function() {
+		return this.dpDiv;
+	},
+
+	/* Override the default settings for all instances of the date picker.
+	 * @param  settings  object - the new settings to use as defaults (anonymous object)
+	 * @return the manager object
+	 */
+	setDefaults: function( settings ) {
+		datepicker_extendRemove( this._defaults, settings || {} );
+		return this;
+	},
+
+	/* Attach the date picker to a jQuery selection.
+	 * @param  target	element - the target input field or division or span
+	 * @param  settings  object - the new settings to use for this date picker instance (anonymous)
+	 */
+	_attachDatepicker: function( target, settings ) {
+		var nodeName, inline, inst;
+		nodeName = target.nodeName.toLowerCase();
+		inline = ( nodeName === "div" || nodeName === "span" );
+		if ( !target.id ) {
+			this.uuid += 1;
+			target.id = "dp" + this.uuid;
+		}
+		inst = this._newInst( $( target ), inline );
+		inst.settings = $.extend( {}, settings || {} );
+		if ( nodeName === "input" ) {
+			this._connectDatepicker( target, inst );
+		} else if ( inline ) {
+			this._inlineDatepicker( target, inst );
+		}
+	},
+
+	/* Create a new instance object. */
+	_newInst: function( target, inline ) {
+		var id = target[ 0 ].id.replace( /([^A-Za-z0-9_\-])/g, "\\\\$1" ); // escape jQuery meta chars
+		return { id: id, input: target, // associated target
+			selectedDay: 0, selectedMonth: 0, selectedYear: 0, // current selection
+			drawMonth: 0, drawYear: 0, // month being drawn
+			inline: inline, // is datepicker inline or not
+			dpDiv: ( !inline ? this.dpDiv : // presentation div
+			datepicker_bindHover( $( "<div class='" + this._inlineClass + " ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'></div>" ) ) ) };
+	},
+
+	/* Attach the date picker to an input field. */
+	_connectDatepicker: function( target, inst ) {
+		var input = $( target );
+		inst.append = $( [] );
+		inst.trigger = $( [] );
+		if ( input.hasClass( this.markerClassName ) ) {
+			return;
+		}
+		this._attachments( input, inst );
+		input.addClass( this.markerClassName ).on( "keydown", this._doKeyDown ).
+			on( "keypress", this._doKeyPress ).on( "keyup", this._doKeyUp );
+		this._autoSize( inst );
+		$.data( target, "datepicker", inst );
+
+		//If disabled option is true, disable the datepicker once it has been attached to the input (see ticket #5665)
+		if ( inst.settings.disabled ) {
+			this._disableDatepicker( target );
+		}
+	},
+
+	/* Make attachments based on settings. */
+	_attachments: function( input, inst ) {
+		var showOn, buttonText, buttonImage,
+			appendText = this._get( inst, "appendText" ),
+			isRTL = this._get( inst, "isRTL" );
+
+		if ( inst.append ) {
+			inst.append.remove();
+		}
+		if ( appendText ) {
+			inst.append = $( "<span class='" + this._appendClass + "'>" + appendText + "</span>" );
+			input[ isRTL ? "before" : "after" ]( inst.append );
+		}
+
+		input.off( "focus", this._showDatepicker );
+
+		if ( inst.trigger ) {
+			inst.trigger.remove();
+		}
+
+		showOn = this._get( inst, "showOn" );
+		if ( showOn === "focus" || showOn === "both" ) { // pop-up date picker when in the marked field
+			input.on( "focus", this._showDatepicker );
+		}
+		if ( showOn === "button" || showOn === "both" ) { // pop-up date picker when button clicked
+			buttonText = this._get( inst, "buttonText" );
+			buttonImage = this._get( inst, "buttonImage" );
+			inst.trigger = $( this._get( inst, "buttonImageOnly" ) ?
+				$( "<img/>" ).addClass( this._triggerClass ).
+					attr( { src: buttonImage, alt: buttonText, title: buttonText } ) :
+				$( "<button type='button'></button>" ).addClass( this._triggerClass ).
+					html( !buttonImage ? buttonText : $( "<img/>" ).attr(
+					{ src:buttonImage, alt:buttonText, title:buttonText } ) ) );
+			input[ isRTL ? "before" : "after" ]( inst.trigger );
+			inst.trigger.on( "click", function() {
+				if ( $.datepicker._datepickerShowing && $.datepicker._lastInput === input[ 0 ] ) {
+					$.datepicker._hideDatepicker();
+				} else if ( $.datepicker._datepickerShowing && $.datepicker._lastInput !== input[ 0 ] ) {
+					$.datepicker._hideDatepicker();
+					$.datepicker._showDatepicker( input[ 0 ] );
+				} else {
+					$.datepicker._showDatepicker( input[ 0 ] );
+				}
+				return false;
+			} );
+		}
+	},
+
+	/* Apply the maximum length for the date format. */
+	_autoSize: function( inst ) {
+		if ( this._get( inst, "autoSize" ) && !inst.inline ) {
+			var findMax, max, maxI, i,
+				date = new Date( 2009, 12 - 1, 20 ), // Ensure double digits
+				dateFormat = this._get( inst, "dateFormat" );
+
+			if ( dateFormat.match( /[DM]/ ) ) {
+				findMax = function( names ) {
+					max = 0;
+					maxI = 0;
+					for ( i = 0; i < names.length; i++ ) {
+						if ( names[ i ].length > max ) {
+							max = names[ i ].length;
+							maxI = i;
+						}
+					}
+					return maxI;
+				};
+				date.setMonth( findMax( this._get( inst, ( dateFormat.match( /MM/ ) ?
+					"monthNames" : "monthNamesShort" ) ) ) );
+				date.setDate( findMax( this._get( inst, ( dateFormat.match( /DD/ ) ?
+					"dayNames" : "dayNamesShort" ) ) ) + 20 - date.getDay() );
+			}
+			inst.input.attr( "size", this._formatDate( inst, date ).length );
+		}
+	},
+
+	/* Attach an inline date picker to a div. */
+	_inlineDatepicker: function( target, inst ) {
+		var divSpan = $( target );
+		if ( divSpan.hasClass( this.markerClassName ) ) {
+			return;
+		}
+		divSpan.addClass( this.markerClassName ).append( inst.dpDiv );
+		$.data( target, "datepicker", inst );
+		this._setDate( inst, this._getDefaultDate( inst ), true );
+		this._updateDatepicker( inst );
+		this._updateAlternate( inst );
+
+		//If disabled option is true, disable the datepicker before showing it (see ticket #5665)
+		if ( inst.settings.disabled ) {
+			this._disableDatepicker( target );
+		}
+
+		// Set display:block in place of inst.dpDiv.show() which won't work on disconnected elements
+		// http://bugs.jqueryui.com/ticket/7552 - A Datepicker created on a detached div has zero height
+		inst.dpDiv.css( "display", "block" );
+	},
+
+	/* Pop-up the date picker in a "dialog" box.
+	 * @param  input element - ignored
+	 * @param  date	string or Date - the initial date to display
+	 * @param  onSelect  function - the function to call when a date is selected
+	 * @param  settings  object - update the dialog date picker instance's settings (anonymous object)
+	 * @param  pos int[2] - coordinates for the dialog's position within the screen or
+	 *					event - with x/y coordinates or
+	 *					leave empty for default (screen centre)
+	 * @return the manager object
+	 */
+	_dialogDatepicker: function( input, date, onSelect, settings, pos ) {
+		var id, browserWidth, browserHeight, scrollX, scrollY,
+			inst = this._dialogInst; // internal instance
+
+		if ( !inst ) {
+			this.uuid += 1;
+			id = "dp" + this.uuid;
+			this._dialogInput = $( "<input type='text' id='" + id +
+				"' style='position: absolute; top: -100px; width: 0px;'/>" );
+			this._dialogInput.on( "keydown", this._doKeyDown );
+			$( "body" ).append( this._dialogInput );
+			inst = this._dialogInst = this._newInst( this._dialogInput, false );
+			inst.settings = {};
+			$.data( this._dialogInput[ 0 ], "datepicker", inst );
+		}
+		datepicker_extendRemove( inst.settings, settings || {} );
+		date = ( date && date.constructor === Date ? this._formatDate( inst, date ) : date );
+		this._dialogInput.val( date );
+
+		this._pos = ( pos ? ( pos.length ? pos : [ pos.pageX, pos.pageY ] ) : null );
+		if ( !this._pos ) {
+			browserWidth = document.documentElement.clientWidth;
+			browserHeight = document.documentElement.clientHeight;
+			scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+			scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+			this._pos = // should use actual width/height below
+				[ ( browserWidth / 2 ) - 100 + scrollX, ( browserHeight / 2 ) - 150 + scrollY ];
+		}
+
+		// Move input on screen for focus, but hidden behind dialog
+		this._dialogInput.css( "left", ( this._pos[ 0 ] + 20 ) + "px" ).css( "top", this._pos[ 1 ] + "px" );
+		inst.settings.onSelect = onSelect;
+		this._inDialog = true;
+		this.dpDiv.addClass( this._dialogClass );
+		this._showDatepicker( this._dialogInput[ 0 ] );
+		if ( $.blockUI ) {
+			$.blockUI( this.dpDiv );
+		}
+		$.data( this._dialogInput[ 0 ], "datepicker", inst );
+		return this;
+	},
+
+	/* Detach a datepicker from its control.
+	 * @param  target	element - the target input field or division or span
+	 */
+	_destroyDatepicker: function( target ) {
+		var nodeName,
+			$target = $( target ),
+			inst = $.data( target, "datepicker" );
+
+		if ( !$target.hasClass( this.markerClassName ) ) {
+			return;
+		}
+
+		nodeName = target.nodeName.toLowerCase();
+		$.removeData( target, "datepicker" );
+		if ( nodeName === "input" ) {
+			inst.append.remove();
+			inst.trigger.remove();
+			$target.removeClass( this.markerClassName ).
+				off( "focus", this._showDatepicker ).
+				off( "keydown", this._doKeyDown ).
+				off( "keypress", this._doKeyPress ).
+				off( "keyup", this._doKeyUp );
+		} else if ( nodeName === "div" || nodeName === "span" ) {
+			$target.removeClass( this.markerClassName ).empty();
+		}
+
+		if ( datepicker_instActive === inst ) {
+			datepicker_instActive = null;
+		}
+	},
+
+	/* Enable the date picker to a jQuery selection.
+	 * @param  target	element - the target input field or division or span
+	 */
+	_enableDatepicker: function( target ) {
+		var nodeName, inline,
+			$target = $( target ),
+			inst = $.data( target, "datepicker" );
+
+		if ( !$target.hasClass( this.markerClassName ) ) {
+			return;
+		}
+
+		nodeName = target.nodeName.toLowerCase();
+		if ( nodeName === "input" ) {
+			target.disabled = false;
+			inst.trigger.filter( "button" ).
+				each( function() { this.disabled = false; } ).end().
+				filter( "img" ).css( { opacity: "1.0", cursor: "" } );
+		} else if ( nodeName === "div" || nodeName === "span" ) {
+			inline = $target.children( "." + this._inlineClass );
+			inline.children().removeClass( "ui-state-disabled" );
+			inline.find( "select.ui-datepicker-month, select.ui-datepicker-year" ).
+				prop( "disabled", false );
+		}
+		this._disabledInputs = $.map( this._disabledInputs,
+			function( value ) { return ( value === target ? null : value ); } ); // delete entry
+	},
+
+	/* Disable the date picker to a jQuery selection.
+	 * @param  target	element - the target input field or division or span
+	 */
+	_disableDatepicker: function( target ) {
+		var nodeName, inline,
+			$target = $( target ),
+			inst = $.data( target, "datepicker" );
+
+		if ( !$target.hasClass( this.markerClassName ) ) {
+			return;
+		}
+
+		nodeName = target.nodeName.toLowerCase();
+		if ( nodeName === "input" ) {
+			target.disabled = true;
+			inst.trigger.filter( "button" ).
+				each( function() { this.disabled = true; } ).end().
+				filter( "img" ).css( { opacity: "0.5", cursor: "default" } );
+		} else if ( nodeName === "div" || nodeName === "span" ) {
+			inline = $target.children( "." + this._inlineClass );
+			inline.children().addClass( "ui-state-disabled" );
+			inline.find( "select.ui-datepicker-month, select.ui-datepicker-year" ).
+				prop( "disabled", true );
+		}
+		this._disabledInputs = $.map( this._disabledInputs,
+			function( value ) { return ( value === target ? null : value ); } ); // delete entry
+		this._disabledInputs[ this._disabledInputs.length ] = target;
+	},
+
+	/* Is the first field in a jQuery collection disabled as a datepicker?
+	 * @param  target	element - the target input field or division or span
+	 * @return boolean - true if disabled, false if enabled
+	 */
+	_isDisabledDatepicker: function( target ) {
+		if ( !target ) {
+			return false;
+		}
+		for ( var i = 0; i < this._disabledInputs.length; i++ ) {
+			if ( this._disabledInputs[ i ] === target ) {
+				return true;
+			}
+		}
+		return false;
+	},
+
+	/* Retrieve the instance data for the target control.
+	 * @param  target  element - the target input field or division or span
+	 * @return  object - the associated instance data
+	 * @throws  error if a jQuery problem getting data
+	 */
+	_getInst: function( target ) {
+		try {
+			return $.data( target, "datepicker" );
+		}
+		catch ( err ) {
+			throw "Missing instance data for this datepicker";
+		}
+	},
+
+	/* Update or retrieve the settings for a date picker attached to an input field or division.
+	 * @param  target  element - the target input field or division or span
+	 * @param  name	object - the new settings to update or
+	 *				string - the name of the setting to change or retrieve,
+	 *				when retrieving also "all" for all instance settings or
+	 *				"defaults" for all global defaults
+	 * @param  value   any - the new value for the setting
+	 *				(omit if above is an object or to retrieve a value)
+	 */
+	_optionDatepicker: function( target, name, value ) {
+		var settings, date, minDate, maxDate,
+			inst = this._getInst( target );
+
+		if ( arguments.length === 2 && typeof name === "string" ) {
+			return ( name === "defaults" ? $.extend( {}, $.datepicker._defaults ) :
+				( inst ? ( name === "all" ? $.extend( {}, inst.settings ) :
+				this._get( inst, name ) ) : null ) );
+		}
+
+		settings = name || {};
+		if ( typeof name === "string" ) {
+			settings = {};
+			settings[ name ] = value;
+		}
+
+		if ( inst ) {
+			if ( this._curInst === inst ) {
+				this._hideDatepicker();
+			}
+
+			date = this._getDateDatepicker( target, true );
+			minDate = this._getMinMaxDate( inst, "min" );
+			maxDate = this._getMinMaxDate( inst, "max" );
+			datepicker_extendRemove( inst.settings, settings );
+
+			// reformat the old minDate/maxDate values if dateFormat changes and a new minDate/maxDate isn't provided
+			if ( minDate !== null && settings.dateFormat !== undefined && settings.minDate === undefined ) {
+				inst.settings.minDate = this._formatDate( inst, minDate );
+			}
+			if ( maxDate !== null && settings.dateFormat !== undefined && settings.maxDate === undefined ) {
+				inst.settings.maxDate = this._formatDate( inst, maxDate );
+			}
+			if ( "disabled" in settings ) {
+				if ( settings.disabled ) {
+					this._disableDatepicker( target );
+				} else {
+					this._enableDatepicker( target );
+				}
+			}
+			this._attachments( $( target ), inst );
+			this._autoSize( inst );
+			this._setDate( inst, date );
+			this._updateAlternate( inst );
+			this._updateDatepicker( inst );
+		}
+	},
+
+	// Change method deprecated
+	_changeDatepicker: function( target, name, value ) {
+		this._optionDatepicker( target, name, value );
+	},
+
+	/* Redraw the date picker attached to an input field or division.
+	 * @param  target  element - the target input field or division or span
+	 */
+	_refreshDatepicker: function( target ) {
+		var inst = this._getInst( target );
+		if ( inst ) {
+			this._updateDatepicker( inst );
+		}
+	},
+
+	/* Set the dates for a jQuery selection.
+	 * @param  target element - the target input field or division or span
+	 * @param  date	Date - the new date
+	 */
+	_setDateDatepicker: function( target, date ) {
+		var inst = this._getInst( target );
+		if ( inst ) {
+			this._setDate( inst, date );
+			this._updateDatepicker( inst );
+			this._updateAlternate( inst );
+		}
+	},
+
+	/* Get the date(s) for the first entry in a jQuery selection.
+	 * @param  target element - the target input field or division or span
+	 * @param  noDefault boolean - true if no default date is to be used
+	 * @return Date - the current date
+	 */
+	_getDateDatepicker: function( target, noDefault ) {
+		var inst = this._getInst( target );
+		if ( inst && !inst.inline ) {
+			this._setDateFromField( inst, noDefault );
+		}
+		return ( inst ? this._getDate( inst ) : null );
+	},
+
+	/* Handle keystrokes. */
+	_doKeyDown: function( event ) {
+		var onSelect, dateStr, sel,
+			inst = $.datepicker._getInst( event.target ),
+			handled = true,
+			isRTL = inst.dpDiv.is( ".ui-datepicker-rtl" );
+
+		inst._keyEvent = true;
+		if ( $.datepicker._datepickerShowing ) {
+			switch ( event.keyCode ) {
+				case 9: $.datepicker._hideDatepicker();
+						handled = false;
+						break; // hide on tab out
+				case 13: sel = $( "td." + $.datepicker._dayOverClass + ":not(." +
+									$.datepicker._currentClass + ")", inst.dpDiv );
+						if ( sel[ 0 ] ) {
+							$.datepicker._selectDay( event.target, inst.selectedMonth, inst.selectedYear, sel[ 0 ] );
+						}
+
+						onSelect = $.datepicker._get( inst, "onSelect" );
+						if ( onSelect ) {
+							dateStr = $.datepicker._formatDate( inst );
+
+							// Trigger custom callback
+							onSelect.apply( ( inst.input ? inst.input[ 0 ] : null ), [ dateStr, inst ] );
+						} else {
+							$.datepicker._hideDatepicker();
+						}
+
+						return false; // don't submit the form
+				case 27: $.datepicker._hideDatepicker();
+						break; // hide on escape
+				case 33: $.datepicker._adjustDate( event.target, ( event.ctrlKey ?
+							-$.datepicker._get( inst, "stepBigMonths" ) :
+							-$.datepicker._get( inst, "stepMonths" ) ), "M" );
+						break; // previous month/year on page up/+ ctrl
+				case 34: $.datepicker._adjustDate( event.target, ( event.ctrlKey ?
+							+$.datepicker._get( inst, "stepBigMonths" ) :
+							+$.datepicker._get( inst, "stepMonths" ) ), "M" );
+						break; // next month/year on page down/+ ctrl
+				case 35: if ( event.ctrlKey || event.metaKey ) {
+							$.datepicker._clearDate( event.target );
+						}
+						handled = event.ctrlKey || event.metaKey;
+						break; // clear on ctrl or command +end
+				case 36: if ( event.ctrlKey || event.metaKey ) {
+							$.datepicker._gotoToday( event.target );
+						}
+						handled = event.ctrlKey || event.metaKey;
+						break; // current on ctrl or command +home
+				case 37: if ( event.ctrlKey || event.metaKey ) {
+							$.datepicker._adjustDate( event.target, ( isRTL ? +1 : -1 ), "D" );
+						}
+						handled = event.ctrlKey || event.metaKey;
+
+						// -1 day on ctrl or command +left
+						if ( event.originalEvent.altKey ) {
+							$.datepicker._adjustDate( event.target, ( event.ctrlKey ?
+								-$.datepicker._get( inst, "stepBigMonths" ) :
+								-$.datepicker._get( inst, "stepMonths" ) ), "M" );
+						}
+
+						// next month/year on alt +left on Mac
+						break;
+				case 38: if ( event.ctrlKey || event.metaKey ) {
+							$.datepicker._adjustDate( event.target, -7, "D" );
+						}
+						handled = event.ctrlKey || event.metaKey;
+						break; // -1 week on ctrl or command +up
+				case 39: if ( event.ctrlKey || event.metaKey ) {
+							$.datepicker._adjustDate( event.target, ( isRTL ? -1 : +1 ), "D" );
+						}
+						handled = event.ctrlKey || event.metaKey;
+
+						// +1 day on ctrl or command +right
+						if ( event.originalEvent.altKey ) {
+							$.datepicker._adjustDate( event.target, ( event.ctrlKey ?
+								+$.datepicker._get( inst, "stepBigMonths" ) :
+								+$.datepicker._get( inst, "stepMonths" ) ), "M" );
+						}
+
+						// next month/year on alt +right
+						break;
+				case 40: if ( event.ctrlKey || event.metaKey ) {
+							$.datepicker._adjustDate( event.target, +7, "D" );
+						}
+						handled = event.ctrlKey || event.metaKey;
+						break; // +1 week on ctrl or command +down
+				default: handled = false;
+			}
+		} else if ( event.keyCode === 36 && event.ctrlKey ) { // display the date picker on ctrl+home
+			$.datepicker._showDatepicker( this );
+		} else {
+			handled = false;
+		}
+
+		if ( handled ) {
+			event.preventDefault();
+			event.stopPropagation();
+		}
+	},
+
+	/* Filter entered characters - based on date format. */
+	_doKeyPress: function( event ) {
+		var chars, chr,
+			inst = $.datepicker._getInst( event.target );
+
+		if ( $.datepicker._get( inst, "constrainInput" ) ) {
+			chars = $.datepicker._possibleChars( $.datepicker._get( inst, "dateFormat" ) );
+			chr = String.fromCharCode( event.charCode == null ? event.keyCode : event.charCode );
+			return event.ctrlKey || event.metaKey || ( chr < " " || !chars || chars.indexOf( chr ) > -1 );
+		}
+	},
+
+	/* Synchronise manual entry and field/alternate field. */
+	_doKeyUp: function( event ) {
+		var date,
+			inst = $.datepicker._getInst( event.target );
+
+		if ( inst.input.val() !== inst.lastVal ) {
+			try {
+				date = $.datepicker.parseDate( $.datepicker._get( inst, "dateFormat" ),
+					( inst.input ? inst.input.val() : null ),
+					$.datepicker._getFormatConfig( inst ) );
+
+				if ( date ) { // only if valid
+					$.datepicker._setDateFromField( inst );
+					$.datepicker._updateAlternate( inst );
+					$.datepicker._updateDatepicker( inst );
+				}
+			}
+			catch ( err ) {
+			}
+		}
+		return true;
+	},
+
+	/* Pop-up the date picker for a given input field.
+	 * If false returned from beforeShow event handler do not show.
+	 * @param  input  element - the input field attached to the date picker or
+	 *					event - if triggered by focus
+	 */
+	_showDatepicker: function( input ) {
+		input = input.target || input;
+		if ( input.nodeName.toLowerCase() !== "input" ) { // find from button/image trigger
+			input = $( "input", input.parentNode )[ 0 ];
+		}
+
+		if ( $.datepicker._isDisabledDatepicker( input ) || $.datepicker._lastInput === input ) { // already here
+			return;
+		}
+
+		var inst, beforeShow, beforeShowSettings, isFixed,
+			offset, showAnim, duration;
+
+		inst = $.datepicker._getInst( input );
+		if ( $.datepicker._curInst && $.datepicker._curInst !== inst ) {
+			$.datepicker._curInst.dpDiv.stop( true, true );
+			if ( inst && $.datepicker._datepickerShowing ) {
+				$.datepicker._hideDatepicker( $.datepicker._curInst.input[ 0 ] );
+			}
+		}
+
+		beforeShow = $.datepicker._get( inst, "beforeShow" );
+		beforeShowSettings = beforeShow ? beforeShow.apply( input, [ input, inst ] ) : {};
+		if ( beforeShowSettings === false ) {
+			return;
+		}
+		datepicker_extendRemove( inst.settings, beforeShowSettings );
+
+		inst.lastVal = null;
+		$.datepicker._lastInput = input;
+		$.datepicker._setDateFromField( inst );
+
+		if ( $.datepicker._inDialog ) { // hide cursor
+			input.value = "";
+		}
+		if ( !$.datepicker._pos ) { // position below input
+			$.datepicker._pos = $.datepicker._findPos( input );
+			$.datepicker._pos[ 1 ] += input.offsetHeight; // add the height
+		}
+
+		isFixed = false;
+		$( input ).parents().each( function() {
+			isFixed |= $( this ).css( "position" ) === "fixed";
+			return !isFixed;
+		} );
+
+		offset = { left: $.datepicker._pos[ 0 ], top: $.datepicker._pos[ 1 ] };
+		$.datepicker._pos = null;
+
+		//to avoid flashes on Firefox
+		inst.dpDiv.empty();
+
+		// determine sizing offscreen
+		inst.dpDiv.css( { position: "absolute", display: "block", top: "-1000px" } );
+		$.datepicker._updateDatepicker( inst );
+
+		// fix width for dynamic number of date pickers
+		// and adjust position before showing
+		offset = $.datepicker._checkOffset( inst, offset, isFixed );
+		inst.dpDiv.css( { position: ( $.datepicker._inDialog && $.blockUI ?
+			"static" : ( isFixed ? "fixed" : "absolute" ) ), display: "none",
+			left: offset.left + "px", top: offset.top + "px" } );
+
+		if ( !inst.inline ) {
+			showAnim = $.datepicker._get( inst, "showAnim" );
+			duration = $.datepicker._get( inst, "duration" );
+			inst.dpDiv.css( "z-index", datepicker_getZindex( $( input ) ) + 1 );
+			$.datepicker._datepickerShowing = true;
+
+			if ( $.effects && $.effects.effect[ showAnim ] ) {
+				inst.dpDiv.show( showAnim, $.datepicker._get( inst, "showOptions" ), duration );
+			} else {
+				inst.dpDiv[ showAnim || "show" ]( showAnim ? duration : null );
+			}
+
+			if ( $.datepicker._shouldFocusInput( inst ) ) {
+				inst.input.trigger( "focus" );
+			}
+
+			$.datepicker._curInst = inst;
+		}
+	},
+
+	/* Generate the date picker content. */
+	_updateDatepicker: function( inst ) {
+		this.maxRows = 4; //Reset the max number of rows being displayed (see #7043)
+		datepicker_instActive = inst; // for delegate hover events
+		inst.dpDiv.empty().append( this._generateHTML( inst ) );
+		this._attachHandlers( inst );
+
+		var origyearshtml,
+			numMonths = this._getNumberOfMonths( inst ),
+			cols = numMonths[ 1 ],
+			width = 17,
+			activeCell = inst.dpDiv.find( "." + this._dayOverClass + " a" );
+
+		if ( activeCell.length > 0 ) {
+			datepicker_handleMouseover.apply( activeCell.get( 0 ) );
+		}
+
+		inst.dpDiv.removeClass( "ui-datepicker-multi-2 ui-datepicker-multi-3 ui-datepicker-multi-4" ).width( "" );
+		if ( cols > 1 ) {
+			inst.dpDiv.addClass( "ui-datepicker-multi-" + cols ).css( "width", ( width * cols ) + "em" );
+		}
+		inst.dpDiv[ ( numMonths[ 0 ] !== 1 || numMonths[ 1 ] !== 1 ? "add" : "remove" ) +
+			"Class" ]( "ui-datepicker-multi" );
+		inst.dpDiv[ ( this._get( inst, "isRTL" ) ? "add" : "remove" ) +
+			"Class" ]( "ui-datepicker-rtl" );
+
+		if ( inst === $.datepicker._curInst && $.datepicker._datepickerShowing && $.datepicker._shouldFocusInput( inst ) ) {
+			inst.input.trigger( "focus" );
+		}
+
+		// Deffered render of the years select (to avoid flashes on Firefox)
+		if ( inst.yearshtml ) {
+			origyearshtml = inst.yearshtml;
+			setTimeout( function() {
+
+				//assure that inst.yearshtml didn't change.
+				if ( origyearshtml === inst.yearshtml && inst.yearshtml ) {
+					inst.dpDiv.find( "select.ui-datepicker-year:first" ).replaceWith( inst.yearshtml );
+				}
+				origyearshtml = inst.yearshtml = null;
+			}, 0 );
+		}
+	},
+
+	// #6694 - don't focus the input if it's already focused
+	// this breaks the change event in IE
+	// Support: IE and jQuery <1.9
+	_shouldFocusInput: function( inst ) {
+		return inst.input && inst.input.is( ":visible" ) && !inst.input.is( ":disabled" ) && !inst.input.is( ":focus" );
+	},
+
+	/* Check positioning to remain on screen. */
+	_checkOffset: function( inst, offset, isFixed ) {
+		var dpWidth = inst.dpDiv.outerWidth(),
+			dpHeight = inst.dpDiv.outerHeight(),
+			inputWidth = inst.input ? inst.input.outerWidth() : 0,
+			inputHeight = inst.input ? inst.input.outerHeight() : 0,
+			viewWidth = document.documentElement.clientWidth + ( isFixed ? 0 : $( document ).scrollLeft() ),
+			viewHeight = document.documentElement.clientHeight + ( isFixed ? 0 : $( document ).scrollTop() );
+
+		offset.left -= ( this._get( inst, "isRTL" ) ? ( dpWidth - inputWidth ) : 0 );
+		offset.left -= ( isFixed && offset.left === inst.input.offset().left ) ? $( document ).scrollLeft() : 0;
+		offset.top -= ( isFixed && offset.top === ( inst.input.offset().top + inputHeight ) ) ? $( document ).scrollTop() : 0;
+
+		// Now check if datepicker is showing outside window viewport - move to a better place if so.
+		offset.left -= Math.min( offset.left, ( offset.left + dpWidth > viewWidth && viewWidth > dpWidth ) ?
+			Math.abs( offset.left + dpWidth - viewWidth ) : 0 );
+		offset.top -= Math.min( offset.top, ( offset.top + dpHeight > viewHeight && viewHeight > dpHeight ) ?
+			Math.abs( dpHeight + inputHeight ) : 0 );
+
+		return offset;
+	},
+
+	/* Find an object's position on the screen. */
+	_findPos: function( obj ) {
+		var position,
+			inst = this._getInst( obj ),
+			isRTL = this._get( inst, "isRTL" );
+
+		while ( obj && ( obj.type === "hidden" || obj.nodeType !== 1 || $.expr.filters.hidden( obj ) ) ) {
+			obj = obj[ isRTL ? "previousSibling" : "nextSibling" ];
+		}
+
+		position = $( obj ).offset();
+		return [ position.left, position.top ];
+	},
+
+	/* Hide the date picker from view.
+	 * @param  input  element - the input field attached to the date picker
+	 */
+	_hideDatepicker: function( input ) {
+		var showAnim, duration, postProcess, onClose,
+			inst = this._curInst;
+
+		if ( !inst || ( input && inst !== $.data( input, "datepicker" ) ) ) {
+			return;
+		}
+
+		if ( this._datepickerShowing ) {
+			showAnim = this._get( inst, "showAnim" );
+			duration = this._get( inst, "duration" );
+			postProcess = function() {
+				$.datepicker._tidyDialog( inst );
+			};
+
+			// DEPRECATED: after BC for 1.8.x $.effects[ showAnim ] is not needed
+			if ( $.effects && ( $.effects.effect[ showAnim ] || $.effects[ showAnim ] ) ) {
+				inst.dpDiv.hide( showAnim, $.datepicker._get( inst, "showOptions" ), duration, postProcess );
+			} else {
+				inst.dpDiv[ ( showAnim === "slideDown" ? "slideUp" :
+					( showAnim === "fadeIn" ? "fadeOut" : "hide" ) ) ]( ( showAnim ? duration : null ), postProcess );
+			}
+
+			if ( !showAnim ) {
+				postProcess();
+			}
+			this._datepickerShowing = false;
+
+			onClose = this._get( inst, "onClose" );
+			if ( onClose ) {
+				onClose.apply( ( inst.input ? inst.input[ 0 ] : null ), [ ( inst.input ? inst.input.val() : "" ), inst ] );
+			}
+
+			this._lastInput = null;
+			if ( this._inDialog ) {
+				this._dialogInput.css( { position: "absolute", left: "0", top: "-100px" } );
+				if ( $.blockUI ) {
+					$.unblockUI();
+					$( "body" ).append( this.dpDiv );
+				}
+			}
+			this._inDialog = false;
+		}
+	},
+
+	/* Tidy up after a dialog display. */
+	_tidyDialog: function( inst ) {
+		inst.dpDiv.removeClass( this._dialogClass ).off( ".ui-datepicker-calendar" );
+	},
+
+	/* Close date picker if clicked elsewhere. */
+	_checkExternalClick: function( event ) {
+		if ( !$.datepicker._curInst ) {
+			return;
+		}
+
+		var $target = $( event.target ),
+			inst = $.datepicker._getInst( $target[ 0 ] );
+
+		if ( ( ( $target[ 0 ].id !== $.datepicker._mainDivId &&
+				$target.parents( "#" + $.datepicker._mainDivId ).length === 0 &&
+				!$target.hasClass( $.datepicker.markerClassName ) &&
+				!$target.closest( "." + $.datepicker._triggerClass ).length &&
+				$.datepicker._datepickerShowing && !( $.datepicker._inDialog && $.blockUI ) ) ) ||
+			( $target.hasClass( $.datepicker.markerClassName ) && $.datepicker._curInst !== inst ) ) {
+				$.datepicker._hideDatepicker();
+		}
+	},
+
+	/* Adjust one of the date sub-fields. */
+	_adjustDate: function( id, offset, period ) {
+		var target = $( id ),
+			inst = this._getInst( target[ 0 ] );
+
+		if ( this._isDisabledDatepicker( target[ 0 ] ) ) {
+			return;
+		}
+		this._adjustInstDate( inst, offset +
+			( period === "M" ? this._get( inst, "showCurrentAtPos" ) : 0 ), // undo positioning
+			period );
+		this._updateDatepicker( inst );
+	},
+
+	/* Action for current link. */
+	_gotoToday: function( id ) {
+		var date,
+			target = $( id ),
+			inst = this._getInst( target[ 0 ] );
+
+		if ( this._get( inst, "gotoCurrent" ) && inst.currentDay ) {
+			inst.selectedDay = inst.currentDay;
+			inst.drawMonth = inst.selectedMonth = inst.currentMonth;
+			inst.drawYear = inst.selectedYear = inst.currentYear;
+		} else {
+			date = new Date();
+			inst.selectedDay = date.getDate();
+			inst.drawMonth = inst.selectedMonth = date.getMonth();
+			inst.drawYear = inst.selectedYear = date.getFullYear();
+		}
+		this._notifyChange( inst );
+		this._adjustDate( target );
+	},
+
+	/* Action for selecting a new month/year. */
+	_selectMonthYear: function( id, select, period ) {
+		var target = $( id ),
+			inst = this._getInst( target[ 0 ] );
+
+		inst[ "selected" + ( period === "M" ? "Month" : "Year" ) ] =
+		inst[ "draw" + ( period === "M" ? "Month" : "Year" ) ] =
+			parseInt( select.options[ select.selectedIndex ].value, 10 );
+
+		this._notifyChange( inst );
+		this._adjustDate( target );
+	},
+
+	/* Action for selecting a day. */
+	_selectDay: function( id, month, year, td ) {
+		var inst,
+			target = $( id );
+
+		if ( $( td ).hasClass( this._unselectableClass ) || this._isDisabledDatepicker( target[ 0 ] ) ) {
+			return;
+		}
+
+		inst = this._getInst( target[ 0 ] );
+		inst.selectedDay = inst.currentDay = $( "a", td ).html();
+		inst.selectedMonth = inst.currentMonth = month;
+		inst.selectedYear = inst.currentYear = year;
+		this._selectDate( id, this._formatDate( inst,
+			inst.currentDay, inst.currentMonth, inst.currentYear ) );
+	},
+
+	/* Erase the input field and hide the date picker. */
+	_clearDate: function( id ) {
+		var target = $( id );
+		this._selectDate( target, "" );
+	},
+
+	/* Update the input field with the selected date. */
+	_selectDate: function( id, dateStr ) {
+		var onSelect,
+			target = $( id ),
+			inst = this._getInst( target[ 0 ] );
+
+		dateStr = ( dateStr != null ? dateStr : this._formatDate( inst ) );
+		if ( inst.input ) {
+			inst.input.val( dateStr );
+		}
+		this._updateAlternate( inst );
+
+		onSelect = this._get( inst, "onSelect" );
+		if ( onSelect ) {
+			onSelect.apply( ( inst.input ? inst.input[ 0 ] : null ), [ dateStr, inst ] );  // trigger custom callback
+		} else if ( inst.input ) {
+			inst.input.trigger( "change" ); // fire the change event
+		}
+
+		if ( inst.inline ) {
+			this._updateDatepicker( inst );
+		} else {
+			this._hideDatepicker();
+			this._lastInput = inst.input[ 0 ];
+			if ( typeof( inst.input[ 0 ] ) !== "object" ) {
+				inst.input.trigger( "focus" ); // restore focus
+			}
+			this._lastInput = null;
+		}
+	},
+
+	/* Update any alternate field to synchronise with the main field. */
+	_updateAlternate: function( inst ) {
+		var altFormat, date, dateStr,
+			altField = this._get( inst, "altField" );
+
+		if ( altField ) { // update alternate field too
+			altFormat = this._get( inst, "altFormat" ) || this._get( inst, "dateFormat" );
+			date = this._getDate( inst );
+			dateStr = this.formatDate( altFormat, date, this._getFormatConfig( inst ) );
+			$( altField ).val( dateStr );
+		}
+	},
+
+	/* Set as beforeShowDay function to prevent selection of weekends.
+	 * @param  date  Date - the date to customise
+	 * @return [boolean, string] - is this date selectable?, what is its CSS class?
+	 */
+	noWeekends: function( date ) {
+		var day = date.getDay();
+		return [ ( day > 0 && day < 6 ), "" ];
+	},
+
+	/* Set as calculateWeek to determine the week of the year based on the ISO 8601 definition.
+	 * @param  date  Date - the date to get the week for
+	 * @return  number - the number of the week within the year that contains this date
+	 */
+	iso8601Week: function( date ) {
+		var time,
+			checkDate = new Date( date.getTime() );
+
+		// Find Thursday of this week starting on Monday
+		checkDate.setDate( checkDate.getDate() + 4 - ( checkDate.getDay() || 7 ) );
+
+		time = checkDate.getTime();
+		checkDate.setMonth( 0 ); // Compare with Jan 1
+		checkDate.setDate( 1 );
+		return Math.floor( Math.round( ( time - checkDate ) / 86400000 ) / 7 ) + 1;
+	},
+
+	/* Parse a string value into a date object.
+	 * See formatDate below for the possible formats.
+	 *
+	 * @param  format string - the expected format of the date
+	 * @param  value string - the date in the above format
+	 * @param  settings Object - attributes include:
+	 *					shortYearCutoff  number - the cutoff year for determining the century (optional)
+	 *					dayNamesShort	string[7] - abbreviated names of the days from Sunday (optional)
+	 *					dayNames		string[7] - names of the days from Sunday (optional)
+	 *					monthNamesShort string[12] - abbreviated names of the months (optional)
+	 *					monthNames		string[12] - names of the months (optional)
+	 * @return  Date - the extracted date value or null if value is blank
+	 */
+	parseDate: function( format, value, settings ) {
+		if ( format == null || value == null ) {
+			throw "Invalid arguments";
+		}
+
+		value = ( typeof value === "object" ? value.toString() : value + "" );
+		if ( value === "" ) {
+			return null;
+		}
+
+		var iFormat, dim, extra,
+			iValue = 0,
+			shortYearCutoffTemp = ( settings ? settings.shortYearCutoff : null ) || this._defaults.shortYearCutoff,
+			shortYearCutoff = ( typeof shortYearCutoffTemp !== "string" ? shortYearCutoffTemp :
+				new Date().getFullYear() % 100 + parseInt( shortYearCutoffTemp, 10 ) ),
+			dayNamesShort = ( settings ? settings.dayNamesShort : null ) || this._defaults.dayNamesShort,
+			dayNames = ( settings ? settings.dayNames : null ) || this._defaults.dayNames,
+			monthNamesShort = ( settings ? settings.monthNamesShort : null ) || this._defaults.monthNamesShort,
+			monthNames = ( settings ? settings.monthNames : null ) || this._defaults.monthNames,
+			year = -1,
+			month = -1,
+			day = -1,
+			doy = -1,
+			literal = false,
+			date,
+
+			// Check whether a format character is doubled
+			lookAhead = function( match ) {
+				var matches = ( iFormat + 1 < format.length && format.charAt( iFormat + 1 ) === match );
+				if ( matches ) {
+					iFormat++;
+				}
+				return matches;
+			},
+
+			// Extract a number from the string value
+			getNumber = function( match ) {
+				var isDoubled = lookAhead( match ),
+					size = ( match === "@" ? 14 : ( match === "!" ? 20 :
+					( match === "y" && isDoubled ? 4 : ( match === "o" ? 3 : 2 ) ) ) ),
+					minSize = ( match === "y" ? size : 1 ),
+					digits = new RegExp( "^\\d{" + minSize + "," + size + "}" ),
+					num = value.substring( iValue ).match( digits );
+				if ( !num ) {
+					throw "Missing number at position " + iValue;
+				}
+				iValue += num[ 0 ].length;
+				return parseInt( num[ 0 ], 10 );
+			},
+
+			// Extract a name from the string value and convert to an index
+			getName = function( match, shortNames, longNames ) {
+				var index = -1,
+					names = $.map( lookAhead( match ) ? longNames : shortNames, function( v, k ) {
+						return [ [ k, v ] ];
+					} ).sort( function( a, b ) {
+						return -( a[ 1 ].length - b[ 1 ].length );
+					} );
+
+				$.each( names, function( i, pair ) {
+					var name = pair[ 1 ];
+					if ( value.substr( iValue, name.length ).toLowerCase() === name.toLowerCase() ) {
+						index = pair[ 0 ];
+						iValue += name.length;
+						return false;
+					}
+				} );
+				if ( index !== -1 ) {
+					return index + 1;
+				} else {
+					throw "Unknown name at position " + iValue;
+				}
+			},
+
+			// Confirm that a literal character matches the string value
+			checkLiteral = function() {
+				if ( value.charAt( iValue ) !== format.charAt( iFormat ) ) {
+					throw "Unexpected literal at position " + iValue;
+				}
+				iValue++;
+			};
+
+		for ( iFormat = 0; iFormat < format.length; iFormat++ ) {
+			if ( literal ) {
+				if ( format.charAt( iFormat ) === "'" && !lookAhead( "'" ) ) {
+					literal = false;
+				} else {
+					checkLiteral();
+				}
+			} else {
+				switch ( format.charAt( iFormat ) ) {
+					case "d":
+						day = getNumber( "d" );
+						break;
+					case "D":
+						getName( "D", dayNamesShort, dayNames );
+						break;
+					case "o":
+						doy = getNumber( "o" );
+						break;
+					case "m":
+						month = getNumber( "m" );
+						break;
+					case "M":
+						month = getName( "M", monthNamesShort, monthNames );
+						break;
+					case "y":
+						year = getNumber( "y" );
+						break;
+					case "@":
+						date = new Date( getNumber( "@" ) );
+						year = date.getFullYear();
+						month = date.getMonth() + 1;
+						day = date.getDate();
+						break;
+					case "!":
+						date = new Date( ( getNumber( "!" ) - this._ticksTo1970 ) / 10000 );
+						year = date.getFullYear();
+						month = date.getMonth() + 1;
+						day = date.getDate();
+						break;
+					case "'":
+						if ( lookAhead( "'" ) ) {
+							checkLiteral();
+						} else {
+							literal = true;
+						}
+						break;
+					default:
+						checkLiteral();
+				}
+			}
+		}
+
+		if ( iValue < value.length ) {
+			extra = value.substr( iValue );
+			if ( !/^\s+/.test( extra ) ) {
+				throw "Extra/unparsed characters found in date: " + extra;
+			}
+		}
+
+		if ( year === -1 ) {
+			year = new Date().getFullYear();
+		} else if ( year < 100 ) {
+			year += new Date().getFullYear() - new Date().getFullYear() % 100 +
+				( year <= shortYearCutoff ? 0 : -100 );
+		}
+
+		if ( doy > -1 ) {
+			month = 1;
+			day = doy;
+			do {
+				dim = this._getDaysInMonth( year, month - 1 );
+				if ( day <= dim ) {
+					break;
+				}
+				month++;
+				day -= dim;
+			} while ( true );
+		}
+
+		date = this._daylightSavingAdjust( new Date( year, month - 1, day ) );
+		if ( date.getFullYear() !== year || date.getMonth() + 1 !== month || date.getDate() !== day ) {
+			throw "Invalid date"; // E.g. 31/02/00
+		}
+		return date;
+	},
+
+	/* Standard date formats. */
+	ATOM: "yy-mm-dd", // RFC 3339 (ISO 8601)
+	COOKIE: "D, dd M yy",
+	ISO_8601: "yy-mm-dd",
+	RFC_822: "D, d M y",
+	RFC_850: "DD, dd-M-y",
+	RFC_1036: "D, d M y",
+	RFC_1123: "D, d M yy",
+	RFC_2822: "D, d M yy",
+	RSS: "D, d M y", // RFC 822
+	TICKS: "!",
+	TIMESTAMP: "@",
+	W3C: "yy-mm-dd", // ISO 8601
+
+	_ticksTo1970: ( ( ( 1970 - 1 ) * 365 + Math.floor( 1970 / 4 ) - Math.floor( 1970 / 100 ) +
+		Math.floor( 1970 / 400 ) ) * 24 * 60 * 60 * 10000000 ),
+
+	/* Format a date object into a string value.
+	 * The format can be combinations of the following:
+	 * d  - day of month (no leading zero)
+	 * dd - day of month (two digit)
+	 * o  - day of year (no leading zeros)
+	 * oo - day of year (three digit)
+	 * D  - day name short
+	 * DD - day name long
+	 * m  - month of year (no leading zero)
+	 * mm - month of year (two digit)
+	 * M  - month name short
+	 * MM - month name long
+	 * y  - year (two digit)
+	 * yy - year (four digit)
+	 * @ - Unix timestamp (ms since 01/01/1970)
+	 * ! - Windows ticks (100ns since 01/01/0001)
+	 * "..." - literal text
+	 * '' - single quote
+	 *
+	 * @param  format string - the desired format of the date
+	 * @param  date Date - the date value to format
+	 * @param  settings Object - attributes include:
+	 *					dayNamesShort	string[7] - abbreviated names of the days from Sunday (optional)
+	 *					dayNames		string[7] - names of the days from Sunday (optional)
+	 *					monthNamesShort string[12] - abbreviated names of the months (optional)
+	 *					monthNames		string[12] - names of the months (optional)
+	 * @return  string - the date in the above format
+	 */
+	formatDate: function( format, date, settings ) {
+		if ( !date ) {
+			return "";
+		}
+
+		var iFormat,
+			dayNamesShort = ( settings ? settings.dayNamesShort : null ) || this._defaults.dayNamesShort,
+			dayNames = ( settings ? settings.dayNames : null ) || this._defaults.dayNames,
+			monthNamesShort = ( settings ? settings.monthNamesShort : null ) || this._defaults.monthNamesShort,
+			monthNames = ( settings ? settings.monthNames : null ) || this._defaults.monthNames,
+
+			// Check whether a format character is doubled
+			lookAhead = function( match ) {
+				var matches = ( iFormat + 1 < format.length && format.charAt( iFormat + 1 ) === match );
+				if ( matches ) {
+					iFormat++;
+				}
+				return matches;
+			},
+
+			// Format a number, with leading zero if necessary
+			formatNumber = function( match, value, len ) {
+				var num = "" + value;
+				if ( lookAhead( match ) ) {
+					while ( num.length < len ) {
+						num = "0" + num;
+					}
+				}
+				return num;
+			},
+
+			// Format a name, short or long as requested
+			formatName = function( match, value, shortNames, longNames ) {
+				return ( lookAhead( match ) ? longNames[ value ] : shortNames[ value ] );
+			},
+			output = "",
+			literal = false;
+
+		if ( date ) {
+			for ( iFormat = 0; iFormat < format.length; iFormat++ ) {
+				if ( literal ) {
+					if ( format.charAt( iFormat ) === "'" && !lookAhead( "'" ) ) {
+						literal = false;
+					} else {
+						output += format.charAt( iFormat );
+					}
+				} else {
+					switch ( format.charAt( iFormat ) ) {
+						case "d":
+							output += formatNumber( "d", date.getDate(), 2 );
+							break;
+						case "D":
+							output += formatName( "D", date.getDay(), dayNamesShort, dayNames );
+							break;
+						case "o":
+							output += formatNumber( "o",
+								Math.round( ( new Date( date.getFullYear(), date.getMonth(), date.getDate() ).getTime() - new Date( date.getFullYear(), 0, 0 ).getTime() ) / 86400000 ), 3 );
+							break;
+						case "m":
+							output += formatNumber( "m", date.getMonth() + 1, 2 );
+							break;
+						case "M":
+							output += formatName( "M", date.getMonth(), monthNamesShort, monthNames );
+							break;
+						case "y":
+							output += ( lookAhead( "y" ) ? date.getFullYear() :
+								( date.getFullYear() % 100 < 10 ? "0" : "" ) + date.getFullYear() % 100 );
+							break;
+						case "@":
+							output += date.getTime();
+							break;
+						case "!":
+							output += date.getTime() * 10000 + this._ticksTo1970;
+							break;
+						case "'":
+							if ( lookAhead( "'" ) ) {
+								output += "'";
+							} else {
+								literal = true;
+							}
+							break;
+						default:
+							output += format.charAt( iFormat );
+					}
+				}
+			}
+		}
+		return output;
+	},
+
+	/* Extract all possible characters from the date format. */
+	_possibleChars: function( format ) {
+		var iFormat,
+			chars = "",
+			literal = false,
+
+			// Check whether a format character is doubled
+			lookAhead = function( match ) {
+				var matches = ( iFormat + 1 < format.length && format.charAt( iFormat + 1 ) === match );
+				if ( matches ) {
+					iFormat++;
+				}
+				return matches;
+			};
+
+		for ( iFormat = 0; iFormat < format.length; iFormat++ ) {
+			if ( literal ) {
+				if ( format.charAt( iFormat ) === "'" && !lookAhead( "'" ) ) {
+					literal = false;
+				} else {
+					chars += format.charAt( iFormat );
+				}
+			} else {
+				switch ( format.charAt( iFormat ) ) {
+					case "d": case "m": case "y": case "@":
+						chars += "0123456789";
+						break;
+					case "D": case "M":
+						return null; // Accept anything
+					case "'":
+						if ( lookAhead( "'" ) ) {
+							chars += "'";
+						} else {
+							literal = true;
+						}
+						break;
+					default:
+						chars += format.charAt( iFormat );
+				}
+			}
+		}
+		return chars;
+	},
+
+	/* Get a setting value, defaulting if necessary. */
+	_get: function( inst, name ) {
+		return inst.settings[ name ] !== undefined ?
+			inst.settings[ name ] : this._defaults[ name ];
+	},
+
+	/* Parse existing date and initialise date picker. */
+	_setDateFromField: function( inst, noDefault ) {
+		if ( inst.input.val() === inst.lastVal ) {
+			return;
+		}
+
+		var dateFormat = this._get( inst, "dateFormat" ),
+			dates = inst.lastVal = inst.input ? inst.input.val() : null,
+			defaultDate = this._getDefaultDate( inst ),
+			date = defaultDate,
+			settings = this._getFormatConfig( inst );
+
+		try {
+			date = this.parseDate( dateFormat, dates, settings ) || defaultDate;
+		} catch ( event ) {
+			dates = ( noDefault ? "" : dates );
+		}
+		inst.selectedDay = date.getDate();
+		inst.drawMonth = inst.selectedMonth = date.getMonth();
+		inst.drawYear = inst.selectedYear = date.getFullYear();
+		inst.currentDay = ( dates ? date.getDate() : 0 );
+		inst.currentMonth = ( dates ? date.getMonth() : 0 );
+		inst.currentYear = ( dates ? date.getFullYear() : 0 );
+		this._adjustInstDate( inst );
+	},
+
+	/* Retrieve the default date shown on opening. */
+	_getDefaultDate: function( inst ) {
+		return this._restrictMinMax( inst,
+			this._determineDate( inst, this._get( inst, "defaultDate" ), new Date() ) );
+	},
+
+	/* A date may be specified as an exact value or a relative one. */
+	_determineDate: function( inst, date, defaultDate ) {
+		var offsetNumeric = function( offset ) {
+				var date = new Date();
+				date.setDate( date.getDate() + offset );
+				return date;
+			},
+			offsetString = function( offset ) {
+				try {
+					return $.datepicker.parseDate( $.datepicker._get( inst, "dateFormat" ),
+						offset, $.datepicker._getFormatConfig( inst ) );
+				}
+				catch ( e ) {
+
+					// Ignore
+				}
+
+				var date = ( offset.toLowerCase().match( /^c/ ) ?
+					$.datepicker._getDate( inst ) : null ) || new Date(),
+					year = date.getFullYear(),
+					month = date.getMonth(),
+					day = date.getDate(),
+					pattern = /([+\-]?[0-9]+)\s*(d|D|w|W|m|M|y|Y)?/g,
+					matches = pattern.exec( offset );
+
+				while ( matches ) {
+					switch ( matches[ 2 ] || "d" ) {
+						case "d" : case "D" :
+							day += parseInt( matches[ 1 ], 10 ); break;
+						case "w" : case "W" :
+							day += parseInt( matches[ 1 ], 10 ) * 7; break;
+						case "m" : case "M" :
+							month += parseInt( matches[ 1 ], 10 );
+							day = Math.min( day, $.datepicker._getDaysInMonth( year, month ) );
+							break;
+						case "y": case "Y" :
+							year += parseInt( matches[ 1 ], 10 );
+							day = Math.min( day, $.datepicker._getDaysInMonth( year, month ) );
+							break;
+					}
+					matches = pattern.exec( offset );
+				}
+				return new Date( year, month, day );
+			},
+			newDate = ( date == null || date === "" ? defaultDate : ( typeof date === "string" ? offsetString( date ) :
+				( typeof date === "number" ? ( isNaN( date ) ? defaultDate : offsetNumeric( date ) ) : new Date( date.getTime() ) ) ) );
+
+		newDate = ( newDate && newDate.toString() === "Invalid Date" ? defaultDate : newDate );
+		if ( newDate ) {
+			newDate.setHours( 0 );
+			newDate.setMinutes( 0 );
+			newDate.setSeconds( 0 );
+			newDate.setMilliseconds( 0 );
+		}
+		return this._daylightSavingAdjust( newDate );
+	},
+
+	/* Handle switch to/from daylight saving.
+	 * Hours may be non-zero on daylight saving cut-over:
+	 * > 12 when midnight changeover, but then cannot generate
+	 * midnight datetime, so jump to 1AM, otherwise reset.
+	 * @param  date  (Date) the date to check
+	 * @return  (Date) the corrected date
+	 */
+	_daylightSavingAdjust: function( date ) {
+		if ( !date ) {
+			return null;
+		}
+		date.setHours( date.getHours() > 12 ? date.getHours() + 2 : 0 );
+		return date;
+	},
+
+	/* Set the date(s) directly. */
+	_setDate: function( inst, date, noChange ) {
+		var clear = !date,
+			origMonth = inst.selectedMonth,
+			origYear = inst.selectedYear,
+			newDate = this._restrictMinMax( inst, this._determineDate( inst, date, new Date() ) );
+
+		inst.selectedDay = inst.currentDay = newDate.getDate();
+		inst.drawMonth = inst.selectedMonth = inst.currentMonth = newDate.getMonth();
+		inst.drawYear = inst.selectedYear = inst.currentYear = newDate.getFullYear();
+		if ( ( origMonth !== inst.selectedMonth || origYear !== inst.selectedYear ) && !noChange ) {
+			this._notifyChange( inst );
+		}
+		this._adjustInstDate( inst );
+		if ( inst.input ) {
+			inst.input.val( clear ? "" : this._formatDate( inst ) );
+		}
+	},
+
+	/* Retrieve the date(s) directly. */
+	_getDate: function( inst ) {
+		var startDate = ( !inst.currentYear || ( inst.input && inst.input.val() === "" ) ? null :
+			this._daylightSavingAdjust( new Date(
+			inst.currentYear, inst.currentMonth, inst.currentDay ) ) );
+			return startDate;
+	},
+
+	/* Attach the onxxx handlers.  These are declared statically so
+	 * they work with static code transformers like Caja.
+	 */
+	_attachHandlers: function( inst ) {
+		var stepMonths = this._get( inst, "stepMonths" ),
+			id = "#" + inst.id.replace( /\\\\/g, "\\" );
+		inst.dpDiv.find( "[data-handler]" ).map( function() {
+			var handler = {
+				prev: function() {
+					$.datepicker._adjustDate( id, -stepMonths, "M" );
+				},
+				next: function() {
+					$.datepicker._adjustDate( id, +stepMonths, "M" );
+				},
+				hide: function() {
+					$.datepicker._hideDatepicker();
+				},
+				today: function() {
+					$.datepicker._gotoToday( id );
+				},
+				selectDay: function() {
+					$.datepicker._selectDay( id, +this.getAttribute( "data-month" ), +this.getAttribute( "data-year" ), this );
+					return false;
+				},
+				selectMonth: function() {
+					$.datepicker._selectMonthYear( id, this, "M" );
+					return false;
+				},
+				selectYear: function() {
+					$.datepicker._selectMonthYear( id, this, "Y" );
+					return false;
+				}
+			};
+			$( this ).on( this.getAttribute( "data-event" ), handler[ this.getAttribute( "data-handler" ) ] );
+		} );
+	},
+
+	/* Generate the HTML for the current state of the date picker. */
+	_generateHTML: function( inst ) {
+		var maxDraw, prevText, prev, nextText, next, currentText, gotoDate,
+			controls, buttonPanel, firstDay, showWeek, dayNames, dayNamesMin,
+			monthNames, monthNamesShort, beforeShowDay, showOtherMonths,
+			selectOtherMonths, defaultDate, html, dow, row, group, col, selectedDate,
+			cornerClass, calender, thead, day, daysInMonth, leadDays, curRows, numRows,
+			printDate, dRow, tbody, daySettings, otherMonth, unselectable,
+			tempDate = new Date(),
+			today = this._daylightSavingAdjust(
+				new Date( tempDate.getFullYear(), tempDate.getMonth(), tempDate.getDate() ) ), // clear time
+			isRTL = this._get( inst, "isRTL" ),
+			showButtonPanel = this._get( inst, "showButtonPanel" ),
+			hideIfNoPrevNext = this._get( inst, "hideIfNoPrevNext" ),
+			navigationAsDateFormat = this._get( inst, "navigationAsDateFormat" ),
+			numMonths = this._getNumberOfMonths( inst ),
+			showCurrentAtPos = this._get( inst, "showCurrentAtPos" ),
+			stepMonths = this._get( inst, "stepMonths" ),
+			isMultiMonth = ( numMonths[ 0 ] !== 1 || numMonths[ 1 ] !== 1 ),
+			currentDate = this._daylightSavingAdjust( ( !inst.currentDay ? new Date( 9999, 9, 9 ) :
+				new Date( inst.currentYear, inst.currentMonth, inst.currentDay ) ) ),
+			minDate = this._getMinMaxDate( inst, "min" ),
+			maxDate = this._getMinMaxDate( inst, "max" ),
+			drawMonth = inst.drawMonth - showCurrentAtPos,
+			drawYear = inst.drawYear;
+
+		if ( drawMonth < 0 ) {
+			drawMonth += 12;
+			drawYear--;
+		}
+		if ( maxDate ) {
+			maxDraw = this._daylightSavingAdjust( new Date( maxDate.getFullYear(),
+				maxDate.getMonth() - ( numMonths[ 0 ] * numMonths[ 1 ] ) + 1, maxDate.getDate() ) );
+			maxDraw = ( minDate && maxDraw < minDate ? minDate : maxDraw );
+			while ( this._daylightSavingAdjust( new Date( drawYear, drawMonth, 1 ) ) > maxDraw ) {
+				drawMonth--;
+				if ( drawMonth < 0 ) {
+					drawMonth = 11;
+					drawYear--;
+				}
+			}
+		}
+		inst.drawMonth = drawMonth;
+		inst.drawYear = drawYear;
+
+		prevText = this._get( inst, "prevText" );
+		prevText = ( !navigationAsDateFormat ? prevText : this.formatDate( prevText,
+			this._daylightSavingAdjust( new Date( drawYear, drawMonth - stepMonths, 1 ) ),
+			this._getFormatConfig( inst ) ) );
+
+		prev = ( this._canAdjustMonth( inst, -1, drawYear, drawMonth ) ?
+			"<a class='ui-datepicker-prev ui-corner-all' data-handler='prev' data-event='click'" +
+			" title='" + prevText + "'><span class='ui-icon ui-icon-circle-triangle-" + ( isRTL ? "e" : "w" ) + "'>" + prevText + "</span></a>" :
+			( hideIfNoPrevNext ? "" : "<a class='ui-datepicker-prev ui-corner-all ui-state-disabled' title='" + prevText + "'><span class='ui-icon ui-icon-circle-triangle-" + ( isRTL ? "e" : "w" ) + "'>" + prevText + "</span></a>" ) );
+
+		nextText = this._get( inst, "nextText" );
+		nextText = ( !navigationAsDateFormat ? nextText : this.formatDate( nextText,
+			this._daylightSavingAdjust( new Date( drawYear, drawMonth + stepMonths, 1 ) ),
+			this._getFormatConfig( inst ) ) );
+
+		next = ( this._canAdjustMonth( inst, +1, drawYear, drawMonth ) ?
+			"<a class='ui-datepicker-next ui-corner-all' data-handler='next' data-event='click'" +
+			" title='" + nextText + "'><span class='ui-icon ui-icon-circle-triangle-" + ( isRTL ? "w" : "e" ) + "'>" + nextText + "</span></a>" :
+			( hideIfNoPrevNext ? "" : "<a class='ui-datepicker-next ui-corner-all ui-state-disabled' title='" + nextText + "'><span class='ui-icon ui-icon-circle-triangle-" + ( isRTL ? "w" : "e" ) + "'>" + nextText + "</span></a>" ) );
+
+		currentText = this._get( inst, "currentText" );
+		gotoDate = ( this._get( inst, "gotoCurrent" ) && inst.currentDay ? currentDate : today );
+		currentText = ( !navigationAsDateFormat ? currentText :
+			this.formatDate( currentText, gotoDate, this._getFormatConfig( inst ) ) );
+
+		controls = ( !inst.inline ? "<button type='button' class='ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all' data-handler='hide' data-event='click'>" +
+			this._get( inst, "closeText" ) + "</button>" : "" );
+
+		buttonPanel = ( showButtonPanel ) ? "<div class='ui-datepicker-buttonpane ui-widget-content'>" + ( isRTL ? controls : "" ) +
+			( this._isInRange( inst, gotoDate ) ? "<button type='button' class='ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all' data-handler='today' data-event='click'" +
+			">" + currentText + "</button>" : "" ) + ( isRTL ? "" : controls ) + "</div>" : "";
+
+		firstDay = parseInt( this._get( inst, "firstDay" ), 10 );
+		firstDay = ( isNaN( firstDay ) ? 0 : firstDay );
+
+		showWeek = this._get( inst, "showWeek" );
+		dayNames = this._get( inst, "dayNames" );
+		dayNamesMin = this._get( inst, "dayNamesMin" );
+		monthNames = this._get( inst, "monthNames" );
+		monthNamesShort = this._get( inst, "monthNamesShort" );
+		beforeShowDay = this._get( inst, "beforeShowDay" );
+		showOtherMonths = this._get( inst, "showOtherMonths" );
+		selectOtherMonths = this._get( inst, "selectOtherMonths" );
+		defaultDate = this._getDefaultDate( inst );
+		html = "";
+
+		for ( row = 0; row < numMonths[ 0 ]; row++ ) {
+			group = "";
+			this.maxRows = 4;
+			for ( col = 0; col < numMonths[ 1 ]; col++ ) {
+				selectedDate = this._daylightSavingAdjust( new Date( drawYear, drawMonth, inst.selectedDay ) );
+				cornerClass = " ui-corner-all";
+				calender = "";
+				if ( isMultiMonth ) {
+					calender += "<div class='ui-datepicker-group";
+					if ( numMonths[ 1 ] > 1 ) {
+						switch ( col ) {
+							case 0: calender += " ui-datepicker-group-first";
+								cornerClass = " ui-corner-" + ( isRTL ? "right" : "left" ); break;
+							case numMonths[ 1 ] - 1: calender += " ui-datepicker-group-last";
+								cornerClass = " ui-corner-" + ( isRTL ? "left" : "right" ); break;
+							default: calender += " ui-datepicker-group-middle"; cornerClass = ""; break;
+						}
+					}
+					calender += "'>";
+				}
+				calender += "<div class='ui-datepicker-header ui-widget-header ui-helper-clearfix" + cornerClass + "'>" +
+					( /all|left/.test( cornerClass ) && row === 0 ? ( isRTL ? next : prev ) : "" ) +
+					( /all|right/.test( cornerClass ) && row === 0 ? ( isRTL ? prev : next ) : "" ) +
+					this._generateMonthYearHeader( inst, drawMonth, drawYear, minDate, maxDate,
+					row > 0 || col > 0, monthNames, monthNamesShort ) + // draw month headers
+					"</div><table class='ui-datepicker-calendar'><thead>" +
+					"<tr>";
+				thead = ( showWeek ? "<th class='ui-datepicker-week-col'>" + this._get( inst, "weekHeader" ) + "</th>" : "" );
+				for ( dow = 0; dow < 7; dow++ ) { // days of the week
+					day = ( dow + firstDay ) % 7;
+					thead += "<th scope='col'" + ( ( dow + firstDay + 6 ) % 7 >= 5 ? " class='ui-datepicker-week-end'" : "" ) + ">" +
+						"<span title='" + dayNames[ day ] + "'>" + dayNamesMin[ day ] + "</span></th>";
+				}
+				calender += thead + "</tr></thead><tbody>";
+				daysInMonth = this._getDaysInMonth( drawYear, drawMonth );
+				if ( drawYear === inst.selectedYear && drawMonth === inst.selectedMonth ) {
+					inst.selectedDay = Math.min( inst.selectedDay, daysInMonth );
+				}
+				leadDays = ( this._getFirstDayOfMonth( drawYear, drawMonth ) - firstDay + 7 ) % 7;
+				curRows = Math.ceil( ( leadDays + daysInMonth ) / 7 ); // calculate the number of rows to generate
+				numRows = ( isMultiMonth ? this.maxRows > curRows ? this.maxRows : curRows : curRows ); //If multiple months, use the higher number of rows (see #7043)
+				this.maxRows = numRows;
+				printDate = this._daylightSavingAdjust( new Date( drawYear, drawMonth, 1 - leadDays ) );
+				for ( dRow = 0; dRow < numRows; dRow++ ) { // create date picker rows
+					calender += "<tr>";
+					tbody = ( !showWeek ? "" : "<td class='ui-datepicker-week-col'>" +
+						this._get( inst, "calculateWeek" )( printDate ) + "</td>" );
+					for ( dow = 0; dow < 7; dow++ ) { // create date picker days
+						daySettings = ( beforeShowDay ?
+							beforeShowDay.apply( ( inst.input ? inst.input[ 0 ] : null ), [ printDate ] ) : [ true, "" ] );
+						otherMonth = ( printDate.getMonth() !== drawMonth );
+						unselectable = ( otherMonth && !selectOtherMonths ) || !daySettings[ 0 ] ||
+							( minDate && printDate < minDate ) || ( maxDate && printDate > maxDate );
+						tbody += "<td class='" +
+							( ( dow + firstDay + 6 ) % 7 >= 5 ? " ui-datepicker-week-end" : "" ) + // highlight weekends
+							( otherMonth ? " ui-datepicker-other-month" : "" ) + // highlight days from other months
+							( ( printDate.getTime() === selectedDate.getTime() && drawMonth === inst.selectedMonth && inst._keyEvent ) || // user pressed key
+							( defaultDate.getTime() === printDate.getTime() && defaultDate.getTime() === selectedDate.getTime() ) ?
+
+							// or defaultDate is current printedDate and defaultDate is selectedDate
+							" " + this._dayOverClass : "" ) + // highlight selected day
+							( unselectable ? " " + this._unselectableClass + " ui-state-disabled" : "" ) +  // highlight unselectable days
+							( otherMonth && !showOtherMonths ? "" : " " + daySettings[ 1 ] + // highlight custom dates
+							( printDate.getTime() === currentDate.getTime() ? " " + this._currentClass : "" ) + // highlight selected day
+							( printDate.getTime() === today.getTime() ? " ui-datepicker-today" : "" ) ) + "'" + // highlight today (if different)
+							( ( !otherMonth || showOtherMonths ) && daySettings[ 2 ] ? " title='" + daySettings[ 2 ].replace( /'/g, "&#39;" ) + "'" : "" ) + // cell title
+							( unselectable ? "" : " data-handler='selectDay' data-event='click' data-month='" + printDate.getMonth() + "' data-year='" + printDate.getFullYear() + "'" ) + ">" + // actions
+							( otherMonth && !showOtherMonths ? "&#xa0;" : // display for other months
+							( unselectable ? "<span class='ui-state-default'>" + printDate.getDate() + "</span>" : "<a class='ui-state-default" +
+							( printDate.getTime() === today.getTime() ? " ui-state-highlight" : "" ) +
+							( printDate.getTime() === currentDate.getTime() ? " ui-state-active" : "" ) + // highlight selected day
+							( otherMonth ? " ui-priority-secondary" : "" ) + // distinguish dates from other months
+							"' href='#'>" + printDate.getDate() + "</a>" ) ) + "</td>"; // display selectable date
+						printDate.setDate( printDate.getDate() + 1 );
+						printDate = this._daylightSavingAdjust( printDate );
+					}
+					calender += tbody + "</tr>";
+				}
+				drawMonth++;
+				if ( drawMonth > 11 ) {
+					drawMonth = 0;
+					drawYear++;
+				}
+				calender += "</tbody></table>" + ( isMultiMonth ? "</div>" +
+							( ( numMonths[ 0 ] > 0 && col === numMonths[ 1 ] - 1 ) ? "<div class='ui-datepicker-row-break'></div>" : "" ) : "" );
+				group += calender;
+			}
+			html += group;
+		}
+		html += buttonPanel;
+		inst._keyEvent = false;
+		return html;
+	},
+
+	/* Generate the month and year header. */
+	_generateMonthYearHeader: function( inst, drawMonth, drawYear, minDate, maxDate,
+			secondary, monthNames, monthNamesShort ) {
+
+		var inMinYear, inMaxYear, month, years, thisYear, determineYear, year, endYear,
+			changeMonth = this._get( inst, "changeMonth" ),
+			changeYear = this._get( inst, "changeYear" ),
+			showMonthAfterYear = this._get( inst, "showMonthAfterYear" ),
+			html = "<div class='ui-datepicker-title'>",
+			monthHtml = "";
+
+		// Month selection
+		if ( secondary || !changeMonth ) {
+			monthHtml += "<span class='ui-datepicker-month'>" + monthNames[ drawMonth ] + "</span>";
+		} else {
+			inMinYear = ( minDate && minDate.getFullYear() === drawYear );
+			inMaxYear = ( maxDate && maxDate.getFullYear() === drawYear );
+			monthHtml += "<select class='ui-datepicker-month' data-handler='selectMonth' data-event='change'>";
+			for ( month = 0; month < 12; month++ ) {
+				if ( ( !inMinYear || month >= minDate.getMonth() ) && ( !inMaxYear || month <= maxDate.getMonth() ) ) {
+					monthHtml += "<option value='" + month + "'" +
+						( month === drawMonth ? " selected='selected'" : "" ) +
+						">" + monthNamesShort[ month ] + "</option>";
+				}
+			}
+			monthHtml += "</select>";
+		}
+
+		if ( !showMonthAfterYear ) {
+			html += monthHtml + ( secondary || !( changeMonth && changeYear ) ? "&#xa0;" : "" );
+		}
+
+		// Year selection
+		if ( !inst.yearshtml ) {
+			inst.yearshtml = "";
+			if ( secondary || !changeYear ) {
+				html += "<span class='ui-datepicker-year'>" + drawYear + "</span>";
+			} else {
+
+				// determine range of years to display
+				years = this._get( inst, "yearRange" ).split( ":" );
+				thisYear = new Date().getFullYear();
+				determineYear = function( value ) {
+					var year = ( value.match( /c[+\-].*/ ) ? drawYear + parseInt( value.substring( 1 ), 10 ) :
+						( value.match( /[+\-].*/ ) ? thisYear + parseInt( value, 10 ) :
+						parseInt( value, 10 ) ) );
+					return ( isNaN( year ) ? thisYear : year );
+				};
+				year = determineYear( years[ 0 ] );
+				endYear = Math.max( year, determineYear( years[ 1 ] || "" ) );
+				year = ( minDate ? Math.max( year, minDate.getFullYear() ) : year );
+				endYear = ( maxDate ? Math.min( endYear, maxDate.getFullYear() ) : endYear );
+				inst.yearshtml += "<select class='ui-datepicker-year' data-handler='selectYear' data-event='change'>";
+				for ( ; year <= endYear; year++ ) {
+					inst.yearshtml += "<option value='" + year + "'" +
+						( year === drawYear ? " selected='selected'" : "" ) +
+						">" + year + "</option>";
+				}
+				inst.yearshtml += "</select>";
+
+				html += inst.yearshtml;
+				inst.yearshtml = null;
+			}
+		}
+
+		html += this._get( inst, "yearSuffix" );
+		if ( showMonthAfterYear ) {
+			html += ( secondary || !( changeMonth && changeYear ) ? "&#xa0;" : "" ) + monthHtml;
+		}
+		html += "</div>"; // Close datepicker_header
+		return html;
+	},
+
+	/* Adjust one of the date sub-fields. */
+	_adjustInstDate: function( inst, offset, period ) {
+		var year = inst.selectedYear + ( period === "Y" ? offset : 0 ),
+			month = inst.selectedMonth + ( period === "M" ? offset : 0 ),
+			day = Math.min( inst.selectedDay, this._getDaysInMonth( year, month ) ) + ( period === "D" ? offset : 0 ),
+			date = this._restrictMinMax( inst, this._daylightSavingAdjust( new Date( year, month, day ) ) );
+
+		inst.selectedDay = date.getDate();
+		inst.drawMonth = inst.selectedMonth = date.getMonth();
+		inst.drawYear = inst.selectedYear = date.getFullYear();
+		if ( period === "M" || period === "Y" ) {
+			this._notifyChange( inst );
+		}
+	},
+
+	/* Ensure a date is within any min/max bounds. */
+	_restrictMinMax: function( inst, date ) {
+		var minDate = this._getMinMaxDate( inst, "min" ),
+			maxDate = this._getMinMaxDate( inst, "max" ),
+			newDate = ( minDate && date < minDate ? minDate : date );
+		return ( maxDate && newDate > maxDate ? maxDate : newDate );
+	},
+
+	/* Notify change of month/year. */
+	_notifyChange: function( inst ) {
+		var onChange = this._get( inst, "onChangeMonthYear" );
+		if ( onChange ) {
+			onChange.apply( ( inst.input ? inst.input[ 0 ] : null ),
+				[ inst.selectedYear, inst.selectedMonth + 1, inst ] );
+		}
+	},
+
+	/* Determine the number of months to show. */
+	_getNumberOfMonths: function( inst ) {
+		var numMonths = this._get( inst, "numberOfMonths" );
+		return ( numMonths == null ? [ 1, 1 ] : ( typeof numMonths === "number" ? [ 1, numMonths ] : numMonths ) );
+	},
+
+	/* Determine the current maximum date - ensure no time components are set. */
+	_getMinMaxDate: function( inst, minMax ) {
+		return this._determineDate( inst, this._get( inst, minMax + "Date" ), null );
+	},
+
+	/* Find the number of days in a given month. */
+	_getDaysInMonth: function( year, month ) {
+		return 32 - this._daylightSavingAdjust( new Date( year, month, 32 ) ).getDate();
+	},
+
+	/* Find the day of the week of the first of a month. */
+	_getFirstDayOfMonth: function( year, month ) {
+		return new Date( year, month, 1 ).getDay();
+	},
+
+	/* Determines if we should allow a "next/prev" month display change. */
+	_canAdjustMonth: function( inst, offset, curYear, curMonth ) {
+		var numMonths = this._getNumberOfMonths( inst ),
+			date = this._daylightSavingAdjust( new Date( curYear,
+			curMonth + ( offset < 0 ? offset : numMonths[ 0 ] * numMonths[ 1 ] ), 1 ) );
+
+		if ( offset < 0 ) {
+			date.setDate( this._getDaysInMonth( date.getFullYear(), date.getMonth() ) );
+		}
+		return this._isInRange( inst, date );
+	},
+
+	/* Is the given date in the accepted range? */
+	_isInRange: function( inst, date ) {
+		var yearSplit, currentYear,
+			minDate = this._getMinMaxDate( inst, "min" ),
+			maxDate = this._getMinMaxDate( inst, "max" ),
+			minYear = null,
+			maxYear = null,
+			years = this._get( inst, "yearRange" );
+			if ( years ) {
+				yearSplit = years.split( ":" );
+				currentYear = new Date().getFullYear();
+				minYear = parseInt( yearSplit[ 0 ], 10 );
+				maxYear = parseInt( yearSplit[ 1 ], 10 );
+				if ( yearSplit[ 0 ].match( /[+\-].*/ ) ) {
+					minYear += currentYear;
+				}
+				if ( yearSplit[ 1 ].match( /[+\-].*/ ) ) {
+					maxYear += currentYear;
+				}
+			}
+
+		return ( ( !minDate || date.getTime() >= minDate.getTime() ) &&
+			( !maxDate || date.getTime() <= maxDate.getTime() ) &&
+			( !minYear || date.getFullYear() >= minYear ) &&
+			( !maxYear || date.getFullYear() <= maxYear ) );
+	},
+
+	/* Provide the configuration settings for formatting/parsing. */
+	_getFormatConfig: function( inst ) {
+		var shortYearCutoff = this._get( inst, "shortYearCutoff" );
+		shortYearCutoff = ( typeof shortYearCutoff !== "string" ? shortYearCutoff :
+			new Date().getFullYear() % 100 + parseInt( shortYearCutoff, 10 ) );
+		return { shortYearCutoff: shortYearCutoff,
+			dayNamesShort: this._get( inst, "dayNamesShort" ), dayNames: this._get( inst, "dayNames" ),
+			monthNamesShort: this._get( inst, "monthNamesShort" ), monthNames: this._get( inst, "monthNames" ) };
+	},
+
+	/* Format the given date for display. */
+	_formatDate: function( inst, day, month, year ) {
+		if ( !day ) {
+			inst.currentDay = inst.selectedDay;
+			inst.currentMonth = inst.selectedMonth;
+			inst.currentYear = inst.selectedYear;
+		}
+		var date = ( day ? ( typeof day === "object" ? day :
+			this._daylightSavingAdjust( new Date( year, month, day ) ) ) :
+			this._daylightSavingAdjust( new Date( inst.currentYear, inst.currentMonth, inst.currentDay ) ) );
+		return this.formatDate( this._get( inst, "dateFormat" ), date, this._getFormatConfig( inst ) );
+	}
+} );
+
+/*
+ * Bind hover events for datepicker elements.
+ * Done via delegate so the binding only occurs once in the lifetime of the parent div.
+ * Global datepicker_instActive, set by _updateDatepicker allows the handlers to find their way back to the active picker.
+ */
+function datepicker_bindHover( dpDiv ) {
+	var selector = "button, .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-calendar td a";
+	return dpDiv.on( "mouseout", selector, function() {
+			$( this ).removeClass( "ui-state-hover" );
+			if ( this.className.indexOf( "ui-datepicker-prev" ) !== -1 ) {
+				$( this ).removeClass( "ui-datepicker-prev-hover" );
+			}
+			if ( this.className.indexOf( "ui-datepicker-next" ) !== -1 ) {
+				$( this ).removeClass( "ui-datepicker-next-hover" );
+			}
+		} )
+		.on( "mouseover", selector, datepicker_handleMouseover );
+}
+
+function datepicker_handleMouseover() {
+	if ( !$.datepicker._isDisabledDatepicker( datepicker_instActive.inline ? datepicker_instActive.dpDiv.parent()[ 0 ] : datepicker_instActive.input[ 0 ] ) ) {
+		$( this ).parents( ".ui-datepicker-calendar" ).find( "a" ).removeClass( "ui-state-hover" );
+		$( this ).addClass( "ui-state-hover" );
+		if ( this.className.indexOf( "ui-datepicker-prev" ) !== -1 ) {
+			$( this ).addClass( "ui-datepicker-prev-hover" );
+		}
+		if ( this.className.indexOf( "ui-datepicker-next" ) !== -1 ) {
+			$( this ).addClass( "ui-datepicker-next-hover" );
+		}
+	}
+}
+
+/* jQuery extend now ignores nulls! */
+function datepicker_extendRemove( target, props ) {
+	$.extend( target, props );
+	for ( var name in props ) {
+		if ( props[ name ] == null ) {
+			target[ name ] = props[ name ];
+		}
+	}
+	return target;
+}
+
+/* Invoke the datepicker functionality.
+   @param  options  string - a command, optionally followed by additional parameters or
+					Object - settings for attaching new datepicker functionality
+   @return  jQuery object */
+$.fn.datepicker = function( options ) {
+
+	/* Verify an empty collection wasn't passed - Fixes #6976 */
+	if ( !this.length ) {
+		return this;
+	}
+
+	/* Initialise the date picker. */
+	if ( !$.datepicker.initialized ) {
+		$( document ).on( "mousedown", $.datepicker._checkExternalClick );
+		$.datepicker.initialized = true;
+	}
+
+	/* Append datepicker main container to body if not exist. */
+	if ( $( "#" + $.datepicker._mainDivId ).length === 0 ) {
+		$( "body" ).append( $.datepicker.dpDiv );
+	}
+
+	var otherArgs = Array.prototype.slice.call( arguments, 1 );
+	if ( typeof options === "string" && ( options === "isDisabled" || options === "getDate" || options === "widget" ) ) {
+		return $.datepicker[ "_" + options + "Datepicker" ].
+			apply( $.datepicker, [ this[ 0 ] ].concat( otherArgs ) );
+	}
+	if ( options === "option" && arguments.length === 2 && typeof arguments[ 1 ] === "string" ) {
+		return $.datepicker[ "_" + options + "Datepicker" ].
+			apply( $.datepicker, [ this[ 0 ] ].concat( otherArgs ) );
+	}
+	return this.each( function() {
+		typeof options === "string" ?
+			$.datepicker[ "_" + options + "Datepicker" ].
+				apply( $.datepicker, [ this ].concat( otherArgs ) ) :
+			$.datepicker._attachDatepicker( this, options );
+	} );
+};
+
+$.datepicker = new Datepicker(); // singleton instance
+$.datepicker.initialized = false;
+$.datepicker.uuid = new Date().getTime();
+$.datepicker.version = "1.12.1";
+
+return $.datepicker;
+
+} ) );
 
 
 /***/ }),
@@ -16706,7 +21166,7 @@ module.exports = function isBuffer (obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * jQuery JavaScript Library v3.4.1
+ * jQuery JavaScript Library v3.5.1
  * https://jquery.com/
  *
  * Includes Sizzle.js
@@ -16716,7 +21176,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2019-05-01T21:04Z
+ * Date: 2020-05-04T22:49Z
  */
 ( function( global, factory ) {
 
@@ -16754,13 +21214,16 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 var arr = [];
 
-var document = window.document;
-
 var getProto = Object.getPrototypeOf;
 
 var slice = arr.slice;
 
-var concat = arr.concat;
+var flat = arr.flat ? function( array ) {
+	return arr.flat.call( array );
+} : function( array ) {
+	return arr.concat.apply( [], array );
+};
+
 
 var push = arr.push;
 
@@ -16792,6 +21255,8 @@ var isWindow = function isWindow( obj ) {
 		return obj != null && obj === obj.window;
 	};
 
+
+var document = window.document;
 
 
 
@@ -16849,7 +21314,7 @@ function toType( obj ) {
 
 
 var
-	version = "3.4.1",
+	version = "3.5.1",
 
 	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
@@ -16857,11 +21322,7 @@ var
 		// The jQuery object is actually just the init constructor 'enhanced'
 		// Need init if jQuery is called (just allow error to be thrown if not included)
 		return new jQuery.fn.init( selector, context );
-	},
-
-	// Support: Android <=4.0 only
-	// Make sure we trim BOM and NBSP
-	rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+	};
 
 jQuery.fn = jQuery.prototype = {
 
@@ -16925,6 +21386,18 @@ jQuery.fn = jQuery.prototype = {
 
 	last: function() {
 		return this.eq( -1 );
+	},
+
+	even: function() {
+		return this.pushStack( jQuery.grep( this, function( _elem, i ) {
+			return ( i + 1 ) % 2;
+		} ) );
+	},
+
+	odd: function() {
+		return this.pushStack( jQuery.grep( this, function( _elem, i ) {
+			return i % 2;
+		} ) );
 	},
 
 	eq: function( i ) {
@@ -17060,9 +21533,10 @@ jQuery.extend( {
 		return true;
 	},
 
-	// Evaluates a script in a global context
-	globalEval: function( code, options ) {
-		DOMEval( code, { nonce: options && options.nonce } );
+	// Evaluates a script in a provided context; falls back to the global one
+	// if not specified.
+	globalEval: function( code, options, doc ) {
+		DOMEval( code, { nonce: options && options.nonce }, doc );
 	},
 
 	each: function( obj, callback ) {
@@ -17084,13 +21558,6 @@ jQuery.extend( {
 		}
 
 		return obj;
-	},
-
-	// Support: Android <=4.0 only
-	trim: function( text ) {
-		return text == null ?
-			"" :
-			( text + "" ).replace( rtrim, "" );
 	},
 
 	// results is for internal usage only
@@ -17179,7 +21646,7 @@ jQuery.extend( {
 		}
 
 		// Flatten any nested arrays
-		return concat.apply( [], ret );
+		return flat( ret );
 	},
 
 	// A global GUID counter for objects
@@ -17196,7 +21663,7 @@ if ( typeof Symbol === "function" ) {
 
 // Populate the class2type map
 jQuery.each( "Boolean Number String Function Array Date RegExp Object Error Symbol".split( " " ),
-function( i, name ) {
+function( _i, name ) {
 	class2type[ "[object " + name + "]" ] = name.toLowerCase();
 } );
 
@@ -17218,17 +21685,16 @@ function isArrayLike( obj ) {
 }
 var Sizzle =
 /*!
- * Sizzle CSS Selector Engine v2.3.4
+ * Sizzle CSS Selector Engine v2.3.5
  * https://sizzlejs.com/
  *
  * Copyright JS Foundation and other contributors
  * Released under the MIT license
  * https://js.foundation/
  *
- * Date: 2019-04-08
+ * Date: 2020-03-14
  */
-(function( window ) {
-
+( function( window ) {
 var i,
 	support,
 	Expr,
@@ -17268,59 +21734,70 @@ var i,
 	},
 
 	// Instance methods
-	hasOwn = ({}).hasOwnProperty,
+	hasOwn = ( {} ).hasOwnProperty,
 	arr = [],
 	pop = arr.pop,
-	push_native = arr.push,
+	pushNative = arr.push,
 	push = arr.push,
 	slice = arr.slice,
+
 	// Use a stripped-down indexOf as it's faster than native
 	// https://jsperf.com/thor-indexof-vs-for/5
 	indexOf = function( list, elem ) {
 		var i = 0,
 			len = list.length;
 		for ( ; i < len; i++ ) {
-			if ( list[i] === elem ) {
+			if ( list[ i ] === elem ) {
 				return i;
 			}
 		}
 		return -1;
 	},
 
-	booleans = "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",
+	booleans = "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|" +
+		"ismap|loop|multiple|open|readonly|required|scoped",
 
 	// Regular expressions
 
 	// http://www.w3.org/TR/css3-selectors/#whitespace
 	whitespace = "[\\x20\\t\\r\\n\\f]",
 
-	// http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
-	identifier = "(?:\\\\.|[\\w-]|[^\0-\\xa0])+",
+	// https://www.w3.org/TR/css-syntax-3/#ident-token-diagram
+	identifier = "(?:\\\\[\\da-fA-F]{1,6}" + whitespace +
+		"?|\\\\[^\\r\\n\\f]|[\\w-]|[^\0-\\x7f])+",
 
 	// Attribute selectors: http://www.w3.org/TR/selectors/#attribute-selectors
 	attributes = "\\[" + whitespace + "*(" + identifier + ")(?:" + whitespace +
+
 		// Operator (capture 2)
 		"*([*^$|!~]?=)" + whitespace +
-		// "Attribute values must be CSS identifiers [capture 5] or strings [capture 3 or capture 4]"
-		"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + identifier + "))|)" + whitespace +
-		"*\\]",
+
+		// "Attribute values must be CSS identifiers [capture 5]
+		// or strings [capture 3 or capture 4]"
+		"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + identifier + "))|)" +
+		whitespace + "*\\]",
 
 	pseudos = ":(" + identifier + ")(?:\\((" +
+
 		// To reduce the number of selectors needing tokenize in the preFilter, prefer arguments:
 		// 1. quoted (capture 3; capture 4 or capture 5)
 		"('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|" +
+
 		// 2. simple (capture 6)
 		"((?:\\\\.|[^\\\\()[\\]]|" + attributes + ")*)|" +
+
 		// 3. anything else (capture 2)
 		".*" +
 		")\\)|)",
 
 	// Leading and non-escaped trailing whitespace, capturing some non-whitespace characters preceding the latter
 	rwhitespace = new RegExp( whitespace + "+", "g" ),
-	rtrim = new RegExp( "^" + whitespace + "+|((?:^|[^\\\\])(?:\\\\.)*)" + whitespace + "+$", "g" ),
+	rtrim = new RegExp( "^" + whitespace + "+|((?:^|[^\\\\])(?:\\\\.)*)" +
+		whitespace + "+$", "g" ),
 
 	rcomma = new RegExp( "^" + whitespace + "*," + whitespace + "*" ),
-	rcombinators = new RegExp( "^" + whitespace + "*([>+~]|" + whitespace + ")" + whitespace + "*" ),
+	rcombinators = new RegExp( "^" + whitespace + "*([>+~]|" + whitespace + ")" + whitespace +
+		"*" ),
 	rdescend = new RegExp( whitespace + "|>" ),
 
 	rpseudo = new RegExp( pseudos ),
@@ -17332,14 +21809,16 @@ var i,
 		"TAG": new RegExp( "^(" + identifier + "|[*])" ),
 		"ATTR": new RegExp( "^" + attributes ),
 		"PSEUDO": new RegExp( "^" + pseudos ),
-		"CHILD": new RegExp( "^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\(" + whitespace +
-			"*(even|odd|(([+-]|)(\\d*)n|)" + whitespace + "*(?:([+-]|)" + whitespace +
-			"*(\\d+)|))" + whitespace + "*\\)|)", "i" ),
+		"CHILD": new RegExp( "^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\(" +
+			whitespace + "*(even|odd|(([+-]|)(\\d*)n|)" + whitespace + "*(?:([+-]|)" +
+			whitespace + "*(\\d+)|))" + whitespace + "*\\)|)", "i" ),
 		"bool": new RegExp( "^(?:" + booleans + ")$", "i" ),
+
 		// For use in libraries implementing .is()
 		// We use this for POS matching in `select`
-		"needsContext": new RegExp( "^" + whitespace + "*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\(" +
-			whitespace + "*((?:-\\d)?\\d*)" + whitespace + "*\\)|)(?=[^-]|$)", "i" )
+		"needsContext": new RegExp( "^" + whitespace +
+			"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\(" + whitespace +
+			"*((?:-\\d)?\\d*)" + whitespace + "*\\)|)(?=[^-]|$)", "i" )
 	},
 
 	rhtml = /HTML$/i,
@@ -17355,18 +21834,21 @@ var i,
 
 	// CSS escapes
 	// http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
-	runescape = new RegExp( "\\\\([\\da-f]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
-	funescape = function( _, escaped, escapedWhitespace ) {
-		var high = "0x" + escaped - 0x10000;
-		// NaN means non-codepoint
-		// Support: Firefox<24
-		// Workaround erroneous numeric interpretation of +"0x"
-		return high !== high || escapedWhitespace ?
-			escaped :
+	runescape = new RegExp( "\\\\[\\da-fA-F]{1,6}" + whitespace + "?|\\\\([^\\r\\n\\f])", "g" ),
+	funescape = function( escape, nonHex ) {
+		var high = "0x" + escape.slice( 1 ) - 0x10000;
+
+		return nonHex ?
+
+			// Strip the backslash prefix from a non-hex escape sequence
+			nonHex :
+
+			// Replace a hexadecimal escape sequence with the encoded Unicode code point
+			// Support: IE <=11+
+			// For values outside the Basic Multilingual Plane (BMP), manually construct a
+			// surrogate pair
 			high < 0 ?
-				// BMP codepoint
 				String.fromCharCode( high + 0x10000 ) :
-				// Supplemental Plane codepoint (surrogate pair)
 				String.fromCharCode( high >> 10 | 0xD800, high & 0x3FF | 0xDC00 );
 	},
 
@@ -17382,7 +21864,8 @@ var i,
 			}
 
 			// Control characters and (dependent upon position) numbers get escaped as code points
-			return ch.slice( 0, -1 ) + "\\" + ch.charCodeAt( ch.length - 1 ).toString( 16 ) + " ";
+			return ch.slice( 0, -1 ) + "\\" +
+				ch.charCodeAt( ch.length - 1 ).toString( 16 ) + " ";
 		}
 
 		// Other potentially-special ASCII characters get backslash-escaped
@@ -17407,18 +21890,20 @@ var i,
 // Optimize for push.apply( _, NodeList )
 try {
 	push.apply(
-		(arr = slice.call( preferredDoc.childNodes )),
+		( arr = slice.call( preferredDoc.childNodes ) ),
 		preferredDoc.childNodes
 	);
+
 	// Support: Android<4.0
 	// Detect silently failing push.apply
+	// eslint-disable-next-line no-unused-expressions
 	arr[ preferredDoc.childNodes.length ].nodeType;
 } catch ( e ) {
 	push = { apply: arr.length ?
 
 		// Leverage slice if possible
 		function( target, els ) {
-			push_native.apply( target, slice.call(els) );
+			pushNative.apply( target, slice.call( els ) );
 		} :
 
 		// Support: IE<9
@@ -17426,8 +21911,9 @@ try {
 		function( target, els ) {
 			var j = target.length,
 				i = 0;
+
 			// Can't trust NodeList.length
-			while ( (target[j++] = els[i++]) ) {}
+			while ( ( target[ j++ ] = els[ i++ ] ) ) {}
 			target.length = j - 1;
 		}
 	};
@@ -17451,24 +21937,21 @@ function Sizzle( selector, context, results, seed ) {
 
 	// Try to shortcut find operations (as opposed to filters) in HTML documents
 	if ( !seed ) {
-
-		if ( ( context ? context.ownerDocument || context : preferredDoc ) !== document ) {
-			setDocument( context );
-		}
+		setDocument( context );
 		context = context || document;
 
 		if ( documentIsHTML ) {
 
 			// If the selector is sufficiently simple, try using a "get*By*" DOM method
 			// (excepting DocumentFragment context, where the methods don't exist)
-			if ( nodeType !== 11 && (match = rquickExpr.exec( selector )) ) {
+			if ( nodeType !== 11 && ( match = rquickExpr.exec( selector ) ) ) {
 
 				// ID selector
-				if ( (m = match[1]) ) {
+				if ( ( m = match[ 1 ] ) ) {
 
 					// Document context
 					if ( nodeType === 9 ) {
-						if ( (elem = context.getElementById( m )) ) {
+						if ( ( elem = context.getElementById( m ) ) ) {
 
 							// Support: IE, Opera, Webkit
 							// TODO: identify versions
@@ -17487,7 +21970,7 @@ function Sizzle( selector, context, results, seed ) {
 						// Support: IE, Opera, Webkit
 						// TODO: identify versions
 						// getElementById can match elements by name instead of ID
-						if ( newContext && (elem = newContext.getElementById( m )) &&
+						if ( newContext && ( elem = newContext.getElementById( m ) ) &&
 							contains( context, elem ) &&
 							elem.id === m ) {
 
@@ -17497,12 +21980,12 @@ function Sizzle( selector, context, results, seed ) {
 					}
 
 				// Type selector
-				} else if ( match[2] ) {
+				} else if ( match[ 2 ] ) {
 					push.apply( results, context.getElementsByTagName( selector ) );
 					return results;
 
 				// Class selector
-				} else if ( (m = match[3]) && support.getElementsByClassName &&
+				} else if ( ( m = match[ 3 ] ) && support.getElementsByClassName &&
 					context.getElementsByClassName ) {
 
 					push.apply( results, context.getElementsByClassName( m ) );
@@ -17513,11 +21996,11 @@ function Sizzle( selector, context, results, seed ) {
 			// Take advantage of querySelectorAll
 			if ( support.qsa &&
 				!nonnativeSelectorCache[ selector + " " ] &&
-				(!rbuggyQSA || !rbuggyQSA.test( selector )) &&
+				( !rbuggyQSA || !rbuggyQSA.test( selector ) ) &&
 
 				// Support: IE 8 only
 				// Exclude object elements
-				(nodeType !== 1 || context.nodeName.toLowerCase() !== "object") ) {
+				( nodeType !== 1 || context.nodeName.toLowerCase() !== "object" ) ) {
 
 				newSelector = selector;
 				newContext = context;
@@ -17526,27 +22009,36 @@ function Sizzle( selector, context, results, seed ) {
 				// descendant combinators, which is not what we want.
 				// In such cases, we work around the behavior by prefixing every selector in the
 				// list with an ID selector referencing the scope context.
+				// The technique has to be used as well when a leading combinator is used
+				// as such selectors are not recognized by querySelectorAll.
 				// Thanks to Andrew Dupont for this technique.
-				if ( nodeType === 1 && rdescend.test( selector ) ) {
+				if ( nodeType === 1 &&
+					( rdescend.test( selector ) || rcombinators.test( selector ) ) ) {
 
-					// Capture the context ID, setting it first if necessary
-					if ( (nid = context.getAttribute( "id" )) ) {
-						nid = nid.replace( rcssescape, fcssescape );
-					} else {
-						context.setAttribute( "id", (nid = expando) );
+					// Expand context for sibling selectors
+					newContext = rsibling.test( selector ) && testContext( context.parentNode ) ||
+						context;
+
+					// We can use :scope instead of the ID hack if the browser
+					// supports it & if we're not changing the context.
+					if ( newContext !== context || !support.scope ) {
+
+						// Capture the context ID, setting it first if necessary
+						if ( ( nid = context.getAttribute( "id" ) ) ) {
+							nid = nid.replace( rcssescape, fcssescape );
+						} else {
+							context.setAttribute( "id", ( nid = expando ) );
+						}
 					}
 
 					// Prefix every selector in the list
 					groups = tokenize( selector );
 					i = groups.length;
 					while ( i-- ) {
-						groups[i] = "#" + nid + " " + toSelector( groups[i] );
+						groups[ i ] = ( nid ? "#" + nid : ":scope" ) + " " +
+							toSelector( groups[ i ] );
 					}
 					newSelector = groups.join( "," );
-
-					// Expand context for sibling selectors
-					newContext = rsibling.test( selector ) && testContext( context.parentNode ) ||
-						context;
 				}
 
 				try {
@@ -17579,12 +22071,14 @@ function createCache() {
 	var keys = [];
 
 	function cache( key, value ) {
+
 		// Use (key + " ") to avoid collision with native prototype properties (see Issue #157)
 		if ( keys.push( key + " " ) > Expr.cacheLength ) {
+
 			// Only keep the most recent entries
 			delete cache[ keys.shift() ];
 		}
-		return (cache[ key + " " ] = value);
+		return ( cache[ key + " " ] = value );
 	}
 	return cache;
 }
@@ -17603,17 +22097,19 @@ function markFunction( fn ) {
  * @param {Function} fn Passed the created element and returns a boolean result
  */
 function assert( fn ) {
-	var el = document.createElement("fieldset");
+	var el = document.createElement( "fieldset" );
 
 	try {
 		return !!fn( el );
-	} catch (e) {
+	} catch ( e ) {
 		return false;
 	} finally {
+
 		// Remove from its parent by default
 		if ( el.parentNode ) {
 			el.parentNode.removeChild( el );
 		}
+
 		// release memory in IE
 		el = null;
 	}
@@ -17625,11 +22121,11 @@ function assert( fn ) {
  * @param {Function} handler The method that will be applied
  */
 function addHandle( attrs, handler ) {
-	var arr = attrs.split("|"),
+	var arr = attrs.split( "|" ),
 		i = arr.length;
 
 	while ( i-- ) {
-		Expr.attrHandle[ arr[i] ] = handler;
+		Expr.attrHandle[ arr[ i ] ] = handler;
 	}
 }
 
@@ -17651,7 +22147,7 @@ function siblingCheck( a, b ) {
 
 	// Check if b follows a
 	if ( cur ) {
-		while ( (cur = cur.nextSibling) ) {
+		while ( ( cur = cur.nextSibling ) ) {
 			if ( cur === b ) {
 				return -1;
 			}
@@ -17679,7 +22175,7 @@ function createInputPseudo( type ) {
 function createButtonPseudo( type ) {
 	return function( elem ) {
 		var name = elem.nodeName.toLowerCase();
-		return (name === "input" || name === "button") && elem.type === type;
+		return ( name === "input" || name === "button" ) && elem.type === type;
 	};
 }
 
@@ -17722,7 +22218,7 @@ function createDisabledPseudo( disabled ) {
 					// Where there is no isDisabled, check manually
 					/* jshint -W018 */
 					elem.isDisabled !== !disabled &&
-						inDisabledFieldset( elem ) === disabled;
+					inDisabledFieldset( elem ) === disabled;
 			}
 
 			return elem.disabled === disabled;
@@ -17744,21 +22240,21 @@ function createDisabledPseudo( disabled ) {
  * @param {Function} fn
  */
 function createPositionalPseudo( fn ) {
-	return markFunction(function( argument ) {
+	return markFunction( function( argument ) {
 		argument = +argument;
-		return markFunction(function( seed, matches ) {
+		return markFunction( function( seed, matches ) {
 			var j,
 				matchIndexes = fn( [], seed.length, argument ),
 				i = matchIndexes.length;
 
 			// Match elements found at the specified indexes
 			while ( i-- ) {
-				if ( seed[ (j = matchIndexes[i]) ] ) {
-					seed[j] = !(matches[j] = seed[j]);
+				if ( seed[ ( j = matchIndexes[ i ] ) ] ) {
+					seed[ j ] = !( matches[ j ] = seed[ j ] );
 				}
 			}
-		});
-	});
+		} );
+	} );
 }
 
 /**
@@ -17780,7 +22276,7 @@ support = Sizzle.support = {};
  */
 isXML = Sizzle.isXML = function( elem ) {
 	var namespace = elem.namespaceURI,
-		docElem = (elem.ownerDocument || elem).documentElement;
+		docElem = ( elem.ownerDocument || elem ).documentElement;
 
 	// Support: IE <=8
 	// Assume HTML when documentElement doesn't yet exist, such as inside loading iframes
@@ -17798,7 +22294,11 @@ setDocument = Sizzle.setDocument = function( node ) {
 		doc = node ? node.ownerDocument || node : preferredDoc;
 
 	// Return early if doc is invalid or already selected
-	if ( doc === document || doc.nodeType !== 9 || !doc.documentElement ) {
+	// Support: IE 11+, Edge 17 - 18+
+	// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+	// two documents; shallow comparisons work.
+	// eslint-disable-next-line eqeqeq
+	if ( doc == document || doc.nodeType !== 9 || !doc.documentElement ) {
 		return document;
 	}
 
@@ -17807,10 +22307,14 @@ setDocument = Sizzle.setDocument = function( node ) {
 	docElem = document.documentElement;
 	documentIsHTML = !isXML( document );
 
-	// Support: IE 9-11, Edge
+	// Support: IE 9 - 11+, Edge 12 - 18+
 	// Accessing iframe documents after unload throws "permission denied" errors (jQuery #13936)
-	if ( preferredDoc !== document &&
-		(subWindow = document.defaultView) && subWindow.top !== subWindow ) {
+	// Support: IE 11+, Edge 17 - 18+
+	// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+	// two documents; shallow comparisons work.
+	// eslint-disable-next-line eqeqeq
+	if ( preferredDoc != document &&
+		( subWindow = document.defaultView ) && subWindow.top !== subWindow ) {
 
 		// Support: IE 11, Edge
 		if ( subWindow.addEventListener ) {
@@ -17822,25 +22326,36 @@ setDocument = Sizzle.setDocument = function( node ) {
 		}
 	}
 
+	// Support: IE 8 - 11+, Edge 12 - 18+, Chrome <=16 - 25 only, Firefox <=3.6 - 31 only,
+	// Safari 4 - 5 only, Opera <=11.6 - 12.x only
+	// IE/Edge & older browsers don't support the :scope pseudo-class.
+	// Support: Safari 6.0 only
+	// Safari 6.0 supports :scope but it's an alias of :root there.
+	support.scope = assert( function( el ) {
+		docElem.appendChild( el ).appendChild( document.createElement( "div" ) );
+		return typeof el.querySelectorAll !== "undefined" &&
+			!el.querySelectorAll( ":scope fieldset div" ).length;
+	} );
+
 	/* Attributes
 	---------------------------------------------------------------------- */
 
 	// Support: IE<8
 	// Verify that getAttribute really returns attributes and not properties
 	// (excepting IE8 booleans)
-	support.attributes = assert(function( el ) {
+	support.attributes = assert( function( el ) {
 		el.className = "i";
-		return !el.getAttribute("className");
-	});
+		return !el.getAttribute( "className" );
+	} );
 
 	/* getElement(s)By*
 	---------------------------------------------------------------------- */
 
 	// Check if getElementsByTagName("*") returns only elements
-	support.getElementsByTagName = assert(function( el ) {
-		el.appendChild( document.createComment("") );
-		return !el.getElementsByTagName("*").length;
-	});
+	support.getElementsByTagName = assert( function( el ) {
+		el.appendChild( document.createComment( "" ) );
+		return !el.getElementsByTagName( "*" ).length;
+	} );
 
 	// Support: IE<9
 	support.getElementsByClassName = rnative.test( document.getElementsByClassName );
@@ -17849,38 +22364,38 @@ setDocument = Sizzle.setDocument = function( node ) {
 	// Check if getElementById returns elements by name
 	// The broken getElementById methods don't pick up programmatically-set names,
 	// so use a roundabout getElementsByName test
-	support.getById = assert(function( el ) {
+	support.getById = assert( function( el ) {
 		docElem.appendChild( el ).id = expando;
 		return !document.getElementsByName || !document.getElementsByName( expando ).length;
-	});
+	} );
 
 	// ID filter and find
 	if ( support.getById ) {
-		Expr.filter["ID"] = function( id ) {
+		Expr.filter[ "ID" ] = function( id ) {
 			var attrId = id.replace( runescape, funescape );
 			return function( elem ) {
-				return elem.getAttribute("id") === attrId;
+				return elem.getAttribute( "id" ) === attrId;
 			};
 		};
-		Expr.find["ID"] = function( id, context ) {
+		Expr.find[ "ID" ] = function( id, context ) {
 			if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
 				var elem = context.getElementById( id );
 				return elem ? [ elem ] : [];
 			}
 		};
 	} else {
-		Expr.filter["ID"] =  function( id ) {
+		Expr.filter[ "ID" ] =  function( id ) {
 			var attrId = id.replace( runescape, funescape );
 			return function( elem ) {
 				var node = typeof elem.getAttributeNode !== "undefined" &&
-					elem.getAttributeNode("id");
+					elem.getAttributeNode( "id" );
 				return node && node.value === attrId;
 			};
 		};
 
 		// Support: IE 6 - 7 only
 		// getElementById is not reliable as a find shortcut
-		Expr.find["ID"] = function( id, context ) {
+		Expr.find[ "ID" ] = function( id, context ) {
 			if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
 				var node, i, elems,
 					elem = context.getElementById( id );
@@ -17888,7 +22403,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 				if ( elem ) {
 
 					// Verify the id attribute
-					node = elem.getAttributeNode("id");
+					node = elem.getAttributeNode( "id" );
 					if ( node && node.value === id ) {
 						return [ elem ];
 					}
@@ -17896,8 +22411,8 @@ setDocument = Sizzle.setDocument = function( node ) {
 					// Fall back on getElementsByName
 					elems = context.getElementsByName( id );
 					i = 0;
-					while ( (elem = elems[i++]) ) {
-						node = elem.getAttributeNode("id");
+					while ( ( elem = elems[ i++ ] ) ) {
+						node = elem.getAttributeNode( "id" );
 						if ( node && node.value === id ) {
 							return [ elem ];
 						}
@@ -17910,7 +22425,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 	}
 
 	// Tag
-	Expr.find["TAG"] = support.getElementsByTagName ?
+	Expr.find[ "TAG" ] = support.getElementsByTagName ?
 		function( tag, context ) {
 			if ( typeof context.getElementsByTagName !== "undefined" ) {
 				return context.getElementsByTagName( tag );
@@ -17925,12 +22440,13 @@ setDocument = Sizzle.setDocument = function( node ) {
 			var elem,
 				tmp = [],
 				i = 0,
+
 				// By happy coincidence, a (broken) gEBTN appears on DocumentFragment nodes too
 				results = context.getElementsByTagName( tag );
 
 			// Filter out possible comments
 			if ( tag === "*" ) {
-				while ( (elem = results[i++]) ) {
+				while ( ( elem = results[ i++ ] ) ) {
 					if ( elem.nodeType === 1 ) {
 						tmp.push( elem );
 					}
@@ -17942,7 +22458,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 		};
 
 	// Class
-	Expr.find["CLASS"] = support.getElementsByClassName && function( className, context ) {
+	Expr.find[ "CLASS" ] = support.getElementsByClassName && function( className, context ) {
 		if ( typeof context.getElementsByClassName !== "undefined" && documentIsHTML ) {
 			return context.getElementsByClassName( className );
 		}
@@ -17963,10 +22479,14 @@ setDocument = Sizzle.setDocument = function( node ) {
 	// See https://bugs.jquery.com/ticket/13378
 	rbuggyQSA = [];
 
-	if ( (support.qsa = rnative.test( document.querySelectorAll )) ) {
+	if ( ( support.qsa = rnative.test( document.querySelectorAll ) ) ) {
+
 		// Build QSA regex
 		// Regex strategy adopted from Diego Perini
-		assert(function( el ) {
+		assert( function( el ) {
+
+			var input;
+
 			// Select is set to empty string on purpose
 			// This is to test IE's treatment of not explicitly
 			// setting a boolean content attribute,
@@ -17980,78 +22500,98 @@ setDocument = Sizzle.setDocument = function( node ) {
 			// Nothing should be selected when empty strings follow ^= or $= or *=
 			// The test attribute must be unknown in Opera but "safe" for WinRT
 			// https://msdn.microsoft.com/en-us/library/ie/hh465388.aspx#attribute_section
-			if ( el.querySelectorAll("[msallowcapture^='']").length ) {
+			if ( el.querySelectorAll( "[msallowcapture^='']" ).length ) {
 				rbuggyQSA.push( "[*^$]=" + whitespace + "*(?:''|\"\")" );
 			}
 
 			// Support: IE8
 			// Boolean attributes and "value" are not treated correctly
-			if ( !el.querySelectorAll("[selected]").length ) {
+			if ( !el.querySelectorAll( "[selected]" ).length ) {
 				rbuggyQSA.push( "\\[" + whitespace + "*(?:value|" + booleans + ")" );
 			}
 
 			// Support: Chrome<29, Android<4.4, Safari<7.0+, iOS<7.0+, PhantomJS<1.9.8+
 			if ( !el.querySelectorAll( "[id~=" + expando + "-]" ).length ) {
-				rbuggyQSA.push("~=");
+				rbuggyQSA.push( "~=" );
+			}
+
+			// Support: IE 11+, Edge 15 - 18+
+			// IE 11/Edge don't find elements on a `[name='']` query in some cases.
+			// Adding a temporary attribute to the document before the selection works
+			// around the issue.
+			// Interestingly, IE 10 & older don't seem to have the issue.
+			input = document.createElement( "input" );
+			input.setAttribute( "name", "" );
+			el.appendChild( input );
+			if ( !el.querySelectorAll( "[name='']" ).length ) {
+				rbuggyQSA.push( "\\[" + whitespace + "*name" + whitespace + "*=" +
+					whitespace + "*(?:''|\"\")" );
 			}
 
 			// Webkit/Opera - :checked should return selected option elements
 			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
 			// IE8 throws error here and will not see later tests
-			if ( !el.querySelectorAll(":checked").length ) {
-				rbuggyQSA.push(":checked");
+			if ( !el.querySelectorAll( ":checked" ).length ) {
+				rbuggyQSA.push( ":checked" );
 			}
 
 			// Support: Safari 8+, iOS 8+
 			// https://bugs.webkit.org/show_bug.cgi?id=136851
 			// In-page `selector#id sibling-combinator selector` fails
 			if ( !el.querySelectorAll( "a#" + expando + "+*" ).length ) {
-				rbuggyQSA.push(".#.+[+~]");
+				rbuggyQSA.push( ".#.+[+~]" );
 			}
-		});
 
-		assert(function( el ) {
+			// Support: Firefox <=3.6 - 5 only
+			// Old Firefox doesn't throw on a badly-escaped identifier.
+			el.querySelectorAll( "\\\f" );
+			rbuggyQSA.push( "[\\r\\n\\f]" );
+		} );
+
+		assert( function( el ) {
 			el.innerHTML = "<a href='' disabled='disabled'></a>" +
 				"<select disabled='disabled'><option/></select>";
 
 			// Support: Windows 8 Native Apps
 			// The type and name attributes are restricted during .innerHTML assignment
-			var input = document.createElement("input");
+			var input = document.createElement( "input" );
 			input.setAttribute( "type", "hidden" );
 			el.appendChild( input ).setAttribute( "name", "D" );
 
 			// Support: IE8
 			// Enforce case-sensitivity of name attribute
-			if ( el.querySelectorAll("[name=d]").length ) {
+			if ( el.querySelectorAll( "[name=d]" ).length ) {
 				rbuggyQSA.push( "name" + whitespace + "*[*^$|!~]?=" );
 			}
 
 			// FF 3.5 - :enabled/:disabled and hidden elements (hidden elements are still enabled)
 			// IE8 throws error here and will not see later tests
-			if ( el.querySelectorAll(":enabled").length !== 2 ) {
+			if ( el.querySelectorAll( ":enabled" ).length !== 2 ) {
 				rbuggyQSA.push( ":enabled", ":disabled" );
 			}
 
 			// Support: IE9-11+
 			// IE's :disabled selector does not pick up the children of disabled fieldsets
 			docElem.appendChild( el ).disabled = true;
-			if ( el.querySelectorAll(":disabled").length !== 2 ) {
+			if ( el.querySelectorAll( ":disabled" ).length !== 2 ) {
 				rbuggyQSA.push( ":enabled", ":disabled" );
 			}
 
+			// Support: Opera 10 - 11 only
 			// Opera 10-11 does not throw on post-comma invalid pseudos
-			el.querySelectorAll("*,:x");
-			rbuggyQSA.push(",.*:");
-		});
+			el.querySelectorAll( "*,:x" );
+			rbuggyQSA.push( ",.*:" );
+		} );
 	}
 
-	if ( (support.matchesSelector = rnative.test( (matches = docElem.matches ||
+	if ( ( support.matchesSelector = rnative.test( ( matches = docElem.matches ||
 		docElem.webkitMatchesSelector ||
 		docElem.mozMatchesSelector ||
 		docElem.oMatchesSelector ||
-		docElem.msMatchesSelector) )) ) {
+		docElem.msMatchesSelector ) ) ) ) {
 
-		assert(function( el ) {
+		assert( function( el ) {
+
 			// Check to see if it's possible to do matchesSelector
 			// on a disconnected node (IE 9)
 			support.disconnectedMatch = matches.call( el, "*" );
@@ -18060,11 +22600,11 @@ setDocument = Sizzle.setDocument = function( node ) {
 			// Gecko does not error, returns false instead
 			matches.call( el, "[s!='']:x" );
 			rbuggyMatches.push( "!=", pseudos );
-		});
+		} );
 	}
 
-	rbuggyQSA = rbuggyQSA.length && new RegExp( rbuggyQSA.join("|") );
-	rbuggyMatches = rbuggyMatches.length && new RegExp( rbuggyMatches.join("|") );
+	rbuggyQSA = rbuggyQSA.length && new RegExp( rbuggyQSA.join( "|" ) );
+	rbuggyMatches = rbuggyMatches.length && new RegExp( rbuggyMatches.join( "|" ) );
 
 	/* Contains
 	---------------------------------------------------------------------- */
@@ -18081,11 +22621,11 @@ setDocument = Sizzle.setDocument = function( node ) {
 				adown.contains ?
 					adown.contains( bup ) :
 					a.compareDocumentPosition && a.compareDocumentPosition( bup ) & 16
-			));
+			) );
 		} :
 		function( a, b ) {
 			if ( b ) {
-				while ( (b = b.parentNode) ) {
+				while ( ( b = b.parentNode ) ) {
 					if ( b === a ) {
 						return true;
 					}
@@ -18114,7 +22654,11 @@ setDocument = Sizzle.setDocument = function( node ) {
 		}
 
 		// Calculate position if both inputs belong to the same document
-		compare = ( a.ownerDocument || a ) === ( b.ownerDocument || b ) ?
+		// Support: IE 11+, Edge 17 - 18+
+		// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+		// two documents; shallow comparisons work.
+		// eslint-disable-next-line eqeqeq
+		compare = ( a.ownerDocument || a ) == ( b.ownerDocument || b ) ?
 			a.compareDocumentPosition( b ) :
 
 			// Otherwise we know they are disconnected
@@ -18122,13 +22666,24 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 		// Disconnected nodes
 		if ( compare & 1 ||
-			(!support.sortDetached && b.compareDocumentPosition( a ) === compare) ) {
+			( !support.sortDetached && b.compareDocumentPosition( a ) === compare ) ) {
 
 			// Choose the first element that is related to our preferred document
-			if ( a === document || a.ownerDocument === preferredDoc && contains(preferredDoc, a) ) {
+			// Support: IE 11+, Edge 17 - 18+
+			// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+			// two documents; shallow comparisons work.
+			// eslint-disable-next-line eqeqeq
+			if ( a == document || a.ownerDocument == preferredDoc &&
+				contains( preferredDoc, a ) ) {
 				return -1;
 			}
-			if ( b === document || b.ownerDocument === preferredDoc && contains(preferredDoc, b) ) {
+
+			// Support: IE 11+, Edge 17 - 18+
+			// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+			// two documents; shallow comparisons work.
+			// eslint-disable-next-line eqeqeq
+			if ( b == document || b.ownerDocument == preferredDoc &&
+				contains( preferredDoc, b ) ) {
 				return 1;
 			}
 
@@ -18141,6 +22696,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 		return compare & 4 ? -1 : 1;
 	} :
 	function( a, b ) {
+
 		// Exit early if the nodes are identical
 		if ( a === b ) {
 			hasDuplicate = true;
@@ -18156,8 +22712,14 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 		// Parentless nodes are either documents or disconnected
 		if ( !aup || !bup ) {
-			return a === document ? -1 :
-				b === document ? 1 :
+
+			// Support: IE 11+, Edge 17 - 18+
+			// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+			// two documents; shallow comparisons work.
+			/* eslint-disable eqeqeq */
+			return a == document ? -1 :
+				b == document ? 1 :
+				/* eslint-enable eqeqeq */
 				aup ? -1 :
 				bup ? 1 :
 				sortInput ?
@@ -18171,26 +22733,32 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 		// Otherwise we need full lists of their ancestors for comparison
 		cur = a;
-		while ( (cur = cur.parentNode) ) {
+		while ( ( cur = cur.parentNode ) ) {
 			ap.unshift( cur );
 		}
 		cur = b;
-		while ( (cur = cur.parentNode) ) {
+		while ( ( cur = cur.parentNode ) ) {
 			bp.unshift( cur );
 		}
 
 		// Walk down the tree looking for a discrepancy
-		while ( ap[i] === bp[i] ) {
+		while ( ap[ i ] === bp[ i ] ) {
 			i++;
 		}
 
 		return i ?
+
 			// Do a sibling check if the nodes have a common ancestor
-			siblingCheck( ap[i], bp[i] ) :
+			siblingCheck( ap[ i ], bp[ i ] ) :
 
 			// Otherwise nodes in our document sort first
-			ap[i] === preferredDoc ? -1 :
-			bp[i] === preferredDoc ? 1 :
+			// Support: IE 11+, Edge 17 - 18+
+			// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+			// two documents; shallow comparisons work.
+			/* eslint-disable eqeqeq */
+			ap[ i ] == preferredDoc ? -1 :
+			bp[ i ] == preferredDoc ? 1 :
+			/* eslint-enable eqeqeq */
 			0;
 	};
 
@@ -18202,10 +22770,7 @@ Sizzle.matches = function( expr, elements ) {
 };
 
 Sizzle.matchesSelector = function( elem, expr ) {
-	// Set document vars if needed
-	if ( ( elem.ownerDocument || elem ) !== document ) {
-		setDocument( elem );
-	}
+	setDocument( elem );
 
 	if ( support.matchesSelector && documentIsHTML &&
 		!nonnativeSelectorCache[ expr + " " ] &&
@@ -18217,12 +22782,13 @@ Sizzle.matchesSelector = function( elem, expr ) {
 
 			// IE 9's matchesSelector returns false on disconnected nodes
 			if ( ret || support.disconnectedMatch ||
-					// As well, disconnected nodes are said to be in a document
-					// fragment in IE 9
-					elem.document && elem.document.nodeType !== 11 ) {
+
+				// As well, disconnected nodes are said to be in a document
+				// fragment in IE 9
+				elem.document && elem.document.nodeType !== 11 ) {
 				return ret;
 			}
-		} catch (e) {
+		} catch ( e ) {
 			nonnativeSelectorCache( expr, true );
 		}
 	}
@@ -18231,20 +22797,31 @@ Sizzle.matchesSelector = function( elem, expr ) {
 };
 
 Sizzle.contains = function( context, elem ) {
+
 	// Set document vars if needed
-	if ( ( context.ownerDocument || context ) !== document ) {
+	// Support: IE 11+, Edge 17 - 18+
+	// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+	// two documents; shallow comparisons work.
+	// eslint-disable-next-line eqeqeq
+	if ( ( context.ownerDocument || context ) != document ) {
 		setDocument( context );
 	}
 	return contains( context, elem );
 };
 
 Sizzle.attr = function( elem, name ) {
+
 	// Set document vars if needed
-	if ( ( elem.ownerDocument || elem ) !== document ) {
+	// Support: IE 11+, Edge 17 - 18+
+	// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+	// two documents; shallow comparisons work.
+	// eslint-disable-next-line eqeqeq
+	if ( ( elem.ownerDocument || elem ) != document ) {
 		setDocument( elem );
 	}
 
 	var fn = Expr.attrHandle[ name.toLowerCase() ],
+
 		// Don't get fooled by Object.prototype properties (jQuery #13807)
 		val = fn && hasOwn.call( Expr.attrHandle, name.toLowerCase() ) ?
 			fn( elem, name, !documentIsHTML ) :
@@ -18254,13 +22831,13 @@ Sizzle.attr = function( elem, name ) {
 		val :
 		support.attributes || !documentIsHTML ?
 			elem.getAttribute( name ) :
-			(val = elem.getAttributeNode(name)) && val.specified ?
+			( val = elem.getAttributeNode( name ) ) && val.specified ?
 				val.value :
 				null;
 };
 
 Sizzle.escape = function( sel ) {
-	return (sel + "").replace( rcssescape, fcssescape );
+	return ( sel + "" ).replace( rcssescape, fcssescape );
 };
 
 Sizzle.error = function( msg ) {
@@ -18283,7 +22860,7 @@ Sizzle.uniqueSort = function( results ) {
 	results.sort( sortOrder );
 
 	if ( hasDuplicate ) {
-		while ( (elem = results[i++]) ) {
+		while ( ( elem = results[ i++ ] ) ) {
 			if ( elem === results[ i ] ) {
 				j = duplicates.push( i );
 			}
@@ -18311,17 +22888,21 @@ getText = Sizzle.getText = function( elem ) {
 		nodeType = elem.nodeType;
 
 	if ( !nodeType ) {
+
 		// If no nodeType, this is expected to be an array
-		while ( (node = elem[i++]) ) {
+		while ( ( node = elem[ i++ ] ) ) {
+
 			// Do not traverse comment nodes
 			ret += getText( node );
 		}
 	} else if ( nodeType === 1 || nodeType === 9 || nodeType === 11 ) {
+
 		// Use textContent for elements
 		// innerText usage removed for consistency of new lines (jQuery #11153)
 		if ( typeof elem.textContent === "string" ) {
 			return elem.textContent;
 		} else {
+
 			// Traverse its children
 			for ( elem = elem.firstChild; elem; elem = elem.nextSibling ) {
 				ret += getText( elem );
@@ -18330,6 +22911,7 @@ getText = Sizzle.getText = function( elem ) {
 	} else if ( nodeType === 3 || nodeType === 4 ) {
 		return elem.nodeValue;
 	}
+
 	// Do not include comment or processing instruction nodes
 
 	return ret;
@@ -18357,19 +22939,21 @@ Expr = Sizzle.selectors = {
 
 	preFilter: {
 		"ATTR": function( match ) {
-			match[1] = match[1].replace( runescape, funescape );
+			match[ 1 ] = match[ 1 ].replace( runescape, funescape );
 
 			// Move the given value to match[3] whether quoted or unquoted
-			match[3] = ( match[3] || match[4] || match[5] || "" ).replace( runescape, funescape );
+			match[ 3 ] = ( match[ 3 ] || match[ 4 ] ||
+				match[ 5 ] || "" ).replace( runescape, funescape );
 
-			if ( match[2] === "~=" ) {
-				match[3] = " " + match[3] + " ";
+			if ( match[ 2 ] === "~=" ) {
+				match[ 3 ] = " " + match[ 3 ] + " ";
 			}
 
 			return match.slice( 0, 4 );
 		},
 
 		"CHILD": function( match ) {
+
 			/* matches from matchExpr["CHILD"]
 				1 type (only|nth|...)
 				2 what (child|of-type)
@@ -18380,22 +22964,25 @@ Expr = Sizzle.selectors = {
 				7 sign of y-component
 				8 y of y-component
 			*/
-			match[1] = match[1].toLowerCase();
+			match[ 1 ] = match[ 1 ].toLowerCase();
 
-			if ( match[1].slice( 0, 3 ) === "nth" ) {
+			if ( match[ 1 ].slice( 0, 3 ) === "nth" ) {
+
 				// nth-* requires argument
-				if ( !match[3] ) {
-					Sizzle.error( match[0] );
+				if ( !match[ 3 ] ) {
+					Sizzle.error( match[ 0 ] );
 				}
 
 				// numeric x and y parameters for Expr.filter.CHILD
 				// remember that false/true cast respectively to 0/1
-				match[4] = +( match[4] ? match[5] + (match[6] || 1) : 2 * ( match[3] === "even" || match[3] === "odd" ) );
-				match[5] = +( ( match[7] + match[8] ) || match[3] === "odd" );
+				match[ 4 ] = +( match[ 4 ] ?
+					match[ 5 ] + ( match[ 6 ] || 1 ) :
+					2 * ( match[ 3 ] === "even" || match[ 3 ] === "odd" ) );
+				match[ 5 ] = +( ( match[ 7 ] + match[ 8 ] ) || match[ 3 ] === "odd" );
 
-			// other types prohibit arguments
-			} else if ( match[3] ) {
-				Sizzle.error( match[0] );
+				// other types prohibit arguments
+			} else if ( match[ 3 ] ) {
+				Sizzle.error( match[ 0 ] );
 			}
 
 			return match;
@@ -18403,26 +22990,28 @@ Expr = Sizzle.selectors = {
 
 		"PSEUDO": function( match ) {
 			var excess,
-				unquoted = !match[6] && match[2];
+				unquoted = !match[ 6 ] && match[ 2 ];
 
-			if ( matchExpr["CHILD"].test( match[0] ) ) {
+			if ( matchExpr[ "CHILD" ].test( match[ 0 ] ) ) {
 				return null;
 			}
 
 			// Accept quoted arguments as-is
-			if ( match[3] ) {
-				match[2] = match[4] || match[5] || "";
+			if ( match[ 3 ] ) {
+				match[ 2 ] = match[ 4 ] || match[ 5 ] || "";
 
 			// Strip excess characters from unquoted arguments
 			} else if ( unquoted && rpseudo.test( unquoted ) &&
+
 				// Get excess from tokenize (recursively)
-				(excess = tokenize( unquoted, true )) &&
+				( excess = tokenize( unquoted, true ) ) &&
+
 				// advance to the next closing parenthesis
-				(excess = unquoted.indexOf( ")", unquoted.length - excess ) - unquoted.length) ) {
+				( excess = unquoted.indexOf( ")", unquoted.length - excess ) - unquoted.length ) ) {
 
 				// excess is a negative index
-				match[0] = match[0].slice( 0, excess );
-				match[2] = unquoted.slice( 0, excess );
+				match[ 0 ] = match[ 0 ].slice( 0, excess );
+				match[ 2 ] = unquoted.slice( 0, excess );
 			}
 
 			// Return only captures needed by the pseudo filter method (type and argument)
@@ -18435,7 +23024,9 @@ Expr = Sizzle.selectors = {
 		"TAG": function( nodeNameSelector ) {
 			var nodeName = nodeNameSelector.replace( runescape, funescape ).toLowerCase();
 			return nodeNameSelector === "*" ?
-				function() { return true; } :
+				function() {
+					return true;
+				} :
 				function( elem ) {
 					return elem.nodeName && elem.nodeName.toLowerCase() === nodeName;
 				};
@@ -18445,10 +23036,16 @@ Expr = Sizzle.selectors = {
 			var pattern = classCache[ className + " " ];
 
 			return pattern ||
-				(pattern = new RegExp( "(^|" + whitespace + ")" + className + "(" + whitespace + "|$)" )) &&
-				classCache( className, function( elem ) {
-					return pattern.test( typeof elem.className === "string" && elem.className || typeof elem.getAttribute !== "undefined" && elem.getAttribute("class") || "" );
-				});
+				( pattern = new RegExp( "(^|" + whitespace +
+					")" + className + "(" + whitespace + "|$)" ) ) && classCache(
+						className, function( elem ) {
+							return pattern.test(
+								typeof elem.className === "string" && elem.className ||
+								typeof elem.getAttribute !== "undefined" &&
+									elem.getAttribute( "class" ) ||
+								""
+							);
+				} );
 		},
 
 		"ATTR": function( name, operator, check ) {
@@ -18464,6 +23061,8 @@ Expr = Sizzle.selectors = {
 
 				result += "";
 
+				/* eslint-disable max-len */
+
 				return operator === "=" ? result === check :
 					operator === "!=" ? result !== check :
 					operator === "^=" ? check && result.indexOf( check ) === 0 :
@@ -18472,10 +23071,12 @@ Expr = Sizzle.selectors = {
 					operator === "~=" ? ( " " + result.replace( rwhitespace, " " ) + " " ).indexOf( check ) > -1 :
 					operator === "|=" ? result === check || result.slice( 0, check.length + 1 ) === check + "-" :
 					false;
+				/* eslint-enable max-len */
+
 			};
 		},
 
-		"CHILD": function( type, what, argument, first, last ) {
+		"CHILD": function( type, what, _argument, first, last ) {
 			var simple = type.slice( 0, 3 ) !== "nth",
 				forward = type.slice( -4 ) !== "last",
 				ofType = what === "of-type";
@@ -18487,7 +23088,7 @@ Expr = Sizzle.selectors = {
 					return !!elem.parentNode;
 				} :
 
-				function( elem, context, xml ) {
+				function( elem, _context, xml ) {
 					var cache, uniqueCache, outerCache, node, nodeIndex, start,
 						dir = simple !== forward ? "nextSibling" : "previousSibling",
 						parent = elem.parentNode,
@@ -18501,7 +23102,7 @@ Expr = Sizzle.selectors = {
 						if ( simple ) {
 							while ( dir ) {
 								node = elem;
-								while ( (node = node[ dir ]) ) {
+								while ( ( node = node[ dir ] ) ) {
 									if ( ofType ?
 										node.nodeName.toLowerCase() === name :
 										node.nodeType === 1 ) {
@@ -18509,6 +23110,7 @@ Expr = Sizzle.selectors = {
 										return false;
 									}
 								}
+
 								// Reverse direction for :only-* (if we haven't yet done so)
 								start = dir = type === "only" && !start && "nextSibling";
 							}
@@ -18524,22 +23126,22 @@ Expr = Sizzle.selectors = {
 
 							// ...in a gzip-friendly way
 							node = parent;
-							outerCache = node[ expando ] || (node[ expando ] = {});
+							outerCache = node[ expando ] || ( node[ expando ] = {} );
 
 							// Support: IE <9 only
 							// Defend against cloned attroperties (jQuery gh-1709)
 							uniqueCache = outerCache[ node.uniqueID ] ||
-								(outerCache[ node.uniqueID ] = {});
+								( outerCache[ node.uniqueID ] = {} );
 
 							cache = uniqueCache[ type ] || [];
 							nodeIndex = cache[ 0 ] === dirruns && cache[ 1 ];
 							diff = nodeIndex && cache[ 2 ];
 							node = nodeIndex && parent.childNodes[ nodeIndex ];
 
-							while ( (node = ++nodeIndex && node && node[ dir ] ||
+							while ( ( node = ++nodeIndex && node && node[ dir ] ||
 
 								// Fallback to seeking `elem` from the start
-								(diff = nodeIndex = 0) || start.pop()) ) {
+								( diff = nodeIndex = 0 ) || start.pop() ) ) {
 
 								// When found, cache indexes on `parent` and break
 								if ( node.nodeType === 1 && ++diff && node === elem ) {
@@ -18549,16 +23151,18 @@ Expr = Sizzle.selectors = {
 							}
 
 						} else {
+
 							// Use previously-cached element index if available
 							if ( useCache ) {
+
 								// ...in a gzip-friendly way
 								node = elem;
-								outerCache = node[ expando ] || (node[ expando ] = {});
+								outerCache = node[ expando ] || ( node[ expando ] = {} );
 
 								// Support: IE <9 only
 								// Defend against cloned attroperties (jQuery gh-1709)
 								uniqueCache = outerCache[ node.uniqueID ] ||
-									(outerCache[ node.uniqueID ] = {});
+									( outerCache[ node.uniqueID ] = {} );
 
 								cache = uniqueCache[ type ] || [];
 								nodeIndex = cache[ 0 ] === dirruns && cache[ 1 ];
@@ -18568,9 +23172,10 @@ Expr = Sizzle.selectors = {
 							// xml :nth-child(...)
 							// or :nth-last-child(...) or :nth(-last)?-of-type(...)
 							if ( diff === false ) {
+
 								// Use the same loop as above to seek `elem` from the start
-								while ( (node = ++nodeIndex && node && node[ dir ] ||
-									(diff = nodeIndex = 0) || start.pop()) ) {
+								while ( ( node = ++nodeIndex && node && node[ dir ] ||
+									( diff = nodeIndex = 0 ) || start.pop() ) ) {
 
 									if ( ( ofType ?
 										node.nodeName.toLowerCase() === name :
@@ -18579,12 +23184,13 @@ Expr = Sizzle.selectors = {
 
 										// Cache the index of each encountered element
 										if ( useCache ) {
-											outerCache = node[ expando ] || (node[ expando ] = {});
+											outerCache = node[ expando ] ||
+												( node[ expando ] = {} );
 
 											// Support: IE <9 only
 											// Defend against cloned attroperties (jQuery gh-1709)
 											uniqueCache = outerCache[ node.uniqueID ] ||
-												(outerCache[ node.uniqueID ] = {});
+												( outerCache[ node.uniqueID ] = {} );
 
 											uniqueCache[ type ] = [ dirruns, diff ];
 										}
@@ -18605,6 +23211,7 @@ Expr = Sizzle.selectors = {
 		},
 
 		"PSEUDO": function( pseudo, argument ) {
+
 			// pseudo-class names are case-insensitive
 			// http://www.w3.org/TR/selectors/#pseudo-classes
 			// Prioritize by case sensitivity in case custom pseudos are added with uppercase letters
@@ -18624,15 +23231,15 @@ Expr = Sizzle.selectors = {
 			if ( fn.length > 1 ) {
 				args = [ pseudo, pseudo, "", argument ];
 				return Expr.setFilters.hasOwnProperty( pseudo.toLowerCase() ) ?
-					markFunction(function( seed, matches ) {
+					markFunction( function( seed, matches ) {
 						var idx,
 							matched = fn( seed, argument ),
 							i = matched.length;
 						while ( i-- ) {
-							idx = indexOf( seed, matched[i] );
-							seed[ idx ] = !( matches[ idx ] = matched[i] );
+							idx = indexOf( seed, matched[ i ] );
+							seed[ idx ] = !( matches[ idx ] = matched[ i ] );
 						}
-					}) :
+					} ) :
 					function( elem ) {
 						return fn( elem, 0, args );
 					};
@@ -18643,8 +23250,10 @@ Expr = Sizzle.selectors = {
 	},
 
 	pseudos: {
+
 		// Potentially complex pseudos
-		"not": markFunction(function( selector ) {
+		"not": markFunction( function( selector ) {
+
 			// Trim the selector passed to compile
 			// to avoid treating leading and trailing
 			// spaces as combinators
@@ -18653,39 +23262,40 @@ Expr = Sizzle.selectors = {
 				matcher = compile( selector.replace( rtrim, "$1" ) );
 
 			return matcher[ expando ] ?
-				markFunction(function( seed, matches, context, xml ) {
+				markFunction( function( seed, matches, _context, xml ) {
 					var elem,
 						unmatched = matcher( seed, null, xml, [] ),
 						i = seed.length;
 
 					// Match elements unmatched by `matcher`
 					while ( i-- ) {
-						if ( (elem = unmatched[i]) ) {
-							seed[i] = !(matches[i] = elem);
+						if ( ( elem = unmatched[ i ] ) ) {
+							seed[ i ] = !( matches[ i ] = elem );
 						}
 					}
-				}) :
-				function( elem, context, xml ) {
-					input[0] = elem;
+				} ) :
+				function( elem, _context, xml ) {
+					input[ 0 ] = elem;
 					matcher( input, null, xml, results );
+
 					// Don't keep the element (issue #299)
-					input[0] = null;
+					input[ 0 ] = null;
 					return !results.pop();
 				};
-		}),
+		} ),
 
-		"has": markFunction(function( selector ) {
+		"has": markFunction( function( selector ) {
 			return function( elem ) {
 				return Sizzle( selector, elem ).length > 0;
 			};
-		}),
+		} ),
 
-		"contains": markFunction(function( text ) {
+		"contains": markFunction( function( text ) {
 			text = text.replace( runescape, funescape );
 			return function( elem ) {
 				return ( elem.textContent || getText( elem ) ).indexOf( text ) > -1;
 			};
-		}),
+		} ),
 
 		// "Whether an element is represented by a :lang() selector
 		// is based solely on the element's language value
@@ -18695,25 +23305,26 @@ Expr = Sizzle.selectors = {
 		// The identifier C does not have to be a valid language name."
 		// http://www.w3.org/TR/selectors/#lang-pseudo
 		"lang": markFunction( function( lang ) {
+
 			// lang value must be a valid identifier
-			if ( !ridentifier.test(lang || "") ) {
+			if ( !ridentifier.test( lang || "" ) ) {
 				Sizzle.error( "unsupported lang: " + lang );
 			}
 			lang = lang.replace( runescape, funescape ).toLowerCase();
 			return function( elem ) {
 				var elemLang;
 				do {
-					if ( (elemLang = documentIsHTML ?
+					if ( ( elemLang = documentIsHTML ?
 						elem.lang :
-						elem.getAttribute("xml:lang") || elem.getAttribute("lang")) ) {
+						elem.getAttribute( "xml:lang" ) || elem.getAttribute( "lang" ) ) ) {
 
 						elemLang = elemLang.toLowerCase();
 						return elemLang === lang || elemLang.indexOf( lang + "-" ) === 0;
 					}
-				} while ( (elem = elem.parentNode) && elem.nodeType === 1 );
+				} while ( ( elem = elem.parentNode ) && elem.nodeType === 1 );
 				return false;
 			};
-		}),
+		} ),
 
 		// Miscellaneous
 		"target": function( elem ) {
@@ -18726,7 +23337,9 @@ Expr = Sizzle.selectors = {
 		},
 
 		"focus": function( elem ) {
-			return elem === document.activeElement && (!document.hasFocus || document.hasFocus()) && !!(elem.type || elem.href || ~elem.tabIndex);
+			return elem === document.activeElement &&
+				( !document.hasFocus || document.hasFocus() ) &&
+				!!( elem.type || elem.href || ~elem.tabIndex );
 		},
 
 		// Boolean properties
@@ -18734,16 +23347,20 @@ Expr = Sizzle.selectors = {
 		"disabled": createDisabledPseudo( true ),
 
 		"checked": function( elem ) {
+
 			// In CSS3, :checked should return both checked and selected elements
 			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
 			var nodeName = elem.nodeName.toLowerCase();
-			return (nodeName === "input" && !!elem.checked) || (nodeName === "option" && !!elem.selected);
+			return ( nodeName === "input" && !!elem.checked ) ||
+				( nodeName === "option" && !!elem.selected );
 		},
 
 		"selected": function( elem ) {
+
 			// Accessing this property makes selected-by-default
 			// options in Safari work properly
 			if ( elem.parentNode ) {
+				// eslint-disable-next-line no-unused-expressions
 				elem.parentNode.selectedIndex;
 			}
 
@@ -18752,6 +23369,7 @@ Expr = Sizzle.selectors = {
 
 		// Contents
 		"empty": function( elem ) {
+
 			// http://www.w3.org/TR/selectors/#empty-pseudo
 			// :empty is negated by element (1) or content nodes (text: 3; cdata: 4; entity ref: 5),
 			//   but not by others (comment: 8; processing instruction: 7; etc.)
@@ -18765,7 +23383,7 @@ Expr = Sizzle.selectors = {
 		},
 
 		"parent": function( elem ) {
-			return !Expr.pseudos["empty"]( elem );
+			return !Expr.pseudos[ "empty" ]( elem );
 		},
 
 		// Element/input types
@@ -18789,39 +23407,40 @@ Expr = Sizzle.selectors = {
 
 				// Support: IE<8
 				// New HTML5 attribute values (e.g., "search") appear with elem.type === "text"
-				( (attr = elem.getAttribute("type")) == null || attr.toLowerCase() === "text" );
+				( ( attr = elem.getAttribute( "type" ) ) == null ||
+					attr.toLowerCase() === "text" );
 		},
 
 		// Position-in-collection
-		"first": createPositionalPseudo(function() {
+		"first": createPositionalPseudo( function() {
 			return [ 0 ];
-		}),
+		} ),
 
-		"last": createPositionalPseudo(function( matchIndexes, length ) {
+		"last": createPositionalPseudo( function( _matchIndexes, length ) {
 			return [ length - 1 ];
-		}),
+		} ),
 
-		"eq": createPositionalPseudo(function( matchIndexes, length, argument ) {
+		"eq": createPositionalPseudo( function( _matchIndexes, length, argument ) {
 			return [ argument < 0 ? argument + length : argument ];
-		}),
+		} ),
 
-		"even": createPositionalPseudo(function( matchIndexes, length ) {
+		"even": createPositionalPseudo( function( matchIndexes, length ) {
 			var i = 0;
 			for ( ; i < length; i += 2 ) {
 				matchIndexes.push( i );
 			}
 			return matchIndexes;
-		}),
+		} ),
 
-		"odd": createPositionalPseudo(function( matchIndexes, length ) {
+		"odd": createPositionalPseudo( function( matchIndexes, length ) {
 			var i = 1;
 			for ( ; i < length; i += 2 ) {
 				matchIndexes.push( i );
 			}
 			return matchIndexes;
-		}),
+		} ),
 
-		"lt": createPositionalPseudo(function( matchIndexes, length, argument ) {
+		"lt": createPositionalPseudo( function( matchIndexes, length, argument ) {
 			var i = argument < 0 ?
 				argument + length :
 				argument > length ?
@@ -18831,19 +23450,19 @@ Expr = Sizzle.selectors = {
 				matchIndexes.push( i );
 			}
 			return matchIndexes;
-		}),
+		} ),
 
-		"gt": createPositionalPseudo(function( matchIndexes, length, argument ) {
+		"gt": createPositionalPseudo( function( matchIndexes, length, argument ) {
 			var i = argument < 0 ? argument + length : argument;
 			for ( ; ++i < length; ) {
 				matchIndexes.push( i );
 			}
 			return matchIndexes;
-		})
+		} )
 	}
 };
 
-Expr.pseudos["nth"] = Expr.pseudos["eq"];
+Expr.pseudos[ "nth" ] = Expr.pseudos[ "eq" ];
 
 // Add button/input type pseudos
 for ( i in { radio: true, checkbox: true, file: true, password: true, image: true } ) {
@@ -18874,37 +23493,39 @@ tokenize = Sizzle.tokenize = function( selector, parseOnly ) {
 	while ( soFar ) {
 
 		// Comma and first run
-		if ( !matched || (match = rcomma.exec( soFar )) ) {
+		if ( !matched || ( match = rcomma.exec( soFar ) ) ) {
 			if ( match ) {
+
 				// Don't consume trailing commas as valid
-				soFar = soFar.slice( match[0].length ) || soFar;
+				soFar = soFar.slice( match[ 0 ].length ) || soFar;
 			}
-			groups.push( (tokens = []) );
+			groups.push( ( tokens = [] ) );
 		}
 
 		matched = false;
 
 		// Combinators
-		if ( (match = rcombinators.exec( soFar )) ) {
+		if ( ( match = rcombinators.exec( soFar ) ) ) {
 			matched = match.shift();
-			tokens.push({
+			tokens.push( {
 				value: matched,
+
 				// Cast descendant combinators to space
-				type: match[0].replace( rtrim, " " )
-			});
+				type: match[ 0 ].replace( rtrim, " " )
+			} );
 			soFar = soFar.slice( matched.length );
 		}
 
 		// Filters
 		for ( type in Expr.filter ) {
-			if ( (match = matchExpr[ type ].exec( soFar )) && (!preFilters[ type ] ||
-				(match = preFilters[ type ]( match ))) ) {
+			if ( ( match = matchExpr[ type ].exec( soFar ) ) && ( !preFilters[ type ] ||
+				( match = preFilters[ type ]( match ) ) ) ) {
 				matched = match.shift();
-				tokens.push({
+				tokens.push( {
 					value: matched,
 					type: type,
 					matches: match
-				});
+				} );
 				soFar = soFar.slice( matched.length );
 			}
 		}
@@ -18921,6 +23542,7 @@ tokenize = Sizzle.tokenize = function( selector, parseOnly ) {
 		soFar.length :
 		soFar ?
 			Sizzle.error( selector ) :
+
 			// Cache the tokens
 			tokenCache( selector, groups ).slice( 0 );
 };
@@ -18930,7 +23552,7 @@ function toSelector( tokens ) {
 		len = tokens.length,
 		selector = "";
 	for ( ; i < len; i++ ) {
-		selector += tokens[i].value;
+		selector += tokens[ i ].value;
 	}
 	return selector;
 }
@@ -18943,9 +23565,10 @@ function addCombinator( matcher, combinator, base ) {
 		doneName = done++;
 
 	return combinator.first ?
+
 		// Check against closest ancestor/preceding element
 		function( elem, context, xml ) {
-			while ( (elem = elem[ dir ]) ) {
+			while ( ( elem = elem[ dir ] ) ) {
 				if ( elem.nodeType === 1 || checkNonElements ) {
 					return matcher( elem, context, xml );
 				}
@@ -18960,7 +23583,7 @@ function addCombinator( matcher, combinator, base ) {
 
 			// We can't set arbitrary data on XML nodes, so they don't benefit from combinator caching
 			if ( xml ) {
-				while ( (elem = elem[ dir ]) ) {
+				while ( ( elem = elem[ dir ] ) ) {
 					if ( elem.nodeType === 1 || checkNonElements ) {
 						if ( matcher( elem, context, xml ) ) {
 							return true;
@@ -18968,27 +23591,29 @@ function addCombinator( matcher, combinator, base ) {
 					}
 				}
 			} else {
-				while ( (elem = elem[ dir ]) ) {
+				while ( ( elem = elem[ dir ] ) ) {
 					if ( elem.nodeType === 1 || checkNonElements ) {
-						outerCache = elem[ expando ] || (elem[ expando ] = {});
+						outerCache = elem[ expando ] || ( elem[ expando ] = {} );
 
 						// Support: IE <9 only
 						// Defend against cloned attroperties (jQuery gh-1709)
-						uniqueCache = outerCache[ elem.uniqueID ] || (outerCache[ elem.uniqueID ] = {});
+						uniqueCache = outerCache[ elem.uniqueID ] ||
+							( outerCache[ elem.uniqueID ] = {} );
 
 						if ( skip && skip === elem.nodeName.toLowerCase() ) {
 							elem = elem[ dir ] || elem;
-						} else if ( (oldCache = uniqueCache[ key ]) &&
+						} else if ( ( oldCache = uniqueCache[ key ] ) &&
 							oldCache[ 0 ] === dirruns && oldCache[ 1 ] === doneName ) {
 
 							// Assign to newCache so results back-propagate to previous elements
-							return (newCache[ 2 ] = oldCache[ 2 ]);
+							return ( newCache[ 2 ] = oldCache[ 2 ] );
 						} else {
+
 							// Reuse newcache so results back-propagate to previous elements
 							uniqueCache[ key ] = newCache;
 
 							// A match means we're done; a fail means we have to keep checking
-							if ( (newCache[ 2 ] = matcher( elem, context, xml )) ) {
+							if ( ( newCache[ 2 ] = matcher( elem, context, xml ) ) ) {
 								return true;
 							}
 						}
@@ -19004,20 +23629,20 @@ function elementMatcher( matchers ) {
 		function( elem, context, xml ) {
 			var i = matchers.length;
 			while ( i-- ) {
-				if ( !matchers[i]( elem, context, xml ) ) {
+				if ( !matchers[ i ]( elem, context, xml ) ) {
 					return false;
 				}
 			}
 			return true;
 		} :
-		matchers[0];
+		matchers[ 0 ];
 }
 
 function multipleContexts( selector, contexts, results ) {
 	var i = 0,
 		len = contexts.length;
 	for ( ; i < len; i++ ) {
-		Sizzle( selector, contexts[i], results );
+		Sizzle( selector, contexts[ i ], results );
 	}
 	return results;
 }
@@ -19030,7 +23655,7 @@ function condense( unmatched, map, filter, context, xml ) {
 		mapped = map != null;
 
 	for ( ; i < len; i++ ) {
-		if ( (elem = unmatched[i]) ) {
+		if ( ( elem = unmatched[ i ] ) ) {
 			if ( !filter || filter( elem, context, xml ) ) {
 				newUnmatched.push( elem );
 				if ( mapped ) {
@@ -19050,14 +23675,18 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 	if ( postFinder && !postFinder[ expando ] ) {
 		postFinder = setMatcher( postFinder, postSelector );
 	}
-	return markFunction(function( seed, results, context, xml ) {
+	return markFunction( function( seed, results, context, xml ) {
 		var temp, i, elem,
 			preMap = [],
 			postMap = [],
 			preexisting = results.length,
 
 			// Get initial elements from seed or context
-			elems = seed || multipleContexts( selector || "*", context.nodeType ? [ context ] : context, [] ),
+			elems = seed || multipleContexts(
+				selector || "*",
+				context.nodeType ? [ context ] : context,
+				[]
+			),
 
 			// Prefilter to get matcher input, preserving a map for seed-results synchronization
 			matcherIn = preFilter && ( seed || !selector ) ?
@@ -19065,6 +23694,7 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 				elems,
 
 			matcherOut = matcher ?
+
 				// If we have a postFinder, or filtered seed, or non-seed postFilter or preexisting results,
 				postFinder || ( seed ? preFilter : preexisting || postFilter ) ?
 
@@ -19088,8 +23718,8 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 			// Un-match failing elements by moving them back to matcherIn
 			i = temp.length;
 			while ( i-- ) {
-				if ( (elem = temp[i]) ) {
-					matcherOut[ postMap[i] ] = !(matcherIn[ postMap[i] ] = elem);
+				if ( ( elem = temp[ i ] ) ) {
+					matcherOut[ postMap[ i ] ] = !( matcherIn[ postMap[ i ] ] = elem );
 				}
 			}
 		}
@@ -19097,25 +23727,27 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 		if ( seed ) {
 			if ( postFinder || preFilter ) {
 				if ( postFinder ) {
+
 					// Get the final matcherOut by condensing this intermediate into postFinder contexts
 					temp = [];
 					i = matcherOut.length;
 					while ( i-- ) {
-						if ( (elem = matcherOut[i]) ) {
+						if ( ( elem = matcherOut[ i ] ) ) {
+
 							// Restore matcherIn since elem is not yet a final match
-							temp.push( (matcherIn[i] = elem) );
+							temp.push( ( matcherIn[ i ] = elem ) );
 						}
 					}
-					postFinder( null, (matcherOut = []), temp, xml );
+					postFinder( null, ( matcherOut = [] ), temp, xml );
 				}
 
 				// Move matched elements from seed to results to keep them synchronized
 				i = matcherOut.length;
 				while ( i-- ) {
-					if ( (elem = matcherOut[i]) &&
-						(temp = postFinder ? indexOf( seed, elem ) : preMap[i]) > -1 ) {
+					if ( ( elem = matcherOut[ i ] ) &&
+						( temp = postFinder ? indexOf( seed, elem ) : preMap[ i ] ) > -1 ) {
 
-						seed[temp] = !(results[temp] = elem);
+						seed[ temp ] = !( results[ temp ] = elem );
 					}
 				}
 			}
@@ -19133,14 +23765,14 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 				push.apply( results, matcherOut );
 			}
 		}
-	});
+	} );
 }
 
 function matcherFromTokens( tokens ) {
 	var checkContext, matcher, j,
 		len = tokens.length,
-		leadingRelative = Expr.relative[ tokens[0].type ],
-		implicitRelative = leadingRelative || Expr.relative[" "],
+		leadingRelative = Expr.relative[ tokens[ 0 ].type ],
+		implicitRelative = leadingRelative || Expr.relative[ " " ],
 		i = leadingRelative ? 1 : 0,
 
 		// The foundational matcher ensures that elements are reachable from top-level context(s)
@@ -19152,38 +23784,43 @@ function matcherFromTokens( tokens ) {
 		}, implicitRelative, true ),
 		matchers = [ function( elem, context, xml ) {
 			var ret = ( !leadingRelative && ( xml || context !== outermostContext ) ) || (
-				(checkContext = context).nodeType ?
+				( checkContext = context ).nodeType ?
 					matchContext( elem, context, xml ) :
 					matchAnyContext( elem, context, xml ) );
+
 			// Avoid hanging onto element (issue #299)
 			checkContext = null;
 			return ret;
 		} ];
 
 	for ( ; i < len; i++ ) {
-		if ( (matcher = Expr.relative[ tokens[i].type ]) ) {
-			matchers = [ addCombinator(elementMatcher( matchers ), matcher) ];
+		if ( ( matcher = Expr.relative[ tokens[ i ].type ] ) ) {
+			matchers = [ addCombinator( elementMatcher( matchers ), matcher ) ];
 		} else {
-			matcher = Expr.filter[ tokens[i].type ].apply( null, tokens[i].matches );
+			matcher = Expr.filter[ tokens[ i ].type ].apply( null, tokens[ i ].matches );
 
 			// Return special upon seeing a positional matcher
 			if ( matcher[ expando ] ) {
+
 				// Find the next relative operator (if any) for proper handling
 				j = ++i;
 				for ( ; j < len; j++ ) {
-					if ( Expr.relative[ tokens[j].type ] ) {
+					if ( Expr.relative[ tokens[ j ].type ] ) {
 						break;
 					}
 				}
 				return setMatcher(
 					i > 1 && elementMatcher( matchers ),
 					i > 1 && toSelector(
-						// If the preceding token was a descendant combinator, insert an implicit any-element `*`
-						tokens.slice( 0, i - 1 ).concat({ value: tokens[ i - 2 ].type === " " ? "*" : "" })
+
+					// If the preceding token was a descendant combinator, insert an implicit any-element `*`
+					tokens
+						.slice( 0, i - 1 )
+						.concat( { value: tokens[ i - 2 ].type === " " ? "*" : "" } )
 					).replace( rtrim, "$1" ),
 					matcher,
 					i < j && matcherFromTokens( tokens.slice( i, j ) ),
-					j < len && matcherFromTokens( (tokens = tokens.slice( j )) ),
+					j < len && matcherFromTokens( ( tokens = tokens.slice( j ) ) ),
 					j < len && toSelector( tokens )
 				);
 			}
@@ -19204,28 +23841,40 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 				unmatched = seed && [],
 				setMatched = [],
 				contextBackup = outermostContext,
+
 				// We must always have either seed elements or outermost context
-				elems = seed || byElement && Expr.find["TAG"]( "*", outermost ),
+				elems = seed || byElement && Expr.find[ "TAG" ]( "*", outermost ),
+
 				// Use integer dirruns iff this is the outermost matcher
-				dirrunsUnique = (dirruns += contextBackup == null ? 1 : Math.random() || 0.1),
+				dirrunsUnique = ( dirruns += contextBackup == null ? 1 : Math.random() || 0.1 ),
 				len = elems.length;
 
 			if ( outermost ) {
-				outermostContext = context === document || context || outermost;
+
+				// Support: IE 11+, Edge 17 - 18+
+				// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+				// two documents; shallow comparisons work.
+				// eslint-disable-next-line eqeqeq
+				outermostContext = context == document || context || outermost;
 			}
 
 			// Add elements passing elementMatchers directly to results
 			// Support: IE<9, Safari
 			// Tolerate NodeList properties (IE: "length"; Safari: <number>) matching elements by id
-			for ( ; i !== len && (elem = elems[i]) != null; i++ ) {
+			for ( ; i !== len && ( elem = elems[ i ] ) != null; i++ ) {
 				if ( byElement && elem ) {
 					j = 0;
-					if ( !context && elem.ownerDocument !== document ) {
+
+					// Support: IE 11+, Edge 17 - 18+
+					// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+					// two documents; shallow comparisons work.
+					// eslint-disable-next-line eqeqeq
+					if ( !context && elem.ownerDocument != document ) {
 						setDocument( elem );
 						xml = !documentIsHTML;
 					}
-					while ( (matcher = elementMatchers[j++]) ) {
-						if ( matcher( elem, context || document, xml) ) {
+					while ( ( matcher = elementMatchers[ j++ ] ) ) {
+						if ( matcher( elem, context || document, xml ) ) {
 							results.push( elem );
 							break;
 						}
@@ -19237,8 +23886,9 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 
 				// Track unmatched elements for set filters
 				if ( bySet ) {
+
 					// They will have gone through all possible matchers
-					if ( (elem = !matcher && elem) ) {
+					if ( ( elem = !matcher && elem ) ) {
 						matchedCount--;
 					}
 
@@ -19262,16 +23912,17 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 			// numerically zero.
 			if ( bySet && i !== matchedCount ) {
 				j = 0;
-				while ( (matcher = setMatchers[j++]) ) {
+				while ( ( matcher = setMatchers[ j++ ] ) ) {
 					matcher( unmatched, setMatched, context, xml );
 				}
 
 				if ( seed ) {
+
 					// Reintegrate element matches to eliminate the need for sorting
 					if ( matchedCount > 0 ) {
 						while ( i-- ) {
-							if ( !(unmatched[i] || setMatched[i]) ) {
-								setMatched[i] = pop.call( results );
+							if ( !( unmatched[ i ] || setMatched[ i ] ) ) {
+								setMatched[ i ] = pop.call( results );
 							}
 						}
 					}
@@ -19312,13 +23963,14 @@ compile = Sizzle.compile = function( selector, match /* Internal Use Only */ ) {
 		cached = compilerCache[ selector + " " ];
 
 	if ( !cached ) {
+
 		// Generate a function of recursive functions that can be used to check each element
 		if ( !match ) {
 			match = tokenize( selector );
 		}
 		i = match.length;
 		while ( i-- ) {
-			cached = matcherFromTokens( match[i] );
+			cached = matcherFromTokens( match[ i ] );
 			if ( cached[ expando ] ) {
 				setMatchers.push( cached );
 			} else {
@@ -19327,7 +23979,10 @@ compile = Sizzle.compile = function( selector, match /* Internal Use Only */ ) {
 		}
 
 		// Cache the compiled function
-		cached = compilerCache( selector, matcherFromGroupMatchers( elementMatchers, setMatchers ) );
+		cached = compilerCache(
+			selector,
+			matcherFromGroupMatchers( elementMatchers, setMatchers )
+		);
 
 		// Save selector and tokenization
 		cached.selector = selector;
@@ -19347,7 +24002,7 @@ compile = Sizzle.compile = function( selector, match /* Internal Use Only */ ) {
 select = Sizzle.select = function( selector, context, results, seed ) {
 	var i, tokens, token, type, find,
 		compiled = typeof selector === "function" && selector,
-		match = !seed && tokenize( (selector = compiled.selector || selector) );
+		match = !seed && tokenize( ( selector = compiled.selector || selector ) );
 
 	results = results || [];
 
@@ -19356,11 +24011,12 @@ select = Sizzle.select = function( selector, context, results, seed ) {
 	if ( match.length === 1 ) {
 
 		// Reduce context if the leading compound selector is an ID
-		tokens = match[0] = match[0].slice( 0 );
-		if ( tokens.length > 2 && (token = tokens[0]).type === "ID" &&
-				context.nodeType === 9 && documentIsHTML && Expr.relative[ tokens[1].type ] ) {
+		tokens = match[ 0 ] = match[ 0 ].slice( 0 );
+		if ( tokens.length > 2 && ( token = tokens[ 0 ] ).type === "ID" &&
+			context.nodeType === 9 && documentIsHTML && Expr.relative[ tokens[ 1 ].type ] ) {
 
-			context = ( Expr.find["ID"]( token.matches[0].replace(runescape, funescape), context ) || [] )[0];
+			context = ( Expr.find[ "ID" ]( token.matches[ 0 ]
+				.replace( runescape, funescape ), context ) || [] )[ 0 ];
 			if ( !context ) {
 				return results;
 
@@ -19373,20 +24029,22 @@ select = Sizzle.select = function( selector, context, results, seed ) {
 		}
 
 		// Fetch a seed set for right-to-left matching
-		i = matchExpr["needsContext"].test( selector ) ? 0 : tokens.length;
+		i = matchExpr[ "needsContext" ].test( selector ) ? 0 : tokens.length;
 		while ( i-- ) {
-			token = tokens[i];
+			token = tokens[ i ];
 
 			// Abort if we hit a combinator
-			if ( Expr.relative[ (type = token.type) ] ) {
+			if ( Expr.relative[ ( type = token.type ) ] ) {
 				break;
 			}
-			if ( (find = Expr.find[ type ]) ) {
+			if ( ( find = Expr.find[ type ] ) ) {
+
 				// Search, expanding context for leading sibling combinators
-				if ( (seed = find(
-					token.matches[0].replace( runescape, funescape ),
-					rsibling.test( tokens[0].type ) && testContext( context.parentNode ) || context
-				)) ) {
+				if ( ( seed = find(
+					token.matches[ 0 ].replace( runescape, funescape ),
+					rsibling.test( tokens[ 0 ].type ) && testContext( context.parentNode ) ||
+						context
+				) ) ) {
 
 					// If seed is empty or no tokens remain, we can return early
 					tokens.splice( i, 1 );
@@ -19417,7 +24075,7 @@ select = Sizzle.select = function( selector, context, results, seed ) {
 // One-time assignments
 
 // Sort stability
-support.sortStable = expando.split("").sort( sortOrder ).join("") === expando;
+support.sortStable = expando.split( "" ).sort( sortOrder ).join( "" ) === expando;
 
 // Support: Chrome 14-35+
 // Always assume duplicates if they aren't passed to the comparison function
@@ -19428,58 +24086,59 @@ setDocument();
 
 // Support: Webkit<537.32 - Safari 6.0.3/Chrome 25 (fixed in Chrome 27)
 // Detached nodes confoundingly follow *each other*
-support.sortDetached = assert(function( el ) {
+support.sortDetached = assert( function( el ) {
+
 	// Should return 1, but returns 4 (following)
-	return el.compareDocumentPosition( document.createElement("fieldset") ) & 1;
-});
+	return el.compareDocumentPosition( document.createElement( "fieldset" ) ) & 1;
+} );
 
 // Support: IE<8
 // Prevent attribute/property "interpolation"
 // https://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
-if ( !assert(function( el ) {
+if ( !assert( function( el ) {
 	el.innerHTML = "<a href='#'></a>";
-	return el.firstChild.getAttribute("href") === "#" ;
-}) ) {
+	return el.firstChild.getAttribute( "href" ) === "#";
+} ) ) {
 	addHandle( "type|href|height|width", function( elem, name, isXML ) {
 		if ( !isXML ) {
 			return elem.getAttribute( name, name.toLowerCase() === "type" ? 1 : 2 );
 		}
-	});
+	} );
 }
 
 // Support: IE<9
 // Use defaultValue in place of getAttribute("value")
-if ( !support.attributes || !assert(function( el ) {
+if ( !support.attributes || !assert( function( el ) {
 	el.innerHTML = "<input/>";
 	el.firstChild.setAttribute( "value", "" );
 	return el.firstChild.getAttribute( "value" ) === "";
-}) ) {
-	addHandle( "value", function( elem, name, isXML ) {
+} ) ) {
+	addHandle( "value", function( elem, _name, isXML ) {
 		if ( !isXML && elem.nodeName.toLowerCase() === "input" ) {
 			return elem.defaultValue;
 		}
-	});
+	} );
 }
 
 // Support: IE<9
 // Use getAttributeNode to fetch booleans when getAttribute lies
-if ( !assert(function( el ) {
-	return el.getAttribute("disabled") == null;
-}) ) {
+if ( !assert( function( el ) {
+	return el.getAttribute( "disabled" ) == null;
+} ) ) {
 	addHandle( booleans, function( elem, name, isXML ) {
 		var val;
 		if ( !isXML ) {
 			return elem[ name ] === true ? name.toLowerCase() :
-					(val = elem.getAttributeNode( name )) && val.specified ?
+				( val = elem.getAttributeNode( name ) ) && val.specified ?
 					val.value :
-				null;
+					null;
 		}
-	});
+	} );
 }
 
 return Sizzle;
 
-})( window );
+} )( window );
 
 
 
@@ -19848,7 +24507,7 @@ jQuery.each( {
 	parents: function( elem ) {
 		return dir( elem, "parentNode" );
 	},
-	parentsUntil: function( elem, i, until ) {
+	parentsUntil: function( elem, _i, until ) {
 		return dir( elem, "parentNode", until );
 	},
 	next: function( elem ) {
@@ -19863,10 +24522,10 @@ jQuery.each( {
 	prevAll: function( elem ) {
 		return dir( elem, "previousSibling" );
 	},
-	nextUntil: function( elem, i, until ) {
+	nextUntil: function( elem, _i, until ) {
 		return dir( elem, "nextSibling", until );
 	},
-	prevUntil: function( elem, i, until ) {
+	prevUntil: function( elem, _i, until ) {
 		return dir( elem, "previousSibling", until );
 	},
 	siblings: function( elem ) {
@@ -19876,7 +24535,13 @@ jQuery.each( {
 		return siblings( elem.firstChild );
 	},
 	contents: function( elem ) {
-		if ( typeof elem.contentDocument !== "undefined" ) {
+		if ( elem.contentDocument != null &&
+
+			// Support: IE 11+
+			// <object> elements with no `data` attribute has an object
+			// `contentDocument` with a `null` prototype.
+			getProto( elem.contentDocument ) ) {
+
 			return elem.contentDocument;
 		}
 
@@ -20219,7 +24884,7 @@ jQuery.extend( {
 					var fns = arguments;
 
 					return jQuery.Deferred( function( newDefer ) {
-						jQuery.each( tuples, function( i, tuple ) {
+						jQuery.each( tuples, function( _i, tuple ) {
 
 							// Map tuples (progress, done, fail) to arguments (done, fail, progress)
 							var fn = isFunction( fns[ tuple[ 4 ] ] ) && fns[ tuple[ 4 ] ];
@@ -20672,7 +25337,7 @@ var access = function( elems, fn, key, value, chainable, emptyGet, raw ) {
 			// ...except when executing function values
 			} else {
 				bulk = fn;
-				fn = function( elem, key, value ) {
+				fn = function( elem, _key, value ) {
 					return bulk.call( jQuery( elem ), value );
 				};
 			}
@@ -20707,7 +25372,7 @@ var rmsPrefix = /^-ms-/,
 	rdashAlpha = /-([a-z])/g;
 
 // Used by camelCase as callback to replace()
-function fcamelCase( all, letter ) {
+function fcamelCase( _all, letter ) {
 	return letter.toUpperCase();
 }
 
@@ -21235,27 +25900,6 @@ var isHiddenWithinTree = function( elem, el ) {
 			jQuery.css( elem, "display" ) === "none";
 	};
 
-var swap = function( elem, options, callback, args ) {
-	var ret, name,
-		old = {};
-
-	// Remember the old values, and insert the new ones
-	for ( name in options ) {
-		old[ name ] = elem.style[ name ];
-		elem.style[ name ] = options[ name ];
-	}
-
-	ret = callback.apply( elem, args || [] );
-
-	// Revert the old values
-	for ( name in options ) {
-		elem.style[ name ] = old[ name ];
-	}
-
-	return ret;
-};
-
-
 
 
 function adjustCSS( elem, prop, valueParts, tween ) {
@@ -21426,11 +26070,40 @@ var rscriptType = ( /^$|^module$|\/(?:java|ecma)script/i );
 
 
 
-// We have to close these tags to support XHTML (#13200)
-var wrapMap = {
+( function() {
+	var fragment = document.createDocumentFragment(),
+		div = fragment.appendChild( document.createElement( "div" ) ),
+		input = document.createElement( "input" );
+
+	// Support: Android 4.0 - 4.3 only
+	// Check state lost if the name is set (#11217)
+	// Support: Windows Web Apps (WWA)
+	// `name` and `type` must use .setAttribute for WWA (#14901)
+	input.setAttribute( "type", "radio" );
+	input.setAttribute( "checked", "checked" );
+	input.setAttribute( "name", "t" );
+
+	div.appendChild( input );
+
+	// Support: Android <=4.1 only
+	// Older WebKit doesn't clone checked state correctly in fragments
+	support.checkClone = div.cloneNode( true ).cloneNode( true ).lastChild.checked;
+
+	// Support: IE <=11 only
+	// Make sure textarea (and checkbox) defaultValue is properly cloned
+	div.innerHTML = "<textarea>x</textarea>";
+	support.noCloneChecked = !!div.cloneNode( true ).lastChild.defaultValue;
 
 	// Support: IE <=9 only
-	option: [ 1, "<select multiple='multiple'>", "</select>" ],
+	// IE <=9 replaces <option> tags with their contents when inserted outside of
+	// the select element.
+	div.innerHTML = "<option></option>";
+	support.option = !!div.lastChild;
+} )();
+
+
+// We have to close these tags to support XHTML (#13200)
+var wrapMap = {
 
 	// XHTML parsers do not magically insert elements in the
 	// same way that tag soup parsers do. So we cannot shorten
@@ -21443,11 +26116,13 @@ var wrapMap = {
 	_default: [ 0, "", "" ]
 };
 
-// Support: IE <=9 only
-wrapMap.optgroup = wrapMap.option;
-
 wrapMap.tbody = wrapMap.tfoot = wrapMap.colgroup = wrapMap.caption = wrapMap.thead;
 wrapMap.th = wrapMap.td;
+
+// Support: IE <=9 only
+if ( !support.option ) {
+	wrapMap.optgroup = wrapMap.option = [ 1, "<select multiple='multiple'>", "</select>" ];
+}
 
 
 function getAll( context, tag ) {
@@ -21581,32 +26256,6 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 }
 
 
-( function() {
-	var fragment = document.createDocumentFragment(),
-		div = fragment.appendChild( document.createElement( "div" ) ),
-		input = document.createElement( "input" );
-
-	// Support: Android 4.0 - 4.3 only
-	// Check state lost if the name is set (#11217)
-	// Support: Windows Web Apps (WWA)
-	// `name` and `type` must use .setAttribute for WWA (#14901)
-	input.setAttribute( "type", "radio" );
-	input.setAttribute( "checked", "checked" );
-	input.setAttribute( "name", "t" );
-
-	div.appendChild( input );
-
-	// Support: Android <=4.1 only
-	// Older WebKit doesn't clone checked state correctly in fragments
-	support.checkClone = div.cloneNode( true ).cloneNode( true ).lastChild.checked;
-
-	// Support: IE <=11 only
-	// Make sure textarea (and checkbox) defaultValue is properly cloned
-	div.innerHTML = "<textarea>x</textarea>";
-	support.noCloneChecked = !!div.cloneNode( true ).lastChild.defaultValue;
-} )();
-
-
 var
 	rkeyEvent = /^key/,
 	rmouseEvent = /^(?:mouse|pointer|contextmenu|drag|drop)|click/,
@@ -21715,8 +26364,8 @@ jQuery.event = {
 			special, handlers, type, namespaces, origType,
 			elemData = dataPriv.get( elem );
 
-		// Don't attach events to noData or text/comment nodes (but allow plain objects)
-		if ( !elemData ) {
+		// Only attach events to objects that accept data
+		if ( !acceptData( elem ) ) {
 			return;
 		}
 
@@ -21740,7 +26389,7 @@ jQuery.event = {
 
 		// Init the element's event structure and main handler, if this is the first
 		if ( !( events = elemData.events ) ) {
-			events = elemData.events = {};
+			events = elemData.events = Object.create( null );
 		}
 		if ( !( eventHandle = elemData.handle ) ) {
 			eventHandle = elemData.handle = function( e ) {
@@ -21898,12 +26547,15 @@ jQuery.event = {
 
 	dispatch: function( nativeEvent ) {
 
-		// Make a writable jQuery.Event from the native event object
-		var event = jQuery.event.fix( nativeEvent );
-
 		var i, j, ret, matched, handleObj, handlerQueue,
 			args = new Array( arguments.length ),
-			handlers = ( dataPriv.get( this, "events" ) || {} )[ event.type ] || [],
+
+			// Make a writable jQuery.Event from the native event object
+			event = jQuery.event.fix( nativeEvent ),
+
+			handlers = (
+					dataPriv.get( this, "events" ) || Object.create( null )
+				)[ event.type ] || [],
 			special = jQuery.event.special[ event.type ] || {};
 
 		// Use the fix-ed jQuery.Event rather than the (read-only) native event
@@ -22478,13 +27130,6 @@ jQuery.fn.extend( {
 
 var
 
-	/* eslint-disable max-len */
-
-	// See https://github.com/eslint/eslint/issues/3229
-	rxhtmlTag = /<(?!area|br|col|embed|hr|img|input|link|meta|param)(([a-z][^\/\0>\x20\t\r\n\f]*)[^>]*)\/>/gi,
-
-	/* eslint-enable */
-
 	// Support: IE <=10 - 11, Edge 12 - 13 only
 	// In IE/Edge using regex groups here causes severe slowdowns.
 	// See https://connect.microsoft.com/IE/feedback/details/1736512/
@@ -22521,7 +27166,7 @@ function restoreScript( elem ) {
 }
 
 function cloneCopyEvent( src, dest ) {
-	var i, l, type, pdataOld, pdataCur, udataOld, udataCur, events;
+	var i, l, type, pdataOld, udataOld, udataCur, events;
 
 	if ( dest.nodeType !== 1 ) {
 		return;
@@ -22529,13 +27174,11 @@ function cloneCopyEvent( src, dest ) {
 
 	// 1. Copy private data: events, handlers, etc.
 	if ( dataPriv.hasData( src ) ) {
-		pdataOld = dataPriv.access( src );
-		pdataCur = dataPriv.set( dest, pdataOld );
+		pdataOld = dataPriv.get( src );
 		events = pdataOld.events;
 
 		if ( events ) {
-			delete pdataCur.handle;
-			pdataCur.events = {};
+			dataPriv.remove( dest, "handle events" );
 
 			for ( type in events ) {
 				for ( i = 0, l = events[ type ].length; i < l; i++ ) {
@@ -22571,7 +27214,7 @@ function fixInput( src, dest ) {
 function domManip( collection, args, callback, ignored ) {
 
 	// Flatten any nested arrays
-	args = concat.apply( [], args );
+	args = flat( args );
 
 	var fragment, first, scripts, hasScripts, node, doc,
 		i = 0,
@@ -22646,7 +27289,7 @@ function domManip( collection, args, callback, ignored ) {
 							if ( jQuery._evalUrl && !node.noModule ) {
 								jQuery._evalUrl( node.src, {
 									nonce: node.nonce || node.getAttribute( "nonce" )
-								} );
+								}, doc );
 							}
 						} else {
 							DOMEval( node.textContent.replace( rcleanScript, "" ), node, doc );
@@ -22683,7 +27326,7 @@ function remove( elem, selector, keepData ) {
 
 jQuery.extend( {
 	htmlPrefilter: function( html ) {
-		return html.replace( rxhtmlTag, "<$1></$2>" );
+		return html;
 	},
 
 	clone: function( elem, dataAndEvents, deepDataAndEvents ) {
@@ -22945,6 +27588,27 @@ var getStyles = function( elem ) {
 		return view.getComputedStyle( elem );
 	};
 
+var swap = function( elem, options, callback ) {
+	var ret, name,
+		old = {};
+
+	// Remember the old values, and insert the new ones
+	for ( name in options ) {
+		old[ name ] = elem.style[ name ];
+		elem.style[ name ] = options[ name ];
+	}
+
+	ret = callback.call( elem );
+
+	// Revert the old values
+	for ( name in options ) {
+		elem.style[ name ] = old[ name ];
+	}
+
+	return ret;
+};
+
+
 var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 
 
@@ -23002,7 +27666,7 @@ var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 	}
 
 	var pixelPositionVal, boxSizingReliableVal, scrollboxSizeVal, pixelBoxStylesVal,
-		reliableMarginLeftVal,
+		reliableTrDimensionsVal, reliableMarginLeftVal,
 		container = document.createElement( "div" ),
 		div = document.createElement( "div" );
 
@@ -23037,6 +27701,35 @@ var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 		scrollboxSize: function() {
 			computeStyleTests();
 			return scrollboxSizeVal;
+		},
+
+		// Support: IE 9 - 11+, Edge 15 - 18+
+		// IE/Edge misreport `getComputedStyle` of table rows with width/height
+		// set in CSS while `offset*` properties report correct values.
+		// Behavior in IE 9 is more subtle than in newer versions & it passes
+		// some versions of this test; make sure not to make it pass there!
+		reliableTrDimensions: function() {
+			var table, tr, trChild, trStyle;
+			if ( reliableTrDimensionsVal == null ) {
+				table = document.createElement( "table" );
+				tr = document.createElement( "tr" );
+				trChild = document.createElement( "div" );
+
+				table.style.cssText = "position:absolute;left:-11111px";
+				tr.style.height = "1px";
+				trChild.style.height = "9px";
+
+				documentElement
+					.appendChild( table )
+					.appendChild( tr )
+					.appendChild( trChild );
+
+				trStyle = window.getComputedStyle( tr );
+				reliableTrDimensionsVal = parseInt( trStyle.height ) > 3;
+
+				documentElement.removeChild( table );
+			}
+			return reliableTrDimensionsVal;
 		}
 	} );
 } )();
@@ -23161,7 +27854,7 @@ var
 		fontWeight: "400"
 	};
 
-function setPositiveNumber( elem, value, subtract ) {
+function setPositiveNumber( _elem, value, subtract ) {
 
 	// Any relative (+/-) values have already been
 	// normalized at this point
@@ -23266,17 +27959,26 @@ function getWidthOrHeight( elem, dimension, extra ) {
 	}
 
 
-	// Fall back to offsetWidth/offsetHeight when value is "auto"
-	// This happens for inline elements with no explicit setting (gh-3571)
-	// Support: Android <=4.1 - 4.3 only
-	// Also use offsetWidth/offsetHeight for misreported inline dimensions (gh-3602)
-	// Support: IE 9-11 only
-	// Also use offsetWidth/offsetHeight for when box sizing is unreliable
-	// We use getClientRects() to check for hidden/disconnected.
-	// In those cases, the computed value can be trusted to be border-box
+	// Support: IE 9 - 11 only
+	// Use offsetWidth/offsetHeight for when box sizing is unreliable.
+	// In those cases, the computed value can be trusted to be border-box.
 	if ( ( !support.boxSizingReliable() && isBorderBox ||
+
+		// Support: IE 10 - 11+, Edge 15 - 18+
+		// IE/Edge misreport `getComputedStyle` of table rows with width/height
+		// set in CSS while `offset*` properties report correct values.
+		// Interestingly, in some cases IE 9 doesn't suffer from this issue.
+		!support.reliableTrDimensions() && nodeName( elem, "tr" ) ||
+
+		// Fall back to offsetWidth/offsetHeight when value is "auto"
+		// This happens for inline elements with no explicit setting (gh-3571)
 		val === "auto" ||
+
+		// Support: Android <=4.1 - 4.3 only
+		// Also use offsetWidth/offsetHeight for misreported inline dimensions (gh-3602)
 		!parseFloat( val ) && jQuery.css( elem, "display", false, styles ) === "inline" ) &&
+
+		// Make sure the element is visible & connected
 		elem.getClientRects().length ) {
 
 		isBorderBox = jQuery.css( elem, "boxSizing", false, styles ) === "border-box";
@@ -23471,7 +28173,7 @@ jQuery.extend( {
 	}
 } );
 
-jQuery.each( [ "height", "width" ], function( i, dimension ) {
+jQuery.each( [ "height", "width" ], function( _i, dimension ) {
 	jQuery.cssHooks[ dimension ] = {
 		get: function( elem, computed, extra ) {
 			if ( computed ) {
@@ -24244,7 +28946,7 @@ jQuery.fn.extend( {
 			clearQueue = type;
 			type = undefined;
 		}
-		if ( clearQueue && type !== false ) {
+		if ( clearQueue ) {
 			this.queue( type || "fx", [] );
 		}
 
@@ -24327,7 +29029,7 @@ jQuery.fn.extend( {
 	}
 } );
 
-jQuery.each( [ "toggle", "show", "hide" ], function( i, name ) {
+jQuery.each( [ "toggle", "show", "hide" ], function( _i, name ) {
 	var cssFn = jQuery.fn[ name ];
 	jQuery.fn[ name ] = function( speed, easing, callback ) {
 		return speed == null || typeof speed === "boolean" ?
@@ -24548,7 +29250,7 @@ boolHook = {
 	}
 };
 
-jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) {
+jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( _i, name ) {
 	var getter = attrHandle[ name ] || jQuery.find.attr;
 
 	attrHandle[ name ] = function( elem, name, isXML ) {
@@ -25172,7 +29874,9 @@ jQuery.extend( jQuery.event, {
 				special.bindType || type;
 
 			// jQuery handler
-			handle = ( dataPriv.get( cur, "events" ) || {} )[ event.type ] &&
+			handle = (
+					dataPriv.get( cur, "events" ) || Object.create( null )
+				)[ event.type ] &&
 				dataPriv.get( cur, "handle" );
 			if ( handle ) {
 				handle.apply( cur, data );
@@ -25283,7 +29987,10 @@ if ( !support.focusin ) {
 
 		jQuery.event.special[ fix ] = {
 			setup: function() {
-				var doc = this.ownerDocument || this,
+
+				// Handle: regular nodes (via `this.ownerDocument`), window
+				// (via `this.document`) & document (via `this`).
+				var doc = this.ownerDocument || this.document || this,
 					attaches = dataPriv.access( doc, fix );
 
 				if ( !attaches ) {
@@ -25292,7 +29999,7 @@ if ( !support.focusin ) {
 				dataPriv.access( doc, fix, ( attaches || 0 ) + 1 );
 			},
 			teardown: function() {
-				var doc = this.ownerDocument || this,
+				var doc = this.ownerDocument || this.document || this,
 					attaches = dataPriv.access( doc, fix ) - 1;
 
 				if ( !attaches ) {
@@ -25308,7 +30015,7 @@ if ( !support.focusin ) {
 }
 var location = window.location;
 
-var nonce = Date.now();
+var nonce = { guid: Date.now() };
 
 var rquery = ( /\?/ );
 
@@ -25440,7 +30147,7 @@ jQuery.fn.extend( {
 				rsubmittable.test( this.nodeName ) && !rsubmitterTypes.test( type ) &&
 				( this.checked || !rcheckableType.test( type ) );
 		} )
-		.map( function( i, elem ) {
+		.map( function( _i, elem ) {
 			var val = jQuery( this ).val();
 
 			if ( val == null ) {
@@ -26053,7 +30760,8 @@ jQuery.extend( {
 			// Add or update anti-cache param if needed
 			if ( s.cache === false ) {
 				cacheURL = cacheURL.replace( rantiCache, "$1" );
-				uncached = ( rquery.test( cacheURL ) ? "&" : "?" ) + "_=" + ( nonce++ ) + uncached;
+				uncached = ( rquery.test( cacheURL ) ? "&" : "?" ) + "_=" + ( nonce.guid++ ) +
+					uncached;
 			}
 
 			// Put hash and anti-cache on the URL that will be requested (gh-1732)
@@ -26186,6 +30894,11 @@ jQuery.extend( {
 				response = ajaxHandleResponses( s, jqXHR, responses );
 			}
 
+			// Use a noop converter for missing script
+			if ( !isSuccess && jQuery.inArray( "script", s.dataTypes ) > -1 ) {
+				s.converters[ "text script" ] = function() {};
+			}
+
 			// Convert no matter what (that way responseXXX fields are always set)
 			response = ajaxConvert( s, response, jqXHR, isSuccess );
 
@@ -26276,7 +30989,7 @@ jQuery.extend( {
 	}
 } );
 
-jQuery.each( [ "get", "post" ], function( i, method ) {
+jQuery.each( [ "get", "post" ], function( _i, method ) {
 	jQuery[ method ] = function( url, data, callback, type ) {
 
 		// Shift arguments if data argument was omitted
@@ -26297,8 +31010,17 @@ jQuery.each( [ "get", "post" ], function( i, method ) {
 	};
 } );
 
+jQuery.ajaxPrefilter( function( s ) {
+	var i;
+	for ( i in s.headers ) {
+		if ( i.toLowerCase() === "content-type" ) {
+			s.contentType = s.headers[ i ] || "";
+		}
+	}
+} );
 
-jQuery._evalUrl = function( url, options ) {
+
+jQuery._evalUrl = function( url, options, doc ) {
 	return jQuery.ajax( {
 		url: url,
 
@@ -26316,7 +31038,7 @@ jQuery._evalUrl = function( url, options ) {
 			"text script": function() {}
 		},
 		dataFilter: function( response ) {
-			jQuery.globalEval( response, options );
+			jQuery.globalEval( response, options, doc );
 		}
 	} );
 };
@@ -26638,7 +31360,7 @@ var oldCallbacks = [],
 jQuery.ajaxSetup( {
 	jsonp: "callback",
 	jsonpCallback: function() {
-		var callback = oldCallbacks.pop() || ( jQuery.expando + "_" + ( nonce++ ) );
+		var callback = oldCallbacks.pop() || ( jQuery.expando + "_" + ( nonce.guid++ ) );
 		this[ callback ] = true;
 		return callback;
 	}
@@ -26855,23 +31577,6 @@ jQuery.fn.load = function( url, params, callback ) {
 
 
 
-// Attach a bunch of functions for handling common AJAX events
-jQuery.each( [
-	"ajaxStart",
-	"ajaxStop",
-	"ajaxComplete",
-	"ajaxError",
-	"ajaxSuccess",
-	"ajaxSend"
-], function( i, type ) {
-	jQuery.fn[ type ] = function( fn ) {
-		return this.on( type, fn );
-	};
-} );
-
-
-
-
 jQuery.expr.pseudos.animated = function( elem ) {
 	return jQuery.grep( jQuery.timers, function( fn ) {
 		return elem === fn.elem;
@@ -26928,6 +31633,12 @@ jQuery.offset = {
 			options.using.call( elem, props );
 
 		} else {
+			if ( typeof props.top === "number" ) {
+				props.top += "px";
+			}
+			if ( typeof props.left === "number" ) {
+				props.left += "px";
+			}
 			curElem.css( props );
 		}
 	}
@@ -27078,7 +31789,7 @@ jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( 
 // Blink bug: https://bugs.chromium.org/p/chromium/issues/detail?id=589347
 // getComputedStyle returns percent when specified for top/left/bottom/right;
 // rather than make the css module depend on the offset module, just check for it here
-jQuery.each( [ "top", "left" ], function( i, prop ) {
+jQuery.each( [ "top", "left" ], function( _i, prop ) {
 	jQuery.cssHooks[ prop ] = addGetHookIf( support.pixelPosition,
 		function( elem, computed ) {
 			if ( computed ) {
@@ -27141,23 +31852,17 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 } );
 
 
-jQuery.each( ( "blur focus focusin focusout resize scroll click dblclick " +
-	"mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave " +
-	"change select submit keydown keypress keyup contextmenu" ).split( " " ),
-	function( i, name ) {
-
-	// Handle event binding
-	jQuery.fn[ name ] = function( data, fn ) {
-		return arguments.length > 0 ?
-			this.on( name, null, data, fn ) :
-			this.trigger( name );
+jQuery.each( [
+	"ajaxStart",
+	"ajaxStop",
+	"ajaxComplete",
+	"ajaxError",
+	"ajaxSuccess",
+	"ajaxSend"
+], function( _i, type ) {
+	jQuery.fn[ type ] = function( fn ) {
+		return this.on( type, fn );
 	};
-} );
-
-jQuery.fn.extend( {
-	hover: function( fnOver, fnOut ) {
-		return this.mouseenter( fnOver ).mouseleave( fnOut || fnOver );
-	}
 } );
 
 
@@ -27181,8 +31886,32 @@ jQuery.fn.extend( {
 		return arguments.length === 1 ?
 			this.off( selector, "**" ) :
 			this.off( types, selector || "**", fn );
+	},
+
+	hover: function( fnOver, fnOut ) {
+		return this.mouseenter( fnOver ).mouseleave( fnOut || fnOver );
 	}
 } );
+
+jQuery.each( ( "blur focus focusin focusout resize scroll click dblclick " +
+	"mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave " +
+	"change select submit keydown keypress keyup contextmenu" ).split( " " ),
+	function( _i, name ) {
+
+		// Handle event binding
+		jQuery.fn[ name ] = function( data, fn ) {
+			return arguments.length > 0 ?
+				this.on( name, null, data, fn ) :
+				this.trigger( name );
+		};
+	} );
+
+
+
+
+// Support: Android <=4.0 only
+// Make sure we trim BOM and NBSP
+var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
 
 // Bind a function to a context, optionally partially applying any
 // arguments.
@@ -27246,6 +31975,11 @@ jQuery.isNumeric = function( obj ) {
 		!isNaN( obj - parseFloat( obj ) );
 };
 
+jQuery.trim = function( text ) {
+	return text == null ?
+		"" :
+		( text + "" ).replace( rtrim, "" );
+};
 
 
 
@@ -27295,7 +32029,7 @@ jQuery.noConflict = function( deep ) {
 // Expose jQuery and $ identifiers, even in AMD
 // (#7102#comment:10, https://github.com/jquery/jquery/pull/557)
 // and CommonJS for browser emulators (#13566)
-if ( !noGlobal ) {
+if ( typeof noGlobal === "undefined" ) {
 	window.jQuery = window.$ = jQuery;
 }
 
@@ -27329,7 +32063,7 @@ return jQuery;
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.15';
+  var VERSION = '4.17.19';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
@@ -31036,8 +35770,21 @@ return jQuery;
      * @returns {Array} Returns the new sorted array.
      */
     function baseOrderBy(collection, iteratees, orders) {
+      if (iteratees.length) {
+        iteratees = arrayMap(iteratees, function(iteratee) {
+          if (isArray(iteratee)) {
+            return function(value) {
+              return baseGet(value, iteratee.length === 1 ? iteratee[0] : iteratee);
+            }
+          }
+          return iteratee;
+        });
+      } else {
+        iteratees = [identity];
+      }
+
       var index = -1;
-      iteratees = arrayMap(iteratees.length ? iteratees : [identity], baseUnary(getIteratee()));
+      iteratees = arrayMap(iteratees, baseUnary(getIteratee()));
 
       var result = baseMap(collection, function(value, key, collection) {
         var criteria = arrayMap(iteratees, function(iteratee) {
@@ -31294,6 +36041,10 @@ return jQuery;
         var key = toKey(path[index]),
             newValue = value;
 
+        if (key === '__proto__' || key === 'constructor' || key === 'prototype') {
+          return object;
+        }
+
         if (index != lastIndex) {
           var objValue = nested[key];
           newValue = customizer ? customizer(objValue, key, nested) : undefined;
@@ -31446,11 +36197,14 @@ return jQuery;
      *  into `array`.
      */
     function baseSortedIndexBy(array, value, iteratee, retHighest) {
-      value = iteratee(value);
-
       var low = 0,
-          high = array == null ? 0 : array.length,
-          valIsNaN = value !== value,
+          high = array == null ? 0 : array.length;
+      if (high === 0) {
+        return 0;
+      }
+
+      value = iteratee(value);
+      var valIsNaN = value !== value,
           valIsNull = value === null,
           valIsSymbol = isSymbol(value),
           valIsUndefined = value === undefined;
@@ -32935,10 +37689,11 @@ return jQuery;
       if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
         return false;
       }
-      // Assume cyclic values are equal.
-      var stacked = stack.get(array);
-      if (stacked && stack.get(other)) {
-        return stacked == other;
+      // Check that cyclic values are equal.
+      var arrStacked = stack.get(array);
+      var othStacked = stack.get(other);
+      if (arrStacked && othStacked) {
+        return arrStacked == other && othStacked == array;
       }
       var index = -1,
           result = true,
@@ -33100,10 +37855,11 @@ return jQuery;
           return false;
         }
       }
-      // Assume cyclic values are equal.
-      var stacked = stack.get(object);
-      if (stacked && stack.get(other)) {
-        return stacked == other;
+      // Check that cyclic values are equal.
+      var objStacked = stack.get(object);
+      var othStacked = stack.get(other);
+      if (objStacked && othStacked) {
+        return objStacked == other && othStacked == object;
       }
       var result = true;
       stack.set(object, other);
@@ -36484,6 +41240,10 @@ return jQuery;
      * // The `_.property` iteratee shorthand.
      * _.filter(users, 'active');
      * // => objects for ['barney']
+     *
+     * // Combining several predicates using `_.overEvery` or `_.overSome`.
+     * _.filter(users, _.overSome([{ 'age': 36 }, ['age', 40]]));
+     * // => objects for ['fred', 'barney']
      */
     function filter(collection, predicate) {
       var func = isArray(collection) ? arrayFilter : baseFilter;
@@ -37233,15 +41993,15 @@ return jQuery;
      * var users = [
      *   { 'user': 'fred',   'age': 48 },
      *   { 'user': 'barney', 'age': 36 },
-     *   { 'user': 'fred',   'age': 40 },
+     *   { 'user': 'fred',   'age': 30 },
      *   { 'user': 'barney', 'age': 34 }
      * ];
      *
      * _.sortBy(users, [function(o) { return o.user; }]);
-     * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 40]]
+     * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 30]]
      *
      * _.sortBy(users, ['user', 'age']);
-     * // => objects for [['barney', 34], ['barney', 36], ['fred', 40], ['fred', 48]]
+     * // => objects for [['barney', 34], ['barney', 36], ['fred', 30], ['fred', 48]]
      */
     var sortBy = baseRest(function(collection, iteratees) {
       if (collection == null) {
@@ -42116,11 +46876,11 @@ return jQuery;
 
       // Use a sourceURL for easier debugging.
       // The sourceURL gets injected into the source that's eval-ed, so be careful
-      // with lookup (in case of e.g. prototype pollution), and strip newlines if any.
-      // A newline wouldn't be a valid sourceURL anyway, and it'd enable code injection.
+      // to normalize all kinds of whitespace, so e.g. newlines (and unicode versions of it) can't sneak in
+      // and escape the comment, thus injecting code that gets evaled.
       var sourceURL = '//# sourceURL=' +
         (hasOwnProperty.call(options, 'sourceURL')
-          ? (options.sourceURL + '').replace(/[\r\n]/g, ' ')
+          ? (options.sourceURL + '').replace(/\s/g, ' ')
           : ('lodash.templateSources[' + (++templateCounter) + ']')
         ) + '\n';
 
@@ -42153,8 +46913,6 @@ return jQuery;
 
       // If `variable` is not specified wrap a with-statement around the generated
       // code to add the data object to the top of the scope chain.
-      // Like with sourceURL, we take care to not check the option's prototype,
-      // as this configuration is a code injection vector.
       var variable = hasOwnProperty.call(options, 'variable') && options.variable;
       if (!variable) {
         source = 'with (obj) {\n' + source + '\n}\n';
@@ -42861,6 +47619,9 @@ return jQuery;
      * values against any array or object value, respectively. See `_.isEqual`
      * for a list of supported value comparisons.
      *
+     * **Note:** Multiple values can be checked by combining several matchers
+     * using `_.overSome`
+     *
      * @static
      * @memberOf _
      * @since 3.0.0
@@ -42876,6 +47637,10 @@ return jQuery;
      *
      * _.filter(objects, _.matches({ 'a': 4, 'c': 6 }));
      * // => [{ 'a': 4, 'b': 5, 'c': 6 }]
+     *
+     * // Checking for several possible values
+     * _.filter(users, _.overSome([_.matches({ 'a': 1 }), _.matches({ 'a': 4 })]));
+     * // => [{ 'a': 1, 'b': 2, 'c': 3 }, { 'a': 4, 'b': 5, 'c': 6 }]
      */
     function matches(source) {
       return baseMatches(baseClone(source, CLONE_DEEP_FLAG));
@@ -42889,6 +47654,9 @@ return jQuery;
      * **Note:** Partial comparisons will match empty array and empty object
      * `srcValue` values against any array or object value, respectively. See
      * `_.isEqual` for a list of supported value comparisons.
+     *
+     * **Note:** Multiple values can be checked by combining several matchers
+     * using `_.overSome`
      *
      * @static
      * @memberOf _
@@ -42906,6 +47674,10 @@ return jQuery;
      *
      * _.find(objects, _.matchesProperty('a', 4));
      * // => { 'a': 4, 'b': 5, 'c': 6 }
+     *
+     * // Checking for several possible values
+     * _.filter(users, _.overSome([_.matchesProperty('a', 1), _.matchesProperty('a', 4)]));
+     * // => [{ 'a': 1, 'b': 2, 'c': 3 }, { 'a': 4, 'b': 5, 'c': 6 }]
      */
     function matchesProperty(path, srcValue) {
       return baseMatchesProperty(path, baseClone(srcValue, CLONE_DEEP_FLAG));
@@ -43129,6 +47901,10 @@ return jQuery;
      * Creates a function that checks if **all** of the `predicates` return
      * truthy when invoked with the arguments it receives.
      *
+     * Following shorthands are possible for providing predicates.
+     * Pass an `Object` and it will be used as an parameter for `_.matches` to create the predicate.
+     * Pass an `Array` of parameters for `_.matchesProperty` and the predicate will be created using them.
+     *
      * @static
      * @memberOf _
      * @since 4.0.0
@@ -43155,6 +47931,10 @@ return jQuery;
      * Creates a function that checks if **any** of the `predicates` return
      * truthy when invoked with the arguments it receives.
      *
+     * Following shorthands are possible for providing predicates.
+     * Pass an `Object` and it will be used as an parameter for `_.matches` to create the predicate.
+     * Pass an `Array` of parameters for `_.matchesProperty` and the predicate will be created using them.
+     *
      * @static
      * @memberOf _
      * @since 4.0.0
@@ -43174,6 +47954,9 @@ return jQuery;
      *
      * func(NaN);
      * // => false
+     *
+     * var matchesFunc = _.overSome([{ 'a': 1 }, { 'a': 2 }])
+     * var matchesPropertyFunc = _.overSome([['a', 1], ['a', 2]])
      */
     var overSome = createOver(arraySome);
 
@@ -44435,7 +49218,7 @@ return jQuery;
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.16.0
+ * @version 1.16.1
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -44781,7 +49564,7 @@ function getBordersSize(styles, axis) {
   var sideA = axis === 'x' ? 'Left' : 'Top';
   var sideB = sideA === 'Left' ? 'Right' : 'Bottom';
 
-  return parseFloat(styles['border' + sideA + 'Width'], 10) + parseFloat(styles['border' + sideB + 'Width'], 10);
+  return parseFloat(styles['border' + sideA + 'Width']) + parseFloat(styles['border' + sideB + 'Width']);
 }
 
 function getSize(axis, body, html, computedStyle) {
@@ -44936,8 +49719,8 @@ function getOffsetRectRelativeToArbitraryNode(children, parent) {
   var scrollParent = getScrollParent(children);
 
   var styles = getStyleComputedProperty(parent);
-  var borderTopWidth = parseFloat(styles.borderTopWidth, 10);
-  var borderLeftWidth = parseFloat(styles.borderLeftWidth, 10);
+  var borderTopWidth = parseFloat(styles.borderTopWidth);
+  var borderLeftWidth = parseFloat(styles.borderLeftWidth);
 
   // In cases where the parent is fixed, we must ignore negative scroll in offset calc
   if (fixedPosition && isHTML) {
@@ -44958,8 +49741,8 @@ function getOffsetRectRelativeToArbitraryNode(children, parent) {
   // differently when margins are applied to it. The margins are included in
   // the box of the documentElement, in the other cases not.
   if (!isIE10 && isHTML) {
-    var marginTop = parseFloat(styles.marginTop, 10);
-    var marginLeft = parseFloat(styles.marginLeft, 10);
+    var marginTop = parseFloat(styles.marginTop);
+    var marginLeft = parseFloat(styles.marginLeft);
 
     offsets.top -= borderTopWidth - marginTop;
     offsets.bottom -= borderTopWidth - marginTop;
@@ -45898,8 +50681,8 @@ function arrow(data, options) {
   // Compute the sideValue using the updated popper offsets
   // take popper margin in account because we don't have this info available
   var css = getStyleComputedProperty(data.instance.popper);
-  var popperMarginSide = parseFloat(css['margin' + sideCapitalized], 10);
-  var popperBorderSide = parseFloat(css['border' + sideCapitalized + 'Width'], 10);
+  var popperMarginSide = parseFloat(css['margin' + sideCapitalized]);
+  var popperBorderSide = parseFloat(css['border' + sideCapitalized + 'Width']);
   var sideValue = center - data.offsets.popper[side] - popperMarginSide - popperBorderSide;
 
   // prevent arrowElement from being placed not contiguously to its popper
@@ -47685,7 +52468,7 @@ function normalizeComponent (
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!
- * Vue.js v2.6.10
+ * Vue.js v2.6.11
  * (c) 2014-2019 Evan You
  * Released under the MIT License.
  */
@@ -49651,7 +54434,7 @@ if (typeof Promise !== 'undefined' && isNative(Promise)) {
   isUsingMicroTask = true;
 } else if (typeof setImmediate !== 'undefined' && isNative(setImmediate)) {
   // Fallback to setImmediate.
-  // Techinically it leverages the (macro) task queue,
+  // Technically it leverages the (macro) task queue,
   // but it is still a better choice than setTimeout.
   timerFunc = function () {
     setImmediate(flushCallbacks);
@@ -49740,7 +54523,7 @@ var initProxy;
     warn(
       "Property \"" + key + "\" must be accessed with \"$data." + key + "\" because " +
       'properties starting with "$" or "_" are not proxied in the Vue instance to ' +
-      'prevent conflicts with Vue internals' +
+      'prevent conflicts with Vue internals. ' +
       'See: https://vuejs.org/v2/api/#data',
       target
     );
@@ -50600,7 +55383,7 @@ function bindDynamicKeys (baseObj, values) {
     if (typeof key === 'string' && key) {
       baseObj[values[i]] = values[i + 1];
     } else if (key !== '' && key !== null) {
-      // null is a speical value for explicitly removing a binding
+      // null is a special value for explicitly removing a binding
       warn(
         ("Invalid value for dynamic directive argument (expected string or null): " + key),
         this
@@ -51095,6 +55878,12 @@ function _createElement (
     ns = (context.$vnode && context.$vnode.ns) || config.getTagNamespace(tag);
     if (config.isReservedTag(tag)) {
       // platform built-in elements
+      if (isDef(data) && isDef(data.nativeOn)) {
+        warn(
+          ("The .native modifier for v-on is only valid on components but it was used on <" + tag + ">."),
+          context
+        );
+      }
       vnode = new VNode(
         config.parsePlatformTagName(tag), data, children,
         undefined, undefined, context
@@ -51220,7 +56009,7 @@ function renderMixin (Vue) {
     // render self
     var vnode;
     try {
-      // There's no need to maintain a stack becaues all render fns are called
+      // There's no need to maintain a stack because all render fns are called
       // separately from one another. Nested component's render fns are called
       // when parent component is patched.
       currentRenderingInstance = vm;
@@ -53119,7 +57908,7 @@ Object.defineProperty(Vue, 'FunctionalRenderContext', {
   value: FunctionalRenderContext
 });
 
-Vue.version = '2.6.10';
+Vue.version = '2.6.11';
 
 /*  */
 
@@ -53792,7 +58581,7 @@ function createPatchFunction (backend) {
     }
   }
 
-  function removeVnodes (parentElm, vnodes, startIdx, endIdx) {
+  function removeVnodes (vnodes, startIdx, endIdx) {
     for (; startIdx <= endIdx; ++startIdx) {
       var ch = vnodes[startIdx];
       if (isDef(ch)) {
@@ -53903,7 +58692,7 @@ function createPatchFunction (backend) {
       refElm = isUndef(newCh[newEndIdx + 1]) ? null : newCh[newEndIdx + 1].elm;
       addVnodes(parentElm, refElm, newCh, newStartIdx, newEndIdx, insertedVnodeQueue);
     } else if (newStartIdx > newEndIdx) {
-      removeVnodes(parentElm, oldCh, oldStartIdx, oldEndIdx);
+      removeVnodes(oldCh, oldStartIdx, oldEndIdx);
     }
   }
 
@@ -53995,7 +58784,7 @@ function createPatchFunction (backend) {
         if (isDef(oldVnode.text)) { nodeOps.setTextContent(elm, ''); }
         addVnodes(elm, null, ch, 0, ch.length - 1, insertedVnodeQueue);
       } else if (isDef(oldCh)) {
-        removeVnodes(elm, oldCh, 0, oldCh.length - 1);
+        removeVnodes(oldCh, 0, oldCh.length - 1);
       } else if (isDef(oldVnode.text)) {
         nodeOps.setTextContent(elm, '');
       }
@@ -54224,7 +59013,7 @@ function createPatchFunction (backend) {
 
         // destroy old node
         if (isDef(parentElm)) {
-          removeVnodes(parentElm, [oldVnode], 0, 0);
+          removeVnodes([oldVnode], 0, 0);
         } else if (isDef(oldVnode.tag)) {
           invokeDestroyHook(oldVnode);
         }
@@ -56930,7 +61719,7 @@ var startTagOpen = new RegExp(("^<" + qnameCapture));
 var startTagClose = /^\s*(\/?)>/;
 var endTag = new RegExp(("^<\\/" + qnameCapture + "[^>]*>"));
 var doctype = /^<!DOCTYPE [^>]+>/i;
-// #7298: escape - to avoid being pased as HTML comment when inlined in page
+// #7298: escape - to avoid being passed as HTML comment when inlined in page
 var comment = /^<!\--/;
 var conditionalComment = /^<!\[/;
 
@@ -57215,7 +62004,7 @@ function parseHTML (html, options) {
 /*  */
 
 var onRE = /^@|^v-on:/;
-var dirRE = /^v-|^@|^:/;
+var dirRE = /^v-|^@|^:|^#/;
 var forAliasRE = /([\s\S]*?)\s+(?:in|of)\s+([\s\S]*)/;
 var forIteratorRE = /,([^,\}\]]*)(?:,([^,\}\]]*))?$/;
 var stripParensRE = /^\(|\)$/g;
@@ -57839,7 +62628,7 @@ function processSlotContent (el) {
           if (el.parent && !maybeComponent(el.parent)) {
             warn$2(
               "<template v-slot> can only appear at the root level inside " +
-              "the receiving the component",
+              "the receiving component",
               el
             );
           }
@@ -58402,7 +63191,7 @@ function isDirectChildOfTemplateFor (node) {
 
 /*  */
 
-var fnExpRE = /^([\w$_]+|\([^)]*?\))\s*=>|^function\s*(?:[\w$]+)?\s*\(/;
+var fnExpRE = /^([\w$_]+|\([^)]*?\))\s*=>|^function(?:\s+[\w$]+)?\s*\(/;
 var fnInvokeRE = /\([^)]*?\);*$/;
 var simplePathRE = /^[A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*|\['[^']*?']|\["[^"]*?"]|\[\d+]|\[[A-Za-z_$][\w$]*])*$/;
 
@@ -59171,6 +63960,8 @@ function checkNode (node, warn) {
           var range = node.rawAttrsMap[name];
           if (name === 'v-for') {
             checkFor(node, ("v-for=\"" + value + "\""), warn, range);
+          } else if (name === 'v-slot' || name[0] === '#') {
+            checkFunctionParameterExpression(value, (name + "=\"" + value + "\""), warn, range);
           } else if (onRE.test(name)) {
             checkEvent(value, (name + "=\"" + value + "\""), warn, range);
           } else {
@@ -59190,9 +63981,9 @@ function checkNode (node, warn) {
 }
 
 function checkEvent (exp, text, warn, range) {
-  var stipped = exp.replace(stripStringRE, '');
-  var keywordMatch = stipped.match(unaryOperatorsRE);
-  if (keywordMatch && stipped.charAt(keywordMatch.index - 1) !== '$') {
+  var stripped = exp.replace(stripStringRE, '');
+  var keywordMatch = stripped.match(unaryOperatorsRE);
+  if (keywordMatch && stripped.charAt(keywordMatch.index - 1) !== '$') {
     warn(
       "avoid using JavaScript unary operator as property name: " +
       "\"" + (keywordMatch[0]) + "\" in expression " + (text.trim()),
@@ -59244,6 +64035,19 @@ function checkExpression (exp, text, warn, range) {
         range
       );
     }
+  }
+}
+
+function checkFunctionParameterExpression (exp, text, warn, range) {
+  try {
+    new Function(exp, '');
+  } catch (e) {
+    warn(
+      "invalid function parameter expression: " + (e.message) + " in\n\n" +
+      "    " + exp + "\n\n" +
+      "  Raw expression: " + (text.trim()) + "\n",
+      range
+    );
   }
 }
 
@@ -59709,9 +64513,13 @@ module.exports = function(module) {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery_ui_ui_widgets_datepicker_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery-ui/ui/widgets/datepicker.js */ "./node_modules/jquery-ui/ui/widgets/datepicker.js");
+/* harmony import */ var jquery_ui_ui_widgets_datepicker_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_ui_ui_widgets_datepicker_js__WEBPACK_IMPORTED_MODULE_0__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -59723,9 +64531,12 @@ __webpack_require__(/*! ./main */ "./resources/js/main.js");
 
 __webpack_require__(/*! ./navbar */ "./resources/js/navbar.js");
 
-__webpack_require__(/*! ./calendar */ "./resources/js/calendar.js");
+__webpack_require__(/*! ./newcalendar */ "./resources/js/newcalendar.js");
+
+__webpack_require__(/*! ./datepicker */ "./resources/js/datepicker.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -59791,65 +64602,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/calendar.js":
-/*!**********************************!*\
-  !*** ./resources/js/calendar.js ***!
-  \**********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fullcalendar/core */ "./node_modules/@fullcalendar/core/main.esm.js");
-/* harmony import */ var _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fullcalendar/daygrid */ "./node_modules/@fullcalendar/daygrid/main.esm.js");
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  var host = window.location.host;
-  var xhr = new XMLHttpRequest();
-  var approvedEvents = [];
-
-  xhr.onreadystatechange = function (e) {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        var response = JSON.parse(xhr.responseText);
-
-        for (var i = 0; i < response.length; i++) {
-          var obj = response[i];
-          var singleEvent = {
-            'title': obj.name,
-            'start': obj.start_date,
-            'end': obj.end_date,
-            'url': "http://" + host + "/events/show/" + obj.id
-          };
-          approvedEvents.push(singleEvent);
-        }
-
-        var calendarEl = document.getElementById("calendar");
-        var calendar = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Calendar"](calendarEl, {
-          height: 650,
-          plugins: [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_1__["default"], 'bootstrap'],
-          defaultView: "dayGridMonth",
-          themeSystem: "bootstrap",
-          events: approvedEvents,
-          header: {
-            left: 'prev',
-            center: 'title',
-            right: 'next'
-          }
-        });
-        console.log(calendar);
-        calendar.render();
-      }
-    }
-  };
-
-  xhr.open('get', "http://" + host + "/events/list", true);
-  xhr.send();
-});
 
 /***/ }),
 
@@ -59922,6 +64674,24 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/datepicker.js":
+/*!************************************!*\
+  !*** ./resources/js/datepicker.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  $(".cusDate").datepicker({
+    dateFormat: 'dd M yy',
+    weekStart: 0,
+    autoclose: true,
+    todayHighlight: true
+  });
+});
+
+/***/ }),
+
 /***/ "./resources/js/main.js":
 /*!******************************!*\
   !*** ./resources/js/main.js ***!
@@ -59933,11 +64703,7 @@ $(document).ready(function () {
   // alert for updating posting
   setTimeout(function () {
     $(".alert").slideUp(1000);
-  }, 4000);
-  $("#datepicker").datepicker({
-    changeMonth: true,
-    changeYear: true
-  }); //Show image name on upload
+  }, 4000); //Show image name on upload
 
   $(".custom-file-input").on("change", function () {
     var fileName = $(this).val().split("\\").pop();
@@ -59954,26 +64720,49 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// $(document).ready(function () {
-//     $(".dropdown").hover(
-//         function (ev) {
-//             if ($(this).children(".dropdown-menu.opened").length == 0) {
-//                 $(this)
-//                     .children(".dropdown-menu")
-//                     .slideDown("medium")
-//                     .addClass("opened");
-//             }
-//         },
-//         function (ev) {
-//             if ($(this).children(".dropdown-menu.opened").length > 0) {
-//                 $(this)
-//                     .children(".dropdown-menu")
-//                     .slideUp("slow")
-//                     .removeClass("opened");
-//             }
-//         }
-//     );
-// });
+$(document).ready(function () {
+  $(document).on("click", 'a[data-toggle="collapse"]', function (onclick) {
+    onclick.stopPropagation();
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/newcalendar.js":
+/*!*************************************!*\
+  !*** ./resources/js/newcalendar.js ***!
+  \*************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fullcalendar/core */ "./node_modules/@fullcalendar/core/main.esm.js");
+/* harmony import */ var _fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fullcalendar/daygrid */ "./node_modules/@fullcalendar/daygrid/main.esm.js");
+/* harmony import */ var _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fullcalendar/interaction */ "./node_modules/@fullcalendar/interaction/main.esm.js");
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var calendarEl = document.getElementById("calendar");
+  var calendar = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["Calendar"](calendarEl, {
+    height: 650,
+    plugins: [_fullcalendar_daygrid__WEBPACK_IMPORTED_MODULE_1__["default"], _fullcalendar_interaction__WEBPACK_IMPORTED_MODULE_2__["default"]],
+    defaultView: "dayGridMonth",
+    events: eventArray,
+    header: {
+      left: "prev",
+      center: "title",
+      right: "next"
+    },
+    navLinks: true,
+    eventLimit: true,
+    eventClick: function eventClick(info) {
+      info.event.url;
+    }
+  });
+  calendar.render();
+});
 
 /***/ }),
 
@@ -59995,8 +64784,8 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\NBU\event-organizer\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\NBU\event-organizer\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Data\ProgrammingAndWork\xampp\htdocs\event-organizer\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Data\ProgrammingAndWork\xampp\htdocs\event-organizer\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -7,10 +7,11 @@
 require('./bootstrap');
 require('./main');
 require('./navbar');
-require('./calendar');
+require('./newcalendar');
+require('./datepicker');
 
 window.Vue = require('vue');
-
+import 'jquery-ui/ui/widgets/datepicker.js';
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

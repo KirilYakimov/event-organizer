@@ -48,18 +48,18 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto nav-pills">
+                    <ul class="nav nav-pills nav-stacked ml-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link {{ (Request::segment(1) == 'home') || (Request::segment(1) == '') ? 'active text-white' : null }}" href="{{ url('home') }}">{{ __('Events') }}</a>
+                            <a class="nav-link {{ (Request::segment(1) == 'home') || (Request::segment(1) == '') ? 'active' : null }}" href="{{ url('home') }}">{{ __('Events') }}</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link {{ Request::segment(1) === 'about' ? 'active text-white' : null }}" href="{{ url('about') }}">{{ __('About') }}</a>
+                            <a class="nav-link {{ Request::segment(1) === 'about' ? 'active' : null }}" href="{{ url('about') }}">{{ __('About') }}</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link {{ Request::segment(1) === 'contact' ? 'active text-white' : null }}" href="{{ url('contact') }}">{{ __('Contacts') }}</a>
+                            <a class="nav-link {{ Request::segment(1) === 'contact' ? 'active' : null }}" href="{{ url('contact') }}">{{ __('Contacts') }}</a>
                         </li>
 
                         <!-- Authentication Links -->
@@ -67,10 +67,10 @@
 
                         @if (Request::path() == 'login' || Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link {{ Request::segment(1) === 'login' ? 'active text-white' : null }}" href="{{ route('login') }}">{{ __('Sign in') }}</a>
+                            <a class="nav-link {{ Request::segment(1) === 'login' ? 'active' : null }}" href="{{ route('login') }}">{{ __('Sign in') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Request::segment(1) === 'register' ? 'active text-white' : null }}" href="{{ route('register') }}">{{ __('Sign up') }}</a>
+                            <a class="nav-link {{ Request::segment(1) === 'register' ? 'active' : null }}" href="{{ route('register') }}">{{ __('Sign up') }}</a>
                         </li>
                         @endif
 
@@ -95,8 +95,9 @@
 
                                     <a class="dropdown-item" href="{{ route('profile.waiting') }}">&emsp;{{ __('Waiting for approvals') }}</a>
 
+                                    @if(auth()->user()->organizer == false)
                                     <a class="dropdown-item" href="{{ route('event.create') }}">&emsp;{{ __('My event requests') }}</a>
-
+                                    @endif
                                 </div>
 
                                 <!-- <a class="dropdown-item" href="#">{{ __('My ratings') }}</a> -->

@@ -16,21 +16,7 @@
 
                  <div class="modal-body">
                      <div class="form-row">
-                         <div class="col-md-6 mb-3">
-                             <label for="username">{{ __('Username') }}</label>
-
-                             <div>
-                                 <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" id="validationServer02" placeholder="Username" name="username" value="{{ old('username') ?? $user['username'] }}" required autocomplete="username" autofocus>
-
-                                 @error('username')
-                                 <span class="invalid-feedback" role="alert">
-                                     <strong>{{ $message }}</strong>
-                                 </span>
-                                 @enderror
-                             </div>
-                         </div>
-
-                         <div class="col-md-6 mb-3">
+                         <div class="col-md-12 mb-3">
                              <label for="email">{{ __('Email address') }}</label>
 
                              <div>
